@@ -1,8 +1,10 @@
 import boto3
+from dotenv import load_dotenv
 
-# Let's use Amazon S3
-s3 = boto3.resource('s3')
+load_dotenv()
 
-# Print out bucket names
-for bucket in s3.buckets.all():
-    print(bucket.name)
+client = boto3.client('cloudtrail', region_name='eu-north-1')
+response = client.lookup_events(MaxResults=5)
+
+for event in response['Events']:
+    print(event['EventName'], event['EventTime'])
