@@ -1,10 +1,27 @@
 import boto3
-from dotenv import load_dotenv
+from typing import Any
 
-load_dotenv()
+from config.settings import CloudTrailConfig
 
-client = boto3.client('cloudtrail', region_name='eu-north-1')
-response = client.lookup_events(MaxResults=5)
+CloudTrailEvent = dict[str, Any]
 
-for event in response['Events']:
-    print(event['EventName'], event['EventTime'])
+
+class CloudTrailReader:
+    """Adapter for reading security-relevant events from AWS CloudTrail."""
+
+    def __init__(self, config: CloudTrailConfig) -> None:
+        self.config = config
+        self.client = boto3.client("cloudtrail", region_name=config.region_name)
+
+    def get_security_events(self) -> list[CloudTrailEvent]:
+        response = self.client.lookup_events(
+            LookupAttributes=[
+                {
+                    "AttributeKey": "ReadOnly",
+                    "AttributeValue": self.config.read_only,
+                }
+            ],
+            MaxResults=self.config.max_results,
+        )
+
+        return response["Events"]
