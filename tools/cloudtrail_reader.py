@@ -5,7 +5,13 @@ load_dotenv()
 
 def get_security_events():
     client = boto3.client('cloudtrail')
-    response = client.lookup_events()
+    response = client.lookup_events(MaxResults=5)
 
-    for events in response['Events']:
-        print(events['EventTime'], events['EventName'])
+    for event in response['Events']:
+        print(event['EventTime'])
+        print(event['EventName'])
+        print(event['EventSource'])
+        print(event.get('Username', 'N/A'))
+        print(event.get('SourceIPAddress', 'N/A'))
+        print(event.get('ErrorCode', 'None'))
+        print(event.get('RequestParameters', {}))
