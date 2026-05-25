@@ -1,4 +1,9 @@
 import boto3
+from dotenv import load_dotenv
 
-# Let's use Amazon S3
-s3 = boto3.resource('s3')
+load_dotenv()
+
+def get_security_events():
+    client = boto3.client('cloudtrail', region_name='eu-north-1')
+    response = client.lookup_events(MaxResults=20)
+    return response['Events']
