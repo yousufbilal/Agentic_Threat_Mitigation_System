@@ -18,8 +18,9 @@ def fetch_mitre_techniques():
 
     for technique in techniques:
         if 'IaaS' in technique.get('x_mitre_platforms', []):    
-            print(technique['name'],technique['description'])
+            # print(technique['name'],technique['description'])
             # print(len(technique['name']))
-            return techniques
+            pass
+    return techniques
 
 
