@@ -4,8 +4,6 @@ file = open("Temp_Events/cloudtrail_synthetic_pe_dataset.json", "r")
 data = json.load(file)
 file.close()
 
-print(data)
-
 def normalize_event(data):
     filtered_event = {
         "event_time": data["eventTime"],
@@ -17,7 +15,7 @@ def normalize_event(data):
         "aws_region": data["awsRegion"],
         "request_parameters": data["requestParameters"]
     }
-    print(filtered_event)
+    print(json.dumps(filtered_event, indent=4))
 
-
-normalize_event(data)
+for event in data["Records"]:
+    normalize_event(event)
