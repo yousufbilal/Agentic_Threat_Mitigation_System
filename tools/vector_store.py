@@ -1,8 +1,13 @@
 import chromadb
+import json
+from tools.cloud_trail_filter import normalize_event
+
+file = open("Temp_Events/cloudtrail_synthetic_pe_dataset.json", "r")
+data = json.load(file)
+file.close()
 
 client = chromadb.PersistentClient(path="./chroma_data")
 collection = client.get_or_create_collection(name="cloudtrail_events")
-
 
 def store_event(event):
     event_text = event["event_name"] + " by " + event["username"] + " from " + event["source_ip"] + " at " + event["event_time"]
@@ -20,13 +25,9 @@ def store_event(event):
         ids=[event_id]
     )
 
-test_event = {
-    "event_name": "CreateUser",
-    "username": "svc-reporting",
-    "source_ip": "198.51.100.77",
-    "event_time": "2026-06-18T14:55:02Z"
-}
-
+for event in data["Records"]:
+    result = normalize_event(event)
+    store_event(result)
 
 results = collection.get()
 print(results)

@@ -15,7 +15,7 @@ def normalize_event(data):
         "aws_region": data["awsRegion"],
         "request_parameters": data["requestParameters"]
     }
-    print(json.dumps(filtered_event, indent=4))
+    return filtered_event
 
 for event in data["Records"]:
-    normalize_event(event)
+    result = normalize_event(event)
