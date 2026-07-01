@@ -15,12 +15,12 @@ def fetch_mitre_techniques():
 
 # Filter techniques relevant to cloud 
 
-
     for technique in techniques:
         if 'IaaS' in technique.get('x_mitre_platforms', []):    
-            # print(technique['name'],technique['description'])
-            # print(len(technique['name']))
+            print(technique['name'],technique['description'])
+            print(len(technique['name']))
             pass
     return techniques
 
 
+fetch_mitre_techniques()
