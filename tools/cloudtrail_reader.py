@@ -8,11 +8,17 @@ def get_security_events():
     client = boto3.client('cloudtrail')
     response = client.lookup_events(MaxResults=50)
 
+
+    unpacked_events_list = []
+
     for event in response['Events']:
         raw_string = event.get("CloudTrailEvent", "{}")
         unpacked_json = json.loads(raw_string)
         print(unpacked_json)
+        
+        unpacked_events_list.append(unpacked_json)
 
+    return unpacked_events_list
 
 if __name__ == "__main__":
     events = get_security_events()
