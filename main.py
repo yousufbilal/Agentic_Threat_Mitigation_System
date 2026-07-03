@@ -6,3 +6,5 @@ def run():
     # techniques = fetch_mitre_techniques()
     get_security_events()
 run()
+
+hello = "Hello, World!"
