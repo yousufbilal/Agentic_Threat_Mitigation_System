@@ -7,4 +7,3 @@ def run():
     get_security_events()
 run()
 
-hello = "Hello, World!"
