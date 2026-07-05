@@ -1,10 +1,5 @@
 import chromadb
 import json
-# from tools.cloud_trail_filter import normalize_event
-
-# file = open("Temp_Events/cloudtrail_synthetic_pe_dataset.json", "r")
-# data = json.load(file)
-# file.close()
 
 file = open("ait_data/processed/fox_matched_alerts.json", "r")
 data = json.load(file)
@@ -35,17 +30,6 @@ def store_wazuh_alert(alert):
 
 for alert in data:
     store_wazuh_alert(alert)
-
-# print ("Total alerts stored in ChromaDB:", len(data))
-# print ("alerts:", data)
-
-
-# for event in data["Records"]:
-#     result = normalize_event(event)
-#     store_event(result)
-
-# results = collection.get()
-# print(results)
 
 results = collection.query(
     query_texts=["sudo root access"],
