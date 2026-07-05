@@ -56,4 +56,5 @@ print("alerts:",(matched_alerts))
 os.makedirs("ait_data/processed", exist_ok=True)
 
 with open("ait_data/processed/fox_matched_alerts.json", "w") as file:
+    
     json.dump(matched_alerts, file, indent=2)
