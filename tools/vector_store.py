@@ -1,33 +1,54 @@
 import chromadb
 import json
-from tools.cloud_trail_filter import normalize_event
+# from tools.cloud_trail_filter import normalize_event
 
-file = open("Temp_Events/cloudtrail_synthetic_pe_dataset.json", "r")
+# file = open("Temp_Events/cloudtrail_synthetic_pe_dataset.json", "r")
+# data = json.load(file)
+# file.close()
+
+file = open("ait_data/processed/fox_matched_alerts.json", "r")
 data = json.load(file)
 file.close()
 
 client = chromadb.PersistentClient(path="./chroma_data")
-collection = client.get_or_create_collection(name="cloudtrail_events")
 
-def store_event(event):
-    event_text = event["event_name"] + " by " + event["username"] + " from " + event["source_ip"] + " at " + event["event_time"]
+# adding just one collection for now for fox, but we can add more later if needed 
+collection = client.get_or_create_collection(name="wazuh_alerts")
 
-    event_id = event["event_time"] + "-" + event["event_name"] + "-" + event["source_ip"]
+def store_wazuh_alert(alert):
+    alert_text = alert["full_log"]
 
     collection.add(
-        documents=[event_text],
+        documents=[alert_text],
         metadatas=[{
-            "username": event["username"],
-            "source_ip": event["source_ip"],
-            "event_time": event["event_time"],
-            "event_name": event["event_name"]
+            "scenario": "fox",
+            "attack_label": alert["attack_label"],
+            "rule_id": alert["rule_id"],
+            "rule_level": alert["rule_level"],
+            "description": alert["description"],
+            "agent_name": alert["agent_name"],
+            "agent_id": alert["agent_id"],
+            "timestamp": alert["timestamp"]
         }],
-        ids=[event_id]
+        ids=[alert["event_id"]]
     )
 
-for event in data["Records"]:
-    result = normalize_event(event)
-    store_event(result)
+for alert in data:
+    store_wazuh_alert(alert)
 
-results = collection.get()
+# print ("Total alerts stored in ChromaDB:", len(data))
+# print ("alerts:", data)
+
+
+# for event in data["Records"]:
+#     result = normalize_event(event)
+#     store_event(result)
+
+# results = collection.get()
+# print(results)
+
+results = collection.query(
+    query_texts=["sudo root access"],
+    n_results=3
+)
 print(results)
