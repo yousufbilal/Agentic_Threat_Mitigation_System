@@ -30,9 +30,3 @@ def store_wazuh_alert(alert):
 
 for alert in data:
     store_wazuh_alert(alert)
-
-results = collection.query(
-    query_texts=["sudo root access"],
-    n_results=3
-)
-print(results)

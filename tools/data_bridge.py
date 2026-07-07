@@ -47,7 +47,7 @@ for alert in ait_data:
     alert_epoch = iso_to_epoch(alert["timestamp"])
     if alert_epoch >= start_time and alert_epoch <= end_time:
         matched_copy = dict(alert)
-        matched_copy["attack_label"] = "privilege_escalation"
+        # matched_copy["attack_label"] = "privilege_escalation"
         matched_alerts.append(matched_copy)
 
 print("Total matched alerts:", len(matched_alerts))
