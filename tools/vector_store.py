@@ -17,7 +17,6 @@ def store_wazuh_alert(alert):
         documents=[alert_text],
         metadatas=[{
             "scenario": "fox",
-            "attack_label": alert["attack_label"],
             "rule_id": alert["rule_id"],
             "rule_level": alert["rule_level"],
             "description": alert["description"],
