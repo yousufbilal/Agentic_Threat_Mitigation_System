@@ -5,7 +5,7 @@ import os
 
 ait_data = []
 
-with open("ait_data/fox_wazuh.json", "r") as file:
+with open("ait_data/raw/fox_wazuh.json", "r") as file:
     for line in file:
         if line.strip():
             alert = json.loads(line)
@@ -26,7 +26,7 @@ with open("ait_data/fox_wazuh.json", "r") as file:
 
 fox_labels = []
 
-with open("ait_data/labels.csv", "r") as file:
+with open("ait_data/labels/labels.csv", "r") as file:
     reader = csv.DictReader(file)
     for row in reader:
         if row["scenario"] == "fox" and row["attack"] == "privilege_escalation":
