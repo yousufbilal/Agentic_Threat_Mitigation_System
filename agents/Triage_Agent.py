@@ -3,5 +3,10 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 
 def triage_agent(state: GraphState) -> GraphState:
-    
-    return(GraphState(nlist=["Yousuf"]))
+
+    return GraphState(
+        session_id=state['session_id'],
+        alerts=state['alerts'],
+        triage_output={"mitigation_required": True, "reasoning": "..."} 
+        )
+        

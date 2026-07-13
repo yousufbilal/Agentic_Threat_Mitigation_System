@@ -39,8 +39,6 @@ def get_fox_session():
         "alerts":flattend_alerts,
         "triage_output": None,
         }
-    print(json.dumps(initial_state,indent=4))
 
     return initial_state
 
-get_fox_session()

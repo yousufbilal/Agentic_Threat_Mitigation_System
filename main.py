@@ -1,11 +1,10 @@
 from graph.workflow import build_graph
 from graph.state import GraphState
+from tools.preprocess_ait_data import get_fox_session
 
 
 def save_graph_diagram(graph):
-
     png_bytes = graph.get_graph().draw_mermaid_png()
-
     with open("graph_output.png", "wb") as f:
         f.write(png_bytes)
 
@@ -13,19 +12,17 @@ def save_graph_diagram(graph):
 def run():
 
     graph = build_graph()
-
     save_graph_diagram(graph)
 
-    initial_state = GraphState(
-        session_id="agent_27",
-        alert_ids=[],
-        raw_alerts=[],
-        triage_output=None
-    )
+    data = get_fox_session()
+
+    initial_state = {
+    "session_id": data["session_id"],
+    "alerts": data["alerts"],
+    "triage_output": None,
+}
 
     result = graph.invoke(initial_state)
-
-    print(result)
 
 
 if __name__ == "__main__":
