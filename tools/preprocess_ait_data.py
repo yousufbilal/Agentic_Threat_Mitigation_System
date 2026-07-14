@@ -1,9 +1,7 @@
 
-from typing import TypedDict, List, Dict, Optional
+from typing import TypedDict, List, Dict, Optional, Annotated, Literal
 import chromadb
-from sympy import limit
 import json
-from typing import Annotated, List, Literal, TypedDict
 import operator
 
 client = chromadb.PersistentClient(path="./chroma_data")
