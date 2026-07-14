@@ -20,9 +20,10 @@ def run():
     "session_id": data["session_id"],
     "alerts": data["alerts"],
     "triage_output": None,
+    "investigator_output":None
 }
-
     result = graph.invoke(initial_state)
+    # print(result)
 
 
 if __name__ == "__main__":
