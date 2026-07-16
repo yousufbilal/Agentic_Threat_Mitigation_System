@@ -20,7 +20,9 @@ def run():
     "session_id": data["session_id"],
     "alerts": data["alerts"],
     "triage_output": None,
-    "investigator_output":None
+    "investigator_output":None,
+    "adversarial_output":None,
+    "responder_output": None
 }
     result = graph.invoke(initial_state)
     # print(result)

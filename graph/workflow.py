@@ -2,7 +2,8 @@ from graph.state import GraphState
 from langgraph.graph import StateGraph, START, END
 from agents.triage_agent import triage_agent
 from agents.investigator_agent import investigator_agent
-
+from agents.adversarial_agent import adversarial_agent
+from agents.responder_agent import responder_agent
 
 def build_graph():
 
@@ -11,12 +12,15 @@ def build_graph():
     # Nodes
     builder.add_node("triage", triage_agent)
     builder.add_node("investigator", investigator_agent)
-
+    builder.add_node("adversarial", adversarial_agent)
+    builder.add_node("responder", responder_agent)
 
     # Edges
     builder.add_edge(START, "triage")
     builder.add_edge("triage", "investigator")
-    builder.add_edge("investigator", END)
+    builder.add_edge("investigator", "adversarial")
+    builder.add_edge("adversarial", "responder")
+    builder.add_edge("responder", END)
 
     # Compile
     graph = builder.compile()
