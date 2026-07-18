@@ -40,8 +40,9 @@ def iso_to_epoch(timestamp_string):
 
 os.makedirs("ait_data/processed", exist_ok=True)
 
+
 for scenario, window in pe_windows.items():
-    
+
     matched_alerts = []
 
     with open(f"ait_data/raw/{scenario}_wazuh.json", "r") as file:
@@ -49,6 +50,9 @@ for scenario, window in pe_windows.items():
             if line.strip():
                 alert = json.loads(line)
                 slimmed_alert = extract_slimmed_alert(alert)
+
+                if slimmed_alert["full_log"] is None:
+                    continue
 
                 alert_epoch = iso_to_epoch(slimmed_alert["timestamp"])
                 if window["start"] <= alert_epoch <= window["end"]:
@@ -58,4 +62,5 @@ for scenario, window in pe_windows.items():
 
     with open(f"ait_data/processed/{scenario}_matched_alerts.json", "w") as out_file:
         json.dump(matched_alerts, out_file, indent=2)
+
         

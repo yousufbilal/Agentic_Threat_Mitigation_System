@@ -1,25 +1,17 @@
 import chromadb
 import json
-
-file = open("ait_data/processed/fox_matched_alerts.json", "r")
-data = json.load(file)
-file.close()
+import glob
 
 client = chromadb.PersistentClient(path="./chroma_data")
-
-# adding just one collection for now for fox, but we can add more later if needed 
 collection = client.get_or_create_collection(name="wazuh_alerts")
 
-# print("Collection created or retrieved:", collection.get(limit=1))  # Print the first document in the collection to verify
-
-def store_wazuh_alert(alert):
+def store_wazuh_alert(alert, scenario):
     alert_text = alert["full_log"]
 
     collection.add(
         documents=[alert_text],
         metadatas=[{
             "timestamp": alert["timestamp"],
-            # "event_id": alert["event_id"], causing duplication
             "agent_ip": alert["agent_ip"],
             "agent_name": alert["agent_name"],
             "agent_id": alert["agent_id"],
@@ -27,10 +19,21 @@ def store_wazuh_alert(alert):
             "rule_level": alert["rule_level"],
             "description": alert["description"],
             "groups": alert["groups"],
-            # "scenario": "fox",
+            "scenario": scenario,
         }],
         ids=[alert["event_id"]]
     )
 
-for alert in data:
-    store_wazuh_alert(alert)
+# accessing all the json files
+processed_files = glob.glob("ait_data/processed/*_matched_alerts.json")
+
+for filepath in processed_files:
+    scenario = filepath.split("/")[-1].replace("_matched_alerts.json", "")
+
+    with open(filepath, "r") as file:
+        data = json.load(file)
+
+    for alert in data:
+        store_wazuh_alert(alert, scenario)
+
+    # print(f"{scenario}: stored {len(data)} alerts")
