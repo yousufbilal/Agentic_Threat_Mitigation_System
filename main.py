@@ -1,8 +1,7 @@
 from graph.workflow import build_graph
 from graph.state import GraphState
 from tools.preprocess_ait_data import get_fox_session
-
-
+from tools.session_loader import get_session
 
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
@@ -15,7 +14,8 @@ def run():
     graph = build_graph()
     save_graph_diagram(graph)
 
-    data = get_fox_session()
+    # data = get_fox_session()
+    data = get_session("fox")
 
     initial_state = {
     "session_id": data["session_id"],
