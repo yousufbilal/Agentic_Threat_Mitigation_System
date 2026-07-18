@@ -1,6 +1,6 @@
 from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
-from graph.state import GraphState  
+from graph.state import GraphState
 from pydantic import BaseModel
 
 class TriageOutput(BaseModel):
@@ -31,6 +31,8 @@ def triage_agent(state: GraphState) -> GraphState:
     return GraphState(
         session_id=state['session_id'],
         alerts=state['alerts'],
-        triage_output={"raw_response": response}
-        )
+        triage_output={
+            "mitigation_required": response.mitigation_required,
+            "reasoning": response.reasoning
+            })
         

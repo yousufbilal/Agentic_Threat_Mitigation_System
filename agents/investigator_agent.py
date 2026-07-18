@@ -20,7 +20,7 @@ def investigator_agent(state:GraphState)-> GraphState:
 
     response = llm.invoke([system_prompt, human_prompt])
 
-    # print(response.content)
+    print(response.content)
 
     return GraphState(
         investigator_output={"raw_response": response.content}
