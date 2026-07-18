@@ -3,6 +3,7 @@ from graph.state import GraphState
 from tools.preprocess_ait_data import get_fox_session
 
 
+
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
     with open("graph_output.png", "wb") as f:
