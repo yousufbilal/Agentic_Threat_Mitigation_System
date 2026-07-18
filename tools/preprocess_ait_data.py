@@ -1,8 +1,4 @@
-
-from typing import TypedDict, List, Dict, Optional, Annotated, Literal
 import chromadb
-import json
-import operator
 
 client = chromadb.PersistentClient(path="./chroma_data")
 collection = client.get_collection(name="wazuh_alerts")
