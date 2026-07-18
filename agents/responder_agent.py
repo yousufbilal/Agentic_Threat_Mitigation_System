@@ -19,7 +19,7 @@ def responder_agent(state: GraphState) -> GraphState:
     human_prompt = HumanMessage(content=str({"investigator_output": investigator_output, "adversarial_output": adversarial_output}))
 
     response = llm.invoke([system_prompt, human_prompt])
-    print(response.content)
+    # print(response.content)
 
     return GraphState(
         responder_output={"raw_response": response.content}

@@ -1,9 +1,14 @@
-from langchain_ollama import ChatOllama  # Swapped from langchain_openai
+from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
+from pydantic import BaseModel
 
+class TriageOutput(BaseModel):
+    mitigation_required: bool
+    reasoning: str
 
 llm = ChatOllama(model="qwen2.5:3b")
+structured_llm = llm.with_structured_output(TriageOutput)
 
 
 def triage_agent(state: GraphState) -> GraphState:
@@ -20,12 +25,12 @@ def triage_agent(state: GraphState) -> GraphState:
     
     human_prompt = HumanMessage(content=str(alerts)) 
 
-    response = llm.invoke([system_prompt, human_prompt])
-    # print(response.content) 
+    response = structured_llm.invoke([system_prompt, human_prompt])
+    print(response)
 
     return GraphState(
         session_id=state['session_id'],
         alerts=state['alerts'],
-        triage_output={"raw_response": response.content}
+        triage_output={"raw_response": response}
         )
         
