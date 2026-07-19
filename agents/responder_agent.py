@@ -2,7 +2,7 @@ from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 
-llm = ChatOllama(model="qwen2.5:3b")
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 
 def responder_agent(state: GraphState) -> GraphState:
 
