@@ -1,8 +1,27 @@
 from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
+from pydantic import BaseModel
+from typing import Literal
 
-llm = ChatOllama(model="qwen2.5:3b")
+class InvestigatorOutput(BaseModel):
+    attack_technique: Literal[
+        "network_scans",
+        "service_scans",
+        "dirb",
+        "wpscan",
+        "webshell",
+        "cracking",
+        "reverse_shell",
+        "privilege_escalation",
+        "service_stop",
+        "dnsteal",
+        "other"]
+    affected_entity:str
+    summary:str
+
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+structured_llm = llm.with_structured_output(InvestigatorOutput)
 
 def investigator_agent(state:GraphState)-> GraphState:
 
@@ -18,10 +37,13 @@ def investigator_agent(state:GraphState)-> GraphState:
 
     human_prompt = HumanMessage(content=str({"alerts": alerts, "triage_output": triage_output}))
 
-    response = llm.invoke([system_prompt, human_prompt])
+    response = structured_llm.invoke([system_prompt, human_prompt])
 
-    print(response.content)
+    print(response)
 
     return GraphState(
-        investigator_output={"raw_response": response.content}
-    )
+        investigator_output={
+            "attack_technique": response.attack_technique,
+            "affected_entity": response.affected_entity,
+            "summary": response.summary
+            })
