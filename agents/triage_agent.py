@@ -22,13 +22,13 @@ def triage_agent(state: GraphState) -> GraphState:
     decide whether this alert sequence requires mitigation action.
     Consider the sequence and pattern of events, not just individual alerts in isolation.
     Base your decision only on the alert data provided below. Do not assume information that isn't present.
-    Output format: {"mitigation_required": true or false, "severity": Low or Medium or High, "reasoning": "one sentence explanation that names the actual events_id or rule_id values from the alert data above that support the decision"}
+    Output format: {"mitigation_required": True or False, "severity": Low or Medium or High, "reasoning": "one sentence explanation that names the actual events_id or rule_id values from the alert data above that support the decision"}
     """)
     
     human_prompt = HumanMessage(content=str(alerts)) 
 
     response = structured_llm.invoke([system_prompt, human_prompt])
-    # print(response)
+    print("TRIAGE AGENT RESPONSE:",response)
 
     return GraphState(
         session_id=state['session_id'],
