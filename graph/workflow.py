@@ -5,6 +5,8 @@ from agents.investigator_agent import investigator_agent
 from agents.adversarial_agent import adversarial_agent
 from agents.responder_agent import responder_agent
 from typing import Literal
+from langgraph.checkpoint.memory import InMemorySaver
+
 
 
 def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
@@ -37,6 +39,6 @@ def build_graph():
     builder.add_edge("responder", END)
 
     # Compile
-    graph = builder.compile()
+    graph = builder.compile(checkpointer=InMemorySaver())
 
     return graph

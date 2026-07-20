@@ -3,6 +3,8 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 from pydantic import BaseModel
 from typing import Literal
+from langgraph.types import interrupt
+
 
 class ResponderOutput(BaseModel):
     alert_ids: list[str]
@@ -22,8 +24,7 @@ def responder_agent(state: GraphState) -> GraphState:
 
     # session_id=state['session_id']
 
-    alerts= state["alerts"],
-
+    alerts= state["alerts"]
     investigator_output = state["investigator_output"]
     adversarial_output = state["adversarial_output"]
 
@@ -53,6 +54,10 @@ def responder_agent(state: GraphState) -> GraphState:
     response = structured_llm.invoke([system_prompt, human_prompt])
     
     print("REPONDER AGENT RESPONSE:",response, "\n")
+
+    decision = interrupt({"responder_output": response})
+
+    print(f"Human decision: {decision}")
 
     return GraphState(
         responder_output={

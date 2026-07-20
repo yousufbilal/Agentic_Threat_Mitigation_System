@@ -7,6 +7,8 @@ from graph.workflow import build_graph
 from graph.state import GraphState
 from tools.preprocess_ait_data import get_fox_session
 from tools.session_loader import get_session
+from langgraph.types import Command
+
 
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
@@ -29,10 +31,20 @@ def run():
     "adversarial_output":None,
     "responder_output": None,
     "revision_count": 0,
-}
-    result = graph.invoke(initial_state)
-    # print(result)
+    "human_decision":None,
+    "execution_result": None,
 
+}
+    config = {"configurable": {"thread_id": data["session_id"]}}
+
+    result = graph.invoke(initial_state, config=config)
+
+    if "__interrupt__" in result:
+        print("\n--- HUMAN APPROVAL REQUIRED ---")
+        print(result["__interrupt__"][0].value)
+        approval = input("\nApprove this action? (y/n): ")
+        result = graph.invoke(Command(resume=approval), config=config)
+        print(result)
 
 if __name__ == "__main__":
     run()

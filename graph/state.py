@@ -9,4 +9,5 @@ class GraphState(TypedDict):
     adversarial_output: Optional[dict]
     responder_output: Optional[dict]
     revision_count: int
+    human_decision: str        
 
