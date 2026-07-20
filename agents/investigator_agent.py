@@ -42,9 +42,14 @@ def investigator_agent(state:GraphState)-> GraphState:
 
     response = structured_llm.invoke([system_prompt, human_prompt])
 
-    print("INVESTIGATOR AGENT RESPONSE:",response)
+    print("INVESTIGATOR AGENT RESPONSE:",response, "\n")
 
     return GraphState(
+        
+        session_id=state['session_id'],
+
+        alerts= state["alerts"],
+
         investigator_output={
             "attack_technique": response.attack_technique,
             "affected_entity": response.affected_entity,

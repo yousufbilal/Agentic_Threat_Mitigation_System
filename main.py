@@ -10,7 +10,7 @@ def save_graph_diagram(graph):
 
 
 def run():
-
+    print()
     graph = build_graph()
     save_graph_diagram(graph)
 

@@ -1,29 +1,61 @@
 from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
+from pydantic import BaseModel
+from typing import Literal, Optional
+
+class AdversalOutput(BaseModel):
+    verdict: Literal["confirmed", "revised", "rejected"]
+    technique_judgment: str
+    entity_judgment: str
+    cited_rule_ids: list[int]
+    revised_technique: Literal[
+    "network_scans", "service_scans", "dirb", "wpscan", "webshell",
+    "cracking", "reverse_shell", "privilege_escalation",
+    "service_stop", "dnsteal", "other", "none"]
+    revised_entity: Optional[str] = None
+
 
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+structured_llm = llm.with_structured_output(AdversalOutput)
 
-def adversarial_agent(state:GraphState) -> GraphState:
+def adversarial_agent(state: GraphState) -> GraphState:
 
-    # print("adversarial agent node received this", state["session_id"])
     alerts = state["alerts"]
     investigator_output = state["investigator_output"]
-    triage_output= state["triage_output"]
+    triage_output = state["triage_output"]
 
     system_prompt = SystemMessage(content="""You are a SOC adversarial reviewer challenging an investigator's conclusion about a security alert sequence.
-    Your only task:
-    determine whether the investigator's attack_technique and affected_entity are actually supported by the alert data and triage reasoning provided below, 
-    or whether the conclusion overreaches, ignores an alternative explanation (e.g. false positive, benign admin activity), or is not backed by the cited events.
-    Base your review only on the alert data, triage reasoning, and investigator output provided below. Do not assume information that isn't present.
-    Output format: {"verdict": "confirmed" or "revised" or "rejected", "revised_technique": "short label or null if confirmed", "reasoning": "one sentence explanation that names the actual events_id or rule_id values from the alert data above that support the verdict"}
-    """)
+        Your task: independently judge whether attack_technique and affected_entity are EACH supported by the alert data, or whether either
+        overreaches, ignores an alternative explanation (e.g. false positive, benign admin activity), or is not backed by the cited events.
+        Base your review only on the alert data, triage reasoning, and investigator output provided below. Do not assume information that isn't present.
 
-    human_prompt = HumanMessage(content=str({"alerts":alerts, "investigator_output":investigator_output, "triage_output":triage_output }))
+        If affected_entity contains generic placeholder text instead of a specific value (e.g. the literal word "host" or "account" with no
+        actual hostname/username resolved), treat that as NOT supported and set entity_verdict to "revised" with a corrected value, or "rejected"
+        if no specific entity can be determined from the alert data.
+        
+        Output format: {"technique_verdict": "confirmed" or "revised" or "rejected",
+        "entity_verdict": "confirmed" or "revised" or "rejected",
+        "revised_technique": "short label, required if technique_verdict is revised, otherwise null",
+        "revised_entity": "corrected account/host, required if entity_verdict is revised, otherwise null",
+        "technique_judgment": "one sentence stating what the cited rule_id values' actual content shows and why it does or doesn't support the technique",
+        "entity_judgment": "one sentence stating what the cited rule_id values' actual content shows and why it does or doesn't support the entity",
+        "cited_rule_ids": [rule_id values from the alert data above that directly support your judgments]}
+        Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs. ]}""")
 
-    response = llm.invoke([system_prompt, human_prompt])
-    # print(response.content)
-    
+    # human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, "triage_output": triage_output}))
+    human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
+
+    response = structured_llm.invoke([system_prompt, human_prompt])
+    print("ADVERSAL AGENT RESPONSE:",response, "\n")
+
     return GraphState(
-    adversarial_agent_output={"adversarial_response": response.content}
-)
+        adversarial_output={
+            "verdict": response.verdict,
+            "revised_technique": response.revised_technique,
+            "revised_entity": response.revised_entity,
+            "technique_judgment": response.technique_judgment,
+            "entity_judgment": response.entity_judgment,
+            "cited_rule_ids": response.cited_rule_ids
+        }
+    )

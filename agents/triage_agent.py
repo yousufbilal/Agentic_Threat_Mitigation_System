@@ -28,7 +28,7 @@ def triage_agent(state: GraphState) -> GraphState:
     human_prompt = HumanMessage(content=str(alerts)) 
 
     response = structured_llm.invoke([system_prompt, human_prompt])
-    print("TRIAGE AGENT RESPONSE:",response)
+    print("TRIAGE AGENT RESPONSE:",response, "\n")
 
     return GraphState(
         session_id=state['session_id'],
