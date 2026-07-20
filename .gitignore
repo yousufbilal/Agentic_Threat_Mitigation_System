@@ -1,3 +1,6 @@
 .env
 .venv
 __pycache__
+ait_data/
+.DS_Store
+chroma_data/
