@@ -57,7 +57,7 @@ def responder_agent(state: GraphState) -> GraphState:
 
     decision = interrupt({"responder_output": response})
 
-    print(f"Human decision: {decision}")
+    # print(f"Human decision: {decision}")
 
     return GraphState(
         responder_output={

@@ -8,6 +8,7 @@ from graph.state import GraphState
 from tools.preprocess_ait_data import get_fox_session
 from tools.session_loader import get_session
 from langgraph.types import Command
+import json
 
 
 def save_graph_diagram(graph):
@@ -40,11 +41,13 @@ def run():
     result = graph.invoke(initial_state, config=config)
 
     if "__interrupt__" in result:
-        print("\n--- HUMAN APPROVAL REQUIRED ---")
-        print(result["__interrupt__"][0].value)
+        # print("\n--- HUMAN APPROVAL REQUIRED ---")
+        # print(result["__interrupt__"][0].value)
         approval = input("\nApprove this action? (y/n): ")
         result = graph.invoke(Command(resume=approval), config=config)
-        print(result)
+        with open(f"outputs/{data['session_id']}_mitigation.json", "w") as f:
+        json.dump(result["responder_output"], f, indent=2)
+        # print(result)
 
 if __name__ == "__main__":
     run()

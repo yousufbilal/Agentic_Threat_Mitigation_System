@@ -7,8 +7,6 @@ from agents.responder_agent import responder_agent
 from typing import Literal
 from langgraph.checkpoint.memory import InMemorySaver
 
-
-
 def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
     if state["triage_output"]["mitigation_required"] == True:
                 return "investigator"
