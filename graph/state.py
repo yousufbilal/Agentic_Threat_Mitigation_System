@@ -8,4 +8,5 @@ class GraphState(TypedDict):
     investigator_output: Optional[dict]
     adversarial_output: Optional[dict]
     responder_output: Optional[dict]
+    revision_count: int
 

@@ -12,6 +12,12 @@ def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
                 return "investigator"
     else:
         return END
+    
+def route_after_adversal(state: GraphState) -> Literal["investigator", "responder"]:
+    if state["adversarial_output"]["verdict"] == "rejected" and state["revision_count"] <= 2:
+        return "investigator"
+    else:
+        return "responder"
 
 def build_graph():
 
@@ -27,7 +33,7 @@ def build_graph():
     builder.add_edge(START, "triage")
     builder.add_conditional_edges("triage", route_after_tirage)
     builder.add_edge("investigator", "adversarial")
-    builder.add_edge("adversarial", "responder")
+    builder.add_conditional_edges("adversarial", route_after_adversal)
     builder.add_edge("responder", END)
 
     # Compile

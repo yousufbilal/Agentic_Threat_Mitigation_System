@@ -5,7 +5,8 @@ from pydantic import BaseModel
 from typing import Literal, Optional
 
 class AdversalOutput(BaseModel):
-    verdict: Literal["confirmed", "revised", "rejected"]
+    # verdict: Literal["confirmed", "revised", "rejected"]
+    verdict: Literal["rejected"]
     technique_judgment: str
     entity_judgment: str
     cited_rule_ids: list[int]
@@ -15,7 +16,6 @@ class AdversalOutput(BaseModel):
     "service_stop", "dnsteal", "other", "none"]
     revised_entity: Optional[str] = None
 
-
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(AdversalOutput)
 
@@ -24,6 +24,7 @@ def adversarial_agent(state: GraphState) -> GraphState:
     alerts = state["alerts"]
     investigator_output = state["investigator_output"]
     triage_output = state["triage_output"]
+    revision_count = state["revision_count"]
 
     system_prompt = SystemMessage(content="""You are a SOC adversarial reviewer challenging an investigator's conclusion about a security alert sequence.
         Your task: independently judge whether attack_technique and affected_entity are EACH supported by the alert data, or whether either
@@ -34,7 +35,8 @@ def adversarial_agent(state: GraphState) -> GraphState:
         actual hostname/username resolved), treat that as NOT supported and set entity_verdict to "revised" with a corrected value, or "rejected"
         if no specific entity can be determined from the alert data.
         
-        Output format: {"technique_verdict": "confirmed" or "revised" or "rejected",
+        Output format: {"technique_verdict": "rejected",
+                                  
         "entity_verdict": "confirmed" or "revised" or "rejected",
         "revised_technique": "short label, required if technique_verdict is revised, otherwise null",
         "revised_entity": "corrected account/host, required if entity_verdict is revised, otherwise null",
@@ -47,7 +49,13 @@ def adversarial_agent(state: GraphState) -> GraphState:
     human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
 
     response = structured_llm.invoke([system_prompt, human_prompt])
+    
     print("ADVERSAL AGENT RESPONSE:",response, "\n")
+
+    adversal_verdict = response.verdict
+    
+    if adversal_verdict == "rejected":
+        revision_count += 1
 
     return GraphState(
         adversarial_output={
@@ -57,5 +65,6 @@ def adversarial_agent(state: GraphState) -> GraphState:
             "technique_judgment": response.technique_judgment,
             "entity_judgment": response.entity_judgment,
             "cited_rule_ids": response.cited_rule_ids
-        }
+        },
+                revision_count = revision_count
     )

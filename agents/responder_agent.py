@@ -51,6 +51,7 @@ def responder_agent(state: GraphState) -> GraphState:
     }))
 
     response = structured_llm.invoke([system_prompt, human_prompt])
+    
     print("REPONDER AGENT RESPONSE:",response, "\n")
 
     return GraphState(

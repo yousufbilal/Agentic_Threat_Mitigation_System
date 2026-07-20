@@ -1,5 +1,7 @@
 import warnings
-warnings.filterwarnings("ignore", message=".*allowed_objects.*")
+# to ignore dependency warnining which was annoying 
+from langchain_core._api.deprecation import LangChainPendingDeprecationWarning
+warnings.filterwarnings("ignore", category=LangChainPendingDeprecationWarning)
 
 from graph.workflow import build_graph
 from graph.state import GraphState
@@ -25,7 +27,8 @@ def run():
     "triage_output": None,
     "investigator_output":None,
     "adversarial_output":None,
-    "responder_output": None
+    "responder_output": None,
+    "revision_count": 0,
 }
     result = graph.invoke(initial_state)
     # print(result)
