@@ -70,3 +70,5 @@ def responder_agent(state: GraphState) -> GraphState:
             "remediation_plan": response.remediation_plan
         }
     )
+
+# RESPONDER AGENT print runs twice which means we are making the llm call twice find solution 

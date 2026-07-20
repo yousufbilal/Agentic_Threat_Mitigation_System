@@ -9,7 +9,9 @@ from tools.preprocess_ait_data import get_fox_session
 from tools.session_loader import get_session
 from langgraph.types import Command
 import json
+import os
 
+os.makedirs("outputs", exist_ok=True)
 
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
@@ -45,9 +47,11 @@ def run():
         # print(result["__interrupt__"][0].value)
         approval = input("\nApprove this action? (y/n): ")
         result = graph.invoke(Command(resume=approval), config=config)
-        with open(f"outputs/{data['session_id']}_mitigation.json", "w") as f:
-        json.dump(result["responder_output"], f, indent=2)
-        # print(result)
+        if approval == "y":
+            with open(f"outputs/{data['session_id']}_mitigation.json", "w") as f:
+                json.dump(result["responder_output"], f, indent=2)
+        else:
+            print("Mitigation solution rejected")
 
 if __name__ == "__main__":
     run()
