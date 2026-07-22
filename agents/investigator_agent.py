@@ -3,7 +3,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 from pydantic import BaseModel
 from typing import Literal
-from mcp_tools.mcp_client import main  
+from mcp_tools.mcp_client import mcp_client
 
 class InvestigatorOutput(BaseModel):
     attack_technique: Literal[
@@ -26,12 +26,26 @@ class InvestigatorOutput(BaseModel):
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(InvestigatorOutput)
 
-def investigator_agent(state:GraphState)-> GraphState:
+async def investigator_agent(state:GraphState)-> GraphState:
 
     # revision_count = state["revision_count"]
     alerts = state["alerts"]
     triage_output = state["triage_output"]
     adversarial_output = state["adversarial_output"]
+
+#   this was aded manually these are the tools we will focus on 
+    allowed_tool_names = (
+        "get_technique_by_id",
+        "get_techniques_by_tactic",
+    )
+
+    tools = await mcp_client.get_tools()
+
+
+    filtered_tools = []
+    for t in tools:
+        if t.name in allowed_tool_names:
+            filtered_tools.append(t)
 
 
     if adversarial_output is not None:
