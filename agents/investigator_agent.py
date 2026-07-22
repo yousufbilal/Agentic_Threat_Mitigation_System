@@ -3,6 +3,8 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 from pydantic import BaseModel
 from typing import Literal
+from mcp_tools.mcp_client import main
+
 
 class InvestigatorOutput(BaseModel):
     attack_technique: Literal[
