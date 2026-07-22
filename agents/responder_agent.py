@@ -45,7 +45,6 @@ def responder_agent(state: GraphState) -> GraphState:
         }
         """)
 
-    # human_prompt = HumanMessage(content=str({"investigator_output": investigator_output, "adversarial_output": adversarial_output}))
     human_prompt = HumanMessage(content=str({
         "adversarial_output": adversarial_output,
         "alerts": alerts,
@@ -57,7 +56,7 @@ def responder_agent(state: GraphState) -> GraphState:
 
     decision = interrupt({"responder_output": response})
 
-    # print(f"Human decision: {decision}")
+    print(f"Human decision: {decision}")
 
     return GraphState(
         responder_output={

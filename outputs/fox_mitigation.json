@@ -15,6 +15,6 @@
   "action": "contain",
   "severity": "high",
   "confidence": 1.0,
-  "justification": "The adversarial reviewer's verdict supports the attack_technique of privilege_escalation, as evidenced by multiple PAM login session events and a successful sudo to root. The alerts show that both users phopkins and host (likely referring to a system or service) were involved in these events, indicating potential unauthorized access and elevated privileges.",
-  "remediation_plan": "1. Isolate the intranet-server from the network until further investigation can be conducted.\n2. Disable all sudo capabilities for the affected user(s).\n3. Conduct a full forensic analysis of the system to identify any additional compromised accounts or files."
+  "justification": "The adversarial reviewer's verdict confirms successful privilege escalation attempts through sudo, as indicated by the PAM rules (5304, 5501, 5502) and subsequent sudo commands. The user phopkins is identified as the affected entity based on login session logs. This indicates a high severity threat that requires immediate containment to prevent unauthorized access.",
+  "remediation_plan": "Isolate the intranet-server asset, disable the phopkins account, block all sudo requests for the phopkins user, and reset the password."
 }

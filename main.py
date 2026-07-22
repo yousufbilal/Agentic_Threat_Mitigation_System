@@ -2,7 +2,6 @@ import warnings
 # to ignore dependency warnining which was annoying 
 from langchain_core._api.deprecation import LangChainPendingDeprecationWarning
 warnings.filterwarnings("ignore", category=LangChainPendingDeprecationWarning)
-
 from graph.workflow import build_graph
 from graph.state import GraphState
 from tools.preprocess_ait_data import get_fox_session
@@ -10,25 +9,27 @@ from tools.session_loader import get_session
 from langgraph.types import Command
 import json
 import os
+import asyncio
 
 os.makedirs("outputs", exist_ok=True)
 
+# to make diagram
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
     with open("graph_output.png", "wb") as f:
         f.write(png_bytes)
 
-def run():
+async def run():
     print()
     graph = build_graph()
     save_graph_diagram(graph)
 
-    # data = get_fox_session()
     data = get_session("fox")
-
+          
     initial_state = {
     "session_id": data["session_id"],
     "alerts": data["alerts"],
+    "alert_log_sequence":data["alert_log_sequence"],
     "triage_output": None,
     "investigator_output":None,
     "adversarial_output":None,
@@ -40,13 +41,12 @@ def run():
 }
     config = {"configurable": {"thread_id": data["session_id"]}}
 
-    result = graph.invoke(initial_state, config=config)
+    result = await graph.ainvoke(initial_state, config=config)
 
     if "__interrupt__" in result:
-        # print("\n--- HUMAN APPROVAL REQUIRED ---")
-        # print(result["__interrupt__"][0].value)
-        approval = input("\nApprove this action? (y/n): ")
-        result = graph.invoke(Command(resume=approval), config=config)
+        approval = input("Approve this action? (y/n): ")
+        result = await graph.ainvoke(Command(resume=approval), config=config)
+
         if approval == "y":
             with open(f"outputs/{data['session_id']}_mitigation.json", "w") as f:
                 json.dump(result["responder_output"], f, indent=2)
@@ -54,4 +54,4 @@ def run():
             print("Mitigation solution rejected")
 
 if __name__ == "__main__":
-    run()
+    asyncio.run(run())
