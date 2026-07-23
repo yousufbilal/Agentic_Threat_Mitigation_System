@@ -13,6 +13,7 @@ def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
     else:
         return END
     
+    # the revision count here is for how many times i wanna run the loop 
 def route_after_adversal(state: GraphState) -> Literal["investigator", "responder"]:
     if state["adversarial_output"]["verdict"] == "rejected" and state["revision_count"] <= 2:
         return "investigator"

@@ -3,21 +3,12 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState
 from pydantic import BaseModel
 from typing import Literal
-from mcp_tools.mcp_client import mcp_client
+from model_context_protocol.mitre_technique import get_mitre_technique_id
+import asyncio
 
 class InvestigatorOutput(BaseModel):
-    attack_technique: Literal[
-        "network_scans",
-        "service_scans",
-        "dirb",
-        "wpscan",
-        "webshell",
-        "cracking",
-        "reverse_shell",
-        "privilege_escalation",
-        "service_stop",
-        "dnsteal",
-        "other"]
+    # removed technique as the llm tool call provides is this 
+    # attack_technique: str
     affected_entity:str
     summary:str
     cited_rule_ids: list[int]
@@ -42,6 +33,8 @@ async def investigator_agent(state: GraphState) -> GraphState:
     # mitre_technique_id = await get_mitre_technique_id(alert_log_sequence)
     # print("MITRE TECHNIQUE RESULT:", mitre_technique_id)
 
+    mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence)
+
     if verdict == "rejected":
         system_prompt = SystemMessage(content="""You are a SOC investigator reviewing a sequence of security alerts that have been flagged for mitigation.
             Your only task:
@@ -52,7 +45,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
             reviewer's technique_judgment and entity_judgment carefully, and produce a revised attack_technique and/or
             affected_entity that directly addresses the reviewer's stated concerns. Do not repeat your previous answer unchanged.
 
-            Output format: {"attack_technique": "short label", "affected_entity": "account/host from the data",
+            Output format: {"affected_entity": "account/host from the data",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion]}
             Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.""")
         payload = {"alerts": alerts, "triage_output": triage_output, "adversarial_output": adversarial_output}
@@ -61,7 +54,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Your only task:
             identify the likely attack technique or pattern in this alert sequence, and which account or host it affects.
             Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
-            Output format: {"attack_technique": "short label", "affected_entity": "account/host from the data",
+            Output format: {"affected_entity": "account/host from the data",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion]}
             Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.""")
         payload = {"alerts": alerts, "triage_output": triage_output}
@@ -70,13 +63,14 @@ async def investigator_agent(state: GraphState) -> GraphState:
 
     response = await structured_llm.ainvoke([system_prompt, human_prompt])
 
-    print("INVESTIGATOR AGENT RESPONSE:", response, "\n")
-
+    print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
+    
     return GraphState(
         session_id=state['session_id'],
         alerts=state["alerts"],
         investigator_output={
-            "attack_technique": response.attack_technique,
+            "attack_technique": mitre_mcp_tool_result.technique_name,
+            "technique_id": mitre_mcp_tool_result.technique_id,
             "affected_entity": response.affected_entity,
             "cited_rule_ids": response.cited_rule_ids,
             "summary": response.summary,

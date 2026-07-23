@@ -5,8 +5,8 @@ from pydantic import BaseModel
 from typing import Literal, Optional
 
 class AdversalOutput(BaseModel):
-    # verdict: Literal["confirmed", "revised", "rejected"]
-    verdict: Literal["rejected"]
+    verdict: Literal["confirmed", "revised", "rejected"]
+    # verdict: Literal["rejected"]
     technique_judgment: str
     entity_judgment: str
     cited_rule_ids: list[int]
@@ -35,7 +35,7 @@ def adversarial_agent(state: GraphState) -> GraphState:
         actual hostname/username resolved), treat that as NOT supported and set entity_verdict to "revised" with a corrected value, or "rejected"
         if no specific entity can be determined from the alert data.
         
-        Output format: {"technique_verdict":"rejected",
+        Output format: {"technique_verdict": "confirmed", "revised", "rejected",
                                   
         "entity_verdict": "confirmed" or "revised" or "rejected",
         "revised_technique": "short label, required if technique_verdict is revised, otherwise null",
