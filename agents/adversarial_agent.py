@@ -16,8 +16,8 @@ class AdversalOutput(BaseModel):
     "service_stop", "dnsteal", "other", "none"]
     revised_entity: Optional[str] = None
 
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
-structured_llm = llm.with_structured_output(AdversalOutput)
+llm = ChatOllama(model="qwen3:4b", temperature=0)
+structured_llm = llm.with_structured_output(AdversalOutput, include_raw=True)
 
 def adversarial_agent(state: GraphState) -> GraphState:
 
@@ -45,12 +45,16 @@ def adversarial_agent(state: GraphState) -> GraphState:
         "cited_rule_ids": [rule_id values from the alert data above that directly support your judgments]}
         Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs. ]}""")
 
-    # human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, "triage_output": triage_output}))
     human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
 
+    # Step 2: convert that draft answer into structured output
     response = structured_llm.invoke([system_prompt, human_prompt])
-    
-    print("ADVERSAL AGENT RESPONSE:",response, "\n")
+
+    thinking = response["raw"].additional_kwargs.get("reasoning_content", "")
+    print("TRIAGE AGENT THINKING:\n", thinking, "\n")
+
+    result = response["parsed"]
+    print("ADVERSAL AGENT RESPONSE:",result, "\n")
 
     adversal_verdict = response.verdict
     
@@ -59,12 +63,12 @@ def adversarial_agent(state: GraphState) -> GraphState:
 
     return GraphState(
         adversarial_output={
-            "verdict": response.verdict,
-            "revised_technique": response.revised_technique,
-            "revised_entity": response.revised_entity,
-            "technique_judgment": response.technique_judgment,
-            "entity_judgment": response.entity_judgment,
-            "cited_rule_ids": response.cited_rule_ids
+            "verdict": result.verdict,
+            "revised_technique": result.revised_technique,
+            "revised_entity": result.revised_entity,
+            "technique_judgment": result.technique_judgment,
+            "entity_judgment": result.entity_judgment,
+            "cited_rule_ids": result.cited_rule_ids
         },
                 revision_count = revision_count
     )

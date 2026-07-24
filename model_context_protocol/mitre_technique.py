@@ -32,19 +32,7 @@ async def get_mitre_technique_id(alert_log_sequence):
 
    llm_with_tools = llm.bind_tools(filtered_tools)
 
-#    system_prompt = SystemMessage(content="""You are a MITRE ATT&CK technique classifier.
-#     You are given a sequence of security alerts.
-#     Identify the most relevant MITRE ATT&CK technique for this alert sequence, then call the correct tool to retrieve it.
-
-#     If you know the exact technique_id, call get_technique_by_id.
-#     If you only know the tactic, call get_techniques_by_tactic.
-
-#     Call exactly one tool, exactly once.
-#     Do not guess. Do not respond without calling a tool.
-#     Base your answer only on the alert data given.
-
-#     Output format: {"technique_id": "MITRE technique ID, e.g. T1110", "technique_name": "short name of the technique"}
-#     Only include a technique_id that is confirmed by the tool result. Do not invent or guess IDs.""")
+#    sometimes model get confused in the prompts 
 
    tool_prompt = HumanMessage(content=f"Identify the relevant MITRE ATT&CK technique ID for this alert sequence: {alert_log_sequence}")
 
