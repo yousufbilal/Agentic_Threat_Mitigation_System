@@ -4,6 +4,7 @@ from model_context_protocol.mcp_client import mcp_client
 from pydantic import BaseModel
 from typing import Optional
 import asyncio
+import json
 
 class MitreTechniqueResult(BaseModel):
     mitigation_technique: Optional[str] = None
@@ -50,4 +51,6 @@ async def get_mitre_technique_id(demo_technique_id):
 if __name__ == "__main__":
     demo_technique_id = "T1110"
     result = asyncio.run(get_mitre_technique_id(demo_technique_id))
-    # print(result)
+    parsed = json.loads(result[0]["text"])
+    with open("mitre_mitigations/mitre_mitigations.json", "w", encoding="utf-8") as f:
+        json.dump(parsed, f, indent=4)
