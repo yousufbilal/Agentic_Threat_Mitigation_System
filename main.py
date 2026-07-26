@@ -4,7 +4,6 @@ from langchain_core._api.deprecation import LangChainPendingDeprecationWarning
 warnings.filterwarnings("ignore", category=LangChainPendingDeprecationWarning)
 from graph.workflow import build_graph
 from graph.state import GraphState
-from tools.preprocess_ait_data import get_fox_session
 from tools.session_loader import get_session
 from langgraph.types import Command
 import json
