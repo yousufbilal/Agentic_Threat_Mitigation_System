@@ -15,8 +15,8 @@ class ResponderOutput(BaseModel):
     justification: str
     remediation_plan: str    
 
+# llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
-
 structured_llm = llm.with_structured_output(ResponderOutput)
 
 
@@ -25,7 +25,7 @@ def responder_agent(state: GraphState) -> GraphState:
     # session_id=state['session_id']
 
     alerts= state["alerts"]
-    investigator_output = state["investigator_output"]
+    # investigator_output = state["investigator_output"]
     adversarial_output = state["adversarial_output"]
 
     system_prompt = SystemMessage(content="""You are a SOC responder deciding the mitigation action for a security alert sequence.

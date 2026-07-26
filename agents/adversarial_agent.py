@@ -16,8 +16,8 @@ class AdversalOutput(BaseModel):
     "service_stop", "dnsteal", "other", "none"]
     revised_entity: Optional[str] = None
 
-llm = ChatOllama(model="qwen3:4b", temperature=0)
-structured_llm = llm.with_structured_output(AdversalOutput, include_raw=True)
+llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
+structured_llm = llm.with_structured_output(AdversalOutput)
 
 def adversarial_agent(state: GraphState) -> GraphState:
 
@@ -47,14 +47,13 @@ def adversarial_agent(state: GraphState) -> GraphState:
 
     human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
 
-    # Step 2: convert that draft answer into structured output
+    # COT LOGIC 
+    # reasoning = llm.invoke([system_prompt, human_prompt])
+    # cot = reasoning.additional_kwargs.get("reasoning_content")
+    # print("ADVERSAL AGENT REASONING (CoT):", cot)
+
     response = structured_llm.invoke([system_prompt, human_prompt])
-
-    thinking = response["raw"].additional_kwargs.get("reasoning_content", "")
-    print("TRIAGE AGENT THINKING:\n", thinking, "\n")
-
-    result = response["parsed"]
-    print("ADVERSAL AGENT RESPONSE:",result, "\n")
+    print("ADVERSAL AGENT RESPONSE:",response, "\n")
 
     adversal_verdict = response.verdict
     
@@ -63,12 +62,12 @@ def adversarial_agent(state: GraphState) -> GraphState:
 
     return GraphState(
         adversarial_output={
-            "verdict": result.verdict,
-            "revised_technique": result.revised_technique,
-            "revised_entity": result.revised_entity,
-            "technique_judgment": result.technique_judgment,
-            "entity_judgment": result.entity_judgment,
-            "cited_rule_ids": result.cited_rule_ids
+            "verdict": response.verdict,
+            "revised_technique": response.revised_technique,
+            "revised_entity": response.revised_entity,
+            "technique_judgment": response.technique_judgment,
+            "entity_judgment": response.entity_judgment,
+            "cited_rule_ids": response.cited_rule_ids
         },
                 revision_count = revision_count
     )

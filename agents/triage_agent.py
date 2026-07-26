@@ -1,4 +1,4 @@
-from langchain_ollama import ChatOllama
+from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState
 from pydantic import BaseModel
@@ -9,33 +9,31 @@ class TriageOutput(BaseModel):
     reasoning: str
     severity: Literal["Low", "Medium", "High"]
 
-llm = ChatOllama(model="qwen3:4b", temperature=0)
-structured_llm = llm.with_structured_output(TriageOutput, include_raw=True)
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 
+structured_llm = llm.with_structured_output(TriageOutput)
 
 def triage_agent(state: GraphState) -> GraphState:
 
     alerts = state['alerts']
 
     system_prompt = SystemMessage(content="""You are a SOC triage analyst reviewing a sequence of security alerts from a Wazuh monitoring system.
-    Your only task:
+    Your only task: 
     decide whether this alert sequence requires mitigation action.
     Consider the sequence and pattern of events, not just individual alerts in isolation.
     Base your decision only on the alert data provided below. Do not assume information that isn't present.
     Output format: {"mitigation_required": True or False, "severity": Low or Medium or High, "reasoning": "one sentence explanation that names the actual events_id or rule_id values from data provided"}
     """)
+    
+    human_prompt = HumanMessage(content=str(alerts)) 
 
-    human_prompt = HumanMessage(content=str(alerts))
+    # COT LOGIC 
+    # reasoning = llm.invoke([system_prompt, human_prompt])
+    # cot = reasoning.additional_kwargs.get("reasoning_content")
+    # print("TRIAGE AGENT REASONING (CoT):", cot)
 
-    # single call: raw (with reasoning_content) and parsed structured output come from the same generation
-    result = structured_llm.invoke([system_prompt, human_prompt])
-
-    # The model has two dict raw for COT
-    thinking = result["raw"].additional_kwargs.get("reasoning_content", "")
-    print("TRIAGE AGENT THINKING:\n", thinking, "\n")
-
-    # The model has two dict parsed for output
-    response = result["parsed"]
+    response = structured_llm.invoke([system_prompt, human_prompt])
     print("TRIAGE AGENT RESPONSE:",response, "\n")
 
     return GraphState(
