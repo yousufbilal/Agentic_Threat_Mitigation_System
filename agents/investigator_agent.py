@@ -62,8 +62,9 @@ async def investigator_agent(state: GraphState) -> GraphState:
     human_prompt = HumanMessage(content=str(payload))
 
     response = await structured_llm.ainvoke([system_prompt, human_prompt])
-
+    print()
     print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
+    print()
 
     if mitre_mcp_tool_result is not None:
         attack_technique = mitre_mcp_tool_result.technique_name

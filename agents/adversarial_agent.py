@@ -53,8 +53,10 @@ def adversarial_agent(state: GraphState) -> GraphState:
     # print("ADVERSAL AGENT REASONING (CoT):", cot)
 
     response = structured_llm.invoke([system_prompt, human_prompt])
+    print()
     print("ADVERSAL AGENT RESPONSE:",response, "\n")
-
+    print()
+    
     adversal_verdict = response.verdict
     
     if adversal_verdict == "rejected":

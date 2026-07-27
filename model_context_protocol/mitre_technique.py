@@ -16,8 +16,8 @@ structured_llm = llm.with_structured_output(MitreTechniqueResult)
 async def get_mitre_technique_id(alert_log_sequence):
    
    tools = await mcp_client.get_tools()
-   for tool in tools:
-    print(tool.name)
+#    for tool in tools:
+#     print(tool.name)
 
    allowed_tool_names = (
        "get_technique_by_id",

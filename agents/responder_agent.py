@@ -4,7 +4,10 @@ from graph.state import GraphState
 from pydantic import BaseModel
 from typing import Literal
 from langgraph.types import interrupt
-
+from model_context_protocol.agentic_rag import run_agent
+import asyncio
+import json
+import os
 
 class ResponderOutput(BaseModel):
     alert_ids: list[str]
@@ -18,22 +21,24 @@ class ResponderOutput(BaseModel):
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(ResponderOutput)
+os.makedirs("outputs", exist_ok=True)   
 
 
-def responder_agent(state: GraphState) -> GraphState:
 
-    # session_id=state['session_id']
+async def responder_agent(state: GraphState) -> GraphState:
 
     alerts= state["alerts"]
-    # investigator_output = state["investigator_output"]
     adversarial_output = state["adversarial_output"]
+
+    mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}")
+    print("THIS IS THE MITIGATION TOOL",mitigation_data)
 
     system_prompt = SystemMessage(content="""You are a SOC responder deciding the mitigation action for a security alert sequence.
         Your only task:
-        Based on the adversarial reviewer's verdict decide the mitigation action, severity, and remediation plan.
-
+        Based on the adversarial reviewer's verdict and the retrieved_mitigation_data, decide the mitigation action, severity, and remediation plan.
         Base your decision only on the data provided below. Do not assume information that isn't present.
-
+        IMPORTANT: Your remediation_plan must be grounded in the retrieved_mitigation_data provided.
+        Write the remediation_plan as a clear, numbered list of concrete steps a SOC analyst can act on immediately. Remove any HTML tags or citation references from the retrieved data before including them. Keep each step short and actionable.
         Output format:
         {
             "action": "escalate" | "contain" | "monitor" | "dismiss",
@@ -41,33 +46,37 @@ def responder_agent(state: GraphState) -> GraphState:
             "severity": "low" | "medium" | "high" | "critical",
             "confidence": float between 0 and 1,
             "justification": "one to two sentence explanation referencing the verdict and technique",
-            "remediation_plan": "concrete steps to take, e.g. isolate host, disable account, block IP, reset credentials"
+            "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in retrieved_mitigation_data and adversarial_output"
         }
         """)
 
     human_prompt = HumanMessage(content=str({
         "adversarial_output": adversarial_output,
         "alerts": alerts,
+        "retrieved_mitigation_data": mitigation_data,
     }))
 
     response = structured_llm.invoke([system_prompt, human_prompt])
-    
+    print()
     print("REPONDER AGENT RESPONSE:",response, "\n")
+    print()
 
     decision = interrupt({"responder_output": response})
 
-    print(f"Human decision: {decision}")
-
-    return GraphState(
-        responder_output={
-            "alert_ids": response.alert_ids,
-            "affected_asset": response.affected_asset,
-            "action": response.action,
-            "severity": response.severity,
-            "confidence": response.confidence,
-            "justification": response.justification,
-            "remediation_plan": response.remediation_plan
-        }
-    )
-
-# RESPONDER AGENT print runs twice which means we are making the llm call twice find solution 
+    if decision == "y":
+        with open("outputs/responder_result.json", "w") as file:  
+            json.dump(response.model_dump(), file, indent=2)
+        print(f"Human decision: {decision}")
+        return GraphState(
+            responder_output={
+                "alert_ids": response.alert_ids,
+                "affected_asset": response.affected_asset,
+                "action": response.action,
+                "severity": response.severity,
+                "confidence": response.confidence,
+                "justification": response.justification,
+                "remediation_plan": response.remediation_plan
+            }
+        )
+    else:
+        return GraphState(responder_output=None)
