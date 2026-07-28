@@ -16,8 +16,6 @@ structured_llm = llm.with_structured_output(MitreTechniqueResult)
 async def get_mitre_technique_id(alert_log_sequence):
    
    tools = await mcp_client.get_tools()
-#    for tool in tools:
-#     print(tool.name)
 
    allowed_tool_names = (
        "get_technique_by_id",
@@ -34,8 +32,8 @@ async def get_mitre_technique_id(alert_log_sequence):
 
    llm_with_tools = llm.bind_tools(filtered_tools)
 
-#    sometimes model get confused in the prompts 
 
+#  sometimes model get confused in the prompts 
    tool_prompt = HumanMessage(content=f"Identify the relevant MITRE ATT&CK technique ID for this alert sequence: {alert_log_sequence}")
 
    ai_msg = await llm_with_tools.ainvoke([tool_prompt])

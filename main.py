@@ -10,8 +10,6 @@ import json
 import os
 import asyncio
 
-os.makedirs("outputs", exist_ok=True)
-
 # to make diagram
 def save_graph_diagram(graph):
     png_bytes = graph.get_graph().draw_mermaid_png()
@@ -24,6 +22,8 @@ async def run():
     save_graph_diagram(graph)
 
     data = get_session("fox")
+
+    print(len(data["alerts"]))
           
     initial_state = {
     "session_id": data["session_id"],
@@ -39,18 +39,11 @@ async def run():
 
 }
     config = {"configurable": {"thread_id": data["session_id"]}}
-
     result = await graph.ainvoke(initial_state, config=config)
 
     if "__interrupt__" in result:
         approval = input("Approve this action? (y/n): ")
         result = await graph.ainvoke(Command(resume=approval), config=config)
-
-        if approval == "y":
-            with open(f"outputs/{data['session_id']}_mitigation.json", "w") as f:
-                json.dump(result["responder_output"], f, indent=2)
-        else:
-            print("Mitigation solution rejected")
 
 if __name__ == "__main__":
     asyncio.run(run())

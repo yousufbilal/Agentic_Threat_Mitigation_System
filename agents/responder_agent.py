@@ -21,7 +21,7 @@ class ResponderOutput(BaseModel):
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(ResponderOutput)
-os.makedirs("outputs", exist_ok=True)   
+os.makedirs("agent_outputs", exist_ok=True)   
 
 
 
@@ -29,6 +29,7 @@ async def responder_agent(state: GraphState) -> GraphState:
 
     alerts= state["alerts"]
     adversarial_output = state["adversarial_output"]
+    session_id = state["session_id"]
 
     mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}")
     print("THIS IS THE MITIGATION TOOL",mitigation_data)
@@ -64,7 +65,7 @@ async def responder_agent(state: GraphState) -> GraphState:
     decision = interrupt({"responder_output": response})
 
     if decision == "y":
-        with open("outputs/responder_result.json", "w") as file:  
+        with open(f"agent_outputs/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
         print(f"Human decision: {decision}")
         return GraphState(

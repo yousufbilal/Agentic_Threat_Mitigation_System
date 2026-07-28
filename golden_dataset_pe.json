@@ -1,0 +1,1584 @@
+{
+  "dataset_name": "MATMF_golden_dataset_privilege_escalation",
+  "version": "v1.0.0-draft",
+  "attack_type_scope": "privilege_escalation",
+  "n_incidents": 8,
+  "construction_note": "One incident per AIT-ADS scenario. Alerts filtered to the agent_id performing the escalation; alerts from other agents inside the same time window (mail logins, Suricata DNS/TLS events) excluded as unrelated background activity.",
+  "entries": [
+    {
+      "incident_id": "fox_PE_001",
+      "metadata": {
+        "scenario": "fox",
+        "attack_type": "privilege_escalation",
+        "agent_id": "27",
+        "host": "intranet-server",
+        "compromised_account": "phopkins",
+        "severity": "High",
+        "time_window": [
+          "2022-01-18T13:14:31.000000Z",
+          "2022-01-18T13:14:49.000000Z"
+        ],
+        "alert_count": 10,
+        "excluded_unrelated_alerts": 0
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-18T13:14:31.000000Z",
+          "event_id": "1686444911.263244326",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 18 13:14:31 intranet-server su[28816]: + /dev/pts/1 www-data:phopkins"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:31.000000Z",
+          "event_id": "1686444911.263244776",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 18 13:14:31 intranet-server su[28816]: pam_unix(su:session): session opened for user phopkins by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:31.000000Z",
+          "event_id": "1686444911.263245247",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 18 13:14:31 intranet-server systemd: pam_unix(systemd-user:session): session opened for user phopkins by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:41.000000Z",
+          "event_id": "1686444921.263245724",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 18 13:14:41 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:43.000000Z",
+          "event_id": "1686444923.263246988",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 18 13:14:43 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:43.000000Z",
+          "event_id": "1686444923.263247446",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 18 13:14:43 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:43.000000Z",
+          "event_id": "1686444923.263246341",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 18 13:14:43 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:49.000000Z",
+          "event_id": "1686444929.263247863",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 18 13:14:49 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:49.000000Z",
+          "event_id": "1686444929.263248512",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 18 13:14:49 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-18T13:14:49.000000Z",
+          "event_id": "1686444929.263248970",
+          "agent_ip": "10.35.35.206",
+          "agent_name": "wazuh-client",
+          "agent_id": "27",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 18 13:14:49 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1083 - File and Directory Discovery"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account phopkins pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for phopkins on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "harrison_PE_001",
+      "metadata": {
+        "scenario": "harrison",
+        "attack_type": "privilege_escalation",
+        "agent_id": "21",
+        "host": "intranet-server",
+        "compromised_account": "jward",
+        "severity": "High",
+        "time_window": [
+          "2022-02-08T08:36:38.000000Z",
+          "2022-02-08T08:37:08.000000Z"
+        ],
+        "alert_count": 13,
+        "excluded_unrelated_alerts": 30
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-02-08T08:36:38.000000Z",
+          "event_id": "1687029656.312088685",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:36:38 intranet-server systemd: pam_unix(systemd-user:session): session opened for user jward by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:38.000000Z",
+          "event_id": "1687029656.312087776",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:36:38 intranet-server su[28321]: + /dev/pts/0 www-data:jward"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:38.000000Z",
+          "event_id": "1687029656.312088220",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:36:38 intranet-server su[28321]: pam_unix(su:session): session opened for user jward by (uid=33)"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:54.000000Z",
+          "event_id": "1687029672.312097648",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  8 08:36:54 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:57.000000Z",
+          "event_id": "1687029676.312101773",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:36:57 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:57.000000Z",
+          "event_id": "1687029676.312102231",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Feb  8 08:36:57 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:57.000000Z",
+          "event_id": "1687029676.312101106",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  8 08:36:57 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:59.000000Z",
+          "event_id": "1687029678.312105252",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Feb  8 08:36:59 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:59.000000Z",
+          "event_id": "1687029678.312104129",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  8 08:36:59 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+        },
+        {
+          "timestamp": "2022-02-08T08:36:59.000000Z",
+          "event_id": "1687029678.312104794",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:36:59 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-08T08:37:08.000000Z",
+          "event_id": "1687029686.312113696",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  8 08:37:08 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-08T08:37:08.000000Z",
+          "event_id": "1687029686.312113037",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  8 08:37:08 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/ls -l /home"
+        },
+        {
+          "timestamp": "2022-02-08T08:37:08.000000Z",
+          "event_id": "1687029686.312114154",
+          "agent_ip": "192.168.131.215",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Feb  8 08:37:08 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1083 - File and Directory Discovery"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account jward pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for jward on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "russellmitchell_PE_001",
+      "metadata": {
+        "scenario": "russellmitchell",
+        "attack_type": "privilege_escalation",
+        "agent_id": "10",
+        "host": "intranet-server",
+        "compromised_account": "jhall",
+        "severity": "High",
+        "time_window": [
+          "2022-01-24T04:37:40.000000Z",
+          "2022-01-24T04:38:06.000000Z"
+        ],
+        "alert_count": 6,
+        "excluded_unrelated_alerts": 0
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-24T04:37:40.000000Z",
+          "event_id": "1685991091.12214835",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 24 04:37:40 intranet-server su[27950]: + /dev/pts/1 www-data:jhall"
+        },
+        {
+          "timestamp": "2022-01-24T04:37:40.000000Z",
+          "event_id": "1685991091.12214371",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 24 04:37:40 intranet-server su[27950]: pam_unix(su:session): session opened for user jhall by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-24T04:37:58.000000Z",
+          "event_id": "1685991109.12215278",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 24 04:37:58 intranet-server sudo:    jhall : TTY=pts/1 ; PWD=/var/www/intranet.smith.russellmitchell.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-24T04:38:06.000000Z",
+          "event_id": "1685991117.12215918",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 24 04:38:06 intranet-server sudo:    jhall : TTY=pts/1 ; PWD=/var/www/intranet.smith.russellmitchell.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-24T04:38:06.000000Z",
+          "event_id": "1685991117.12216590",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 24 04:38:06 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-24T04:38:06.000000Z",
+          "event_id": "1685991117.12217047",
+          "agent_ip": "10.143.2.4",
+          "agent_name": "wazuh-client",
+          "agent_id": "10",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 24 04:38:06 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account jhall pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for jhall on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "santos_PE_001",
+      "metadata": {
+        "scenario": "santos",
+        "attack_type": "privilege_escalation",
+        "agent_id": "26",
+        "host": "intranet-server",
+        "compromised_account": "gmorgan",
+        "severity": "High",
+        "time_window": [
+          "2022-01-17T11:58:17.000000Z",
+          "2022-01-17T11:58:54.000000Z"
+        ],
+        "alert_count": 10,
+        "excluded_unrelated_alerts": 12
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-17T11:58:17.000000Z",
+          "event_id": "1687477683.16223775",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 17 11:58:17 intranet-server su[20749]: + /dev/pts/1 www-data:gmorgan"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:17.000000Z",
+          "event_id": "1687477683.16224222",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 17 11:58:17 intranet-server su[20749]: pam_unix(su:session): session opened for user gmorgan by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:17.000000Z",
+          "event_id": "1687477683.16224690",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 17 11:58:17 intranet-server systemd: pam_unix(systemd-user:session): session opened for user gmorgan by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:27.000000Z",
+          "event_id": "1687477693.16225164",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 17 11:58:27 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:29.000000Z",
+          "event_id": "1687477695.16225611",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 17 11:58:29 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:29.000000Z",
+          "event_id": "1687477695.16226265",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 17 11:58:29 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:29.000000Z",
+          "event_id": "1687477695.16226722",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 17 11:58:29 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:54.000000Z",
+          "event_id": "1687477721.16232284",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 17 11:58:54 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:54.000000Z",
+          "event_id": "1687477721.16232741",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 17 11:58:54 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-17T11:58:54.000000Z",
+          "event_id": "1687477721.16231632",
+          "agent_ip": "192.168.104.155",
+          "agent_name": "wazuh-client",
+          "agent_id": "26",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 17 11:58:54 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1083 - File and Directory Discovery"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account gmorgan pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for gmorgan on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "shaw_PE_001",
+      "metadata": {
+        "scenario": "shaw",
+        "attack_type": "privilege_escalation",
+        "agent_id": "21",
+        "host": "intranet-server",
+        "compromised_account": "gmarsh",
+        "severity": "High",
+        "time_window": [
+          "2022-01-29T15:20:51.000000Z",
+          "2022-01-29T15:21:09.000000Z"
+        ],
+        "alert_count": 10,
+        "excluded_unrelated_alerts": 9
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-29T15:20:51.000000Z",
+          "event_id": "1688163860.10465797",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 29 15:20:51 intranet-server su[28625]: + /dev/pts/0 www-data:gmarsh"
+        },
+        {
+          "timestamp": "2022-01-29T15:20:51.000000Z",
+          "event_id": "1688163860.10466242",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 29 15:20:51 intranet-server su[28625]: pam_unix(su:session): session opened for user gmarsh by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-29T15:20:51.000000Z",
+          "event_id": "1688163860.10466708",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 29 15:20:51 intranet-server systemd: pam_unix(systemd-user:session): session opened for user gmarsh by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:02.000000Z",
+          "event_id": "1688163870.10471638",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 29 15:21:02 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:04.000000Z",
+          "event_id": "1688163872.10472097",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 29 15:21:04 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:04.000000Z",
+          "event_id": "1688163872.10472761",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 29 15:21:04 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:05.000000Z",
+          "event_id": "1688163874.10473218",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 29 15:21:05 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:09.000000Z",
+          "event_id": "1688163878.10473634",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 29 15:21:09 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:09.000000Z",
+          "event_id": "1688163878.10474757",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 29 15:21:09 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-29T15:21:09.000000Z",
+          "event_id": "1688163878.10474300",
+          "agent_ip": "192.168.188.179",
+          "agent_name": "wazuh-client",
+          "agent_id": "21",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 29 15:21:09 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1083 - File and Directory Discovery"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account gmarsh pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for gmarsh on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "wardbeck_PE_001",
+      "metadata": {
+        "scenario": "wardbeck",
+        "attack_type": "privilege_escalation",
+        "agent_id": "12",
+        "host": "intranet-server",
+        "compromised_account": "blord",
+        "severity": "High",
+        "time_window": [
+          "2022-01-23T12:55:01.000000Z",
+          "2022-01-23T12:55:19.000000Z"
+        ],
+        "alert_count": 10,
+        "excluded_unrelated_alerts": 3
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-23T12:55:01.000000Z",
+          "event_id": "1688763945.10674854",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 23 12:55:01 intranet-server su[28708]: + /dev/pts/1 www-data:blord"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:01.000000Z",
+          "event_id": "1688763945.10675297",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 23 12:55:01 intranet-server su[28708]: pam_unix(su:session): session opened for user blord by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:01.000000Z",
+          "event_id": "1688763945.10675761",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 23 12:55:01 intranet-server systemd: pam_unix(systemd-user:session): session opened for user blord by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:14.000000Z",
+          "event_id": "1688763957.10677718",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 23 12:55:14 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:15.000000Z",
+          "event_id": "1688763959.10678179",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 23 12:55:15 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:15.000000Z",
+          "event_id": "1688763959.10678847",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 23 12:55:15 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:16.000000Z",
+          "event_id": "1688763959.10679304",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 23 12:55:16 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:19.000000Z",
+          "event_id": "1688763963.10680386",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 23 12:55:19 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:19.000000Z",
+          "event_id": "1688763963.10680843",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 23 12:55:19 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-23T12:55:19.000000Z",
+          "event_id": "1688763963.10679720",
+          "agent_ip": "172.21.241.88",
+          "agent_name": "wazuh-client",
+          "agent_id": "12",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 23 12:55:19 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1083 - File and Directory Discovery"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account blord pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for blord on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "wheeler_PE_001",
+      "metadata": {
+        "scenario": "wheeler",
+        "attack_type": "privilege_escalation",
+        "agent_id": "32",
+        "host": "intranet-server",
+        "compromised_account": "kford",
+        "severity": "High",
+        "time_window": [
+          "2022-01-30T17:51:52.000000Z",
+          "2022-01-30T17:52:13.000000Z"
+        ],
+        "alert_count": 9,
+        "excluded_unrelated_alerts": 8
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-01-30T17:51:52.000000Z",
+          "event_id": "1689384947.3520706",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 30 17:51:52 intranet-server su[6892]: pam_unix(su:session): session opened for user kford by (uid=33)"
+        },
+        {
+          "timestamp": "2022-01-30T17:51:52.000000Z",
+          "event_id": "1689384947.3520265",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Jan 30 17:51:52 intranet-server su[6892]: + /dev/pts/2 www-data:kford"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:07.000000Z",
+          "event_id": "1689384963.3531192",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 30 17:52:07 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:10.000000Z",
+          "event_id": "1689384965.3531642",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 30 17:52:10 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:10.000000Z",
+          "event_id": "1689384965.3532299",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 30 17:52:10 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:10.000000Z",
+          "event_id": "1689384965.3532755",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 30 17:52:10 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:13.000000Z",
+          "event_id": "1689384969.3534283",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Jan 30 17:52:13 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:13.000000Z",
+          "event_id": "1689384969.3533170",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Jan 30 17:52:13 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/passwd"
+        },
+        {
+          "timestamp": "2022-01-30T17:52:13.000000Z",
+          "event_id": "1689384969.3533827",
+          "agent_ip": "192.168.2.114",
+          "agent_name": "wazuh-client",
+          "agent_id": "32",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Jan 30 17:52:13 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1003.008 - OS Credential Dumping: /etc/passwd and /etc/shadow",
+          "T1087.001 - Account Discovery: Local Account"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account kford pending investigation",
+          "Rotate credentials for all local accounts (/etc/shadow contents exposed)",
+          "Audit and restrict sudoers policy for kford on intranet-server",
+          "Escalate to SOC analyst as high severity (root access + credential file read)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    },
+    {
+      "incident_id": "wilson_PE_001",
+      "metadata": {
+        "scenario": "wilson",
+        "attack_type": "privilege_escalation",
+        "agent_id": "28",
+        "host": "intranet-server",
+        "compromised_account": "jwilkinson",
+        "severity": "Medium",
+        "time_window": [
+          "2022-02-07T11:48:18.000000Z",
+          "2022-02-07T11:48:51.000000Z"
+        ],
+        "alert_count": 10,
+        "excluded_unrelated_alerts": 12
+      },
+      "input_alerts": [
+        {
+          "timestamp": "2022-02-07T11:48:18.000000Z",
+          "event_id": "1690059387.310719057",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5304",
+          "rule_level": 3,
+          "description": "User successfully changed UID.",
+          "groups": [
+            "syslog",
+            "su",
+            "authentication_success"
+          ],
+          "full_log": "Feb  7 11:48:18 intranet-server su[6084]: + /dev/pts/1 www-data:jwilkinson"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:18.000000Z",
+          "event_id": "1690059387.310719510",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  7 11:48:18 intranet-server su[6084]: pam_unix(su:session): session opened for user jwilkinson by (uid=33)"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:18.000000Z",
+          "event_id": "1690059387.310719984",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  7 11:48:18 intranet-server systemd: pam_unix(systemd-user:session): session opened for user jwilkinson by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:32.000000Z",
+          "event_id": "1690059401.310724995",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5403",
+          "rule_level": 4,
+          "description": "First time user executed sudo.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  7 11:48:32 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=list"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:39.000000Z",
+          "event_id": "1690059407.310726118",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  7 11:48:39 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:39.000000Z",
+          "event_id": "1690059407.310726576",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Feb  7 11:48:39 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:39.000000Z",
+          "event_id": "1690059407.310725453",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  7 11:48:39 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/cat /etc/passwd"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:50.000000Z",
+          "event_id": "1690059419.310727652",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5501",
+          "rule_level": 3,
+          "description": "PAM: Login session opened.",
+          "groups": [
+            "pam",
+            "syslog",
+            "authentication_success"
+          ],
+          "full_log": "Feb  7 11:48:50 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:50.000000Z",
+          "event_id": "1690059419.310726993",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5402",
+          "rule_level": 3,
+          "description": "Successful sudo to ROOT executed.",
+          "groups": [
+            "syslog",
+            "sudo"
+          ],
+          "full_log": "Feb  7 11:48:50 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/sbin/iptables -L"
+        },
+        {
+          "timestamp": "2022-02-07T11:48:51.000000Z",
+          "event_id": "1690059419.310728110",
+          "agent_ip": "172.26.243.167",
+          "agent_name": "wazuh-client",
+          "agent_id": "28",
+          "rule_id": "5502",
+          "rule_level": 3,
+          "description": "PAM: Login session closed.",
+          "groups": [
+            "pam",
+            "syslog"
+          ],
+          "full_log": "Feb  7 11:48:51 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+        }
+      ],
+      "context_grounding": {
+        "mitre_attack_techniques": [
+          "T1548.003 - Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+          "T1087.001 - Account Discovery: Local Account (/etc/passwd)",
+          "T1016 - System Network Configuration Discovery (iptables -L)"
+        ],
+        "technique_justification": "Techniques assigned by direct match between sudo/su command evidence in full_log and the corresponding MITRE ATT&CK technique descriptions.",
+        "d3fend_source": "MITRE D3FEND defensive technique mappings for the ATT&CK techniques listed above"
+      },
+      "reference_ground_truth": {
+        "expected_mitigation_actions": [
+          "Suspend/lock user account jwilkinson pending investigation",
+          "Audit and restrict sudoers policy for jwilkinson on intranet-server",
+          "Review host firewall rules and monitor for follow-on lateral movement",
+          "Escalate to SOC analyst as medium severity (root access, no password hashes exposed)"
+        ]
+      },
+      "evaluation_rubric": {
+        "pass": "Responder output semantically covers at least 3 of the 4 expected_mitigation_actions and contains no action contradicting them (e.g. 'no action required', 'benign').",
+        "partial": "Responder output semantically covers 1-2 of the expected_mitigation_actions.",
+        "fail": "Responder output covers 0 expected actions, is generic (e.g. 'continue monitoring'), or dismisses the incident."
+      },
+      "provenance": {
+        "source_of_answer": "Derived by researcher from MITRE ATT&CK technique identification and corresponding MITRE D3FEND mitigations. AIT-ADS provides no ground-truth mitigation labels.",
+        "llm_assistance": "Candidate mappings drafted with LLM assistance; require manual verification against official MITRE documentation before use.",
+        "reviewed_by": "PENDING - supervisor review required"
+      }
+    }
+  ]
+}

@@ -6,7 +6,6 @@ from typing import Literal, Optional
 
 class AdversalOutput(BaseModel):
     verdict: Literal["confirmed", "revised", "rejected"]
-    # verdict: Literal["rejected"]
     technique_judgment: str
     entity_judgment: str
     cited_rule_ids: list[int]
