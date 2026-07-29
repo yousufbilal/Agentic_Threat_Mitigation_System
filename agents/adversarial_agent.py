@@ -15,7 +15,9 @@ class AdversalOutput(BaseModel):
     "service_stop", "dnsteal", "other", "none"]
     revised_entity: Optional[str] = None
 
-llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
+# llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+
 structured_llm = llm.with_structured_output(AdversalOutput)
 
 def adversarial_agent(state: GraphState) -> GraphState:

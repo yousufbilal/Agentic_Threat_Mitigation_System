@@ -9,6 +9,10 @@ from langgraph.types import Command
 import json
 import os
 import asyncio
+from dotenv import load_dotenv
+load_dotenv()
+
+print(os.environ.get("LANGSMITH_API_KEY"))
 
 # to make diagram
 def save_graph_diagram(graph):
