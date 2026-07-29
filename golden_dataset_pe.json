@@ -1,61 +1,2395 @@
 {
   "fox": {
+    "input": {
+      "alerts": [{
+    "timestamp": "2022-01-18T13:14:31.000000Z",
+    "event_id": "1686444911.263244326",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 18 13:14:31 intranet-server su[28816]: + /dev/pts/1 www-data:phopkins"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:31.000000Z",
+    "event_id": "1686444911.263244776",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 18 13:14:31 intranet-server su[28816]: pam_unix(su:session): session opened for user phopkins by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:31.000000Z",
+    "event_id": "1686444911.263245247",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 18 13:14:31 intranet-server systemd: pam_unix(systemd-user:session): session opened for user phopkins by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:41.000000Z",
+    "event_id": "1686444921.263245724",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 18 13:14:41 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:43.000000Z",
+    "event_id": "1686444923.263246988",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 18 13:14:43 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:43.000000Z",
+    "event_id": "1686444923.263247446",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 18 13:14:43 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:43.000000Z",
+    "event_id": "1686444923.263246341",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 18 13:14:43 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:49.000000Z",
+    "event_id": "1686444929.263247863",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 18 13:14:49 intranet-server sudo: phopkins : TTY=pts/1 ; PWD=/var/www/intranet.price.fox.org/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:49.000000Z",
+    "event_id": "1686444929.263248512",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 18 13:14:49 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-18T13:14:49.000000Z",
+    "event_id": "1686444929.263248970",
+    "agent_ip": "10.35.35.206",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 18 13:14:49 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  }]
+    },
+    "expected_output":{
     "action": "contain",
     "target": "phopkins @ intranet-server (10.35.35.206, agent 27)",
     "severity": "critical",
     "confidence": 0.95,
     "justification": "The www-data web account switched UID to 'phopkins' (T1078.003) and used sudo to root to read /etc/shadow (T1003.008) and recursively list /root/ (T1083). The sudo working directory is inside the WordPress uploads folder of intranet.price.fox.org, indicating a web shell (T1505.003).",
     "remediation_plan": "1. Isolate 10.35.35.206 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.price.fox.org.\n3. Kill all sessions for 'phopkins' and www-data, then lock the account: pkill -u phopkins; passwd -l phopkins.\n4. Hunt the web shell: find /var/www/intranet.price.fox.org/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'phopkins' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd.\n10. Rule 5403 did not fire, so 'phopkins' has legitimate prior sudo use \u2014 audit that account's full sudo history rather than assuming it was attacker-created."
-  },
+    }
+},
   "harrison": {
-    "action": "contain",
+    "input": {
+      "alerts":[{
+    "timestamp": "2022-02-08T08:36:38.000000Z",
+    "event_id": "1687029656.312088685",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:38 intranet-server systemd: pam_unix(systemd-user:session): session opened for user jward by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:38.000000Z",
+    "event_id": "1687029656.312087776",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:38 intranet-server su[28321]: + /dev/pts/0 www-data:jward"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:38.000000Z",
+    "event_id": "1687029656.312088220",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:38 intranet-server su[28321]: pam_unix(su:session): session opened for user jward by (uid=33)"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:40.855218Z",
+    "event_id": "1687029660.312094270",
+    "agent_ip": "192.168.131.109",
+    "agent_name": "wazuh-client",
+    "agent_id": "16",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:36:40.855218  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 192.168.131.109:51248 -> 192.168.128.1:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:40.859221Z",
+    "event_id": "1687029660.312091504",
+    "agent_ip": "192.168.128.1",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:36:40.859221  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 172.28.192.4:54025 -> 172.28.255.254:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312095181",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24268, TLS, session=<MB/qnX3XIpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312095676",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24264, TLS, session=<3qHdnX3XHpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312097156",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24268, TLS, session=<MB/qnX3XIpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312094686",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24264, TLS, session=<3qHdnX3XHpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312096170",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24268, TLS, session=<MB/qnX3XIpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:43.000000Z",
+    "event_id": "1687029662.312096664",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:43 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24264, TLS, session=<3qHdnX3XHpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:54.000000Z",
+    "event_id": "1687029672.312099109",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:54 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18992, TLS, session=<0v+Lnn3X7O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:54.000000Z",
+    "event_id": "1687029672.312097648",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  8 08:36:54 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:54.000000Z",
+    "event_id": "1687029672.312098108",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:54 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18992, TLS, session=<0v+Lnn3X7O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:54.000000Z",
+    "event_id": "1687029672.312098609",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:54 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18992, TLS, session=<0v+Lnn3X7O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:55.000000Z",
+    "event_id": "1687029674.312100108",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:55 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18996, TLS, session=<wcydnn3X8u2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:55.000000Z",
+    "event_id": "1687029674.312099607",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:55 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18996, TLS, session=<wcydnn3X8u2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:55.000000Z",
+    "event_id": "1687029674.312100608",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:55 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18996, TLS, session=<wcydnn3X8u2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:57.000000Z",
+    "event_id": "1687029676.312101773",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:57 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:57.000000Z",
+    "event_id": "1687029676.312102231",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Feb  8 08:36:57 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:57.000000Z",
+    "event_id": "1687029676.312101106",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  8 08:36:57 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:58.000000Z",
+    "event_id": "1687029676.312103143",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:58 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24274, TLS, session=<j+fEnn3XJJAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:58.000000Z",
+    "event_id": "1687029676.312102648",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:58 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24274, TLS, session=<j+fEnn3XJJAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:58.000000Z",
+    "event_id": "1687029676.312103637",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:58 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24274, TLS, session=<j+fEnn3XJJAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:59.000000Z",
+    "event_id": "1687029678.312105252",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Feb  8 08:36:59 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:59.000000Z",
+    "event_id": "1687029678.312104129",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  8 08:36:59 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+  },
+  {
+    "timestamp": "2022-02-08T08:36:59.000000Z",
+    "event_id": "1687029678.312104794",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:36:59 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:00.918698Z",
+    "event_id": "1687029680.312110789",
+    "agent_ip": "192.168.131.109",
+    "agent_name": "wazuh-client",
+    "agent_id": "16",
+    "rule_id": "20162",
+    "rule_level": 11,
+    "description": "Multiple IDS alerts for same id (ignoring now this id).",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:37:00.918698  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 192.168.131.109:35998 -> 192.168.128.1:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:00.922710Z",
+    "event_id": "1687029680.312110378",
+    "agent_ip": "192.168.128.1",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:37:00.922710  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 172.28.192.4:64521 -> 172.28.255.254:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:08.000000Z",
+    "event_id": "1687029686.312113696",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:08 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:08.000000Z",
+    "event_id": "1687029686.312113037",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  8 08:37:08 intranet-server sudo:    jward : TTY=pts/0 ; PWD=/var/www/intranet.mannsmith.harrison.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/ls -l /home"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:08.000000Z",
+    "event_id": "1687029686.312114154",
+    "agent_ip": "192.168.131.215",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Feb  8 08:37:08 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:10.000000Z",
+    "event_id": "1687029688.312114571",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:10 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18998, TLS, session=<KfWEn33X9O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:10.000000Z",
+    "event_id": "1687029688.312115072",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:10 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18998, TLS, session=<KfWEn33X9O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:10.000000Z",
+    "event_id": "1687029688.312115572",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:10 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=18998, TLS, session=<KfWEn33X9O2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:18.972889Z",
+    "event_id": "1687029698.312121179",
+    "agent_ip": "192.168.131.109",
+    "agent_name": "wazuh-client",
+    "agent_id": "16",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:37:18.972889  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 192.168.131.109:47938 -> 192.168.128.1:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:18.976824Z",
+    "event_id": "1687029698.312118416",
+    "agent_ip": "192.168.128.1",
+    "agent_name": "wazuh-client",
+    "agent_id": "27",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "02/08/2022-08:37:18.976824  [**] [1:2027863:4] ET INFO Observed DNS Query to .biz TLD [**] [Classification: Potentially Bad Traffic] [Priority: 2] {UDP} 172.28.192.4:3891 -> 172.28.255.254:53"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:20.000000Z",
+    "event_id": "1687029698.312122584",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:20 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24277, TLS, session=<7igeoH3XJpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:20.000000Z",
+    "event_id": "1687029698.312121595",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:20 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24277, TLS, session=<7igeoH3XJpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:20.000000Z",
+    "event_id": "1687029698.312122090",
+    "agent_ip": "10.237.2.255",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:20 mail dovecot: imap-login: Login: user=<joseph.foster>, method=PLAIN, rip=10.237.2.255, lip=10.237.2.255, mpid=24277, TLS, session=<7igeoH3XJpAK7QL/>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:25.000000Z",
+    "event_id": "1687029704.312123076",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:25 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=19000, TLS, session=<nDNloH3X9u2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:25.000000Z",
+    "event_id": "1687029704.312123577",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:25 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=19000, TLS, session=<nDNloH3X9u2sHMAH>"
+  },
+  {
+    "timestamp": "2022-02-08T08:37:25.000000Z",
+    "event_id": "1687029704.312124077",
+    "agent_ip": "172.28.192.97",
+    "agent_name": "wazuh-client",
+    "agent_id": "6",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  8 08:37:25 taylor-mail dovecot: imap-login: Login: user=<wayne.riley>, method=PLAIN, rip=172.28.192.7, lip=172.28.192.7, mpid=19000, TLS, session=<nDNloH3X9u2sHMAH>"
+  }]
+    },
+    "expected_output":{    "action": "contain",
     "target": "jward @ intranet-server (192.168.131.215, agent 21)",
     "severity": "critical",
     "confidence": 0.96,
     "justification": "www-data escalated to 'jward' (T1078.003), triggered first-time sudo (rule 5403), then read /etc/shadow (T1003.008) and enumerated /root/ and /home (T1083) from the intranet.mannsmith.harrison.com uploads directory. The concurrent ET INFO .biz DNS alerts are informational noise and the Dovecot logins are unrelated mail activity.",
     "remediation_plan": "1. Isolate 192.168.131.215 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.mannsmith.harrison.com.\n3. Kill all sessions for 'jward' and www-data, then lock the account: pkill -u jward; passwd -l jward.\n4. Hunt the web shell: find /var/www/intranet.mannsmith.harrison.com/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'jward' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd.\n10. /home was enumerated, so treat every user home directory as read: check for exposed SSH private keys, .netrc, .aws/credentials and .git-credentials, and rotate anything found."
-  },
+  }
+},
   "russellmitchell": {
+    "input": {
+      "alerts": [{
+    "timestamp": "2022-01-24T04:37:40.000000Z",
+    "event_id": "1685991091.12214835",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 24 04:37:40 intranet-server su[27950]: + /dev/pts/1 www-data:jhall"
+  },
+  {
+    "timestamp": "2022-01-24T04:37:40.000000Z",
+    "event_id": "1685991091.12214371",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 24 04:37:40 intranet-server su[27950]: pam_unix(su:session): session opened for user jhall by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-24T04:37:58.000000Z",
+    "event_id": "1685991109.12215278",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 24 04:37:58 intranet-server sudo:    jhall : TTY=pts/1 ; PWD=/var/www/intranet.smith.russellmitchell.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-24T04:38:06.000000Z",
+    "event_id": "1685991117.12215918",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 24 04:38:06 intranet-server sudo:    jhall : TTY=pts/1 ; PWD=/var/www/intranet.smith.russellmitchell.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-24T04:38:06.000000Z",
+    "event_id": "1685991117.12216590",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 24 04:38:06 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-24T04:38:06.000000Z",
+    "event_id": "1685991117.12217047",
+    "agent_ip": "10.143.2.4",
+    "agent_name": "wazuh-client",
+    "agent_id": "10",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 24 04:38:06 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  }]
+    },
+    "expected_output":{    
     "action": "contain",
     "target": "jhall @ intranet-server (10.143.2.4, agent 10)",
     "severity": "critical",
     "confidence": 0.9,
     "justification": "www-data switched UID to 'jhall' (T1078.003) and used sudo to root to read /etc/shadow (T1003.008) at 04:37, well outside business hours, from the intranet.smith.russellmitchell.com uploads directory. Confidence is slightly lower only because the captured window is 26 seconds with no follow-on discovery commands.",
     "remediation_plan": "1. Isolate 10.143.2.4 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.smith.russellmitchell.com.\n3. Kill all sessions for 'jhall' and www-data, then lock the account: pkill -u jhall; passwd -l jhall.\n4. Hunt the web shell: find /var/www/intranet.smith.russellmitchell.com/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'jhall' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd.\n10. Pull the full auth.log and Apache logs for the surrounding hour \u2014 most of the session is outside the captured window."
-  },
+  }
+},
   "santos": {
+    "input": {
+      "alerts": [{
+    "timestamp": "2022-01-17T11:58:17.000000Z",
+    "event_id": "1687477683.16223775",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:17 intranet-server su[20749]: + /dev/pts/1 www-data:gmorgan"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:17.000000Z",
+    "event_id": "1687477683.16224222",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:17 intranet-server su[20749]: pam_unix(su:session): session opened for user gmorgan by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:17.000000Z",
+    "event_id": "1687477683.16224690",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:17 intranet-server systemd: pam_unix(systemd-user:session): session opened for user gmorgan by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:27.000000Z",
+    "event_id": "1687477693.16225164",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 17 11:58:27 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:28.000000Z",
+    "event_id": "1687477695.16227138",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:28 mail dovecot: imap-login: Login: user=<danny.jarvis>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22016, TLS, session=<jXDt3sXVyr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:28.000000Z",
+    "event_id": "1687477695.16228127",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:28 mail dovecot: imap-login: Login: user=<danny.jarvis>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22016, TLS, session=<jXDt3sXVyr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:28.000000Z",
+    "event_id": "1687477695.16227633",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:28 mail dovecot: imap-login: Login: user=<danny.jarvis>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22016, TLS, session=<jXDt3sXVyr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:29.000000Z",
+    "event_id": "1687477695.16225611",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 17 11:58:29 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:29.000000Z",
+    "event_id": "1687477695.16226265",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:29 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:29.000000Z",
+    "event_id": "1687477695.16226722",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 17 11:58:29 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:43.000000Z",
+    "event_id": "1687477709.16229612",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:43 mail dovecot: imap-login: Login: user=<taylor.johnson>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22021, TLS, session=<HrjE38XVzr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:43.000000Z",
+    "event_id": "1687477709.16228619",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:43 mail dovecot: imap-login: Login: user=<taylor.johnson>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22021, TLS, session=<HrjE38XVzr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:43.000000Z",
+    "event_id": "1687477709.16229116",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:43 mail dovecot: imap-login: Login: user=<taylor.johnson>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22021, TLS, session=<HrjE38XVzr+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:45.000000Z",
+    "event_id": "1687477711.16230106",
+    "agent_ip": "10.229.0.32",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:45 rogersturnbull-mail dovecot: imap-login: Login: user=<katelyn.clayton>, method=PLAIN, rip=10.229.0.32, lip=10.229.0.32, mpid=31541, TLS, session=<X7Xw38XVGo4K5QAg>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:45.000000Z",
+    "event_id": "1687477711.16230616",
+    "agent_ip": "10.229.0.32",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:45 rogersturnbull-mail dovecot: imap-login: Login: user=<katelyn.clayton>, method=PLAIN, rip=10.229.0.32, lip=10.229.0.32, mpid=31541, TLS, session=<X7Xw38XVGo4K5QAg>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:45.000000Z",
+    "event_id": "1687477711.16231125",
+    "agent_ip": "10.229.0.32",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:45 rogersturnbull-mail dovecot: imap-login: Login: user=<katelyn.clayton>, method=PLAIN, rip=10.229.0.32, lip=10.229.0.32, mpid=31541, TLS, session=<X7Xw38XVGo4K5QAg>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:54.000000Z",
+    "event_id": "1687477721.16232284",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:54 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:54.000000Z",
+    "event_id": "1687477721.16232741",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 17 11:58:54 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:54.000000Z",
+    "event_id": "1687477721.16231632",
+    "agent_ip": "192.168.104.155",
+    "agent_name": "wazuh-client",
+    "agent_id": "26",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 17 11:58:54 intranet-server sudo:  gmorgan : TTY=pts/1 ; PWD=/var/www/intranet.smith.santos.com/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:57.000000Z",
+    "event_id": "1687477723.16234148",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:57 mail dovecot: imap-login: Login: user=<andrew.pierce>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22032, TLS, session=<96+b4MXV0r+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:57.000000Z",
+    "event_id": "1687477723.16233157",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:57 mail dovecot: imap-login: Login: user=<andrew.pierce>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22032, TLS, session=<96+b4MXV0r+sFYMy>"
+  },
+  {
+    "timestamp": "2022-01-17T11:58:57.000000Z",
+    "event_id": "1687477723.16233653",
+    "agent_ip": "172.21.131.50",
+    "agent_name": "wazuh-client",
+    "agent_id": "22",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 17 11:58:57 mail dovecot: imap-login: Login: user=<andrew.pierce>, method=PLAIN, rip=172.21.131.50, lip=172.21.131.50, mpid=22032, TLS, session=<96+b4MXV0r+sFYMy>"
+  }]
+    },
+    "expected_output":{    
     "action": "contain",
     "target": "gmorgan @ intranet-server (192.168.104.155, agent 26)",
     "severity": "critical",
     "confidence": 0.95,
     "justification": "www-data escalated to 'gmorgan' via su (T1078.003), triggered first-time sudo (rule 5403), then read /etc/shadow (T1003.008) and ran ls -laR /root/ (T1083) from the intranet.smith.santos.com uploads directory. The Dovecot authentication successes on agents 22 and 15 are separate mail activity, not part of this chain.",
     "remediation_plan": "1. Isolate 192.168.104.155 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.smith.santos.com.\n3. Kill all sessions for 'gmorgan' and www-data, then lock the account: pkill -u gmorgan; passwd -l gmorgan.\n4. Hunt the web shell: find /var/www/intranet.smith.santos.com/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'gmorgan' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd."
-  },
+  }
+},
   "shaw": {
+    "input": {
+      "alerts": [{
+    "timestamp": "2022-01-29T15:20:51.000000Z",
+    "event_id": "1688163860.10465797",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:51 intranet-server su[28625]: + /dev/pts/0 www-data:gmarsh"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:51.000000Z",
+    "event_id": "1688163860.10466242",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:51 intranet-server su[28625]: pam_unix(su:session): session opened for user gmarsh by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:51.000000Z",
+    "event_id": "1688163860.10466708",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:51 intranet-server systemd: pam_unix(systemd-user:session): session opened for user gmarsh by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:56.000000Z",
+    "event_id": "1688163864.10467180",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:56 mail dovecot: imap-login: Login: user=<jonathan.owen>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25025, TLS, session=<wcEZGbrWnJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:56.000000Z",
+    "event_id": "1688163864.10467676",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:56 mail dovecot: imap-login: Login: user=<jonathan.owen>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25025, TLS, session=<wcEZGbrWnJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:56.000000Z",
+    "event_id": "1688163864.10468171",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:56 mail dovecot: imap-login: Login: user=<jonathan.owen>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25025, TLS, session=<wcEZGbrWnJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10468664",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25029, TLS, session=<FAU7GbrWoJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10469161",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25035, TLS, session=<yIRHGbrWopKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10470650",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25029, TLS, session=<FAU7GbrWoJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10470154",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25035, TLS, session=<yIRHGbrWopKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10471144",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25035, TLS, session=<yIRHGbrWopKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:20:59.000000Z",
+    "event_id": "1688163868.10469658",
+    "agent_ip": "10.38.242.195",
+    "agent_name": "wazuh-client",
+    "agent_id": "20",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:20:59 mail dovecot: imap-login: Login: user=<samantha.hayes>, method=PLAIN, rip=172.24.251.90, lip=172.24.251.90, mpid=25029, TLS, session=<FAU7GbrWoJKsGPta>"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:02.000000Z",
+    "event_id": "1688163870.10471638",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 29 15:21:02 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:04.000000Z",
+    "event_id": "1688163872.10472097",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 29 15:21:04 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:04.000000Z",
+    "event_id": "1688163872.10472761",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:21:04 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:05.000000Z",
+    "event_id": "1688163874.10473218",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 29 15:21:05 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:09.000000Z",
+    "event_id": "1688163878.10473634",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 29 15:21:09 intranet-server sudo:   gmarsh : TTY=pts/0 ; PWD=/var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:09.000000Z",
+    "event_id": "1688163878.10474757",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 29 15:21:09 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-29T15:21:09.000000Z",
+    "event_id": "1688163878.10474300",
+    "agent_ip": "192.168.188.179",
+    "agent_name": "wazuh-client",
+    "agent_id": "21",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 29 15:21:09 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  }]
+    },
+    "expected_output":{
     "action": "contain",
     "target": "gmarsh @ intranet-server (192.168.188.179, agent 21)",
     "severity": "critical",
     "confidence": 0.95,
     "justification": "www-data escalated to 'gmarsh' (T1078.003), triggered first-time sudo (rule 5403), then ran ls -laR /root/ (T1083) and cat /etc/shadow (T1003.008) from the intranet.thomasmurray.shaw.info uploads path. The IMAP logins on agent 20 are unrelated background noise.",
     "remediation_plan": "1. Isolate 192.168.188.179 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.thomasmurray.shaw.info.\n3. Kill all sessions for 'gmarsh' and www-data, then lock the account: pkill -u gmarsh; passwd -l gmarsh.\n4. Hunt the web shell: find /var/www/intranet.thomasmurray.shaw.info/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'gmarsh' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd."
-  },
+    }
+},
   "wardbeck": {
+    "input": {
+      "alerts":[{
+    "timestamp": "2022-01-23T12:55:01.000000Z",
+    "event_id": "1688763945.10674854",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:01 intranet-server su[28708]: + /dev/pts/1 www-data:blord"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:01.000000Z",
+    "event_id": "1688763945.10675297",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:01 intranet-server su[28708]: pam_unix(su:session): session opened for user blord by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:01.000000Z",
+    "event_id": "1688763945.10675761",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:01 intranet-server systemd: pam_unix(systemd-user:session): session opened for user blord by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:04.000000Z",
+    "event_id": "1688763947.10676231",
+    "agent_ip": "10.132.56.171",
+    "agent_name": "wazuh-client",
+    "agent_id": "25",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:04 mail dovecot: imap-login: Login: user=<michael.bennett>, method=PLAIN, rip=10.132.56.171, lip=10.132.56.171, mpid=6392, TLS, session=<iKhcXD/WxroKhDir>"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:04.000000Z",
+    "event_id": "1688763947.10677224",
+    "agent_ip": "10.132.56.171",
+    "agent_name": "wazuh-client",
+    "agent_id": "25",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:04 mail dovecot: imap-login: Login: user=<michael.bennett>, method=PLAIN, rip=10.132.56.171, lip=10.132.56.171, mpid=6392, TLS, session=<iKhcXD/WxroKhDir>"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:04.000000Z",
+    "event_id": "1688763947.10676728",
+    "agent_ip": "10.132.56.171",
+    "agent_name": "wazuh-client",
+    "agent_id": "25",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:04 mail dovecot: imap-login: Login: user=<michael.bennett>, method=PLAIN, rip=10.132.56.171, lip=10.132.56.171, mpid=6392, TLS, session=<iKhcXD/WxroKhDir>"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:14.000000Z",
+    "event_id": "1688763957.10677718",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 23 12:55:14 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:15.000000Z",
+    "event_id": "1688763959.10678179",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 23 12:55:15 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:15.000000Z",
+    "event_id": "1688763959.10678847",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:15 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:16.000000Z",
+    "event_id": "1688763959.10679304",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 23 12:55:16 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:19.000000Z",
+    "event_id": "1688763963.10680386",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 23 12:55:19 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:19.000000Z",
+    "event_id": "1688763963.10680843",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 23 12:55:19 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-23T12:55:19.000000Z",
+    "event_id": "1688763963.10679720",
+    "agent_ip": "172.21.241.88",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 23 12:55:19 intranet-server sudo:    blord : TTY=pts/1 ; PWD=/var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/ls -laR /root/"
+  }]
+    },
+    "expected_output":{    
     "action": "contain",
     "target": "blord @ intranet-server (172.21.241.88, agent 12)",
     "severity": "critical",
     "confidence": 0.95,
     "justification": "su from www-data to 'blord' (T1078.003), first-time sudo (rule 5403), then a root read of /etc/shadow (T1003.008) and a recursive listing of /root/ (T1083) from the intranet.hurstwong.wardbeck.info uploads directory. The three Dovecot logins for michael.bennett on agent 25 are unrelated.",
     "remediation_plan": "1. Isolate 172.21.241.88 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.hurstwong.wardbeck.info.\n3. Kill all sessions for 'blord' and www-data, then lock the account: pkill -u blord; passwd -l blord.\n4. Hunt the web shell: find /var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'blord' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd."
-  },
+  }
+},
   "wheeler": {
+    "input": {
+      "alerts":[{
+    "timestamp": "2022-01-30T17:51:52.000000Z",
+    "event_id": "1689384947.3520706",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 30 17:51:52 intranet-server su[6892]: pam_unix(su:session): session opened for user kford by (uid=33)"
+  },
+  {
+    "timestamp": "2022-01-30T17:51:52.000000Z",
+    "event_id": "1689384947.3520265",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Jan 30 17:51:52 intranet-server su[6892]: + /dev/pts/2 www-data:kford"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:03.903971Z",
+    "event_id": "1689384959.3529542",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:03.903971  [**] [1:2230003:1] SURICATA TLS invalid handshake message [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.242.195:443 -> 10.38.243.24:48570"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:03.903971Z",
+    "event_id": "1689384959.3529957",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:03.903971  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.242.195:443 -> 10.38.243.24:48570"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:03.904166Z",
+    "event_id": "1689384959.3530782",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:03.904166  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.243.24:48570 -> 10.38.242.195:443"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:03.904166Z",
+    "event_id": "1689384959.3530369",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:03.904166  [**] [1:2230003:1] SURICATA TLS invalid handshake message [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.243.24:48570 -> 10.38.242.195:443"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:07.000000Z",
+    "event_id": "1689384963.3531192",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 30 17:52:07 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:10.000000Z",
+    "event_id": "1689384965.3531642",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 30 17:52:10 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/shadow"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:10.000000Z",
+    "event_id": "1689384965.3532299",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 30 17:52:10 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:10.000000Z",
+    "event_id": "1689384965.3532755",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 30 17:52:10 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:13.000000Z",
+    "event_id": "1689384969.3534283",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Jan 30 17:52:13 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:13.000000Z",
+    "event_id": "1689384969.3533170",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Jan 30 17:52:13 intranet-server sudo:    kford : TTY=pts/2 ; PWD=/var/www/intranet.flores.wheeler.biz/wp-content/uploads/2022/01 ; USER=root ; COMMAND=/bin/cat /etc/passwd"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:13.000000Z",
+    "event_id": "1689384969.3533827",
+    "agent_ip": "192.168.2.114",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Jan 30 17:52:13 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:15.011930Z",
+    "event_id": "1689384971.3543072",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:15.011930  [**] [1:2230003:1] SURICATA TLS invalid handshake message [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.242.195:443 -> 10.38.243.24:48576"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:15.011930Z",
+    "event_id": "1689384971.3543487",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:15.011930  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.242.195:443 -> 10.38.243.24:48576"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:15.012049Z",
+    "event_id": "1689384971.3543899",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:15.012049  [**] [1:2230003:1] SURICATA TLS invalid handshake message [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.243.24:48576 -> 10.38.242.195:443"
+  },
+  {
+    "timestamp": "2022-01-30T17:52:15.012049Z",
+    "event_id": "1689384971.3544312",
+    "agent_ip": "10.38.243.24",
+    "agent_name": "wazuh-client",
+    "agent_id": "12",
+    "rule_id": "20101",
+    "rule_level": 6,
+    "description": "IDS event.",
+    "groups": [
+      "ids"
+    ],
+    "full_log": "01/30/2022-17:52:15.012049  [**] [1:2230010:1] SURICATA TLS invalid record/traffic [**] [Classification: Generic Protocol Command Decode] [Priority: 3] {TCP} 10.38.243.24:48576 -> 10.38.242.195:443"
+  }]
+    },
+    "expected_output":{    
     "action": "contain",
     "target": "kford @ intranet-server (192.168.2.114, agent 32)",
     "severity": "critical",
     "confidence": 0.94,
     "justification": "www-data switched to 'kford' (T1078.003), used sudo for the first time (rule 5403), then dumped both /etc/shadow and /etc/passwd as root (T1003.008) from the intranet.flores.wheeler.biz uploads directory. The Suricata TLS decode alerts on agent 12 are low-fidelity network noise on a different host and should not be merged into this incident.",
     "remediation_plan": "1. Isolate 192.168.2.114 from the network (block egress and lateral SSH/SMB) while preserving volatile state; do not power off.\n2. Snapshot the host and export /var/log/auth.log, /var/log/syslog and the Apache access/error logs for /var/www/intranet.flores.wheeler.biz.\n3. Kill all sessions for 'kford' and www-data, then lock the account: pkill -u kford; passwd -l kford.\n4. Hunt the web shell: find /var/www/intranet.flores.wheeler.biz/wp-content/uploads -name '*.php' and list files modified in the 72h before the alert; preserve copies as evidence, then remove.\n5. Treat all local credentials as compromised: force a password reset for every account on this host and anywhere those passwords were reused.\n6. Rotate host secrets reachable by root: SSH host keys and authorized_keys, wp-config.php DB credentials, API tokens, cron-embedded secrets.\n7. Remove 'kford' from sudoers/sudo group unless the entitlement is documented and required (MITRE M1026).\n8. Patch WordPress core, plugins and themes, and block PHP execution inside wp-content/uploads at the webserver (M1051, M1042).\n9. Check for persistence: crontab -l for all users, /etc/cron.*, systemd units, /root/.ssh/authorized_keys, and new UID-0 entries in /etc/passwd.\n10. Both /etc/passwd and /etc/shadow were read, so the attacker holds a full user list plus hashes \u2014 prioritise resets and watch for offline-cracking follow-up against those usernames."
-  },
+  }
+},
   "wilson": {
+    "input": {
+      "alerts":[{
+    "timestamp": "2022-02-07T11:48:18.000000Z",
+    "event_id": "1690059387.310719057",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5304",
+    "rule_level": 3,
+    "description": "User successfully changed UID.",
+    "groups": [
+      "syslog",
+      "su",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:18 intranet-server su[6084]: + /dev/pts/1 www-data:jwilkinson"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:18.000000Z",
+    "event_id": "1690059387.310719510",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:18 intranet-server su[6084]: pam_unix(su:session): session opened for user jwilkinson by (uid=33)"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:18.000000Z",
+    "event_id": "1690059387.310719984",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:18 intranet-server systemd: pam_unix(systemd-user:session): session opened for user jwilkinson by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:25.000000Z",
+    "event_id": "1690059393.310720465",
+    "agent_ip": "10.182.193.181",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:25 mail dovecot: imap-login: Login: user=<patrick.wood>, method=PLAIN, rip=10.182.193.181, lip=10.182.193.181, mpid=13334, TLS, session=<ebahLWzXRJIKtsG1>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:25.000000Z",
+    "event_id": "1690059393.310721460",
+    "agent_ip": "10.182.193.181",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:25 mail dovecot: imap-login: Login: user=<patrick.wood>, method=PLAIN, rip=10.182.193.181, lip=10.182.193.181, mpid=13334, TLS, session=<ebahLWzXRJIKtsG1>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:25.000000Z",
+    "event_id": "1690059393.310720963",
+    "agent_ip": "10.182.193.181",
+    "agent_name": "wazuh-client",
+    "agent_id": "32",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:25 mail dovecot: imap-login: Login: user=<patrick.wood>, method=PLAIN, rip=10.182.193.181, lip=10.182.193.181, mpid=13334, TLS, session=<ebahLWzXRJIKtsG1>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:29.000000Z",
+    "event_id": "1690059397.310721955",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:29 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30190, TLS, session=<UTPgLWzXFLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:29.000000Z",
+    "event_id": "1690059397.310722463",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:29 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30190, TLS, session=<UTPgLWzXFLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:29.000000Z",
+    "event_id": "1690059397.310722970",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:29 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30190, TLS, session=<UTPgLWzXFLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:30.000000Z",
+    "event_id": "1690059399.310723475",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:30 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30192, TLS, session=<XLbsLWzXFrXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:30.000000Z",
+    "event_id": "1690059399.310723983",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:30 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30192, TLS, session=<XLbsLWzXFrXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:30.000000Z",
+    "event_id": "1690059399.310724490",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:30 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30192, TLS, session=<XLbsLWzXFrXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:32.000000Z",
+    "event_id": "1690059401.310724995",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5403",
+    "rule_level": 4,
+    "description": "First time user executed sudo.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  7 11:48:32 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=list"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:39.000000Z",
+    "event_id": "1690059407.310726118",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:39 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:39.000000Z",
+    "event_id": "1690059407.310726576",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Feb  7 11:48:39 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:39.000000Z",
+    "event_id": "1690059407.310725453",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  7 11:48:39 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/bin/cat /etc/passwd"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:50.000000Z",
+    "event_id": "1690059419.310727652",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5501",
+    "rule_level": 3,
+    "description": "PAM: Login session opened.",
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:50 intranet-server sudo: pam_unix(sudo:session): session opened for user root by (uid=0)"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:50.000000Z",
+    "event_id": "1690059419.310729542",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:50 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30194, TLS, session=<q/cjL2zXGLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:50.000000Z",
+    "event_id": "1690059419.310726993",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5402",
+    "rule_level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "full_log": "Feb  7 11:48:50 intranet-server sudo: jwilkinson : TTY=pts/1 ; PWD=/var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02 ; USER=root ; COMMAND=/sbin/iptables -L"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:50.000000Z",
+    "event_id": "1690059419.310728527",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:50 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30194, TLS, session=<q/cjL2zXGLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:50.000000Z",
+    "event_id": "1690059419.310729035",
+    "agent_ip": "192.168.226.198",
+    "agent_name": "wazuh-client",
+    "agent_id": "15",
+    "rule_id": "9701",
+    "rule_level": 3,
+    "description": "Dovecot Authentication Success.",
+    "groups": [
+      "dovecot",
+      "authentication_success"
+    ],
+    "full_log": "Feb  7 11:48:50 lane-mail dovecot: imap-login: Login: user=<irene.williams>, method=PLAIN, rip=192.168.226.198, lip=192.168.226.198, mpid=30194, TLS, session=<q/cjL2zXGLXAqOLG>"
+  },
+  {
+    "timestamp": "2022-02-07T11:48:51.000000Z",
+    "event_id": "1690059419.310728110",
+    "agent_ip": "172.26.243.167",
+    "agent_name": "wazuh-client",
+    "agent_id": "28",
+    "rule_id": "5502",
+    "rule_level": 3,
+    "description": "PAM: Login session closed.",
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "full_log": "Feb  7 11:48:51 intranet-server sudo: pam_unix(sudo:session): session closed for user root"
+  }]
+    },
+    "expected_output":{    
     "action": "escalate",
     "target": "jwilkinson @ intranet-server (172.26.243.167, agent 28)",
     "severity": "high",
@@ -63,4 +2397,5 @@
     "justification": "www-data escalated to 'jwilkinson' (T1078.003) and reached root via first-time sudo (rule 5403), but the commands run were cat /etc/passwd and iptables -L \u2014 account and firewall enumeration (T1087.001, T1016) rather than a hash dump. Root access is confirmed, so this goes to IR for scoping, but no credential material was read in this window.",
     "remediation_plan": "1. Escalate to tier-2/IR with the sudo session for 'jwilkinson' between 11:48:18 and 11:48:51 on 2022-02-07.\n2. Snapshot 172.26.243.167 and export auth.log, syslog and Apache access logs for the surrounding hour before any cleanup.\n3. Hunt the web shell in /var/www/intranet.hallbrown.wilson.com/wp-content/uploads (recent PHP files, uploads modified in the last 72h); preserve copies.\n4. Suspend the session and account pending confirmation with the owner: pkill -u jwilkinson; passwd -l jwilkinson.\n5. iptables -L was run as root: diff the live firewall ruleset against the approved baseline and alert on any rule added after 11:48 on 2022-02-07.\n6. Confirm no hash access occurred \u2014 check auth.log and auditd execve records for later /etc/shadow reads; if found, re-grade to critical and switch to containment.\n7. Review and remove the 'jwilkinson' sudo entitlement if undocumented (MITRE M1026).\n8. Patch WordPress core/plugins/themes and block PHP execution in wp-content/uploads (M1051, M1042)."
   }
+}
 }
