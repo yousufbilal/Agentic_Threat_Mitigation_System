@@ -4,9 +4,12 @@ from pydantic import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv()
+from langchain_ollama import ChatOllama  
 
 # judge_llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
-judge_llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+# judge_llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+judge_llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+
 
 
 def action_correct(outputs: dict, reference_outputs: dict) -> dict:
@@ -26,7 +29,6 @@ def action_correct(outputs: dict, reference_outputs: dict) -> dict:
         score = 0
 
     return {"key": "action_correct", "score": score}
-
 
 
 def target_correct(outputs: dict, reference_outputs: dict) -> dict:
@@ -69,12 +71,12 @@ def severity_correct(outputs: dict, reference_outputs: dict) -> dict:
 
 
 
-def remediation_quality(outputs: dict, reference_outputs: dict) -> dict:
+def remediation_correct(outputs: dict, reference_outputs: dict) -> dict:
     if outputs is None:
-        return {"key": "remediation_quality", "score": 0}
+        return {"key": "remediation_plan", "score": 0}
 
-    if "remediation_quality" is None:
-        return {"key": "remediation_quality", "score": 0}
+    if "remediation_plan" is None:
+        return {"key": "remediation_plan", "score": 0}
 
     prompt = f"""You are grading a SOC remediation plan.
 
@@ -84,11 +86,11 @@ def remediation_quality(outputs: dict, reference_outputs: dict) -> dict:
     Model's remediation plan:
     {outputs['remediation_plan']}
 
-    Score 1 if the model's plan covers the same critical actions as the golden plan (even with different wording).
-    Score 0.5 if it covers some but misses key steps.
-    Score 0 if it's substantially wrong or missing.
+    Score 1:  if the model's plan covers the same critical actions as the golden plan (even with different wording).
+    Score 0.5: if it covers some but misses key steps.
+    Score 0:  if it's substantially wrong or missing.
 
-    Respond with only the number: 0, 0.5, or 1."""
+    Respond with only the number: 0, 0.5, 1."""
 
     try:
         response = judge_llm.invoke(prompt)
@@ -96,4 +98,4 @@ def remediation_quality(outputs: dict, reference_outputs: dict) -> dict:
     except ValueError:
         score = 0
 
-    return {"key": "remediation_quality", "score": score}
+    return {"key": "remediation_plan", "score": score}
