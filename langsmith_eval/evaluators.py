@@ -71,6 +71,9 @@ def remediation_quality(outputs: dict, reference_outputs: dict) -> dict:
     if outputs is None:
         return {"key": "remediation_quality", "score": 0}
 
+    if "remediation_quality" is None:
+        return {"key": "remediation_quality", "score": 0}
+
     prompt = f"""You are grading a SOC remediation plan.
 
     Golden/expected remediation plan:
@@ -85,7 +88,10 @@ def remediation_quality(outputs: dict, reference_outputs: dict) -> dict:
 
     Respond with only the number: 0, 0.5, or 1."""
 
-    response = judge_llm.invoke(prompt)
-    score = float(response.content.strip())
+    try:
+        response = judge_llm.invoke(prompt)
+        score = float(response.content.strip())
+    except ValueError:
+        score = 0
 
     return {"key": "remediation_quality", "score": score}

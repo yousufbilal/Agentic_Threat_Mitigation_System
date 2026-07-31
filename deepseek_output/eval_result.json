@@ -1,11 +1,14 @@
 {
   "alert_ids": [
-    "ids: multiple attempts to login with the same username"
+    "5304",
+    "5501",
+    "5502",
+    "5402"
   ],
-  "affected_asset": "user log",
-  "action": "monitor",
-  "severity": "critical",
-  "confidence": 95.0,
-  "justification": "Multiple attempts to login with the same username indicate potential unauthorized access or root-based activity.",
-  "remediation_plan": "Implement root-based sanitization tools (e.g., certool, certparse) to detect and mitigate SURICATA TLS handshake failures and repeated login attempts. Additionally, implement user-based sanitization strategies to prevent common root commands such as sudo:root. Consider implementing root-based sanitization for PAM-related events if necessary."
+  "affected_asset": "phopkins @ intranet-server (10.35.35.206, agent 27)",
+  "action": "contain",
+  "severity": "high",
+  "confidence": 0.95,
+  "justification": "The alert sequence shows multiple events related to user 'phopkins' successfully changing UID, opening login sessions, and executing sudo commands, which aligns with the Process Injection technique. The PAM: Login session opened and successful sudo to ROOT executed alerts indicate that the adversary has gained root privileges.",
+  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206). 2. Lock account phopkins. 3. Rotate credentials for user phopkins. 4. Conduct a thorough forensic analysis of the system to identify any additional malicious activity or compromised files. 5. Implement Application Isolation and Least Privilege controls to limit the impact of future attacks. 6. Deploy Web Application Firewalls if not already in place to protect externally facing servers. 7. Review and update security policies, especially those related to process injection techniques."
 }
