@@ -4,14 +4,18 @@ from graph.state import GraphState
 from pydantic import BaseModel
 from typing import Literal
 import json
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv() 
 
 class TriageOutput(BaseModel):
     mitigation_required: bool
     reasoning: str
     severity: Literal["Low", "Medium", "High"]
 
-# llm = ChatOllama(model="qwen3:4b", temperature=0)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+llm = ChatOllama(model="qwen3:4b", temperature=0)
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 
 structured_llm = llm.with_structured_output(TriageOutput)

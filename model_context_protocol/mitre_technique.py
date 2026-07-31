@@ -5,12 +5,17 @@ from pydantic import BaseModel
 from typing import Optional
 import asyncio
 import json
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv() 
 
 class MitreTechniqueResult(BaseModel):
     technique_id: Optional[str] = None
     technique_name: Optional[str] = None
 
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+llm = ChatOllama(model="qwen3:4b", temperature=0)
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 structured_llm = llm.with_structured_output(MitreTechniqueResult)
 
 async def get_mitre_technique_id(alert_log_sequence):

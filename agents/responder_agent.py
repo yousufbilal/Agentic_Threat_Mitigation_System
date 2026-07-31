@@ -8,6 +8,9 @@ from model_context_protocol.agentic_rag import run_agent
 import asyncio
 import json
 import os
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv() 
 
 class ResponderOutput(BaseModel):
     alert_ids: list[str]
@@ -18,8 +21,9 @@ class ResponderOutput(BaseModel):
     justification: str
     remediation_plan: str    
 
-# llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 structured_llm = llm.with_structured_output(ResponderOutput)
 os.makedirs("agent_outputs", exist_ok=True)   
 
@@ -43,7 +47,7 @@ async def responder_agent(state: GraphState) -> GraphState:
         Output format:
         {
             "action": "escalate" | "contain" | "monitor" | "dismiss",
-            "target": "affected account/host",
+            "affected_asset": "affected account/host in the format 'username @ hostname (ip_address, agent_id)', e.g. 'phopkins @ intranet-server (10.35.35.206, agent 27)'",            
             "severity": "low" | "medium" | "high" | "critical",
             "confidence": float between 0 and 1,
             "justification": "one to two sentence explanation referencing the verdict and technique",
@@ -65,7 +69,7 @@ async def responder_agent(state: GraphState) -> GraphState:
     decision = interrupt({"responder_output": response})
 
     if decision == "y":
-        with open(f"agent_outputs/{session_id}_result.json", "w") as file:
+        with open(f"qwen3:4b_output/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
         print(f"Human decision: {decision}")
         return GraphState(

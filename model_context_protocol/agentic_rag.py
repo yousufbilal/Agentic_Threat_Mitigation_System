@@ -3,6 +3,9 @@ from langchain_core.messages import HumanMessage
 from langchain_core.tools import tool
 import chromadb
 import asyncio
+from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+load_dotenv() 
 
 client = chromadb.PersistentClient(path="./chroma_data/chroma_mitre_mitigation")
 collection = client.get_or_create_collection(name="get_mitigation")
@@ -15,7 +18,9 @@ def agentic_rag(query: str) -> str:
     return str(documents)
 
 
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+llm = ChatOllama(model="qwen3:4b", temperature=0)
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 llm_with_tools = llm.bind_tools(([agentic_rag]))
 
 async def run_agent(user_input):

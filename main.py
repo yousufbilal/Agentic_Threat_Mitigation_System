@@ -12,7 +12,6 @@ import asyncio
 from dotenv import load_dotenv
 load_dotenv()
 
-print(os.environ.get("LANGSMITH_API_KEY"))
 
 # to make diagram
 def save_graph_diagram(graph):
@@ -25,9 +24,7 @@ async def run():
     graph = build_graph()
     save_graph_diagram(graph)
 
-    data = get_session("fox")
-
-    print(len(data["alerts"]))
+    data = get_session("wheeler")
           
     initial_state = {
     "session_id": data["session_id"],

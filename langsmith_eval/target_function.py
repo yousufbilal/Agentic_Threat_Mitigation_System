@@ -22,21 +22,16 @@ async def target(inputs: dict) -> dict:
         "execution_result": None,
     }
 
-    config = {"configurable": {"thread_id": "eval-run"}}
-
+    # config = {"configurable": {"thread_id": "eval-run"}}
+    config = {"configurable": {"thread_id": inputs.get("session_id", "eval-run")}}
     result = await graph.ainvoke(initial_state, config=config)
 
     if "__interrupt__" in result:
         result = await graph.ainvoke(Command(resume="y"), config=config)
 
     return result["responder_output"]
-    # return result["triage_output"]
 
 if __name__ == "__main__":
     data = get_session("fox")
     test_input = {"alerts": data["alerts"]}
-
     result = asyncio.run(target(test_input))
-    print()
-    print("THE IS THE TARGET FUNCTION---->",result)
-    print()
