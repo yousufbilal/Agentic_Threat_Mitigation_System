@@ -75,7 +75,7 @@ def remediation_correct(outputs: dict, reference_outputs: dict) -> dict:
     if outputs is None:
         return {"key": "remediation_plan", "score": 0}
 
-    if "remediation_plan" is None:
+    if "remediation_plan" not in outputs:
         return {"key": "remediation_plan", "score": 0}
 
     prompt = f"""You are grading a SOC remediation plan.
