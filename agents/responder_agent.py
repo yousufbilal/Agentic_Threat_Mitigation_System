@@ -21,8 +21,9 @@ class ResponderOutput(BaseModel):
     justification: str = Field(description="One to two sentences explaining the decision")
     remediation_plan: str = Field(description="Numbered list of concrete steps") 
 
-llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
-# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0, reasoning=True)
+# llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 structured_llm = llm.with_structured_output(ResponderOutput)
 os.makedirs("agent_outputs", exist_ok=True)   
@@ -79,7 +80,7 @@ async def responder_agent(state: GraphState) -> GraphState:
     decision = interrupt({"responder_output": response})
 
     if decision == "y":
-        with open(f"qwen3:4b_output/{session_id}_result.json", "w") as file:
+        with open(f"deepseek_output/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
         print(f"Human decision: {decision}")
         return GraphState(

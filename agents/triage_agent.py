@@ -13,8 +13,9 @@ class TriageOutput(BaseModel):
     reasoning: str
     severity: Literal["Low", "Medium", "High"]
 
-llm = ChatOllama(model="qwen3:4b", temperature=0)
-# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
+# llm = ChatOllama(model="qwen3:4b", temperature=0)
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 

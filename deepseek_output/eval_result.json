@@ -1,0 +1,11 @@
+{
+  "alert_ids": [
+    "ids: multiple attempts to login with the same username"
+  ],
+  "affected_asset": "user log",
+  "action": "monitor",
+  "severity": "critical",
+  "confidence": 95.0,
+  "justification": "Multiple attempts to login with the same username indicate potential unauthorized access or root-based activity.",
+  "remediation_plan": "Implement root-based sanitization tools (e.g., certool, certparse) to detect and mitigate SURICATA TLS handshake failures and repeated login attempts. Additionally, implement user-based sanitization strategies to prevent common root commands such as sudo:root. Consider implementing root-based sanitization for PAM-related events if necessary."
+}

@@ -18,8 +18,9 @@ def agentic_rag(query: str) -> str:
     return str(documents)
 
 
-llm = ChatOllama(model="qwen3:4b", temperature=0)
-# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
+# llm = ChatOllama(model="qwen3:4b", temperature=0)
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 llm_with_tools = llm.bind_tools(([agentic_rag]))
 
