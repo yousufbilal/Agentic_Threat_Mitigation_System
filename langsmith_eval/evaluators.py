@@ -1,3 +1,8 @@
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import SystemMessage, HumanMessage
+from pydantic import BaseModel, Field
+
+
 def action_correct(outputs: dict, reference_outputs: dict) -> dict:
 
     # exception handling
@@ -26,7 +31,7 @@ def target_correct(outputs: dict, reference_outputs: dict) -> dict:
     if "affected_asset" not in outputs:
         return {"key": "target_correct", "score": 0}
 
-    model_target = outputs["target"]
+    model_target = outputs["affected_asset"]
     expected_target = reference_outputs["target"]
 
     if model_target == expected_target:

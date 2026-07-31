@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama  
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Literal
 from langgraph.types import interrupt
 from model_context_protocol.agentic_rag import run_agent
@@ -13,13 +13,13 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 class ResponderOutput(BaseModel):
-    alert_ids: list[str]
-    affected_asset: str
+    alert_ids: list[str] = Field(description="List of alert IDs involved in this incident")
+    affected_asset: str = Field(description="Format: 'username @ hostname (ip_address, agent_id)'. Example: 'phopkins @ intranet-server (10.35.35.206, agent 27)'. NOT severity, NOT a plan, NOT a sentence.")
     action: Literal["escalate", "contain", "monitor", "dismiss"]
     severity: Literal["low", "medium", "high", "critical"]
     confidence: float
-    justification: str
-    remediation_plan: str    
+    justification: str = Field(description="One to two sentences explaining the decision")
+    remediation_plan: str = Field(description="Numbered list of concrete steps") 
 
 llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 # llm = ChatOllama(model="qwen2.5:3b", temperature=0)
@@ -52,6 +52,16 @@ async def responder_agent(state: GraphState) -> GraphState:
             "confidence": float between 0 and 1,
             "justification": "one to two sentence explanation referencing the verdict and technique",
             "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in retrieved_mitigation_data and adversarial_output"
+        }
+
+        Example output:
+        {
+            "action": "contain",
+            "affected_asset": "phopkins @ intranet-server (10.35.35.206, agent 27)",
+            "severity": "critical",
+            "confidence": 0.95,
+            "justification": "Root access confirmed via sudo, /etc/shadow was read.",
+            "remediation_plan": "1. Isolate host. 2. Lock account. 3. Rotate credentials."
         }
         """)
 

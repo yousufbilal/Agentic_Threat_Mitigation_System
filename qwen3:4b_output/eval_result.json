@@ -1,15 +1,13 @@
 {
   "alert_ids": [
-    "10.35.35.206:intraweb-server:2024-05-20T14:23:01Z:5402",
-    "10.35.35.206:intraweb-server:2024-05-20T14:23:02Z:5402",
-    "10.35.35.206:intraweb-server:2024-05-20T14:23:03Z:5402",
-    "10.35.35.206:intraweb-server:2024-05-20T14:23:04Z:5402",
-    "10.35.35.206:intraweb-server:2024-05-20T14:23:05Z:5402"
+    "5304",
+    "5501",
+    "5402"
   ],
-  "affected_asset": "intraweb-server",
+  "affected_asset": "phopkins @ intranet-server (10.35.35.206, agent 27)",
   "action": "escalate",
   "severity": "high",
   "confidence": 1.0,
-  "justification": "The adversarial reviewer confirmed the alert as a true positive (verdict: confirmed) for the technique of unauthorized root access via sudo, evidenced by the user 'phopkins' executing commands as root to access the sensitive /etc/shadow file.",
-  "remediation_plan": "1. Investigate the user account 'phopkins' to determine if the sudo access was legitimate or malicious.\n2. If unauthorized, revoke the user's sudo privileges and reset the password.\n3. Restrict the user's access to the /etc/shadow file by removing write permissions.\n4. Implement an Endpoint Detection and Response (EDR) solution to monitor for unauthorized root access and sensitive file access."
+  "justification": "The adversarial reviewer confirmed the alert as a true positive (verdict: confirmed) for the technique of privilege escalation via sudo, with the user 'phopkins' accessing the sensitive /etc/shadow file on the host 'intranet-server'.",
+  "remediation_plan": "1. Implement Endpoint Detection and Response (EDR) tools to monitor and block processes exhibiting unusual behavior, such as privilege escalation attempts.\n2. Configure Data Loss Prevention (DLP) policies to block unauthorized access to sensitive files (e.g., /etc/shadow) by user accounts with elevated privileges."
 }
