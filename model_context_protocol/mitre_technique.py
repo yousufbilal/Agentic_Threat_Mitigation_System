@@ -26,7 +26,7 @@ async def get_mitre_technique_id(alert_log_sequence):
    allowed_tool_names = (
        "get_technique_by_id",
     #    "get_techniques_by_tactic",
-   )
+)
 
    tools_by_name = {}
 
@@ -50,7 +50,8 @@ async def get_mitre_technique_id(alert_log_sequence):
        return None
 
    call = ai_msg.tool_calls[0]
-   tool_to_use = tools_by_name[call["name"]]
+   
+   tool_to_use = filtered_tools[0]
   
    result = await tool_to_use.ainvoke(call["args"])
 #    print("tool returned:", result)   

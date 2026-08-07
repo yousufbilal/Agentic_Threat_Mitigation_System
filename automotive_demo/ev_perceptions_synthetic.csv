@@ -1,0 +1,3001 @@
+respondent_id,age_group,region,gender,income_band,likelihood_ev_next_vehicle
+1,65+,South East,Male,£40k-£60k,Neutral
+2,25-34,Northern Ireland,Male,£80k+,Very likely
+3,45-54,London,Male,£20k-£40k,Somewhat likely
+4,55-64,London,Female,£80k+,Neutral
+5,45-54,Scotland,Male,Under £20k,Very unlikely
+6,25-34,Northern Ireland,Male,£40k-£60k,Very likely
+7,35-44,South East,Male,Under £20k,Somewhat likely
+8,35-44,Scotland,Male,Under £20k,Somewhat unlikely
+9,55-64,South East,Other,£60k-£80k,Very likely
+10,35-44,Wales,Female,£40k-£60k,Neutral
+11,65+,South East,Male,£20k-£40k,Very unlikely
+12,18-24,North West,Female,£60k-£80k,Somewhat likely
+13,65+,Yorkshire,Male,£40k-£60k,Neutral
+14,35-44,Northern Ireland,Female,Under £20k,Neutral
+15,25-34,East of England,Female,£20k-£40k,Somewhat likely
+16,35-44,Wales,Female,£20k-£40k,Somewhat unlikely
+17,18-24,North West,Female,£40k-£60k,Neutral
+18,18-24,North West,Female,£80k+,Very unlikely
+19,35-44,North West,Female,£60k-£80k,Very unlikely
+20,65+,East Midlands,Male,£20k-£40k,Neutral
+21,55-64,East of England,Male,£80k+,Somewhat unlikely
+22,55-64,West Midlands,Male,£20k-£40k,Somewhat unlikely
+23,18-24,London,Female,£20k-£40k,Somewhat unlikely
+24,65+,West Midlands,Female,£60k-£80k,Somewhat unlikely
+25,45-54,East of England,Male,£80k+,Very unlikely
+26,18-24,Wales,Female,£80k+,Somewhat unlikely
+27,65+,Yorkshire,Male,£60k-£80k,Neutral
+28,18-24,Northern Ireland,Female,£40k-£60k,Very unlikely
+29,25-34,East of England,Female,£40k-£60k,Somewhat unlikely
+30,55-64,Scotland,Male,£40k-£60k,Very unlikely
+31,55-64,East of England,Female,£80k+,Neutral
+32,18-24,South East,Female,£40k-£60k,Somewhat likely
+33,25-34,Scotland,Female,Under £20k,Somewhat unlikely
+34,18-24,East of England,Female,£20k-£40k,Somewhat unlikely
+35,55-64,South West,Male,£80k+,Somewhat unlikely
+36,25-34,East of England,Female,£20k-£40k,Somewhat unlikely
+37,45-54,Wales,Female,£60k-£80k,Very unlikely
+38,45-54,South East,Male,Under £20k,Somewhat likely
+39,55-64,East of England,Male,£20k-£40k,Very likely
+40,65+,Wales,Male,Under £20k,Very unlikely
+41,35-44,South East,Female,£40k-£60k,Neutral
+42,25-34,East of England,Male,£80k+,Neutral
+43,25-34,East Midlands,Female,£20k-£40k,Very likely
+44,65+,West Midlands,Male,£60k-£80k,Somewhat unlikely
+45,65+,London,Female,Under £20k,Very likely
+46,65+,Yorkshire,Female,Under £20k,Neutral
+47,25-34,East of England,Male,£60k-£80k,Very likely
+48,45-54,North West,Female,Under £20k,Neutral
+49,55-64,South East,Male,£80k+,Very unlikely
+50,18-24,North West,Male,£60k-£80k,Neutral
+51,45-54,London,Male,Under £20k,Very unlikely
+52,35-44,East Midlands,Male,£80k+,Somewhat unlikely
+53,45-54,South West,Male,£20k-£40k,Very unlikely
+54,55-64,Northern Ireland,Female,£40k-£60k,Very likely
+55,55-64,East Midlands,Female,£80k+,Somewhat likely
+56,55-64,South East,Female,Under £20k,Somewhat unlikely
+57,65+,North West,Male,£80k+,Neutral
+58,55-64,London,Female,£60k-£80k,Somewhat unlikely
+59,55-64,East of England,Male,£40k-£60k,Somewhat likely
+60,65+,Yorkshire,Male,£60k-£80k,Somewhat likely
+61,65+,North East,Male,Under £20k,Very likely
+62,55-64,Scotland,Other,Under £20k,Somewhat unlikely
+63,55-64,North East,Male,£40k-£60k,Very unlikely
+64,25-34,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+65,65+,North East,Female,£80k+,Very likely
+66,55-64,North East,Female,Under £20k,Very unlikely
+67,25-34,North East,Male,Under £20k,Somewhat unlikely
+68,25-34,North East,Male,£20k-£40k,Somewhat unlikely
+69,25-34,Wales,Female,£40k-£60k,Neutral
+70,35-44,London,Male,£60k-£80k,Somewhat unlikely
+71,18-24,London,Male,£20k-£40k,Somewhat unlikely
+72,35-44,South West,Female,£80k+,Somewhat unlikely
+73,55-64,London,Male,£20k-£40k,Somewhat unlikely
+74,35-44,Scotland,Female,£60k-£80k,Very likely
+75,35-44,Yorkshire,Female,Under £20k,Very unlikely
+76,25-34,Wales,Male,Under £20k,Somewhat likely
+77,55-64,West Midlands,Other,£20k-£40k,Very unlikely
+78,25-34,South West,Other,£20k-£40k,Very unlikely
+79,18-24,South West,Female,£40k-£60k,Somewhat unlikely
+80,45-54,Wales,Female,£20k-£40k,Somewhat likely
+81,65+,South East,Male,Under £20k,Very unlikely
+82,25-34,North West,Female,£60k-£80k,Somewhat likely
+83,25-34,North West,Male,£20k-£40k,Somewhat likely
+84,35-44,South East,Other,£40k-£60k,Somewhat likely
+85,55-64,West Midlands,Female,£80k+,Neutral
+86,18-24,South East,Female,£40k-£60k,Somewhat likely
+87,35-44,London,Male,£60k-£80k,Somewhat likely
+88,35-44,West Midlands,Female,£80k+,Very likely
+89,55-64,North West,Male,£60k-£80k,Very likely
+90,55-64,Wales,Female,£20k-£40k,Neutral
+91,18-24,Wales,Female,£80k+,Neutral
+92,18-24,Northern Ireland,Female,£80k+,Neutral
+93,45-54,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+94,25-34,West Midlands,Female,£60k-£80k,Neutral
+95,25-34,Scotland,Female,£60k-£80k,Neutral
+96,18-24,North East,Male,£60k-£80k,Somewhat unlikely
+97,55-64,Wales,Male,£60k-£80k,Somewhat unlikely
+98,25-34,East of England,Male,£20k-£40k,Neutral
+99,35-44,East of England,Female,£80k+,Somewhat likely
+100,25-34,Wales,Male,£20k-£40k,Very likely
+101,18-24,North West,Other,£80k+,Very unlikely
+102,18-24,East Midlands,Male,£80k+,Somewhat likely
+103,65+,West Midlands,Female,£20k-£40k,Neutral
+104,65+,London,Female,Under £20k,Very unlikely
+105,25-34,South West,Female,£80k+,Somewhat likely
+106,55-64,North West,Female,Under £20k,Somewhat unlikely
+107,45-54,Wales,Female,£80k+,Somewhat unlikely
+108,45-54,Scotland,Female,£80k+,Neutral
+109,55-64,East Midlands,Female,£60k-£80k,Somewhat unlikely
+110,25-34,Wales,Male,£80k+,Neutral
+111,25-34,North East,Male,£40k-£60k,Somewhat likely
+112,35-44,Yorkshire,Female,Under £20k,Very likely
+113,25-34,West Midlands,Female,£20k-£40k,Very likely
+114,45-54,Yorkshire,Female,£60k-£80k,Very likely
+115,45-54,West Midlands,Female,£80k+,Very unlikely
+116,18-24,Scotland,Male,Under £20k,Very unlikely
+117,35-44,West Midlands,Female,£60k-£80k,Neutral
+118,65+,East of England,Female,£20k-£40k,Somewhat unlikely
+119,35-44,West Midlands,Female,£60k-£80k,Somewhat likely
+120,65+,West Midlands,Female,£60k-£80k,Very unlikely
+121,55-64,East of England,Male,£60k-£80k,Somewhat unlikely
+122,65+,London,Male,£60k-£80k,Somewhat likely
+123,45-54,South West,Male,£60k-£80k,Neutral
+124,45-54,Yorkshire,Male,£60k-£80k,Somewhat likely
+125,45-54,North East,Female,£60k-£80k,Very likely
+126,55-64,London,Other,£40k-£60k,Somewhat likely
+127,18-24,Wales,Male,Under £20k,Very unlikely
+128,25-34,London,Female,£20k-£40k,Very likely
+129,65+,South East,Female,£20k-£40k,Somewhat unlikely
+130,35-44,Yorkshire,Male,£80k+,Very unlikely
+131,65+,South East,Female,£20k-£40k,Very unlikely
+132,18-24,Scotland,Male,£40k-£60k,Somewhat unlikely
+133,45-54,West Midlands,Female,£20k-£40k,Very likely
+134,65+,Wales,Male,£40k-£60k,Very unlikely
+135,55-64,South East,Female,£80k+,Very unlikely
+136,35-44,East of England,Male,£40k-£60k,Very likely
+137,65+,Yorkshire,Male,£60k-£80k,Very unlikely
+138,18-24,West Midlands,Other,£60k-£80k,Somewhat unlikely
+139,45-54,South West,Female,£40k-£60k,Somewhat unlikely
+140,55-64,East Midlands,Male,£80k+,Neutral
+141,25-34,South East,Male,£60k-£80k,Somewhat likely
+142,45-54,Scotland,Female,£60k-£80k,Somewhat likely
+143,45-54,Yorkshire,Male,£20k-£40k,Neutral
+144,35-44,Yorkshire,Male,£80k+,Somewhat unlikely
+145,35-44,East of England,Male,£20k-£40k,Very likely
+146,65+,West Midlands,Female,£20k-£40k,Very unlikely
+147,65+,Northern Ireland,Female,Under £20k,Somewhat likely
+148,25-34,West Midlands,Female,£40k-£60k,Neutral
+149,35-44,East Midlands,Female,£40k-£60k,Neutral
+150,65+,East of England,Male,£60k-£80k,Neutral
+151,35-44,North West,Male,£20k-£40k,Somewhat likely
+152,65+,East of England,Female,£20k-£40k,Neutral
+153,65+,East Midlands,Male,£80k+,Very unlikely
+154,55-64,Scotland,Male,Under £20k,Very unlikely
+155,35-44,North West,Male,£40k-£60k,Very likely
+156,55-64,South West,Male,Under £20k,Somewhat unlikely
+157,65+,South West,Female,£60k-£80k,Somewhat likely
+158,18-24,Scotland,Male,£60k-£80k,Neutral
+159,25-34,London,Male,£60k-£80k,Very likely
+160,18-24,West Midlands,Female,£80k+,Somewhat unlikely
+161,18-24,South West,Male,£80k+,Very unlikely
+162,18-24,North West,Male,£60k-£80k,Somewhat unlikely
+163,55-64,North West,Female,£60k-£80k,Somewhat unlikely
+164,45-54,North East,Female,£60k-£80k,Neutral
+165,55-64,London,Female,Under £20k,Very unlikely
+166,25-34,Wales,Male,Under £20k,Very likely
+167,25-34,East of England,Male,Under £20k,Somewhat likely
+168,65+,Scotland,Male,Under £20k,Neutral
+169,65+,North East,Female,£60k-£80k,Somewhat likely
+170,25-34,North East,Female,£80k+,Neutral
+171,25-34,West Midlands,Male,£20k-£40k,Neutral
+172,35-44,South West,Male,£20k-£40k,Somewhat unlikely
+173,55-64,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+174,45-54,Northern Ireland,Male,£60k-£80k,Very unlikely
+175,55-64,East of England,Female,Under £20k,Somewhat unlikely
+176,45-54,Northern Ireland,Male,£40k-£60k,Very likely
+177,25-34,Wales,Female,£80k+,Neutral
+178,18-24,Wales,Female,£80k+,Very likely
+179,25-34,East Midlands,Female,£60k-£80k,Very unlikely
+180,25-34,Scotland,Male,£60k-£80k,Very unlikely
+181,45-54,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+182,25-34,Yorkshire,Male,£60k-£80k,Somewhat likely
+183,45-54,East of England,Male,Under £20k,Somewhat likely
+184,35-44,South East,Other,£60k-£80k,Very unlikely
+185,18-24,Wales,Female,£60k-£80k,Neutral
+186,25-34,East of England,Male,£60k-£80k,Neutral
+187,18-24,North West,Male,£20k-£40k,Very unlikely
+188,45-54,Northern Ireland,Female,Under £20k,Very unlikely
+189,55-64,North West,Female,£40k-£60k,Somewhat unlikely
+190,55-64,West Midlands,Male,Under £20k,Somewhat unlikely
+191,18-24,Wales,Female,£60k-£80k,Very unlikely
+192,35-44,East of England,Female,£60k-£80k,Very unlikely
+193,45-54,North West,Male,£20k-£40k,Neutral
+194,55-64,East of England,Female,£20k-£40k,Very unlikely
+195,35-44,West Midlands,Male,£80k+,Somewhat likely
+196,18-24,North East,Female,£80k+,Somewhat unlikely
+197,65+,East Midlands,Female,£60k-£80k,Somewhat unlikely
+198,35-44,Yorkshire,Female,£80k+,Somewhat likely
+199,35-44,North West,Other,£20k-£40k,Neutral
+200,25-34,West Midlands,Male,£60k-£80k,Somewhat unlikely
+201,45-54,West Midlands,Other,£20k-£40k,Neutral
+202,18-24,South West,Female,£80k+,Neutral
+203,18-24,East Midlands,Male,£60k-£80k,Very likely
+204,25-34,West Midlands,Female,£20k-£40k,Very likely
+205,35-44,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+206,35-44,Wales,Female,£60k-£80k,Very unlikely
+207,65+,Northern Ireland,Female,£60k-£80k,Very unlikely
+208,18-24,Scotland,Male,£40k-£60k,Very unlikely
+209,65+,South East,Male,Under £20k,Very unlikely
+210,65+,South East,Male,£40k-£60k,Very unlikely
+211,18-24,Yorkshire,Female,£40k-£60k,Neutral
+212,45-54,South West,Male,£60k-£80k,Somewhat unlikely
+213,25-34,South West,Male,£80k+,Very unlikely
+214,55-64,Wales,Male,£80k+,Somewhat likely
+215,45-54,Wales,Male,£40k-£60k,Somewhat unlikely
+216,45-54,North East,Female,£20k-£40k,Very likely
+217,35-44,Scotland,Male,£60k-£80k,Somewhat unlikely
+218,45-54,North East,Male,£60k-£80k,Very unlikely
+219,18-24,North West,Male,£40k-£60k,Somewhat unlikely
+220,65+,North East,Male,£60k-£80k,Neutral
+221,55-64,Wales,Female,Under £20k,Very unlikely
+222,65+,East Midlands,Female,£40k-£60k,Very unlikely
+223,25-34,Scotland,Female,£20k-£40k,Neutral
+224,55-64,North East,Female,£20k-£40k,Somewhat unlikely
+225,65+,Wales,Male,£60k-£80k,Very likely
+226,35-44,Northern Ireland,Male,£40k-£60k,Somewhat likely
+227,45-54,South West,Male,£80k+,Very unlikely
+228,35-44,East of England,Female,£40k-£60k,Very unlikely
+229,35-44,East Midlands,Other,£40k-£60k,Somewhat unlikely
+230,35-44,South East,Male,Under £20k,Very likely
+231,25-34,Wales,Female,£60k-£80k,Very unlikely
+232,55-64,Yorkshire,Male,£60k-£80k,Very likely
+233,55-64,South East,Male,£40k-£60k,Somewhat unlikely
+234,65+,Yorkshire,Male,£20k-£40k,Somewhat unlikely
+235,55-64,East of England,Male,£80k+,Neutral
+236,18-24,Wales,Female,£40k-£60k,Somewhat unlikely
+237,18-24,South West,Male,Under £20k,Neutral
+238,45-54,South East,Male,£80k+,Somewhat likely
+239,45-54,Yorkshire,Female,£80k+,Neutral
+240,65+,Northern Ireland,Male,£60k-£80k,Very unlikely
+241,45-54,Scotland,Male,£40k-£60k,Very likely
+242,35-44,North West,Male,£20k-£40k,Very unlikely
+243,18-24,Wales,Male,£40k-£60k,Very likely
+244,35-44,North West,Other,£60k-£80k,Very likely
+245,25-34,Wales,Female,Under £20k,Very likely
+246,35-44,North West,Other,£80k+,Somewhat likely
+247,55-64,North West,Female,£20k-£40k,Neutral
+248,25-34,Scotland,Male,£20k-£40k,Very unlikely
+249,55-64,North East,Female,Under £20k,Very unlikely
+250,18-24,South West,Male,£20k-£40k,Somewhat unlikely
+251,18-24,South West,Male,£20k-£40k,Somewhat unlikely
+252,55-64,South East,Female,£60k-£80k,Somewhat unlikely
+253,35-44,East of England,Female,£60k-£80k,Neutral
+254,55-64,London,Female,£80k+,Neutral
+255,65+,London,Male,£60k-£80k,Very unlikely
+256,45-54,Wales,Male,£60k-£80k,Very likely
+257,18-24,Yorkshire,Female,Under £20k,Somewhat likely
+258,55-64,Wales,Female,£40k-£60k,Somewhat unlikely
+259,55-64,East of England,Male,£80k+,Somewhat unlikely
+260,18-24,Northern Ireland,Male,£80k+,Somewhat unlikely
+261,25-34,West Midlands,Male,£20k-£40k,Somewhat likely
+262,45-54,West Midlands,Male,Under £20k,Neutral
+263,35-44,Wales,Male,£20k-£40k,Somewhat unlikely
+264,45-54,South East,Male,Under £20k,Very likely
+265,18-24,Northern Ireland,Female,£20k-£40k,Somewhat unlikely
+266,55-64,East of England,Female,Under £20k,Somewhat unlikely
+267,65+,West Midlands,Female,Under £20k,Very unlikely
+268,55-64,North East,Male,£80k+,Somewhat unlikely
+269,25-34,Wales,Female,Under £20k,Somewhat likely
+270,55-64,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+271,45-54,East of England,Other,£80k+,Somewhat unlikely
+272,65+,East of England,Male,£40k-£60k,Very likely
+273,35-44,Northern Ireland,Female,£40k-£60k,Somewhat likely
+274,25-34,South West,Female,£60k-£80k,Very likely
+275,65+,Wales,Other,Under £20k,Very unlikely
+276,25-34,West Midlands,Male,£40k-£60k,Very likely
+277,35-44,Northern Ireland,Male,£80k+,Neutral
+278,18-24,South West,Male,£80k+,Very likely
+279,18-24,North East,Male,£60k-£80k,Neutral
+280,45-54,West Midlands,Male,£80k+,Very likely
+281,45-54,South East,Male,£80k+,Neutral
+282,65+,North East,Male,£60k-£80k,Very unlikely
+283,18-24,London,Male,£20k-£40k,Somewhat unlikely
+284,35-44,North East,Male,Under £20k,Neutral
+285,45-54,South West,Male,£80k+,Somewhat unlikely
+286,55-64,East of England,Female,£40k-£60k,Very likely
+287,65+,London,Male,£60k-£80k,Very unlikely
+288,35-44,Scotland,Male,£60k-£80k,Somewhat unlikely
+289,45-54,North East,Male,Under £20k,Very unlikely
+290,25-34,Scotland,Male,£40k-£60k,Very likely
+291,18-24,North West,Male,£60k-£80k,Neutral
+292,45-54,North East,Female,£20k-£40k,Neutral
+293,25-34,South East,Female,Under £20k,Somewhat likely
+294,25-34,Yorkshire,Male,£20k-£40k,Somewhat likely
+295,25-34,North East,Male,£80k+,Very likely
+296,65+,South East,Male,£60k-£80k,Somewhat unlikely
+297,55-64,Scotland,Male,£80k+,Somewhat unlikely
+298,55-64,Yorkshire,Female,£40k-£60k,Somewhat likely
+299,18-24,East Midlands,Male,£40k-£60k,Very unlikely
+300,55-64,London,Male,Under £20k,Neutral
+301,45-54,London,Male,£40k-£60k,Very likely
+302,18-24,Scotland,Female,£60k-£80k,Neutral
+303,55-64,Northern Ireland,Female,£60k-£80k,Very unlikely
+304,55-64,Wales,Male,£80k+,Somewhat unlikely
+305,25-34,London,Male,£40k-£60k,Very unlikely
+306,18-24,East of England,Female,Under £20k,Somewhat likely
+307,45-54,East Midlands,Female,£80k+,Somewhat likely
+308,35-44,North East,Male,£40k-£60k,Somewhat unlikely
+309,18-24,Wales,Female,Under £20k,Neutral
+310,55-64,Wales,Male,£40k-£60k,Very unlikely
+311,65+,Scotland,Female,£40k-£60k,Somewhat likely
+312,65+,South West,Female,£40k-£60k,Very unlikely
+313,65+,Wales,Male,£80k+,Very unlikely
+314,18-24,North East,Female,£40k-£60k,Very unlikely
+315,65+,Northern Ireland,Female,£80k+,Somewhat likely
+316,65+,West Midlands,Female,Under £20k,Somewhat unlikely
+317,25-34,North West,Male,£60k-£80k,Somewhat likely
+318,25-34,South West,Male,Under £20k,Neutral
+319,55-64,Northern Ireland,Female,Under £20k,Very unlikely
+320,55-64,South West,Female,£20k-£40k,Somewhat likely
+321,65+,Scotland,Female,£20k-£40k,Very unlikely
+322,18-24,West Midlands,Male,£20k-£40k,Very unlikely
+323,55-64,North East,Female,£60k-£80k,Neutral
+324,25-34,North East,Other,£60k-£80k,Very unlikely
+325,25-34,Yorkshire,Female,£80k+,Very unlikely
+326,45-54,North East,Female,£80k+,Somewhat unlikely
+327,25-34,North West,Female,£20k-£40k,Very unlikely
+328,18-24,Wales,Female,£40k-£60k,Somewhat unlikely
+329,18-24,Northern Ireland,Female,Under £20k,Neutral
+330,25-34,North East,Male,£80k+,Very likely
+331,45-54,South East,Female,£20k-£40k,Very unlikely
+332,35-44,London,Male,£60k-£80k,Somewhat likely
+333,25-34,West Midlands,Other,£40k-£60k,Somewhat likely
+334,35-44,South East,Female,£40k-£60k,Somewhat unlikely
+335,25-34,London,Male,£60k-£80k,Neutral
+336,25-34,Northern Ireland,Male,£80k+,Very likely
+337,18-24,London,Male,£20k-£40k,Neutral
+338,65+,Scotland,Female,Under £20k,Very unlikely
+339,25-34,North East,Male,£20k-£40k,Somewhat likely
+340,55-64,East Midlands,Male,£60k-£80k,Somewhat unlikely
+341,18-24,Wales,Female,£20k-£40k,Somewhat unlikely
+342,35-44,West Midlands,Male,£40k-£60k,Somewhat likely
+343,45-54,South West,Female,Under £20k,Somewhat unlikely
+344,35-44,South East,Female,£80k+,Neutral
+345,55-64,East of England,Male,£60k-£80k,Very likely
+346,45-54,Yorkshire,Male,Under £20k,Neutral
+347,18-24,Yorkshire,Male,Under £20k,Somewhat unlikely
+348,65+,Yorkshire,Male,£40k-£60k,Very unlikely
+349,65+,South West,Female,£60k-£80k,Very unlikely
+350,45-54,Wales,Male,£20k-£40k,Very likely
+351,45-54,London,Male,Under £20k,Very unlikely
+352,18-24,Yorkshire,Female,£80k+,Neutral
+353,55-64,East Midlands,Male,£20k-£40k,Neutral
+354,18-24,Wales,Male,Under £20k,Very unlikely
+355,45-54,West Midlands,Female,£60k-£80k,Neutral
+356,25-34,East Midlands,Female,£40k-£60k,Very unlikely
+357,55-64,North East,Female,£60k-£80k,Somewhat likely
+358,55-64,South West,Female,£40k-£60k,Somewhat likely
+359,35-44,Wales,Male,£60k-£80k,Neutral
+360,45-54,South West,Female,£40k-£60k,Neutral
+361,65+,Yorkshire,Female,£60k-£80k,Neutral
+362,18-24,South East,Female,£60k-£80k,Neutral
+363,65+,Wales,Male,Under £20k,Neutral
+364,55-64,Wales,Female,Under £20k,Somewhat likely
+365,25-34,Wales,Male,£60k-£80k,Very unlikely
+366,18-24,Scotland,Male,£60k-£80k,Very unlikely
+367,35-44,East Midlands,Female,£80k+,Very likely
+368,35-44,West Midlands,Male,£40k-£60k,Somewhat likely
+369,18-24,London,Female,£60k-£80k,Neutral
+370,55-64,South East,Male,£40k-£60k,Very unlikely
+371,25-34,Scotland,Male,£60k-£80k,Very likely
+372,25-34,South East,Male,£60k-£80k,Very unlikely
+373,65+,Yorkshire,Female,Under £20k,Very unlikely
+374,35-44,North East,Female,£20k-£40k,Somewhat unlikely
+375,55-64,North West,Male,£20k-£40k,Very unlikely
+376,25-34,East Midlands,Male,£80k+,Neutral
+377,45-54,East of England,Male,Under £20k,Very likely
+378,45-54,Northern Ireland,Female,£80k+,Neutral
+379,45-54,Scotland,Male,£40k-£60k,Somewhat unlikely
+380,45-54,East Midlands,Female,£40k-£60k,Somewhat likely
+381,55-64,Wales,Female,£20k-£40k,Somewhat unlikely
+382,18-24,South East,Female,£40k-£60k,Somewhat likely
+383,35-44,Northern Ireland,Male,£80k+,Very unlikely
+384,18-24,North East,Male,£80k+,Neutral
+385,65+,North East,Female,Under £20k,Somewhat unlikely
+386,25-34,Scotland,Female,£20k-£40k,Very likely
+387,55-64,Northern Ireland,Female,£40k-£60k,Very unlikely
+388,55-64,London,Female,Under £20k,Very likely
+389,65+,Scotland,Male,£20k-£40k,Very unlikely
+390,45-54,Scotland,Female,£60k-£80k,Very unlikely
+391,55-64,North East,Female,£40k-£60k,Somewhat unlikely
+392,65+,West Midlands,Male,Under £20k,Very unlikely
+393,25-34,East Midlands,Male,£60k-£80k,Somewhat likely
+394,55-64,South West,Male,£40k-£60k,Very unlikely
+395,35-44,West Midlands,Male,£40k-£60k,Neutral
+396,18-24,Yorkshire,Male,Under £20k,Somewhat likely
+397,25-34,South West,Male,£40k-£60k,Very unlikely
+398,55-64,West Midlands,Male,£20k-£40k,Very unlikely
+399,55-64,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+400,55-64,East Midlands,Female,£40k-£60k,Somewhat unlikely
+401,18-24,West Midlands,Female,£20k-£40k,Somewhat likely
+402,35-44,London,Male,£60k-£80k,Neutral
+403,65+,Wales,Male,£80k+,Very likely
+404,18-24,West Midlands,Male,£40k-£60k,Somewhat unlikely
+405,45-54,Yorkshire,Male,Under £20k,Somewhat unlikely
+406,25-34,Yorkshire,Female,Under £20k,Somewhat likely
+407,45-54,East of England,Male,£80k+,Somewhat unlikely
+408,18-24,South West,Other,£60k-£80k,Neutral
+409,35-44,East of England,Female,£20k-£40k,Somewhat likely
+410,55-64,West Midlands,Female,Under £20k,Very likely
+411,65+,Yorkshire,Female,£80k+,Somewhat unlikely
+412,55-64,East of England,Male,£80k+,Neutral
+413,45-54,Scotland,Female,£40k-£60k,Somewhat unlikely
+414,55-64,East of England,Female,£80k+,Neutral
+415,18-24,Yorkshire,Male,Under £20k,Very unlikely
+416,55-64,North East,Female,Under £20k,Somewhat unlikely
+417,35-44,Wales,Female,£80k+,Neutral
+418,65+,London,Female,£20k-£40k,Somewhat unlikely
+419,65+,Scotland,Female,£60k-£80k,Somewhat likely
+420,65+,North West,Male,Under £20k,Neutral
+421,45-54,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+422,45-54,East of England,Female,£60k-£80k,Very unlikely
+423,65+,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+424,55-64,Yorkshire,Other,£60k-£80k,Somewhat unlikely
+425,35-44,South West,Male,£80k+,Somewhat likely
+426,35-44,Wales,Female,£40k-£60k,Neutral
+427,25-34,North West,Male,£40k-£60k,Somewhat likely
+428,35-44,North East,Female,£60k-£80k,Somewhat likely
+429,35-44,East of England,Female,£40k-£60k,Somewhat likely
+430,55-64,Wales,Female,£60k-£80k,Very unlikely
+431,25-34,North East,Male,Under £20k,Somewhat likely
+432,45-54,Wales,Male,£60k-£80k,Somewhat likely
+433,55-64,North East,Female,£40k-£60k,Somewhat likely
+434,55-64,Northern Ireland,Female,£20k-£40k,Very likely
+435,55-64,North West,Female,Under £20k,Somewhat likely
+436,35-44,Northern Ireland,Male,£20k-£40k,Very likely
+437,55-64,South West,Male,£60k-£80k,Somewhat unlikely
+438,25-34,North East,Male,Under £20k,Very unlikely
+439,18-24,Wales,Female,£80k+,Somewhat unlikely
+440,18-24,South West,Male,£20k-£40k,Very unlikely
+441,18-24,West Midlands,Female,£20k-£40k,Very unlikely
+442,35-44,London,Male,£80k+,Neutral
+443,35-44,North East,Male,£80k+,Neutral
+444,25-34,East of England,Male,£20k-£40k,Somewhat unlikely
+445,35-44,South West,Female,£40k-£60k,Somewhat unlikely
+446,18-24,Northern Ireland,Male,£40k-£60k,Somewhat unlikely
+447,25-34,South West,Female,£60k-£80k,Somewhat unlikely
+448,55-64,Yorkshire,Male,Under £20k,Somewhat likely
+449,25-34,East Midlands,Male,£20k-£40k,Very likely
+450,45-54,North West,Male,£40k-£60k,Very unlikely
+451,35-44,Scotland,Female,Under £20k,Somewhat likely
+452,35-44,Northern Ireland,Male,Under £20k,Neutral
+453,25-34,West Midlands,Female,£40k-£60k,Neutral
+454,65+,North East,Male,£20k-£40k,Neutral
+455,25-34,East Midlands,Male,£80k+,Somewhat likely
+456,65+,East of England,Female,£80k+,Very unlikely
+457,25-34,North West,Female,£80k+,Very unlikely
+458,18-24,East of England,Male,£40k-£60k,Very likely
+459,55-64,South East,Male,£80k+,Very unlikely
+460,25-34,Scotland,Female,£20k-£40k,Somewhat likely
+461,55-64,East Midlands,Male,£20k-£40k,Very unlikely
+462,45-54,South East,Female,£60k-£80k,Very unlikely
+463,45-54,South West,Female,£60k-£80k,Somewhat unlikely
+464,55-64,East Midlands,Female,£40k-£60k,Very unlikely
+465,45-54,North East,Female,£20k-£40k,Somewhat unlikely
+466,18-24,West Midlands,Male,Under £20k,Neutral
+467,18-24,South East,Other,£60k-£80k,Very likely
+468,45-54,South West,Female,£60k-£80k,Neutral
+469,45-54,East Midlands,Female,£60k-£80k,Neutral
+470,65+,Wales,Female,£20k-£40k,Very unlikely
+471,35-44,South East,Male,£80k+,Somewhat likely
+472,25-34,Northern Ireland,Other,Under £20k,Somewhat unlikely
+473,35-44,East Midlands,Female,£80k+,Neutral
+474,45-54,North West,Male,£40k-£60k,Somewhat likely
+475,25-34,Northern Ireland,Female,Under £20k,Somewhat unlikely
+476,45-54,Scotland,Female,Under £20k,Somewhat likely
+477,18-24,South East,Female,£60k-£80k,Somewhat unlikely
+478,65+,London,Male,Under £20k,Somewhat unlikely
+479,25-34,East of England,Male,Under £20k,Very likely
+480,35-44,North West,Female,£80k+,Somewhat likely
+481,55-64,Wales,Female,£20k-£40k,Neutral
+482,25-34,Wales,Female,£60k-£80k,Somewhat likely
+483,18-24,East of England,Female,£20k-£40k,Somewhat unlikely
+484,45-54,East of England,Female,£40k-£60k,Very unlikely
+485,65+,West Midlands,Female,£40k-£60k,Very unlikely
+486,45-54,South West,Male,£20k-£40k,Very unlikely
+487,45-54,North West,Female,£40k-£60k,Very unlikely
+488,25-34,East Midlands,Female,£80k+,Somewhat likely
+489,45-54,East of England,Female,£60k-£80k,Somewhat likely
+490,25-34,Yorkshire,Female,£60k-£80k,Very unlikely
+491,18-24,East of England,Female,£20k-£40k,Very likely
+492,45-54,Wales,Female,Under £20k,Very unlikely
+493,25-34,Scotland,Female,£80k+,Somewhat likely
+494,25-34,Yorkshire,Male,Under £20k,Somewhat likely
+495,25-34,Northern Ireland,Male,£60k-£80k,Very unlikely
+496,65+,Scotland,Female,£60k-£80k,Very unlikely
+497,55-64,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+498,65+,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+499,45-54,East Midlands,Male,£60k-£80k,Very unlikely
+500,35-44,North West,Male,£60k-£80k,Very likely
+501,25-34,Northern Ireland,Male,£40k-£60k,Neutral
+502,55-64,Scotland,Female,£40k-£60k,Somewhat likely
+503,35-44,North West,Male,£20k-£40k,Neutral
+504,65+,Wales,Male,£60k-£80k,Very unlikely
+505,65+,Northern Ireland,Female,£20k-£40k,Very unlikely
+506,35-44,South West,Male,£80k+,Neutral
+507,55-64,Wales,Female,£80k+,Very likely
+508,18-24,Wales,Male,Under £20k,Neutral
+509,65+,North West,Male,£20k-£40k,Very likely
+510,55-64,East Midlands,Male,£80k+,Somewhat unlikely
+511,55-64,East Midlands,Female,Under £20k,Very likely
+512,55-64,West Midlands,Male,£80k+,Very unlikely
+513,55-64,North East,Male,£60k-£80k,Very unlikely
+514,25-34,South East,Female,£80k+,Very likely
+515,25-34,Scotland,Female,£40k-£60k,Somewhat likely
+516,45-54,South East,Male,£60k-£80k,Neutral
+517,25-34,Northern Ireland,Male,Under £20k,Neutral
+518,65+,London,Male,£60k-£80k,Somewhat unlikely
+519,45-54,London,Female,£20k-£40k,Very likely
+520,45-54,Wales,Female,£80k+,Very unlikely
+521,18-24,East of England,Female,£20k-£40k,Somewhat likely
+522,65+,Scotland,Male,Under £20k,Very unlikely
+523,65+,North East,Female,£80k+,Very unlikely
+524,25-34,Yorkshire,Male,£20k-£40k,Neutral
+525,65+,West Midlands,Female,£40k-£60k,Neutral
+526,25-34,Scotland,Female,£60k-£80k,Neutral
+527,55-64,Yorkshire,Male,£20k-£40k,Very unlikely
+528,65+,Northern Ireland,Male,£40k-£60k,Somewhat likely
+529,45-54,North West,Female,£40k-£60k,Somewhat unlikely
+530,55-64,Scotland,Male,£40k-£60k,Very likely
+531,35-44,East Midlands,Female,£40k-£60k,Neutral
+532,45-54,West Midlands,Male,£80k+,Somewhat unlikely
+533,18-24,Scotland,Male,£20k-£40k,Somewhat unlikely
+534,18-24,North East,Male,£20k-£40k,Somewhat unlikely
+535,35-44,Yorkshire,Male,Under £20k,Very unlikely
+536,45-54,Yorkshire,Female,Under £20k,Somewhat likely
+537,25-34,West Midlands,Male,£80k+,Neutral
+538,18-24,London,Male,£80k+,Very likely
+539,55-64,Yorkshire,Female,Under £20k,Neutral
+540,45-54,South East,Female,£80k+,Very unlikely
+541,25-34,Scotland,Female,£60k-£80k,Very likely
+542,35-44,North East,Male,£20k-£40k,Very likely
+543,45-54,North East,Male,£60k-£80k,Very unlikely
+544,35-44,North East,Female,£60k-£80k,Neutral
+545,25-34,East Midlands,Male,£40k-£60k,Very likely
+546,45-54,Yorkshire,Female,£60k-£80k,Very unlikely
+547,35-44,East Midlands,Male,£80k+,Very likely
+548,35-44,Scotland,Female,£20k-£40k,Neutral
+549,25-34,West Midlands,Other,£40k-£60k,Somewhat unlikely
+550,65+,East Midlands,Other,£20k-£40k,Somewhat unlikely
+551,35-44,West Midlands,Male,£80k+,Somewhat likely
+552,55-64,South West,Female,£80k+,Very likely
+553,65+,East Midlands,Female,£20k-£40k,Somewhat unlikely
+554,35-44,Northern Ireland,Male,£60k-£80k,Somewhat unlikely
+555,25-34,Wales,Male,£40k-£60k,Neutral
+556,65+,West Midlands,Female,Under £20k,Somewhat unlikely
+557,55-64,East Midlands,Female,£80k+,Somewhat unlikely
+558,65+,West Midlands,Female,£40k-£60k,Very unlikely
+559,55-64,Scotland,Female,Under £20k,Somewhat likely
+560,25-34,Wales,Female,£20k-£40k,Neutral
+561,18-24,Scotland,Other,£60k-£80k,Very unlikely
+562,35-44,West Midlands,Male,Under £20k,Somewhat likely
+563,55-64,Northern Ireland,Female,£80k+,Very unlikely
+564,25-34,East Midlands,Male,£60k-£80k,Somewhat unlikely
+565,55-64,Northern Ireland,Female,£40k-£60k,Very unlikely
+566,45-54,South East,Male,Under £20k,Very likely
+567,65+,South West,Male,£40k-£60k,Somewhat unlikely
+568,25-34,East of England,Female,£60k-£80k,Very likely
+569,65+,Northern Ireland,Male,Under £20k,Somewhat unlikely
+570,65+,South East,Male,£40k-£60k,Very unlikely
+571,65+,South West,Female,£20k-£40k,Somewhat unlikely
+572,55-64,South West,Male,£60k-£80k,Very unlikely
+573,25-34,West Midlands,Female,£20k-£40k,Neutral
+574,45-54,West Midlands,Male,£80k+,Very unlikely
+575,45-54,Scotland,Male,Under £20k,Somewhat unlikely
+576,25-34,North East,Female,Under £20k,Neutral
+577,55-64,South West,Male,£20k-£40k,Somewhat unlikely
+578,35-44,Wales,Female,£80k+,Very unlikely
+579,35-44,Scotland,Male,£60k-£80k,Neutral
+580,35-44,Yorkshire,Female,£80k+,Somewhat likely
+581,65+,Northern Ireland,Female,£80k+,Very unlikely
+582,65+,South West,Male,£20k-£40k,Somewhat unlikely
+583,25-34,Yorkshire,Female,£80k+,Somewhat likely
+584,55-64,South West,Female,£60k-£80k,Somewhat likely
+585,65+,East of England,Female,£20k-£40k,Very unlikely
+586,45-54,North East,Male,£40k-£60k,Very unlikely
+587,55-64,London,Female,Under £20k,Somewhat unlikely
+588,25-34,West Midlands,Other,£80k+,Neutral
+589,45-54,Wales,Female,£60k-£80k,Neutral
+590,18-24,Scotland,Male,£20k-£40k,Somewhat likely
+591,35-44,North West,Female,£20k-£40k,Somewhat unlikely
+592,55-64,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+593,18-24,Scotland,Male,£80k+,Very unlikely
+594,35-44,East of England,Female,Under £20k,Somewhat unlikely
+595,45-54,East of England,Male,£60k-£80k,Very likely
+596,65+,North West,Male,Under £20k,Somewhat unlikely
+597,35-44,South East,Male,Under £20k,Somewhat unlikely
+598,25-34,North West,Female,£80k+,Somewhat unlikely
+599,65+,Scotland,Female,£20k-£40k,Very unlikely
+600,25-34,North West,Female,£80k+,Somewhat likely
+601,35-44,Scotland,Female,£40k-£60k,Very unlikely
+602,35-44,North East,Female,£80k+,Very unlikely
+603,65+,South East,Male,£60k-£80k,Very unlikely
+604,35-44,Wales,Male,£20k-£40k,Somewhat likely
+605,65+,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+606,55-64,Wales,Male,£60k-£80k,Neutral
+607,18-24,Wales,Female,Under £20k,Neutral
+608,65+,North East,Female,£40k-£60k,Somewhat unlikely
+609,45-54,Yorkshire,Female,Under £20k,Somewhat unlikely
+610,45-54,Wales,Female,£40k-£60k,Very unlikely
+611,55-64,West Midlands,Male,£60k-£80k,Very unlikely
+612,45-54,North East,Male,£40k-£60k,Neutral
+613,55-64,South West,Female,£60k-£80k,Very unlikely
+614,65+,London,Male,£60k-£80k,Very likely
+615,25-34,East Midlands,Male,£60k-£80k,Somewhat likely
+616,65+,South West,Female,£40k-£60k,Neutral
+617,35-44,South East,Female,£40k-£60k,Very likely
+618,65+,Wales,Male,£60k-£80k,Very unlikely
+619,65+,Northern Ireland,Female,£60k-£80k,Very unlikely
+620,65+,South East,Male,£60k-£80k,Somewhat likely
+621,55-64,North West,Female,£60k-£80k,Very likely
+622,65+,Yorkshire,Female,£60k-£80k,Very unlikely
+623,45-54,South East,Male,Under £20k,Somewhat unlikely
+624,18-24,South East,Male,£40k-£60k,Somewhat likely
+625,25-34,Wales,Other,£20k-£40k,Very likely
+626,55-64,London,Female,£20k-£40k,Somewhat unlikely
+627,65+,North West,Female,£20k-£40k,Very unlikely
+628,55-64,Wales,Male,£20k-£40k,Somewhat likely
+629,18-24,South West,Female,£80k+,Somewhat unlikely
+630,35-44,West Midlands,Male,£20k-£40k,Somewhat likely
+631,65+,South East,Male,£80k+,Very unlikely
+632,55-64,North East,Female,Under £20k,Very unlikely
+633,65+,North East,Male,£80k+,Somewhat unlikely
+634,65+,West Midlands,Male,Under £20k,Very unlikely
+635,25-34,East Midlands,Male,£20k-£40k,Neutral
+636,55-64,South East,Female,Under £20k,Very unlikely
+637,35-44,South West,Male,£80k+,Somewhat likely
+638,55-64,Wales,Male,£60k-£80k,Very unlikely
+639,18-24,London,Female,Under £20k,Somewhat likely
+640,18-24,London,Female,£60k-£80k,Neutral
+641,65+,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+642,45-54,South East,Female,£80k+,Somewhat unlikely
+643,35-44,South East,Male,£80k+,Very unlikely
+644,25-34,East of England,Male,£80k+,Neutral
+645,65+,Wales,Female,£40k-£60k,Very unlikely
+646,65+,North West,Male,Under £20k,Very unlikely
+647,18-24,East Midlands,Female,Under £20k,Neutral
+648,65+,Wales,Female,Under £20k,Very likely
+649,25-34,Northern Ireland,Male,£60k-£80k,Very unlikely
+650,55-64,East of England,Female,£40k-£60k,Somewhat likely
+651,25-34,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+652,18-24,London,Male,£60k-£80k,Somewhat likely
+653,18-24,North East,Female,£80k+,Somewhat unlikely
+654,45-54,East Midlands,Female,Under £20k,Neutral
+655,55-64,South West,Male,£40k-£60k,Very unlikely
+656,55-64,Wales,Female,£20k-£40k,Very unlikely
+657,18-24,London,Female,Under £20k,Somewhat likely
+658,45-54,Yorkshire,Male,£20k-£40k,Somewhat likely
+659,18-24,East of England,Female,£60k-£80k,Somewhat likely
+660,25-34,West Midlands,Female,£40k-£60k,Somewhat likely
+661,18-24,Scotland,Male,£80k+,Somewhat unlikely
+662,18-24,South West,Male,£80k+,Very unlikely
+663,45-54,South East,Female,£40k-£60k,Very unlikely
+664,35-44,Yorkshire,Male,£60k-£80k,Very likely
+665,25-34,North East,Female,£40k-£60k,Somewhat unlikely
+666,25-34,East Midlands,Male,£60k-£80k,Very unlikely
+667,25-34,Northern Ireland,Female,£20k-£40k,Very likely
+668,45-54,London,Male,£40k-£60k,Somewhat unlikely
+669,65+,London,Female,Under £20k,Very unlikely
+670,45-54,Northern Ireland,Female,Under £20k,Somewhat likely
+671,25-34,West Midlands,Female,Under £20k,Very unlikely
+672,25-34,Northern Ireland,Male,Under £20k,Very unlikely
+673,55-64,West Midlands,Female,£40k-£60k,Somewhat unlikely
+674,65+,South East,Female,£80k+,Somewhat likely
+675,45-54,South East,Female,Under £20k,Neutral
+676,25-34,North West,Male,£40k-£60k,Very unlikely
+677,45-54,Northern Ireland,Female,£40k-£60k,Neutral
+678,35-44,North West,Male,£20k-£40k,Very likely
+679,55-64,South East,Male,£20k-£40k,Somewhat unlikely
+680,35-44,West Midlands,Male,£40k-£60k,Very unlikely
+681,25-34,East Midlands,Male,£40k-£60k,Very unlikely
+682,18-24,South West,Female,£40k-£60k,Very unlikely
+683,65+,Scotland,Male,£40k-£60k,Somewhat likely
+684,65+,North West,Other,£60k-£80k,Somewhat unlikely
+685,65+,North East,Male,£20k-£40k,Very likely
+686,45-54,East Midlands,Female,£80k+,Somewhat likely
+687,45-54,South East,Female,£20k-£40k,Very likely
+688,18-24,North West,Male,£60k-£80k,Neutral
+689,65+,Wales,Male,£80k+,Neutral
+690,18-24,London,Other,£20k-£40k,Very unlikely
+691,45-54,South West,Male,£40k-£60k,Somewhat likely
+692,45-54,London,Male,£80k+,Neutral
+693,65+,West Midlands,Female,£60k-£80k,Very unlikely
+694,25-34,Yorkshire,Male,£20k-£40k,Somewhat likely
+695,45-54,South West,Male,£80k+,Somewhat unlikely
+696,65+,North East,Female,£80k+,Somewhat unlikely
+697,18-24,North East,Male,£60k-£80k,Somewhat likely
+698,55-64,North West,Female,£80k+,Very unlikely
+699,45-54,Northern Ireland,Male,£80k+,Very unlikely
+700,35-44,Scotland,Female,£60k-£80k,Somewhat likely
+701,18-24,Yorkshire,Female,Under £20k,Very unlikely
+702,35-44,London,Female,£60k-£80k,Neutral
+703,55-64,North West,Other,Under £20k,Neutral
+704,25-34,North East,Female,Under £20k,Somewhat unlikely
+705,25-34,Scotland,Female,£60k-£80k,Somewhat likely
+706,25-34,South West,Male,£40k-£60k,Somewhat unlikely
+707,65+,Yorkshire,Female,Under £20k,Very unlikely
+708,35-44,Scotland,Female,£80k+,Very unlikely
+709,45-54,East of England,Male,£60k-£80k,Very likely
+710,18-24,North West,Female,Under £20k,Neutral
+711,18-24,Yorkshire,Female,£20k-£40k,Very unlikely
+712,35-44,Northern Ireland,Male,£40k-£60k,Very likely
+713,25-34,Scotland,Female,£20k-£40k,Somewhat unlikely
+714,55-64,Yorkshire,Other,£40k-£60k,Very unlikely
+715,65+,West Midlands,Female,£40k-£60k,Somewhat unlikely
+716,25-34,South West,Female,£60k-£80k,Somewhat unlikely
+717,45-54,Wales,Male,£80k+,Somewhat unlikely
+718,55-64,Yorkshire,Male,£80k+,Very unlikely
+719,45-54,North East,Female,£40k-£60k,Somewhat likely
+720,65+,London,Female,£80k+,Somewhat unlikely
+721,55-64,London,Male,£40k-£60k,Very unlikely
+722,55-64,North West,Female,Under £20k,Very unlikely
+723,25-34,Yorkshire,Female,£20k-£40k,Somewhat likely
+724,35-44,South West,Female,Under £20k,Somewhat unlikely
+725,65+,Wales,Female,£40k-£60k,Somewhat unlikely
+726,35-44,North West,Male,Under £20k,Somewhat likely
+727,18-24,Northern Ireland,Male,£60k-£80k,Neutral
+728,45-54,South West,Female,£60k-£80k,Very unlikely
+729,35-44,East of England,Male,£60k-£80k,Somewhat unlikely
+730,55-64,Wales,Female,£20k-£40k,Somewhat likely
+731,18-24,London,Male,£40k-£60k,Somewhat likely
+732,18-24,South East,Male,£60k-£80k,Somewhat likely
+733,18-24,East of England,Female,Under £20k,Neutral
+734,55-64,East Midlands,Female,£60k-£80k,Very unlikely
+735,25-34,Scotland,Female,£20k-£40k,Very likely
+736,35-44,North West,Other,£60k-£80k,Somewhat unlikely
+737,65+,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+738,18-24,London,Male,£80k+,Very unlikely
+739,25-34,London,Male,£60k-£80k,Very likely
+740,65+,Wales,Female,£20k-£40k,Somewhat likely
+741,25-34,South West,Female,Under £20k,Somewhat likely
+742,18-24,North East,Female,£60k-£80k,Neutral
+743,65+,North East,Male,£80k+,Somewhat unlikely
+744,35-44,West Midlands,Male,£60k-£80k,Very likely
+745,45-54,East Midlands,Male,£40k-£60k,Somewhat unlikely
+746,25-34,Northern Ireland,Female,Under £20k,Somewhat unlikely
+747,55-64,West Midlands,Other,£80k+,Neutral
+748,18-24,West Midlands,Female,£60k-£80k,Very unlikely
+749,65+,East Midlands,Female,£20k-£40k,Somewhat unlikely
+750,18-24,West Midlands,Female,Under £20k,Neutral
+751,55-64,Scotland,Female,£80k+,Somewhat likely
+752,45-54,South West,Female,£20k-£40k,Very unlikely
+753,25-34,South West,Male,Under £20k,Very unlikely
+754,45-54,North West,Other,£20k-£40k,Very unlikely
+755,35-44,Yorkshire,Female,Under £20k,Very likely
+756,55-64,West Midlands,Female,£40k-£60k,Somewhat unlikely
+757,18-24,Northern Ireland,Female,£80k+,Somewhat unlikely
+758,18-24,West Midlands,Male,£80k+,Somewhat unlikely
+759,18-24,South East,Female,Under £20k,Somewhat unlikely
+760,55-64,Yorkshire,Female,£40k-£60k,Neutral
+761,45-54,Scotland,Female,Under £20k,Somewhat likely
+762,45-54,South West,Female,£60k-£80k,Very likely
+763,35-44,Northern Ireland,Male,£60k-£80k,Very unlikely
+764,35-44,London,Male,£40k-£60k,Somewhat likely
+765,45-54,Northern Ireland,Female,£20k-£40k,Somewhat likely
+766,65+,East Midlands,Female,£40k-£60k,Neutral
+767,45-54,Scotland,Female,£20k-£40k,Neutral
+768,45-54,Northern Ireland,Female,£80k+,Very unlikely
+769,18-24,East of England,Female,Under £20k,Neutral
+770,55-64,West Midlands,Male,£80k+,Very unlikely
+771,18-24,South West,Male,£20k-£40k,Very unlikely
+772,25-34,London,Male,£40k-£60k,Neutral
+773,35-44,Yorkshire,Female,£80k+,Somewhat likely
+774,18-24,Wales,Male,£40k-£60k,Neutral
+775,45-54,South West,Other,£60k-£80k,Somewhat unlikely
+776,35-44,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+777,65+,South East,Male,£60k-£80k,Very likely
+778,55-64,North West,Female,£20k-£40k,Very unlikely
+779,35-44,Wales,Male,Under £20k,Very unlikely
+780,65+,London,Male,£20k-£40k,Very unlikely
+781,55-64,London,Male,£80k+,Very unlikely
+782,35-44,Northern Ireland,Other,£40k-£60k,Neutral
+783,45-54,Yorkshire,Male,£20k-£40k,Neutral
+784,65+,East of England,Female,£60k-£80k,Very unlikely
+785,18-24,East of England,Other,£40k-£60k,Somewhat unlikely
+786,55-64,Scotland,Male,Under £20k,Somewhat unlikely
+787,35-44,North East,Female,£40k-£60k,Somewhat likely
+788,65+,Wales,Male,£20k-£40k,Somewhat unlikely
+789,25-34,London,Female,£80k+,Somewhat likely
+790,35-44,Wales,Male,Under £20k,Somewhat unlikely
+791,35-44,North East,Female,£60k-£80k,Somewhat likely
+792,18-24,Scotland,Female,£80k+,Very unlikely
+793,35-44,Northern Ireland,Female,£80k+,Somewhat unlikely
+794,45-54,Wales,Male,£40k-£60k,Very unlikely
+795,65+,East of England,Male,Under £20k,Somewhat unlikely
+796,65+,North East,Female,£80k+,Very unlikely
+797,25-34,Wales,Female,Under £20k,Somewhat likely
+798,25-34,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+799,35-44,Yorkshire,Male,£40k-£60k,Neutral
+800,18-24,East Midlands,Male,£80k+,Somewhat unlikely
+801,55-64,South East,Male,£20k-£40k,Somewhat unlikely
+802,65+,West Midlands,Female,£60k-£80k,Somewhat likely
+803,25-34,South West,Other,£40k-£60k,Somewhat likely
+804,55-64,East Midlands,Male,£20k-£40k,Very unlikely
+805,45-54,Yorkshire,Female,£20k-£40k,Neutral
+806,18-24,London,Male,£20k-£40k,Somewhat unlikely
+807,25-34,Scotland,Female,£60k-£80k,Somewhat unlikely
+808,18-24,South West,Female,£60k-£80k,Neutral
+809,45-54,West Midlands,Male,£80k+,Somewhat likely
+810,35-44,London,Female,£80k+,Very likely
+811,65+,London,Female,£20k-£40k,Neutral
+812,35-44,North East,Male,£60k-£80k,Neutral
+813,35-44,South West,Male,Under £20k,Somewhat likely
+814,35-44,East Midlands,Female,£80k+,Neutral
+815,45-54,Wales,Other,£40k-£60k,Very unlikely
+816,45-54,Yorkshire,Female,£20k-£40k,Very unlikely
+817,45-54,London,Male,£20k-£40k,Somewhat likely
+818,18-24,Scotland,Female,Under £20k,Neutral
+819,65+,London,Male,£40k-£60k,Very unlikely
+820,55-64,London,Female,Under £20k,Somewhat unlikely
+821,65+,London,Male,Under £20k,Somewhat unlikely
+822,45-54,South East,Female,£60k-£80k,Somewhat unlikely
+823,25-34,Northern Ireland,Female,Under £20k,Somewhat likely
+824,65+,South East,Female,£40k-£60k,Very unlikely
+825,65+,South West,Male,Under £20k,Somewhat unlikely
+826,55-64,South East,Male,Under £20k,Somewhat unlikely
+827,55-64,North West,Female,£80k+,Very unlikely
+828,35-44,Northern Ireland,Male,£20k-£40k,Very likely
+829,45-54,North West,Female,£60k-£80k,Neutral
+830,18-24,London,Female,Under £20k,Very unlikely
+831,65+,East Midlands,Male,Under £20k,Very unlikely
+832,18-24,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+833,45-54,North East,Male,Under £20k,Very likely
+834,25-34,London,Female,£40k-£60k,Somewhat unlikely
+835,35-44,West Midlands,Female,Under £20k,Very unlikely
+836,18-24,London,Female,£20k-£40k,Somewhat likely
+837,45-54,Scotland,Male,Under £20k,Neutral
+838,35-44,South West,Male,£60k-£80k,Very unlikely
+839,35-44,West Midlands,Female,£60k-£80k,Somewhat unlikely
+840,65+,South West,Male,Under £20k,Very unlikely
+841,25-34,South East,Male,£80k+,Somewhat likely
+842,55-64,Wales,Male,£80k+,Somewhat unlikely
+843,35-44,Scotland,Male,£20k-£40k,Neutral
+844,45-54,South East,Female,£60k-£80k,Very likely
+845,35-44,Wales,Male,£80k+,Somewhat unlikely
+846,55-64,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+847,65+,Northern Ireland,Female,£60k-£80k,Very unlikely
+848,25-34,East Midlands,Male,£60k-£80k,Very likely
+849,55-64,Scotland,Male,£20k-£40k,Somewhat unlikely
+850,45-54,East Midlands,Female,Under £20k,Very unlikely
+851,35-44,North West,Male,£40k-£60k,Very likely
+852,25-34,East of England,Female,£60k-£80k,Somewhat unlikely
+853,18-24,East Midlands,Male,£80k+,Neutral
+854,45-54,East Midlands,Male,£60k-£80k,Very unlikely
+855,18-24,South East,Male,Under £20k,Neutral
+856,18-24,South East,Female,£80k+,Somewhat unlikely
+857,55-64,East of England,Male,£60k-£80k,Very unlikely
+858,35-44,London,Female,£60k-£80k,Somewhat likely
+859,55-64,Scotland,Male,£40k-£60k,Very unlikely
+860,18-24,South East,Female,£20k-£40k,Very likely
+861,35-44,Wales,Other,£40k-£60k,Neutral
+862,35-44,Northern Ireland,Male,£20k-£40k,Neutral
+863,65+,Northern Ireland,Female,Under £20k,Neutral
+864,25-34,North West,Male,£60k-£80k,Somewhat likely
+865,25-34,Northern Ireland,Male,£60k-£80k,Very likely
+866,65+,Wales,Female,£60k-£80k,Somewhat unlikely
+867,55-64,East of England,Male,£60k-£80k,Very likely
+868,65+,London,Female,£60k-£80k,Very unlikely
+869,45-54,East of England,Female,£20k-£40k,Somewhat unlikely
+870,25-34,Northern Ireland,Female,Under £20k,Somewhat likely
+871,55-64,Scotland,Female,£80k+,Very unlikely
+872,45-54,Scotland,Female,£20k-£40k,Somewhat likely
+873,35-44,North East,Male,£20k-£40k,Very likely
+874,55-64,Northern Ireland,Female,£80k+,Neutral
+875,65+,East of England,Female,£80k+,Very unlikely
+876,25-34,North West,Female,£40k-£60k,Somewhat unlikely
+877,65+,South West,Other,£20k-£40k,Somewhat unlikely
+878,65+,Wales,Male,Under £20k,Very unlikely
+879,55-64,East Midlands,Female,£60k-£80k,Very unlikely
+880,55-64,North East,Female,£60k-£80k,Very unlikely
+881,55-64,South East,Male,£20k-£40k,Very likely
+882,18-24,North West,Male,£20k-£40k,Very unlikely
+883,65+,North East,Male,Under £20k,Very unlikely
+884,35-44,North West,Female,Under £20k,Somewhat likely
+885,45-54,South East,Female,£80k+,Very unlikely
+886,65+,Wales,Female,£20k-£40k,Somewhat unlikely
+887,65+,North East,Female,Under £20k,Very unlikely
+888,45-54,West Midlands,Female,£40k-£60k,Very unlikely
+889,18-24,London,Female,£20k-£40k,Somewhat unlikely
+890,45-54,North West,Female,£40k-£60k,Very unlikely
+891,55-64,Northern Ireland,Female,£20k-£40k,Neutral
+892,25-34,Wales,Male,£20k-£40k,Somewhat unlikely
+893,18-24,West Midlands,Male,£40k-£60k,Somewhat unlikely
+894,25-34,South West,Female,£40k-£60k,Very likely
+895,45-54,Northern Ireland,Female,Under £20k,Somewhat likely
+896,35-44,Scotland,Male,£80k+,Very unlikely
+897,35-44,East Midlands,Female,£80k+,Somewhat likely
+898,65+,Yorkshire,Female,£20k-£40k,Somewhat unlikely
+899,55-64,South West,Male,£80k+,Somewhat unlikely
+900,35-44,North West,Female,£40k-£60k,Somewhat likely
+901,35-44,North West,Female,£80k+,Neutral
+902,55-64,Wales,Male,£40k-£60k,Somewhat unlikely
+903,65+,Scotland,Female,£20k-£40k,Very unlikely
+904,65+,Yorkshire,Male,Under £20k,Somewhat unlikely
+905,55-64,Northern Ireland,Male,£80k+,Very unlikely
+906,35-44,East of England,Female,£60k-£80k,Neutral
+907,35-44,Wales,Male,£80k+,Very likely
+908,18-24,South West,Other,£80k+,Neutral
+909,65+,South East,Male,£20k-£40k,Very unlikely
+910,45-54,South East,Male,£60k-£80k,Somewhat unlikely
+911,18-24,Northern Ireland,Female,Under £20k,Neutral
+912,35-44,London,Male,Under £20k,Very likely
+913,35-44,East of England,Male,£20k-£40k,Very unlikely
+914,45-54,West Midlands,Male,£60k-£80k,Neutral
+915,18-24,West Midlands,Female,£80k+,Very likely
+916,65+,Scotland,Male,£80k+,Very likely
+917,18-24,Yorkshire,Female,Under £20k,Neutral
+918,65+,North East,Female,£40k-£60k,Very unlikely
+919,45-54,West Midlands,Male,Under £20k,Neutral
+920,55-64,North West,Male,£60k-£80k,Very unlikely
+921,55-64,North East,Other,£20k-£40k,Neutral
+922,65+,Wales,Male,Under £20k,Very unlikely
+923,55-64,South West,Male,Under £20k,Somewhat unlikely
+924,45-54,East of England,Female,Under £20k,Somewhat likely
+925,65+,Northern Ireland,Female,£40k-£60k,Neutral
+926,65+,East of England,Male,£20k-£40k,Neutral
+927,35-44,North West,Male,£80k+,Very unlikely
+928,55-64,East Midlands,Female,Under £20k,Neutral
+929,18-24,North East,Male,£80k+,Neutral
+930,35-44,Yorkshire,Male,£20k-£40k,Very likely
+931,55-64,South East,Female,£40k-£60k,Somewhat unlikely
+932,35-44,Scotland,Female,£80k+,Very likely
+933,55-64,Yorkshire,Female,£60k-£80k,Somewhat likely
+934,35-44,North West,Female,£60k-£80k,Somewhat likely
+935,35-44,South West,Female,£40k-£60k,Very unlikely
+936,45-54,East Midlands,Male,£40k-£60k,Neutral
+937,18-24,South West,Female,Under £20k,Very unlikely
+938,25-34,East of England,Male,Under £20k,Somewhat unlikely
+939,18-24,East of England,Female,£80k+,Somewhat unlikely
+940,55-64,North West,Female,£80k+,Neutral
+941,55-64,East Midlands,Female,£20k-£40k,Neutral
+942,25-34,Scotland,Female,£40k-£60k,Very likely
+943,55-64,East of England,Male,£40k-£60k,Somewhat unlikely
+944,65+,North West,Female,£80k+,Very unlikely
+945,55-64,South West,Male,£20k-£40k,Somewhat unlikely
+946,55-64,Wales,Female,£20k-£40k,Very unlikely
+947,45-54,Yorkshire,Male,£60k-£80k,Somewhat likely
+948,35-44,Yorkshire,Male,£20k-£40k,Neutral
+949,35-44,West Midlands,Male,£60k-£80k,Very unlikely
+950,18-24,Wales,Male,£80k+,Somewhat unlikely
+951,35-44,Northern Ireland,Male,£80k+,Neutral
+952,45-54,Wales,Male,£80k+,Somewhat unlikely
+953,18-24,East of England,Male,£20k-£40k,Neutral
+954,35-44,Yorkshire,Female,£60k-£80k,Very unlikely
+955,18-24,East of England,Female,£60k-£80k,Somewhat likely
+956,18-24,East of England,Female,£20k-£40k,Somewhat likely
+957,25-34,Yorkshire,Female,Under £20k,Neutral
+958,45-54,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+959,45-54,North West,Female,£60k-£80k,Very likely
+960,18-24,South West,Female,£20k-£40k,Somewhat likely
+961,55-64,London,Female,£20k-£40k,Very likely
+962,35-44,South West,Female,£60k-£80k,Neutral
+963,55-64,Wales,Male,£40k-£60k,Very unlikely
+964,25-34,East Midlands,Female,£60k-£80k,Very unlikely
+965,25-34,North West,Female,£80k+,Very likely
+966,55-64,South West,Female,£80k+,Neutral
+967,65+,Wales,Male,£60k-£80k,Very unlikely
+968,18-24,North West,Male,£20k-£40k,Somewhat likely
+969,25-34,East of England,Female,£80k+,Neutral
+970,25-34,Scotland,Male,£60k-£80k,Very unlikely
+971,55-64,London,Female,£80k+,Somewhat unlikely
+972,18-24,South East,Female,£20k-£40k,Very unlikely
+973,55-64,London,Female,£60k-£80k,Somewhat unlikely
+974,35-44,London,Female,£60k-£80k,Somewhat likely
+975,45-54,West Midlands,Male,£80k+,Very likely
+976,25-34,North East,Male,£20k-£40k,Very unlikely
+977,18-24,North East,Female,£80k+,Neutral
+978,25-34,London,Female,Under £20k,Neutral
+979,18-24,East of England,Male,£20k-£40k,Somewhat unlikely
+980,35-44,West Midlands,Male,£20k-£40k,Somewhat likely
+981,55-64,North East,Male,£80k+,Somewhat unlikely
+982,35-44,Scotland,Male,£60k-£80k,Somewhat unlikely
+983,45-54,East of England,Female,£60k-£80k,Somewhat likely
+984,55-64,East of England,Female,£40k-£60k,Somewhat unlikely
+985,65+,West Midlands,Female,Under £20k,Very unlikely
+986,45-54,Northern Ireland,Female,Under £20k,Somewhat likely
+987,45-54,Yorkshire,Female,£80k+,Somewhat unlikely
+988,65+,London,Male,Under £20k,Very unlikely
+989,25-34,East Midlands,Female,£60k-£80k,Very likely
+990,35-44,North West,Male,£80k+,Very likely
+991,45-54,West Midlands,Female,£80k+,Somewhat likely
+992,55-64,London,Female,£20k-£40k,Somewhat unlikely
+993,45-54,London,Male,£80k+,Somewhat likely
+994,18-24,Scotland,Female,£20k-£40k,Somewhat unlikely
+995,65+,London,Male,Under £20k,Very unlikely
+996,18-24,North East,Female,£40k-£60k,Somewhat unlikely
+997,45-54,Scotland,Male,Under £20k,Somewhat unlikely
+998,18-24,South East,Female,£80k+,Very unlikely
+999,35-44,Yorkshire,Other,£40k-£60k,Somewhat likely
+1000,25-34,East Midlands,Female,£80k+,Very likely
+1001,25-34,West Midlands,Female,£80k+,Very likely
+1002,35-44,Yorkshire,Female,£80k+,Very unlikely
+1003,55-64,Scotland,Male,£60k-£80k,Very unlikely
+1004,55-64,East Midlands,Female,£40k-£60k,Very unlikely
+1005,45-54,Wales,Male,£80k+,Very unlikely
+1006,45-54,South East,Male,£60k-£80k,Somewhat unlikely
+1007,25-34,Wales,Female,£40k-£60k,Somewhat likely
+1008,35-44,East of England,Female,£40k-£60k,Somewhat likely
+1009,18-24,West Midlands,Female,£40k-£60k,Very likely
+1010,25-34,East Midlands,Male,£20k-£40k,Very unlikely
+1011,35-44,South West,Female,£20k-£40k,Neutral
+1012,25-34,North West,Female,£40k-£60k,Somewhat likely
+1013,25-34,North West,Female,£40k-£60k,Very likely
+1014,18-24,South East,Female,£60k-£80k,Somewhat unlikely
+1015,55-64,London,Female,£40k-£60k,Somewhat unlikely
+1016,45-54,Scotland,Female,£60k-£80k,Somewhat likely
+1017,55-64,North East,Male,£80k+,Somewhat likely
+1018,55-64,West Midlands,Male,£80k+,Very likely
+1019,35-44,West Midlands,Female,£20k-£40k,Neutral
+1020,18-24,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+1021,18-24,Wales,Male,£80k+,Somewhat likely
+1022,35-44,Scotland,Female,£20k-£40k,Neutral
+1023,25-34,North East,Male,£80k+,Somewhat likely
+1024,25-34,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1025,35-44,Yorkshire,Female,£40k-£60k,Neutral
+1026,55-64,South West,Other,£20k-£40k,Very unlikely
+1027,65+,North East,Female,£80k+,Somewhat unlikely
+1028,45-54,North West,Male,£20k-£40k,Neutral
+1029,18-24,South West,Male,£20k-£40k,Very unlikely
+1030,65+,East of England,Female,£40k-£60k,Very unlikely
+1031,35-44,North East,Female,£80k+,Very likely
+1032,18-24,Northern Ireland,Male,£20k-£40k,Very unlikely
+1033,45-54,Wales,Male,£40k-£60k,Somewhat likely
+1034,35-44,East of England,Female,£40k-£60k,Somewhat likely
+1035,45-54,South East,Male,£80k+,Somewhat likely
+1036,55-64,Wales,Female,£20k-£40k,Very unlikely
+1037,35-44,Yorkshire,Male,£80k+,Neutral
+1038,65+,East Midlands,Female,£60k-£80k,Very unlikely
+1039,45-54,Wales,Female,£20k-£40k,Somewhat unlikely
+1040,35-44,West Midlands,Female,£80k+,Somewhat likely
+1041,18-24,South East,Male,£20k-£40k,Somewhat likely
+1042,65+,North East,Female,£80k+,Very unlikely
+1043,35-44,East Midlands,Female,£40k-£60k,Somewhat unlikely
+1044,55-64,East Midlands,Male,£20k-£40k,Very unlikely
+1045,25-34,Northern Ireland,Male,£40k-£60k,Very unlikely
+1046,65+,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1047,18-24,South East,Female,£60k-£80k,Neutral
+1048,18-24,West Midlands,Female,Under £20k,Somewhat likely
+1049,55-64,South West,Male,£60k-£80k,Neutral
+1050,25-34,Northern Ireland,Male,£20k-£40k,Very likely
+1051,25-34,London,Male,£40k-£60k,Somewhat unlikely
+1052,35-44,East Midlands,Male,£80k+,Very unlikely
+1053,55-64,East Midlands,Male,£80k+,Somewhat likely
+1054,55-64,East Midlands,Female,£80k+,Somewhat unlikely
+1055,65+,Wales,Female,£40k-£60k,Somewhat unlikely
+1056,25-34,South East,Male,£40k-£60k,Somewhat likely
+1057,25-34,North East,Male,£80k+,Somewhat unlikely
+1058,25-34,Yorkshire,Male,£80k+,Very likely
+1059,45-54,East Midlands,Male,£60k-£80k,Very unlikely
+1060,55-64,North West,Female,£80k+,Neutral
+1061,45-54,East of England,Male,£20k-£40k,Somewhat likely
+1062,65+,Wales,Male,£60k-£80k,Neutral
+1063,18-24,West Midlands,Female,£80k+,Somewhat unlikely
+1064,55-64,Northern Ireland,Female,£40k-£60k,Very unlikely
+1065,55-64,North East,Male,Under £20k,Somewhat likely
+1066,35-44,South East,Female,£80k+,Somewhat likely
+1067,65+,Scotland,Female,£40k-£60k,Very likely
+1068,18-24,East of England,Male,Under £20k,Somewhat likely
+1069,25-34,Northern Ireland,Male,Under £20k,Somewhat likely
+1070,25-34,London,Female,£40k-£60k,Somewhat likely
+1071,45-54,Yorkshire,Male,Under £20k,Neutral
+1072,25-34,London,Male,£60k-£80k,Very likely
+1073,45-54,South West,Male,£40k-£60k,Very unlikely
+1074,18-24,South East,Other,£20k-£40k,Neutral
+1075,45-54,North West,Female,Under £20k,Somewhat likely
+1076,65+,South East,Female,£20k-£40k,Somewhat unlikely
+1077,65+,North East,Female,£20k-£40k,Very unlikely
+1078,18-24,Northern Ireland,Female,£80k+,Somewhat likely
+1079,45-54,Wales,Male,£40k-£60k,Very unlikely
+1080,65+,North West,Other,£20k-£40k,Very unlikely
+1081,35-44,London,Male,£40k-£60k,Neutral
+1082,45-54,North West,Male,Under £20k,Somewhat unlikely
+1083,65+,East Midlands,Female,£20k-£40k,Somewhat unlikely
+1084,18-24,North West,Male,Under £20k,Somewhat unlikely
+1085,35-44,Wales,Male,£40k-£60k,Somewhat unlikely
+1086,65+,East of England,Female,£20k-£40k,Somewhat unlikely
+1087,35-44,East of England,Female,£40k-£60k,Somewhat unlikely
+1088,45-54,Northern Ireland,Male,£60k-£80k,Neutral
+1089,25-34,North East,Female,£60k-£80k,Somewhat unlikely
+1090,55-64,North East,Female,£60k-£80k,Neutral
+1091,25-34,East of England,Male,£60k-£80k,Somewhat likely
+1092,55-64,East of England,Male,£80k+,Somewhat likely
+1093,35-44,North East,Female,£60k-£80k,Very likely
+1094,65+,East of England,Male,£20k-£40k,Very unlikely
+1095,55-64,Yorkshire,Female,£20k-£40k,Neutral
+1096,18-24,Wales,Other,£60k-£80k,Somewhat likely
+1097,65+,East Midlands,Female,£20k-£40k,Very unlikely
+1098,35-44,West Midlands,Female,Under £20k,Very likely
+1099,65+,South East,Male,£20k-£40k,Neutral
+1100,18-24,North West,Male,£20k-£40k,Somewhat likely
+1101,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+1102,65+,Scotland,Male,£40k-£60k,Neutral
+1103,65+,South East,Male,£20k-£40k,Very unlikely
+1104,18-24,East Midlands,Female,Under £20k,Neutral
+1105,65+,West Midlands,Female,Under £20k,Very unlikely
+1106,35-44,East of England,Male,Under £20k,Very unlikely
+1107,18-24,North West,Other,Under £20k,Somewhat likely
+1108,25-34,East of England,Male,£20k-£40k,Neutral
+1109,25-34,Scotland,Female,£20k-£40k,Neutral
+1110,55-64,West Midlands,Female,£80k+,Neutral
+1111,45-54,Northern Ireland,Female,Under £20k,Somewhat likely
+1112,25-34,East of England,Male,£40k-£60k,Neutral
+1113,55-64,Scotland,Male,£40k-£60k,Very unlikely
+1114,55-64,Yorkshire,Female,£60k-£80k,Very unlikely
+1115,45-54,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1116,25-34,West Midlands,Female,£40k-£60k,Somewhat likely
+1117,45-54,East Midlands,Female,Under £20k,Somewhat unlikely
+1118,35-44,Scotland,Male,£20k-£40k,Very unlikely
+1119,35-44,London,Male,£20k-£40k,Somewhat likely
+1120,35-44,London,Female,£40k-£60k,Very unlikely
+1121,55-64,East of England,Female,£80k+,Somewhat likely
+1122,18-24,East Midlands,Male,£20k-£40k,Somewhat likely
+1123,55-64,North West,Male,£40k-£60k,Somewhat likely
+1124,45-54,Scotland,Female,Under £20k,Somewhat unlikely
+1125,45-54,South West,Female,£80k+,Very unlikely
+1126,18-24,Scotland,Female,Under £20k,Somewhat unlikely
+1127,55-64,West Midlands,Male,Under £20k,Very unlikely
+1128,35-44,Yorkshire,Female,£60k-£80k,Somewhat likely
+1129,18-24,North West,Female,£80k+,Very unlikely
+1130,65+,Wales,Male,£40k-£60k,Somewhat unlikely
+1131,35-44,East of England,Female,£40k-£60k,Neutral
+1132,25-34,South West,Male,£60k-£80k,Very unlikely
+1133,55-64,Scotland,Female,£20k-£40k,Somewhat unlikely
+1134,45-54,South West,Male,Under £20k,Neutral
+1135,65+,London,Female,£40k-£60k,Somewhat likely
+1136,55-64,West Midlands,Female,£20k-£40k,Very unlikely
+1137,45-54,East of England,Male,£60k-£80k,Somewhat unlikely
+1138,25-34,East of England,Female,£80k+,Somewhat likely
+1139,18-24,North East,Female,£40k-£60k,Somewhat unlikely
+1140,55-64,South East,Male,£60k-£80k,Somewhat unlikely
+1141,35-44,North West,Male,£80k+,Somewhat unlikely
+1142,35-44,South West,Other,£80k+,Somewhat unlikely
+1143,45-54,Scotland,Male,Under £20k,Very unlikely
+1144,25-34,North West,Female,£20k-£40k,Somewhat unlikely
+1145,18-24,South East,Female,£20k-£40k,Very unlikely
+1146,25-34,North East,Male,Under £20k,Somewhat likely
+1147,45-54,London,Male,£80k+,Somewhat likely
+1148,55-64,East of England,Female,£80k+,Somewhat unlikely
+1149,65+,South West,Female,Under £20k,Somewhat unlikely
+1150,65+,East of England,Male,£20k-£40k,Somewhat likely
+1151,25-34,Northern Ireland,Female,Under £20k,Neutral
+1152,18-24,South East,Male,£40k-£60k,Somewhat unlikely
+1153,65+,Yorkshire,Female,Under £20k,Somewhat unlikely
+1154,65+,West Midlands,Male,£60k-£80k,Somewhat unlikely
+1155,65+,South East,Female,£60k-£80k,Very unlikely
+1156,55-64,South East,Male,£80k+,Very unlikely
+1157,55-64,Northern Ireland,Male,£20k-£40k,Very unlikely
+1158,35-44,Yorkshire,Female,£20k-£40k,Very likely
+1159,65+,Yorkshire,Male,£40k-£60k,Neutral
+1160,55-64,North East,Female,£40k-£60k,Very unlikely
+1161,18-24,East of England,Female,£20k-£40k,Somewhat likely
+1162,45-54,Wales,Male,£60k-£80k,Somewhat unlikely
+1163,65+,Scotland,Female,£20k-£40k,Somewhat unlikely
+1164,55-64,South West,Male,£40k-£60k,Very unlikely
+1165,35-44,East Midlands,Female,£20k-£40k,Somewhat unlikely
+1166,55-64,East of England,Female,£20k-£40k,Very unlikely
+1167,35-44,Northern Ireland,Female,£80k+,Very unlikely
+1168,45-54,South West,Female,£80k+,Very unlikely
+1169,35-44,South East,Female,Under £20k,Very likely
+1170,25-34,Northern Ireland,Male,£40k-£60k,Very unlikely
+1171,45-54,West Midlands,Male,£40k-£60k,Somewhat likely
+1172,25-34,South East,Male,Under £20k,Somewhat unlikely
+1173,55-64,Scotland,Male,£80k+,Somewhat unlikely
+1174,55-64,North West,Male,Under £20k,Neutral
+1175,65+,East Midlands,Male,£80k+,Somewhat unlikely
+1176,65+,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+1177,25-34,South West,Male,Under £20k,Somewhat likely
+1178,18-24,North East,Female,£20k-£40k,Somewhat unlikely
+1179,25-34,North West,Male,£60k-£80k,Very unlikely
+1180,45-54,Northern Ireland,Male,£60k-£80k,Very unlikely
+1181,45-54,West Midlands,Female,£80k+,Somewhat unlikely
+1182,45-54,Northern Ireland,Male,£80k+,Very unlikely
+1183,55-64,Scotland,Female,Under £20k,Somewhat unlikely
+1184,45-54,East Midlands,Female,Under £20k,Very unlikely
+1185,25-34,East of England,Female,Under £20k,Neutral
+1186,55-64,Wales,Other,£20k-£40k,Neutral
+1187,45-54,North East,Female,£40k-£60k,Neutral
+1188,45-54,North East,Female,Under £20k,Somewhat unlikely
+1189,25-34,East Midlands,Female,£60k-£80k,Very likely
+1190,55-64,South East,Male,£80k+,Very unlikely
+1191,65+,East of England,Male,£60k-£80k,Somewhat unlikely
+1192,18-24,South West,Male,£20k-£40k,Very unlikely
+1193,18-24,North East,Male,£20k-£40k,Somewhat unlikely
+1194,18-24,South East,Male,£60k-£80k,Somewhat unlikely
+1195,18-24,East of England,Female,£80k+,Somewhat unlikely
+1196,25-34,West Midlands,Female,Under £20k,Somewhat unlikely
+1197,35-44,Scotland,Female,£20k-£40k,Very likely
+1198,25-34,South West,Female,Under £20k,Somewhat likely
+1199,35-44,Northern Ireland,Female,£60k-£80k,Somewhat likely
+1200,25-34,South East,Female,£20k-£40k,Very likely
+1201,35-44,London,Male,£60k-£80k,Neutral
+1202,18-24,Scotland,Female,£20k-£40k,Somewhat likely
+1203,65+,East Midlands,Male,£60k-£80k,Somewhat likely
+1204,55-64,London,Male,£80k+,Neutral
+1205,65+,East of England,Female,£20k-£40k,Very likely
+1206,25-34,London,Female,Under £20k,Very likely
+1207,18-24,Wales,Female,£80k+,Neutral
+1208,18-24,London,Male,£20k-£40k,Somewhat likely
+1209,35-44,Scotland,Female,£80k+,Neutral
+1210,55-64,South West,Other,£80k+,Neutral
+1211,18-24,South East,Female,£40k-£60k,Neutral
+1212,45-54,South East,Female,£80k+,Very likely
+1213,45-54,South West,Male,£40k-£60k,Neutral
+1214,45-54,East of England,Male,£20k-£40k,Somewhat unlikely
+1215,18-24,Scotland,Female,£80k+,Very unlikely
+1216,45-54,Northern Ireland,Female,£40k-£60k,Neutral
+1217,35-44,North East,Female,£80k+,Somewhat likely
+1218,25-34,Scotland,Female,£80k+,Somewhat unlikely
+1219,45-54,East Midlands,Female,£80k+,Somewhat likely
+1220,35-44,North West,Male,Under £20k,Neutral
+1221,18-24,Northern Ireland,Female,£80k+,Very unlikely
+1222,45-54,London,Male,£80k+,Very unlikely
+1223,25-34,London,Female,£40k-£60k,Somewhat likely
+1224,18-24,North East,Male,£80k+,Neutral
+1225,18-24,South East,Female,£40k-£60k,Neutral
+1226,55-64,Scotland,Other,£20k-£40k,Somewhat likely
+1227,35-44,Wales,Male,£60k-£80k,Somewhat unlikely
+1228,65+,South West,Female,£60k-£80k,Very unlikely
+1229,55-64,Yorkshire,Male,£60k-£80k,Very unlikely
+1230,18-24,East of England,Male,£40k-£60k,Somewhat unlikely
+1231,18-24,North West,Female,£40k-£60k,Very unlikely
+1232,35-44,South East,Other,£40k-£60k,Somewhat unlikely
+1233,35-44,West Midlands,Female,£20k-£40k,Neutral
+1234,45-54,South West,Female,£40k-£60k,Somewhat unlikely
+1235,35-44,Northern Ireland,Male,£60k-£80k,Very likely
+1236,25-34,Yorkshire,Male,£40k-£60k,Somewhat likely
+1237,35-44,South West,Male,Under £20k,Somewhat unlikely
+1238,18-24,East Midlands,Female,£60k-£80k,Very unlikely
+1239,25-34,North West,Male,£60k-£80k,Somewhat unlikely
+1240,55-64,North East,Female,£20k-£40k,Very unlikely
+1241,18-24,East of England,Female,£20k-£40k,Somewhat likely
+1242,18-24,East Midlands,Male,£80k+,Somewhat likely
+1243,35-44,London,Female,£80k+,Very unlikely
+1244,35-44,East Midlands,Female,Under £20k,Neutral
+1245,65+,Northern Ireland,Male,£80k+,Very unlikely
+1246,65+,North West,Male,£20k-£40k,Neutral
+1247,55-64,Yorkshire,Female,Under £20k,Neutral
+1248,25-34,North East,Male,£80k+,Neutral
+1249,18-24,North West,Female,£80k+,Neutral
+1250,25-34,Northern Ireland,Female,£80k+,Somewhat likely
+1251,18-24,North East,Female,£40k-£60k,Somewhat unlikely
+1252,18-24,South West,Male,Under £20k,Somewhat likely
+1253,18-24,South East,Male,£20k-£40k,Somewhat unlikely
+1254,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+1255,35-44,Yorkshire,Female,£80k+,Very likely
+1256,45-54,Scotland,Male,£60k-£80k,Very likely
+1257,35-44,Wales,Female,£60k-£80k,Neutral
+1258,25-34,South West,Female,£80k+,Somewhat likely
+1259,35-44,West Midlands,Male,£40k-£60k,Somewhat unlikely
+1260,35-44,East Midlands,Female,Under £20k,Neutral
+1261,35-44,East Midlands,Male,£20k-£40k,Somewhat likely
+1262,35-44,Scotland,Female,£80k+,Very likely
+1263,65+,South East,Male,Under £20k,Very unlikely
+1264,55-64,East Midlands,Male,£60k-£80k,Neutral
+1265,25-34,East of England,Male,£60k-£80k,Somewhat likely
+1266,35-44,North West,Female,£80k+,Neutral
+1267,45-54,Scotland,Female,£80k+,Somewhat unlikely
+1268,25-34,Wales,Female,£80k+,Somewhat unlikely
+1269,18-24,Scotland,Female,£40k-£60k,Neutral
+1270,45-54,South West,Male,£60k-£80k,Very likely
+1271,18-24,Wales,Female,£60k-£80k,Neutral
+1272,65+,Wales,Male,£20k-£40k,Very unlikely
+1273,55-64,Wales,Female,£20k-£40k,Very unlikely
+1274,45-54,East of England,Male,£80k+,Somewhat unlikely
+1275,25-34,North West,Female,£40k-£60k,Somewhat likely
+1276,65+,North East,Female,£60k-£80k,Very unlikely
+1277,35-44,South East,Female,£80k+,Very unlikely
+1278,45-54,South West,Female,Under £20k,Neutral
+1279,55-64,London,Male,£80k+,Very unlikely
+1280,35-44,South East,Female,Under £20k,Somewhat likely
+1281,65+,Scotland,Male,£40k-£60k,Very unlikely
+1282,45-54,West Midlands,Male,£20k-£40k,Somewhat unlikely
+1283,45-54,South West,Male,£60k-£80k,Very unlikely
+1284,35-44,West Midlands,Male,£20k-£40k,Very likely
+1285,18-24,Wales,Male,£60k-£80k,Somewhat unlikely
+1286,25-34,South East,Male,£60k-£80k,Somewhat unlikely
+1287,65+,Scotland,Female,£80k+,Neutral
+1288,55-64,West Midlands,Female,£60k-£80k,Neutral
+1289,25-34,South West,Male,Under £20k,Neutral
+1290,65+,North West,Female,£40k-£60k,Somewhat unlikely
+1291,55-64,Scotland,Male,Under £20k,Somewhat unlikely
+1292,65+,Yorkshire,Male,£60k-£80k,Very unlikely
+1293,18-24,South West,Female,£80k+,Very unlikely
+1294,35-44,East Midlands,Female,£80k+,Very unlikely
+1295,18-24,North West,Male,Under £20k,Somewhat unlikely
+1296,55-64,Scotland,Male,Under £20k,Very unlikely
+1297,55-64,London,Male,£80k+,Very unlikely
+1298,55-64,Northern Ireland,Male,£40k-£60k,Very unlikely
+1299,35-44,North East,Male,£80k+,Somewhat unlikely
+1300,65+,Scotland,Male,£60k-£80k,Very unlikely
+1301,55-64,London,Female,£40k-£60k,Very unlikely
+1302,55-64,London,Male,Under £20k,Somewhat likely
+1303,18-24,North East,Male,£80k+,Neutral
+1304,35-44,London,Female,£80k+,Very likely
+1305,55-64,Northern Ireland,Male,£60k-£80k,Neutral
+1306,25-34,North East,Female,£20k-£40k,Neutral
+1307,55-64,London,Male,Under £20k,Very unlikely
+1308,55-64,South West,Female,£60k-£80k,Very unlikely
+1309,25-34,Wales,Male,£20k-£40k,Somewhat likely
+1310,65+,Yorkshire,Male,£40k-£60k,Very unlikely
+1311,18-24,London,Male,£60k-£80k,Neutral
+1312,45-54,Northern Ireland,Female,£80k+,Somewhat likely
+1313,65+,Northern Ireland,Male,£40k-£60k,Neutral
+1314,45-54,London,Male,£60k-£80k,Neutral
+1315,35-44,East of England,Female,Under £20k,Very likely
+1316,55-64,Wales,Male,£60k-£80k,Somewhat unlikely
+1317,65+,North East,Male,£40k-£60k,Very unlikely
+1318,35-44,Wales,Female,£60k-£80k,Somewhat unlikely
+1319,65+,North West,Female,£80k+,Very unlikely
+1320,55-64,Yorkshire,Female,£20k-£40k,Neutral
+1321,18-24,Wales,Male,Under £20k,Very likely
+1322,18-24,East of England,Male,£60k-£80k,Neutral
+1323,65+,North East,Male,Under £20k,Very likely
+1324,18-24,London,Female,£20k-£40k,Very unlikely
+1325,65+,South East,Female,Under £20k,Somewhat likely
+1326,55-64,South West,Male,£80k+,Very unlikely
+1327,25-34,South East,Female,£40k-£60k,Somewhat likely
+1328,65+,South East,Female,£40k-£60k,Very unlikely
+1329,65+,Wales,Female,£40k-£60k,Neutral
+1330,18-24,North East,Female,£60k-£80k,Neutral
+1331,18-24,North East,Female,£40k-£60k,Somewhat likely
+1332,18-24,East Midlands,Other,£20k-£40k,Somewhat unlikely
+1333,25-34,Wales,Female,£20k-£40k,Neutral
+1334,45-54,North West,Female,Under £20k,Very unlikely
+1335,65+,North East,Male,Under £20k,Somewhat likely
+1336,65+,North East,Female,Under £20k,Very unlikely
+1337,25-34,Wales,Female,Under £20k,Neutral
+1338,35-44,South West,Female,£60k-£80k,Neutral
+1339,55-64,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+1340,45-54,Northern Ireland,Female,Under £20k,Somewhat unlikely
+1341,18-24,West Midlands,Female,£60k-£80k,Somewhat likely
+1342,55-64,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+1343,65+,Wales,Male,£80k+,Very unlikely
+1344,35-44,South East,Female,£40k-£60k,Neutral
+1345,25-34,East of England,Male,£60k-£80k,Neutral
+1346,35-44,Northern Ireland,Male,Under £20k,Somewhat unlikely
+1347,35-44,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1348,25-34,London,Male,£80k+,Somewhat likely
+1349,45-54,South East,Female,£40k-£60k,Neutral
+1350,45-54,London,Male,Under £20k,Somewhat likely
+1351,65+,London,Male,£20k-£40k,Very unlikely
+1352,65+,East of England,Male,£80k+,Somewhat likely
+1353,55-64,North West,Female,Under £20k,Very unlikely
+1354,45-54,Wales,Male,£80k+,Very likely
+1355,65+,Wales,Male,£20k-£40k,Very unlikely
+1356,35-44,South East,Male,£20k-£40k,Somewhat unlikely
+1357,18-24,South East,Male,£80k+,Somewhat unlikely
+1358,25-34,South East,Female,£60k-£80k,Somewhat likely
+1359,65+,Wales,Male,Under £20k,Very unlikely
+1360,55-64,East of England,Male,£20k-£40k,Very unlikely
+1361,55-64,South West,Male,Under £20k,Neutral
+1362,45-54,South West,Female,£80k+,Somewhat likely
+1363,25-34,Scotland,Male,Under £20k,Somewhat unlikely
+1364,65+,Scotland,Male,£20k-£40k,Very likely
+1365,45-54,South East,Male,£20k-£40k,Very unlikely
+1366,65+,Wales,Female,£40k-£60k,Somewhat unlikely
+1367,45-54,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1368,55-64,East Midlands,Male,£20k-£40k,Somewhat unlikely
+1369,18-24,Scotland,Male,£60k-£80k,Somewhat unlikely
+1370,18-24,Wales,Female,£40k-£60k,Neutral
+1371,18-24,East of England,Male,Under £20k,Very unlikely
+1372,18-24,Scotland,Male,£80k+,Neutral
+1373,45-54,Wales,Female,£40k-£60k,Very likely
+1374,18-24,South West,Female,£60k-£80k,Neutral
+1375,25-34,Wales,Female,Under £20k,Neutral
+1376,35-44,North West,Male,£40k-£60k,Neutral
+1377,45-54,London,Male,Under £20k,Very unlikely
+1378,25-34,South West,Female,£60k-£80k,Neutral
+1379,18-24,North West,Female,£80k+,Somewhat unlikely
+1380,45-54,North West,Female,£40k-£60k,Somewhat likely
+1381,18-24,Yorkshire,Male,£20k-£40k,Somewhat unlikely
+1382,25-34,West Midlands,Female,Under £20k,Somewhat likely
+1383,45-54,London,Female,£20k-£40k,Somewhat likely
+1384,55-64,East Midlands,Male,£40k-£60k,Somewhat likely
+1385,65+,North West,Female,£40k-£60k,Neutral
+1386,25-34,London,Female,Under £20k,Somewhat likely
+1387,18-24,East Midlands,Male,£20k-£40k,Somewhat unlikely
+1388,25-34,North East,Female,£80k+,Very unlikely
+1389,55-64,East of England,Female,Under £20k,Somewhat unlikely
+1390,55-64,East Midlands,Female,£20k-£40k,Somewhat unlikely
+1391,45-54,North East,Male,£60k-£80k,Very unlikely
+1392,25-34,North West,Male,£80k+,Somewhat likely
+1393,55-64,South West,Female,Under £20k,Somewhat unlikely
+1394,18-24,London,Other,£80k+,Very likely
+1395,55-64,West Midlands,Male,Under £20k,Somewhat unlikely
+1396,25-34,South East,Female,Under £20k,Neutral
+1397,45-54,North West,Male,£40k-£60k,Somewhat likely
+1398,18-24,London,Male,£40k-£60k,Somewhat likely
+1399,45-54,Scotland,Female,Under £20k,Very unlikely
+1400,45-54,South West,Female,£60k-£80k,Somewhat likely
+1401,35-44,Wales,Male,Under £20k,Very unlikely
+1402,18-24,West Midlands,Female,£40k-£60k,Neutral
+1403,35-44,West Midlands,Female,£80k+,Neutral
+1404,25-34,Wales,Male,£40k-£60k,Somewhat unlikely
+1405,18-24,East of England,Female,£40k-£60k,Very unlikely
+1406,18-24,West Midlands,Male,£80k+,Very likely
+1407,35-44,South West,Female,Under £20k,Neutral
+1408,25-34,South West,Other,£20k-£40k,Neutral
+1409,65+,East Midlands,Female,£80k+,Very unlikely
+1410,65+,North West,Female,£20k-£40k,Somewhat unlikely
+1411,35-44,East of England,Female,£40k-£60k,Very likely
+1412,35-44,Yorkshire,Male,£80k+,Neutral
+1413,18-24,East Midlands,Female,£80k+,Very unlikely
+1414,45-54,Scotland,Male,Under £20k,Somewhat likely
+1415,45-54,South East,Male,£20k-£40k,Somewhat likely
+1416,18-24,South East,Male,Under £20k,Somewhat unlikely
+1417,45-54,South West,Female,£80k+,Very unlikely
+1418,18-24,North East,Male,£80k+,Very unlikely
+1419,45-54,Yorkshire,Male,Under £20k,Somewhat likely
+1420,18-24,London,Female,£20k-£40k,Very unlikely
+1421,55-64,Wales,Male,£80k+,Neutral
+1422,65+,Yorkshire,Female,£80k+,Very unlikely
+1423,45-54,East Midlands,Male,£20k-£40k,Very unlikely
+1424,35-44,South West,Female,£20k-£40k,Neutral
+1425,35-44,London,Male,£40k-£60k,Somewhat likely
+1426,25-34,Scotland,Female,£80k+,Somewhat likely
+1427,25-34,Northern Ireland,Female,£20k-£40k,Very likely
+1428,18-24,London,Other,£80k+,Somewhat likely
+1429,35-44,Yorkshire,Male,£80k+,Somewhat unlikely
+1430,65+,Yorkshire,Other,£20k-£40k,Somewhat unlikely
+1431,55-64,South West,Female,Under £20k,Very unlikely
+1432,45-54,East Midlands,Female,£60k-£80k,Very unlikely
+1433,25-34,London,Other,£80k+,Very unlikely
+1434,35-44,Wales,Female,£60k-£80k,Very unlikely
+1435,55-64,Wales,Male,£80k+,Very unlikely
+1436,45-54,Yorkshire,Female,£60k-£80k,Very unlikely
+1437,25-34,Wales,Female,£40k-£60k,Very likely
+1438,55-64,North West,Male,Under £20k,Neutral
+1439,55-64,Wales,Male,£80k+,Neutral
+1440,35-44,North West,Male,£80k+,Very unlikely
+1441,65+,Wales,Female,£80k+,Somewhat unlikely
+1442,45-54,Yorkshire,Female,£80k+,Very unlikely
+1443,65+,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+1444,35-44,London,Male,£40k-£60k,Somewhat likely
+1445,45-54,East of England,Male,£60k-£80k,Somewhat unlikely
+1446,45-54,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1447,45-54,South West,Female,£80k+,Very likely
+1448,25-34,North East,Male,£80k+,Very unlikely
+1449,18-24,Scotland,Female,Under £20k,Very likely
+1450,65+,North East,Male,£80k+,Somewhat unlikely
+1451,55-64,South West,Male,£60k-£80k,Neutral
+1452,45-54,London,Female,£40k-£60k,Very unlikely
+1453,35-44,East Midlands,Female,£60k-£80k,Somewhat likely
+1454,18-24,South West,Male,£60k-£80k,Somewhat likely
+1455,65+,North East,Male,£60k-£80k,Very unlikely
+1456,65+,North West,Male,£40k-£60k,Somewhat unlikely
+1457,18-24,Scotland,Female,£80k+,Neutral
+1458,45-54,North East,Female,£60k-£80k,Very unlikely
+1459,18-24,Yorkshire,Female,£80k+,Very likely
+1460,35-44,South West,Female,£20k-£40k,Somewhat likely
+1461,65+,South West,Male,Under £20k,Neutral
+1462,45-54,Wales,Female,£40k-£60k,Very likely
+1463,35-44,East of England,Female,Under £20k,Neutral
+1464,65+,South West,Female,£80k+,Very unlikely
+1465,55-64,Yorkshire,Female,£40k-£60k,Neutral
+1466,65+,Northern Ireland,Male,£80k+,Very unlikely
+1467,25-34,London,Male,£40k-£60k,Somewhat likely
+1468,45-54,West Midlands,Male,£20k-£40k,Very likely
+1469,25-34,East of England,Male,£20k-£40k,Somewhat unlikely
+1470,55-64,Scotland,Female,£80k+,Very unlikely
+1471,65+,East of England,Female,Under £20k,Somewhat unlikely
+1472,18-24,South East,Female,Under £20k,Neutral
+1473,35-44,Northern Ireland,Male,£60k-£80k,Very unlikely
+1474,55-64,East of England,Female,£40k-£60k,Somewhat likely
+1475,35-44,London,Female,Under £20k,Somewhat likely
+1476,65+,South West,Female,£40k-£60k,Somewhat likely
+1477,25-34,South East,Male,Under £20k,Very likely
+1478,45-54,West Midlands,Male,Under £20k,Very likely
+1479,65+,East of England,Female,£60k-£80k,Somewhat likely
+1480,35-44,London,Male,Under £20k,Somewhat unlikely
+1481,18-24,Scotland,Male,£20k-£40k,Somewhat likely
+1482,35-44,London,Male,£40k-£60k,Very unlikely
+1483,35-44,Yorkshire,Male,£80k+,Somewhat unlikely
+1484,55-64,North West,Female,Under £20k,Somewhat likely
+1485,55-64,London,Female,£20k-£40k,Very unlikely
+1486,25-34,East of England,Male,Under £20k,Very unlikely
+1487,55-64,Northern Ireland,Male,£80k+,Neutral
+1488,65+,South East,Male,£40k-£60k,Very unlikely
+1489,45-54,North West,Female,£60k-£80k,Somewhat likely
+1490,35-44,South East,Male,£80k+,Very likely
+1491,35-44,Northern Ireland,Male,Under £20k,Very likely
+1492,45-54,South East,Male,£60k-£80k,Somewhat unlikely
+1493,35-44,Wales,Other,£60k-£80k,Somewhat likely
+1494,45-54,North East,Other,£60k-£80k,Somewhat likely
+1495,18-24,East Midlands,Female,£40k-£60k,Somewhat likely
+1496,65+,East Midlands,Female,£60k-£80k,Somewhat unlikely
+1497,65+,Wales,Male,£20k-£40k,Somewhat unlikely
+1498,65+,Scotland,Other,£20k-£40k,Somewhat likely
+1499,25-34,Yorkshire,Male,£60k-£80k,Very likely
+1500,45-54,Northern Ireland,Female,£80k+,Somewhat unlikely
+1501,65+,West Midlands,Male,£80k+,Very unlikely
+1502,45-54,East of England,Male,£60k-£80k,Very likely
+1503,35-44,East Midlands,Female,£20k-£40k,Very likely
+1504,65+,London,Female,£60k-£80k,Very unlikely
+1505,25-34,West Midlands,Female,£40k-£60k,Very likely
+1506,55-64,Scotland,Male,Under £20k,Very unlikely
+1507,55-64,East Midlands,Female,£20k-£40k,Neutral
+1508,45-54,East Midlands,Female,£80k+,Neutral
+1509,55-64,East of England,Male,Under £20k,Very unlikely
+1510,18-24,West Midlands,Male,£60k-£80k,Neutral
+1511,18-24,London,Male,£40k-£60k,Very unlikely
+1512,25-34,East Midlands,Male,£40k-£60k,Somewhat unlikely
+1513,45-54,South East,Female,£60k-£80k,Somewhat unlikely
+1514,65+,East of England,Female,£60k-£80k,Very unlikely
+1515,25-34,East of England,Male,£40k-£60k,Somewhat likely
+1516,45-54,Scotland,Female,£40k-£60k,Somewhat likely
+1517,18-24,Scotland,Male,£40k-£60k,Neutral
+1518,65+,Scotland,Male,£40k-£60k,Somewhat unlikely
+1519,45-54,Yorkshire,Other,£60k-£80k,Neutral
+1520,65+,North West,Male,£40k-£60k,Very unlikely
+1521,65+,South East,Female,Under £20k,Somewhat unlikely
+1522,18-24,East of England,Male,£60k-£80k,Somewhat unlikely
+1523,45-54,Scotland,Female,£60k-£80k,Somewhat likely
+1524,65+,East Midlands,Female,£40k-£60k,Somewhat unlikely
+1525,45-54,Yorkshire,Female,£60k-£80k,Very likely
+1526,65+,North West,Male,£80k+,Very unlikely
+1527,65+,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+1528,45-54,North West,Female,Under £20k,Very unlikely
+1529,55-64,North West,Male,Under £20k,Neutral
+1530,55-64,West Midlands,Female,£80k+,Very unlikely
+1531,18-24,Northern Ireland,Female,Under £20k,Somewhat unlikely
+1532,35-44,South East,Female,£80k+,Somewhat likely
+1533,25-34,Yorkshire,Female,£40k-£60k,Neutral
+1534,35-44,West Midlands,Female,£40k-£60k,Somewhat likely
+1535,45-54,North East,Female,£60k-£80k,Somewhat unlikely
+1536,55-64,South West,Female,£80k+,Very unlikely
+1537,55-64,East Midlands,Male,£60k-£80k,Neutral
+1538,65+,East of England,Female,£60k-£80k,Very unlikely
+1539,65+,Wales,Male,£20k-£40k,Somewhat unlikely
+1540,25-34,North West,Male,£40k-£60k,Very unlikely
+1541,45-54,Yorkshire,Female,Under £20k,Somewhat unlikely
+1542,45-54,North East,Female,£20k-£40k,Somewhat likely
+1543,55-64,North West,Male,Under £20k,Somewhat likely
+1544,18-24,North West,Female,£40k-£60k,Neutral
+1545,55-64,West Midlands,Male,Under £20k,Somewhat likely
+1546,35-44,South West,Male,£40k-£60k,Somewhat unlikely
+1547,25-34,Wales,Female,£60k-£80k,Somewhat unlikely
+1548,18-24,South East,Male,£40k-£60k,Very unlikely
+1549,45-54,Yorkshire,Female,Under £20k,Neutral
+1550,65+,South West,Male,£80k+,Very unlikely
+1551,18-24,East of England,Female,£80k+,Very unlikely
+1552,55-64,North East,Female,Under £20k,Neutral
+1553,18-24,Yorkshire,Male,£80k+,Somewhat unlikely
+1554,65+,Northern Ireland,Male,£60k-£80k,Neutral
+1555,18-24,South West,Male,£40k-£60k,Neutral
+1556,35-44,Scotland,Male,£80k+,Somewhat likely
+1557,18-24,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+1558,35-44,South West,Male,£40k-£60k,Somewhat unlikely
+1559,18-24,Wales,Other,£80k+,Very likely
+1560,65+,Wales,Female,Under £20k,Very unlikely
+1561,65+,North West,Male,£60k-£80k,Somewhat unlikely
+1562,65+,Yorkshire,Female,Under £20k,Somewhat unlikely
+1563,25-34,East Midlands,Male,£60k-£80k,Very unlikely
+1564,35-44,North East,Male,£20k-£40k,Somewhat likely
+1565,25-34,East Midlands,Female,£60k-£80k,Somewhat unlikely
+1566,35-44,South East,Female,£60k-£80k,Somewhat likely
+1567,45-54,Yorkshire,Female,Under £20k,Very unlikely
+1568,65+,North East,Female,£40k-£60k,Somewhat unlikely
+1569,65+,East of England,Female,£60k-£80k,Very unlikely
+1570,18-24,Wales,Female,£60k-£80k,Very unlikely
+1571,25-34,London,Male,£40k-£60k,Somewhat likely
+1572,18-24,South East,Male,£80k+,Somewhat unlikely
+1573,65+,South West,Female,£60k-£80k,Very unlikely
+1574,35-44,East Midlands,Male,£20k-£40k,Somewhat likely
+1575,65+,Scotland,Female,£40k-£60k,Neutral
+1576,45-54,Yorkshire,Male,£60k-£80k,Very unlikely
+1577,55-64,North West,Male,Under £20k,Very unlikely
+1578,65+,Scotland,Female,Under £20k,Very unlikely
+1579,25-34,North East,Female,£20k-£40k,Very likely
+1580,55-64,West Midlands,Female,£20k-£40k,Somewhat likely
+1581,35-44,South West,Female,Under £20k,Very likely
+1582,55-64,West Midlands,Female,£60k-£80k,Very unlikely
+1583,45-54,South East,Male,£20k-£40k,Somewhat likely
+1584,35-44,North East,Female,£60k-£80k,Very likely
+1585,25-34,Scotland,Male,£40k-£60k,Somewhat unlikely
+1586,25-34,West Midlands,Male,£20k-£40k,Very likely
+1587,35-44,North West,Female,£20k-£40k,Somewhat likely
+1588,65+,Wales,Male,Under £20k,Somewhat unlikely
+1589,35-44,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1590,65+,West Midlands,Female,£40k-£60k,Somewhat likely
+1591,55-64,London,Male,£20k-£40k,Somewhat unlikely
+1592,35-44,Scotland,Female,£80k+,Somewhat unlikely
+1593,18-24,London,Male,£80k+,Neutral
+1594,45-54,Wales,Male,£80k+,Very likely
+1595,25-34,North East,Male,£60k-£80k,Very unlikely
+1596,45-54,South West,Male,£80k+,Neutral
+1597,35-44,South East,Male,£20k-£40k,Neutral
+1598,35-44,Northern Ireland,Male,£60k-£80k,Somewhat likely
+1599,35-44,Scotland,Female,£40k-£60k,Neutral
+1600,45-54,South West,Male,£60k-£80k,Very unlikely
+1601,25-34,East of England,Female,£60k-£80k,Very likely
+1602,25-34,London,Male,Under £20k,Somewhat likely
+1603,25-34,Northern Ireland,Male,Under £20k,Very unlikely
+1604,45-54,London,Male,£80k+,Neutral
+1605,45-54,South East,Female,£20k-£40k,Very likely
+1606,18-24,North West,Female,£20k-£40k,Very unlikely
+1607,65+,East of England,Female,£80k+,Very unlikely
+1608,55-64,North West,Female,Under £20k,Somewhat unlikely
+1609,55-64,South West,Male,Under £20k,Neutral
+1610,45-54,Wales,Male,£40k-£60k,Very likely
+1611,65+,Wales,Male,£40k-£60k,Very unlikely
+1612,18-24,Yorkshire,Male,Under £20k,Neutral
+1613,65+,Wales,Male,£40k-£60k,Very unlikely
+1614,18-24,Yorkshire,Other,£80k+,Very unlikely
+1615,35-44,Northern Ireland,Other,£80k+,Very likely
+1616,18-24,Wales,Male,Under £20k,Somewhat unlikely
+1617,55-64,Scotland,Male,£60k-£80k,Neutral
+1618,25-34,West Midlands,Male,£20k-£40k,Very likely
+1619,45-54,North East,Female,£20k-£40k,Somewhat likely
+1620,45-54,West Midlands,Female,£40k-£60k,Very unlikely
+1621,55-64,South West,Male,Under £20k,Very unlikely
+1622,55-64,North West,Female,£60k-£80k,Somewhat unlikely
+1623,55-64,Scotland,Male,£60k-£80k,Very unlikely
+1624,55-64,South West,Male,£60k-£80k,Somewhat likely
+1625,55-64,Yorkshire,Other,£20k-£40k,Very unlikely
+1626,65+,South West,Female,£80k+,Very unlikely
+1627,55-64,South East,Male,£60k-£80k,Very likely
+1628,45-54,North East,Male,£20k-£40k,Somewhat unlikely
+1629,35-44,North West,Female,£40k-£60k,Neutral
+1630,55-64,South East,Female,£80k+,Somewhat likely
+1631,45-54,West Midlands,Male,£80k+,Very unlikely
+1632,35-44,North East,Female,£80k+,Very likely
+1633,65+,Wales,Male,£20k-£40k,Very unlikely
+1634,18-24,South East,Male,£40k-£60k,Somewhat likely
+1635,65+,East Midlands,Female,£60k-£80k,Very unlikely
+1636,35-44,Yorkshire,Other,£20k-£40k,Somewhat likely
+1637,18-24,Northern Ireland,Other,£40k-£60k,Very unlikely
+1638,18-24,West Midlands,Female,Under £20k,Neutral
+1639,18-24,South West,Female,£60k-£80k,Somewhat unlikely
+1640,65+,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+1641,55-64,Yorkshire,Female,£60k-£80k,Very unlikely
+1642,18-24,South West,Male,£20k-£40k,Somewhat likely
+1643,18-24,Northern Ireland,Other,Under £20k,Somewhat likely
+1644,65+,South West,Female,£60k-£80k,Very unlikely
+1645,55-64,North West,Male,£60k-£80k,Somewhat likely
+1646,45-54,London,Male,£20k-£40k,Somewhat unlikely
+1647,45-54,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1648,25-34,North East,Female,£60k-£80k,Very likely
+1649,18-24,South East,Female,£60k-£80k,Very unlikely
+1650,45-54,Northern Ireland,Female,£80k+,Very unlikely
+1651,18-24,East Midlands,Male,£80k+,Somewhat unlikely
+1652,55-64,Wales,Female,£60k-£80k,Neutral
+1653,18-24,East of England,Male,£80k+,Neutral
+1654,18-24,North East,Female,£60k-£80k,Very unlikely
+1655,18-24,East Midlands,Female,£40k-£60k,Neutral
+1656,45-54,London,Male,£20k-£40k,Neutral
+1657,45-54,North West,Female,£80k+,Very unlikely
+1658,35-44,Scotland,Female,£60k-£80k,Very likely
+1659,35-44,Northern Ireland,Female,£60k-£80k,Very unlikely
+1660,65+,Wales,Female,£60k-£80k,Very unlikely
+1661,25-34,Scotland,Male,Under £20k,Neutral
+1662,25-34,South West,Male,£80k+,Somewhat likely
+1663,45-54,East Midlands,Male,£20k-£40k,Somewhat unlikely
+1664,18-24,Yorkshire,Female,£40k-£60k,Somewhat unlikely
+1665,25-34,East of England,Male,Under £20k,Somewhat likely
+1666,18-24,Scotland,Male,£80k+,Somewhat likely
+1667,35-44,Yorkshire,Female,Under £20k,Somewhat unlikely
+1668,55-64,North East,Female,£80k+,Somewhat unlikely
+1669,18-24,Northern Ireland,Male,£60k-£80k,Very unlikely
+1670,18-24,South East,Female,£80k+,Somewhat unlikely
+1671,18-24,East of England,Male,Under £20k,Somewhat likely
+1672,18-24,North West,Female,£20k-£40k,Somewhat unlikely
+1673,65+,East Midlands,Female,£60k-£80k,Very unlikely
+1674,18-24,South West,Female,£40k-£60k,Very unlikely
+1675,18-24,North West,Male,£60k-£80k,Somewhat unlikely
+1676,18-24,North West,Female,£60k-£80k,Neutral
+1677,55-64,South West,Male,£40k-£60k,Very unlikely
+1678,45-54,Yorkshire,Female,£20k-£40k,Somewhat likely
+1679,55-64,West Midlands,Female,£20k-£40k,Very unlikely
+1680,45-54,West Midlands,Female,£80k+,Very unlikely
+1681,35-44,London,Male,Under £20k,Somewhat unlikely
+1682,55-64,South East,Male,£40k-£60k,Neutral
+1683,25-34,West Midlands,Male,Under £20k,Neutral
+1684,65+,South West,Female,Under £20k,Very unlikely
+1685,65+,Wales,Female,£40k-£60k,Somewhat unlikely
+1686,65+,Northern Ireland,Female,£40k-£60k,Very unlikely
+1687,35-44,Yorkshire,Male,£40k-£60k,Very unlikely
+1688,55-64,South West,Female,£60k-£80k,Somewhat unlikely
+1689,55-64,Scotland,Female,£60k-£80k,Very unlikely
+1690,65+,West Midlands,Female,£40k-£60k,Somewhat likely
+1691,55-64,Yorkshire,Male,£20k-£40k,Somewhat unlikely
+1692,55-64,North East,Male,£80k+,Somewhat unlikely
+1693,55-64,Yorkshire,Female,£20k-£40k,Very likely
+1694,55-64,Scotland,Male,£40k-£60k,Very unlikely
+1695,55-64,South East,Female,£40k-£60k,Neutral
+1696,55-64,Yorkshire,Male,Under £20k,Somewhat unlikely
+1697,55-64,Northern Ireland,Male,£40k-£60k,Very unlikely
+1698,65+,Scotland,Female,£80k+,Very unlikely
+1699,25-34,Yorkshire,Male,£80k+,Neutral
+1700,65+,West Midlands,Female,£20k-£40k,Somewhat likely
+1701,55-64,Scotland,Male,£40k-£60k,Somewhat unlikely
+1702,25-34,Northern Ireland,Male,£60k-£80k,Very likely
+1703,18-24,West Midlands,Female,£60k-£80k,Somewhat likely
+1704,18-24,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+1705,55-64,West Midlands,Female,£80k+,Somewhat unlikely
+1706,45-54,East Midlands,Female,£60k-£80k,Somewhat unlikely
+1707,45-54,South West,Male,£20k-£40k,Neutral
+1708,45-54,South West,Other,£80k+,Very unlikely
+1709,18-24,Northern Ireland,Male,£60k-£80k,Very likely
+1710,25-34,East of England,Male,Under £20k,Neutral
+1711,45-54,South East,Male,£80k+,Somewhat likely
+1712,55-64,South West,Male,£40k-£60k,Very unlikely
+1713,35-44,North East,Female,£20k-£40k,Very likely
+1714,55-64,West Midlands,Male,£40k-£60k,Very unlikely
+1715,25-34,South West,Female,£60k-£80k,Very likely
+1716,55-64,Yorkshire,Male,Under £20k,Somewhat unlikely
+1717,55-64,North East,Female,£40k-£60k,Very unlikely
+1718,45-54,Northern Ireland,Female,£20k-£40k,Very unlikely
+1719,55-64,Wales,Male,£60k-£80k,Very unlikely
+1720,25-34,Northern Ireland,Male,£80k+,Neutral
+1721,45-54,West Midlands,Male,£60k-£80k,Neutral
+1722,18-24,Wales,Female,£40k-£60k,Somewhat unlikely
+1723,25-34,Northern Ireland,Male,£40k-£60k,Neutral
+1724,18-24,Wales,Female,£20k-£40k,Very unlikely
+1725,55-64,Scotland,Female,£80k+,Somewhat unlikely
+1726,45-54,East of England,Female,Under £20k,Somewhat unlikely
+1727,55-64,South West,Other,£40k-£60k,Very unlikely
+1728,25-34,Northern Ireland,Female,£80k+,Somewhat likely
+1729,55-64,Scotland,Male,£80k+,Very likely
+1730,18-24,Yorkshire,Male,£60k-£80k,Very likely
+1731,55-64,Yorkshire,Male,Under £20k,Somewhat likely
+1732,18-24,East of England,Male,£20k-£40k,Somewhat likely
+1733,18-24,South West,Male,£60k-£80k,Somewhat unlikely
+1734,18-24,Scotland,Other,£20k-£40k,Very likely
+1735,18-24,North East,Male,£40k-£60k,Somewhat likely
+1736,35-44,North East,Male,Under £20k,Very likely
+1737,25-34,Scotland,Female,£60k-£80k,Somewhat likely
+1738,55-64,West Midlands,Female,£40k-£60k,Very likely
+1739,45-54,East of England,Male,£60k-£80k,Very likely
+1740,65+,North West,Female,Under £20k,Neutral
+1741,55-64,Wales,Male,£80k+,Very unlikely
+1742,25-34,North East,Female,£60k-£80k,Very likely
+1743,65+,East of England,Male,£20k-£40k,Somewhat unlikely
+1744,25-34,North West,Female,£60k-£80k,Very unlikely
+1745,55-64,East Midlands,Male,£60k-£80k,Very unlikely
+1746,55-64,North East,Female,£20k-£40k,Very likely
+1747,45-54,North East,Female,£60k-£80k,Very unlikely
+1748,65+,North West,Female,£80k+,Neutral
+1749,25-34,Northern Ireland,Female,Under £20k,Somewhat likely
+1750,45-54,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1751,35-44,West Midlands,Male,£80k+,Very unlikely
+1752,35-44,Wales,Female,£40k-£60k,Very unlikely
+1753,65+,East Midlands,Male,£40k-£60k,Somewhat unlikely
+1754,45-54,Scotland,Male,£20k-£40k,Somewhat unlikely
+1755,18-24,Scotland,Male,Under £20k,Somewhat unlikely
+1756,45-54,East of England,Female,£60k-£80k,Very unlikely
+1757,55-64,South East,Female,Under £20k,Somewhat unlikely
+1758,65+,East Midlands,Female,£40k-£60k,Very unlikely
+1759,45-54,Scotland,Male,£20k-£40k,Very unlikely
+1760,65+,London,Male,£40k-£60k,Very unlikely
+1761,45-54,London,Male,Under £20k,Somewhat unlikely
+1762,65+,Northern Ireland,Male,Under £20k,Very unlikely
+1763,65+,North East,Female,£20k-£40k,Neutral
+1764,45-54,Yorkshire,Male,£60k-£80k,Very unlikely
+1765,65+,Scotland,Male,£20k-£40k,Very unlikely
+1766,65+,West Midlands,Male,£40k-£60k,Very unlikely
+1767,45-54,South West,Female,£80k+,Somewhat unlikely
+1768,55-64,Scotland,Male,£80k+,Somewhat likely
+1769,18-24,South West,Male,£80k+,Very unlikely
+1770,55-64,Northern Ireland,Female,£20k-£40k,Very unlikely
+1771,18-24,Northern Ireland,Female,£80k+,Somewhat likely
+1772,55-64,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1773,65+,London,Female,£40k-£60k,Somewhat unlikely
+1774,45-54,North East,Male,£80k+,Neutral
+1775,35-44,East of England,Female,£20k-£40k,Very likely
+1776,45-54,East of England,Male,Under £20k,Neutral
+1777,35-44,South East,Female,Under £20k,Very unlikely
+1778,25-34,Northern Ireland,Male,Under £20k,Very unlikely
+1779,25-34,South West,Male,Under £20k,Neutral
+1780,18-24,London,Male,Under £20k,Somewhat unlikely
+1781,65+,Yorkshire,Female,£20k-£40k,Somewhat likely
+1782,25-34,Yorkshire,Female,£40k-£60k,Neutral
+1783,25-34,South East,Female,£80k+,Somewhat likely
+1784,18-24,Wales,Male,Under £20k,Very likely
+1785,18-24,London,Male,Under £20k,Somewhat unlikely
+1786,18-24,East Midlands,Male,£80k+,Somewhat unlikely
+1787,18-24,South East,Female,£80k+,Very likely
+1788,45-54,West Midlands,Male,£60k-£80k,Somewhat likely
+1789,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+1790,45-54,Scotland,Female,£40k-£60k,Somewhat unlikely
+1791,65+,London,Male,£40k-£60k,Very unlikely
+1792,18-24,South East,Male,Under £20k,Somewhat unlikely
+1793,25-34,Scotland,Male,£80k+,Somewhat likely
+1794,45-54,East Midlands,Female,£60k-£80k,Somewhat likely
+1795,25-34,London,Male,£40k-£60k,Neutral
+1796,55-64,Wales,Female,£40k-£60k,Somewhat unlikely
+1797,55-64,South West,Male,£40k-£60k,Somewhat unlikely
+1798,35-44,Yorkshire,Other,£80k+,Neutral
+1799,65+,South West,Male,£80k+,Very unlikely
+1800,55-64,London,Male,£20k-£40k,Very unlikely
+1801,65+,North West,Female,£40k-£60k,Neutral
+1802,45-54,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+1803,35-44,Scotland,Female,£40k-£60k,Neutral
+1804,45-54,Yorkshire,Male,£60k-£80k,Very unlikely
+1805,18-24,East Midlands,Male,Under £20k,Somewhat unlikely
+1806,65+,North West,Male,£20k-£40k,Neutral
+1807,65+,Yorkshire,Female,£60k-£80k,Neutral
+1808,25-34,London,Male,Under £20k,Somewhat likely
+1809,55-64,South East,Male,£60k-£80k,Somewhat likely
+1810,55-64,Yorkshire,Male,Under £20k,Somewhat likely
+1811,35-44,South West,Male,£40k-£60k,Somewhat unlikely
+1812,35-44,East of England,Male,£20k-£40k,Very likely
+1813,35-44,South East,Male,£20k-£40k,Somewhat likely
+1814,18-24,Yorkshire,Female,£40k-£60k,Neutral
+1815,35-44,Yorkshire,Female,£80k+,Very unlikely
+1816,55-64,West Midlands,Female,Under £20k,Somewhat likely
+1817,25-34,North West,Male,£60k-£80k,Somewhat unlikely
+1818,35-44,Scotland,Male,£20k-£40k,Very unlikely
+1819,55-64,Scotland,Male,£80k+,Neutral
+1820,25-34,Yorkshire,Male,£40k-£60k,Very unlikely
+1821,55-64,Scotland,Female,£20k-£40k,Very unlikely
+1822,45-54,Wales,Female,£20k-£40k,Somewhat unlikely
+1823,65+,East of England,Male,£80k+,Somewhat unlikely
+1824,35-44,Northern Ireland,Male,£60k-£80k,Somewhat unlikely
+1825,45-54,East Midlands,Male,£60k-£80k,Somewhat unlikely
+1826,55-64,Wales,Male,£20k-£40k,Very unlikely
+1827,45-54,North West,Male,£40k-£60k,Neutral
+1828,45-54,Scotland,Male,£40k-£60k,Somewhat likely
+1829,18-24,South West,Female,£40k-£60k,Neutral
+1830,35-44,North West,Female,£60k-£80k,Neutral
+1831,35-44,West Midlands,Male,£60k-£80k,Somewhat likely
+1832,45-54,Yorkshire,Male,Under £20k,Somewhat likely
+1833,25-34,North East,Female,£40k-£60k,Very unlikely
+1834,35-44,East of England,Female,Under £20k,Somewhat unlikely
+1835,25-34,South East,Male,£40k-£60k,Very likely
+1836,25-34,Yorkshire,Male,£40k-£60k,Somewhat likely
+1837,65+,Wales,Female,£20k-£40k,Very unlikely
+1838,25-34,Northern Ireland,Female,£40k-£60k,Very likely
+1839,35-44,North East,Female,£60k-£80k,Very unlikely
+1840,55-64,Wales,Male,£80k+,Very unlikely
+1841,25-34,West Midlands,Male,£20k-£40k,Somewhat likely
+1842,55-64,Scotland,Female,£60k-£80k,Very unlikely
+1843,45-54,Yorkshire,Female,£40k-£60k,Very unlikely
+1844,45-54,Northern Ireland,Male,£60k-£80k,Neutral
+1845,55-64,London,Male,£80k+,Very unlikely
+1846,35-44,Northern Ireland,Male,£40k-£60k,Somewhat likely
+1847,45-54,West Midlands,Female,£60k-£80k,Very unlikely
+1848,65+,East of England,Male,£80k+,Very likely
+1849,18-24,South West,Male,£40k-£60k,Somewhat unlikely
+1850,55-64,Scotland,Female,£60k-£80k,Very unlikely
+1851,25-34,West Midlands,Male,£60k-£80k,Very likely
+1852,18-24,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+1853,35-44,South East,Male,£80k+,Very likely
+1854,65+,Scotland,Female,£20k-£40k,Neutral
+1855,45-54,North East,Male,£40k-£60k,Somewhat unlikely
+1856,18-24,East Midlands,Male,£80k+,Very likely
+1857,35-44,West Midlands,Male,Under £20k,Very likely
+1858,45-54,East Midlands,Female,£60k-£80k,Very unlikely
+1859,25-34,South West,Female,£40k-£60k,Somewhat likely
+1860,65+,Wales,Male,£80k+,Very unlikely
+1861,35-44,Scotland,Male,£60k-£80k,Somewhat likely
+1862,18-24,South West,Male,£60k-£80k,Somewhat unlikely
+1863,25-34,East of England,Male,£80k+,Very unlikely
+1864,45-54,East Midlands,Female,Under £20k,Somewhat likely
+1865,45-54,Yorkshire,Female,£40k-£60k,Neutral
+1866,25-34,West Midlands,Male,£80k+,Somewhat unlikely
+1867,45-54,West Midlands,Female,£20k-£40k,Somewhat unlikely
+1868,18-24,West Midlands,Female,Under £20k,Somewhat likely
+1869,25-34,North East,Female,£80k+,Somewhat likely
+1870,18-24,Northern Ireland,Female,£20k-£40k,Very unlikely
+1871,45-54,East of England,Male,£40k-£60k,Very likely
+1872,18-24,East of England,Female,£40k-£60k,Neutral
+1873,25-34,North East,Male,Under £20k,Neutral
+1874,18-24,Wales,Female,£60k-£80k,Neutral
+1875,65+,West Midlands,Female,£60k-£80k,Very likely
+1876,35-44,South East,Female,£20k-£40k,Somewhat likely
+1877,65+,East Midlands,Female,Under £20k,Somewhat likely
+1878,65+,North West,Female,£60k-£80k,Neutral
+1879,35-44,South West,Male,Under £20k,Neutral
+1880,25-34,North East,Male,£60k-£80k,Very likely
+1881,65+,London,Female,£20k-£40k,Somewhat unlikely
+1882,25-34,North West,Female,£80k+,Somewhat likely
+1883,65+,London,Female,£80k+,Very unlikely
+1884,65+,Wales,Female,£60k-£80k,Very unlikely
+1885,45-54,London,Female,Under £20k,Very unlikely
+1886,25-34,North West,Male,£20k-£40k,Somewhat likely
+1887,18-24,West Midlands,Male,Under £20k,Neutral
+1888,25-34,Wales,Female,£20k-£40k,Very unlikely
+1889,18-24,Wales,Male,£20k-£40k,Very likely
+1890,55-64,South East,Female,£40k-£60k,Somewhat unlikely
+1891,25-34,Scotland,Male,£80k+,Somewhat likely
+1892,45-54,South East,Male,Under £20k,Neutral
+1893,25-34,London,Male,£40k-£60k,Very likely
+1894,25-34,East Midlands,Male,£40k-£60k,Neutral
+1895,35-44,London,Male,£20k-£40k,Somewhat likely
+1896,55-64,East Midlands,Other,Under £20k,Very unlikely
+1897,55-64,South West,Male,Under £20k,Somewhat unlikely
+1898,65+,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+1899,65+,Northern Ireland,Male,£60k-£80k,Somewhat likely
+1900,18-24,Scotland,Female,£60k-£80k,Neutral
+1901,65+,Northern Ireland,Male,£80k+,Very unlikely
+1902,18-24,North West,Male,Under £20k,Neutral
+1903,65+,West Midlands,Female,£80k+,Somewhat likely
+1904,25-34,Yorkshire,Female,£20k-£40k,Very likely
+1905,25-34,Wales,Male,£80k+,Very unlikely
+1906,45-54,Northern Ireland,Female,£20k-£40k,Neutral
+1907,65+,London,Female,£60k-£80k,Very unlikely
+1908,35-44,London,Male,£40k-£60k,Somewhat likely
+1909,25-34,East of England,Male,£20k-£40k,Somewhat unlikely
+1910,65+,Northern Ireland,Male,£60k-£80k,Somewhat unlikely
+1911,25-34,East Midlands,Female,Under £20k,Very unlikely
+1912,18-24,North West,Male,£20k-£40k,Very unlikely
+1913,25-34,South East,Male,£80k+,Somewhat unlikely
+1914,25-34,North West,Female,£60k-£80k,Somewhat unlikely
+1915,35-44,South West,Female,£20k-£40k,Somewhat likely
+1916,55-64,North West,Male,£80k+,Somewhat unlikely
+1917,65+,North West,Male,£60k-£80k,Somewhat likely
+1918,35-44,West Midlands,Male,£60k-£80k,Neutral
+1919,55-64,Scotland,Female,£20k-£40k,Very unlikely
+1920,45-54,London,Female,£60k-£80k,Very unlikely
+1921,35-44,Scotland,Female,£80k+,Somewhat unlikely
+1922,35-44,West Midlands,Male,£60k-£80k,Somewhat likely
+1923,55-64,Scotland,Female,£40k-£60k,Somewhat likely
+1924,45-54,North West,Male,£20k-£40k,Very likely
+1925,55-64,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+1926,45-54,West Midlands,Other,£40k-£60k,Neutral
+1927,35-44,Wales,Other,Under £20k,Somewhat likely
+1928,18-24,South East,Male,£80k+,Somewhat likely
+1929,45-54,North East,Female,£40k-£60k,Somewhat unlikely
+1930,45-54,Wales,Female,Under £20k,Somewhat unlikely
+1931,45-54,Northern Ireland,Male,£60k-£80k,Very likely
+1932,35-44,Wales,Female,Under £20k,Somewhat unlikely
+1933,65+,South West,Male,£60k-£80k,Very unlikely
+1934,25-34,North East,Male,£80k+,Very unlikely
+1935,25-34,London,Male,Under £20k,Neutral
+1936,45-54,West Midlands,Female,Under £20k,Somewhat unlikely
+1937,25-34,West Midlands,Male,£60k-£80k,Somewhat likely
+1938,35-44,East of England,Other,£60k-£80k,Neutral
+1939,65+,West Midlands,Female,Under £20k,Somewhat likely
+1940,55-64,Yorkshire,Female,£40k-£60k,Very unlikely
+1941,65+,West Midlands,Female,Under £20k,Very unlikely
+1942,45-54,London,Male,£60k-£80k,Neutral
+1943,65+,North East,Female,£20k-£40k,Neutral
+1944,25-34,Northern Ireland,Male,£60k-£80k,Somewhat likely
+1945,18-24,East Midlands,Female,£20k-£40k,Somewhat likely
+1946,18-24,Northern Ireland,Male,£20k-£40k,Neutral
+1947,45-54,East Midlands,Female,£80k+,Very likely
+1948,65+,South West,Male,Under £20k,Somewhat unlikely
+1949,35-44,South East,Male,£80k+,Somewhat likely
+1950,45-54,Wales,Female,Under £20k,Very likely
+1951,18-24,Wales,Female,Under £20k,Somewhat likely
+1952,55-64,London,Male,£80k+,Very unlikely
+1953,35-44,East Midlands,Male,£40k-£60k,Neutral
+1954,35-44,Yorkshire,Female,£40k-£60k,Very unlikely
+1955,25-34,Yorkshire,Female,£60k-£80k,Neutral
+1956,35-44,Yorkshire,Female,Under £20k,Neutral
+1957,65+,West Midlands,Female,£20k-£40k,Very likely
+1958,18-24,East of England,Male,£20k-£40k,Neutral
+1959,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+1960,65+,North West,Male,£40k-£60k,Very likely
+1961,35-44,London,Other,£40k-£60k,Neutral
+1962,25-34,Scotland,Female,£80k+,Somewhat unlikely
+1963,35-44,West Midlands,Female,£60k-£80k,Very unlikely
+1964,65+,South East,Female,£40k-£60k,Very unlikely
+1965,65+,South West,Female,£80k+,Very unlikely
+1966,65+,East of England,Male,£60k-£80k,Very unlikely
+1967,35-44,Wales,Other,£60k-£80k,Somewhat likely
+1968,45-54,South East,Female,£80k+,Somewhat likely
+1969,25-34,South West,Female,Under £20k,Very likely
+1970,65+,London,Male,£40k-£60k,Very unlikely
+1971,35-44,North West,Female,£60k-£80k,Very unlikely
+1972,65+,South East,Female,£80k+,Very unlikely
+1973,45-54,South East,Female,£40k-£60k,Very unlikely
+1974,55-64,Scotland,Male,£40k-£60k,Neutral
+1975,65+,Northern Ireland,Female,£60k-£80k,Very unlikely
+1976,55-64,West Midlands,Female,£20k-£40k,Neutral
+1977,35-44,South East,Male,£40k-£60k,Somewhat unlikely
+1978,25-34,Northern Ireland,Female,£80k+,Somewhat likely
+1979,35-44,West Midlands,Female,Under £20k,Somewhat likely
+1980,55-64,East of England,Male,£60k-£80k,Very unlikely
+1981,35-44,Yorkshire,Female,£20k-£40k,Neutral
+1982,55-64,Scotland,Male,£60k-£80k,Very likely
+1983,45-54,Yorkshire,Male,£40k-£60k,Very unlikely
+1984,45-54,Wales,Male,£80k+,Somewhat likely
+1985,65+,Wales,Female,Under £20k,Very unlikely
+1986,35-44,East of England,Other,Under £20k,Somewhat likely
+1987,65+,Scotland,Male,£20k-£40k,Somewhat unlikely
+1988,65+,West Midlands,Male,£40k-£60k,Neutral
+1989,65+,North West,Female,£20k-£40k,Very unlikely
+1990,18-24,South West,Female,£60k-£80k,Somewhat likely
+1991,65+,South West,Other,£80k+,Somewhat unlikely
+1992,45-54,Wales,Male,£40k-£60k,Very unlikely
+1993,45-54,South East,Female,£40k-£60k,Somewhat likely
+1994,25-34,Northern Ireland,Female,£60k-£80k,Very likely
+1995,35-44,Scotland,Female,Under £20k,Very unlikely
+1996,65+,North East,Male,£20k-£40k,Very unlikely
+1997,45-54,Northern Ireland,Female,£20k-£40k,Somewhat likely
+1998,65+,North West,Female,Under £20k,Somewhat unlikely
+1999,55-64,South East,Female,£20k-£40k,Neutral
+2000,45-54,Wales,Female,Under £20k,Very likely
+2001,45-54,South West,Female,Under £20k,Very unlikely
+2002,65+,Yorkshire,Female,£20k-£40k,Very unlikely
+2003,45-54,North West,Male,£20k-£40k,Neutral
+2004,35-44,Northern Ireland,Female,£20k-£40k,Somewhat unlikely
+2005,45-54,Northern Ireland,Other,Under £20k,Very unlikely
+2006,65+,West Midlands,Male,£60k-£80k,Somewhat unlikely
+2007,18-24,South East,Male,£60k-£80k,Somewhat unlikely
+2008,55-64,North West,Male,£80k+,Very unlikely
+2009,45-54,North East,Female,Under £20k,Very unlikely
+2010,25-34,West Midlands,Female,£60k-£80k,Somewhat likely
+2011,25-34,South East,Male,£80k+,Very likely
+2012,65+,London,Male,£80k+,Very unlikely
+2013,55-64,East Midlands,Male,£80k+,Somewhat unlikely
+2014,65+,South East,Female,£20k-£40k,Very unlikely
+2015,18-24,South West,Female,£20k-£40k,Very likely
+2016,45-54,Yorkshire,Male,£20k-£40k,Somewhat unlikely
+2017,65+,South West,Male,£40k-£60k,Very unlikely
+2018,18-24,South East,Other,£80k+,Somewhat likely
+2019,55-64,South West,Male,Under £20k,Neutral
+2020,18-24,East of England,Female,£40k-£60k,Somewhat unlikely
+2021,45-54,South West,Female,£40k-£60k,Somewhat unlikely
+2022,35-44,Scotland,Female,£20k-£40k,Somewhat unlikely
+2023,65+,London,Male,£20k-£40k,Somewhat likely
+2024,25-34,South West,Female,£20k-£40k,Neutral
+2025,35-44,South West,Female,£60k-£80k,Very likely
+2026,35-44,North East,Male,£20k-£40k,Neutral
+2027,18-24,North East,Female,£20k-£40k,Somewhat unlikely
+2028,18-24,Wales,Female,£20k-£40k,Somewhat unlikely
+2029,55-64,Wales,Female,£80k+,Somewhat unlikely
+2030,45-54,South West,Male,£60k-£80k,Neutral
+2031,55-64,North West,Male,Under £20k,Somewhat unlikely
+2032,65+,East of England,Male,£40k-£60k,Very unlikely
+2033,35-44,Yorkshire,Female,£20k-£40k,Very unlikely
+2034,25-34,North East,Male,£60k-£80k,Very unlikely
+2035,25-34,West Midlands,Female,Under £20k,Very likely
+2036,65+,North East,Female,£60k-£80k,Somewhat likely
+2037,35-44,Northern Ireland,Female,£40k-£60k,Neutral
+2038,55-64,South East,Female,£20k-£40k,Neutral
+2039,45-54,South West,Male,£80k+,Somewhat unlikely
+2040,45-54,East Midlands,Female,£40k-£60k,Very likely
+2041,55-64,Northern Ireland,Male,£20k-£40k,Somewhat likely
+2042,55-64,Northern Ireland,Male,£40k-£60k,Very unlikely
+2043,25-34,Wales,Female,£60k-£80k,Very likely
+2044,35-44,East Midlands,Female,£40k-£60k,Very unlikely
+2045,55-64,Northern Ireland,Female,£20k-£40k,Neutral
+2046,18-24,North East,Male,£40k-£60k,Very unlikely
+2047,65+,South East,Male,£20k-£40k,Very unlikely
+2048,25-34,Scotland,Male,£40k-£60k,Neutral
+2049,45-54,London,Other,£60k-£80k,Somewhat unlikely
+2050,65+,South West,Male,£80k+,Very unlikely
+2051,65+,East of England,Female,£60k-£80k,Very likely
+2052,25-34,Northern Ireland,Male,£60k-£80k,Somewhat unlikely
+2053,65+,Yorkshire,Male,£80k+,Very unlikely
+2054,18-24,Scotland,Male,£20k-£40k,Somewhat unlikely
+2055,55-64,North West,Male,£40k-£60k,Very unlikely
+2056,55-64,Yorkshire,Female,£60k-£80k,Somewhat unlikely
+2057,25-34,Yorkshire,Other,£40k-£60k,Very unlikely
+2058,25-34,East of England,Female,Under £20k,Somewhat likely
+2059,45-54,North East,Male,Under £20k,Very unlikely
+2060,55-64,West Midlands,Male,£40k-£60k,Very unlikely
+2061,65+,East of England,Female,Under £20k,Very unlikely
+2062,55-64,East Midlands,Male,Under £20k,Somewhat unlikely
+2063,35-44,North East,Male,Under £20k,Somewhat likely
+2064,65+,South West,Male,Under £20k,Somewhat likely
+2065,45-54,North West,Male,£80k+,Very unlikely
+2066,45-54,South East,Female,Under £20k,Somewhat likely
+2067,65+,North East,Male,£60k-£80k,Somewhat unlikely
+2068,35-44,West Midlands,Female,£80k+,Somewhat unlikely
+2069,18-24,East Midlands,Female,£60k-£80k,Somewhat likely
+2070,35-44,Northern Ireland,Male,£40k-£60k,Very unlikely
+2071,65+,North West,Male,£40k-£60k,Very likely
+2072,45-54,West Midlands,Female,Under £20k,Somewhat likely
+2073,25-34,East Midlands,Female,£40k-£60k,Very likely
+2074,45-54,East of England,Female,£20k-£40k,Neutral
+2075,45-54,East of England,Female,£60k-£80k,Somewhat likely
+2076,18-24,London,Male,£40k-£60k,Neutral
+2077,65+,North West,Male,£40k-£60k,Somewhat unlikely
+2078,55-64,Northern Ireland,Male,£60k-£80k,Neutral
+2079,45-54,South East,Female,£20k-£40k,Somewhat unlikely
+2080,65+,East of England,Male,£40k-£60k,Very unlikely
+2081,35-44,Northern Ireland,Male,£60k-£80k,Somewhat likely
+2082,65+,South East,Female,£80k+,Very unlikely
+2083,25-34,Scotland,Female,£20k-£40k,Somewhat likely
+2084,25-34,West Midlands,Male,£20k-£40k,Very unlikely
+2085,45-54,London,Female,Under £20k,Very unlikely
+2086,45-54,West Midlands,Female,£20k-£40k,Somewhat likely
+2087,45-54,East Midlands,Male,£60k-£80k,Somewhat unlikely
+2088,35-44,South East,Male,£40k-£60k,Very unlikely
+2089,65+,West Midlands,Male,Under £20k,Neutral
+2090,18-24,London,Female,£40k-£60k,Somewhat likely
+2091,45-54,North East,Female,Under £20k,Neutral
+2092,35-44,East Midlands,Male,£40k-£60k,Very likely
+2093,65+,London,Female,£20k-£40k,Somewhat unlikely
+2094,65+,Yorkshire,Female,£80k+,Somewhat unlikely
+2095,35-44,North West,Female,£20k-£40k,Neutral
+2096,18-24,South East,Male,£80k+,Somewhat likely
+2097,55-64,Wales,Female,£20k-£40k,Very unlikely
+2098,18-24,South East,Female,£80k+,Neutral
+2099,65+,East Midlands,Other,£20k-£40k,Somewhat unlikely
+2100,25-34,London,Male,£60k-£80k,Somewhat likely
+2101,35-44,East of England,Other,£40k-£60k,Somewhat likely
+2102,65+,South East,Female,Under £20k,Somewhat unlikely
+2103,55-64,East of England,Female,£20k-£40k,Somewhat unlikely
+2104,65+,South West,Male,£80k+,Somewhat likely
+2105,65+,North West,Female,£60k-£80k,Somewhat unlikely
+2106,55-64,East of England,Other,£20k-£40k,Somewhat unlikely
+2107,55-64,West Midlands,Female,£60k-£80k,Somewhat unlikely
+2108,35-44,North West,Male,£20k-£40k,Neutral
+2109,55-64,Northern Ireland,Male,£80k+,Somewhat unlikely
+2110,65+,Northern Ireland,Female,£40k-£60k,Very unlikely
+2111,35-44,Northern Ireland,Male,Under £20k,Somewhat likely
+2112,18-24,East of England,Male,Under £20k,Somewhat unlikely
+2113,35-44,South West,Male,Under £20k,Neutral
+2114,25-34,North West,Female,Under £20k,Neutral
+2115,65+,Scotland,Other,£40k-£60k,Somewhat likely
+2116,65+,East of England,Male,£20k-£40k,Somewhat unlikely
+2117,55-64,North East,Male,Under £20k,Somewhat unlikely
+2118,18-24,Yorkshire,Male,£40k-£60k,Somewhat likely
+2119,18-24,East of England,Female,£80k+,Somewhat likely
+2120,65+,Northern Ireland,Male,£40k-£60k,Very unlikely
+2121,65+,Scotland,Female,£60k-£80k,Neutral
+2122,35-44,North West,Female,£60k-£80k,Very likely
+2123,25-34,Northern Ireland,Female,£40k-£60k,Very likely
+2124,45-54,South East,Female,£60k-£80k,Somewhat likely
+2125,25-34,North West,Female,£20k-£40k,Neutral
+2126,18-24,North East,Male,£20k-£40k,Very unlikely
+2127,65+,Scotland,Male,£20k-£40k,Somewhat likely
+2128,25-34,East Midlands,Female,£60k-£80k,Very likely
+2129,55-64,South West,Female,Under £20k,Somewhat unlikely
+2130,45-54,West Midlands,Male,Under £20k,Very unlikely
+2131,65+,London,Male,Under £20k,Neutral
+2132,65+,Scotland,Male,Under £20k,Very unlikely
+2133,18-24,East of England,Female,£40k-£60k,Very unlikely
+2134,18-24,North West,Male,£80k+,Very unlikely
+2135,25-34,North East,Male,£20k-£40k,Somewhat likely
+2136,55-64,Northern Ireland,Male,£80k+,Somewhat likely
+2137,18-24,South East,Female,Under £20k,Neutral
+2138,45-54,South West,Male,£20k-£40k,Very likely
+2139,45-54,West Midlands,Male,£40k-£60k,Somewhat likely
+2140,65+,West Midlands,Female,Under £20k,Somewhat unlikely
+2141,18-24,North West,Male,£40k-£60k,Neutral
+2142,55-64,Yorkshire,Male,Under £20k,Very unlikely
+2143,55-64,South West,Male,£80k+,Neutral
+2144,25-34,Wales,Male,£40k-£60k,Neutral
+2145,35-44,Yorkshire,Female,£40k-£60k,Very unlikely
+2146,65+,Yorkshire,Female,Under £20k,Very unlikely
+2147,25-34,Wales,Male,£20k-£40k,Somewhat likely
+2148,65+,East Midlands,Female,Under £20k,Very unlikely
+2149,65+,North East,Male,£40k-£60k,Very unlikely
+2150,25-34,West Midlands,Male,£60k-£80k,Somewhat likely
+2151,65+,West Midlands,Female,£40k-£60k,Somewhat likely
+2152,65+,North West,Male,£80k+,Somewhat unlikely
+2153,55-64,East Midlands,Female,£20k-£40k,Neutral
+2154,55-64,Northern Ireland,Male,£80k+,Very unlikely
+2155,65+,North West,Female,£20k-£40k,Somewhat unlikely
+2156,25-34,London,Male,£60k-£80k,Very unlikely
+2157,18-24,London,Female,£40k-£60k,Very unlikely
+2158,25-34,North East,Male,£80k+,Very unlikely
+2159,45-54,North West,Male,£20k-£40k,Very likely
+2160,25-34,South East,Other,£20k-£40k,Somewhat likely
+2161,18-24,Northern Ireland,Other,£40k-£60k,Very likely
+2162,18-24,Wales,Female,£60k-£80k,Very unlikely
+2163,25-34,London,Male,£20k-£40k,Very likely
+2164,18-24,London,Female,£60k-£80k,Somewhat likely
+2165,25-34,East Midlands,Female,£80k+,Somewhat unlikely
+2166,35-44,East Midlands,Male,£40k-£60k,Neutral
+2167,65+,Northern Ireland,Male,Under £20k,Neutral
+2168,65+,London,Female,£20k-£40k,Somewhat unlikely
+2169,18-24,West Midlands,Female,£60k-£80k,Somewhat unlikely
+2170,35-44,Scotland,Female,£20k-£40k,Somewhat likely
+2171,25-34,North East,Other,£80k+,Somewhat likely
+2172,25-34,Northern Ireland,Male,£80k+,Very likely
+2173,45-54,South West,Female,£80k+,Somewhat unlikely
+2174,18-24,Northern Ireland,Male,£40k-£60k,Somewhat unlikely
+2175,45-54,West Midlands,Male,£40k-£60k,Somewhat unlikely
+2176,25-34,North East,Male,Under £20k,Somewhat likely
+2177,35-44,London,Male,£20k-£40k,Neutral
+2178,18-24,North West,Female,£40k-£60k,Somewhat likely
+2179,25-34,Wales,Female,£20k-£40k,Somewhat likely
+2180,55-64,Scotland,Male,£60k-£80k,Very likely
+2181,35-44,South East,Female,Under £20k,Very unlikely
+2182,35-44,West Midlands,Female,£40k-£60k,Somewhat unlikely
+2183,65+,Yorkshire,Other,Under £20k,Somewhat unlikely
+2184,65+,East of England,Male,£20k-£40k,Very likely
+2185,45-54,East Midlands,Female,Under £20k,Somewhat likely
+2186,25-34,Wales,Male,Under £20k,Very unlikely
+2187,25-34,North West,Female,£20k-£40k,Somewhat unlikely
+2188,25-34,East of England,Female,£80k+,Neutral
+2189,35-44,East Midlands,Female,£40k-£60k,Somewhat likely
+2190,55-64,West Midlands,Male,£60k-£80k,Neutral
+2191,55-64,Scotland,Male,£20k-£40k,Somewhat unlikely
+2192,45-54,South East,Female,£20k-£40k,Very unlikely
+2193,35-44,East of England,Female,Under £20k,Neutral
+2194,45-54,Yorkshire,Male,£40k-£60k,Somewhat likely
+2195,35-44,Scotland,Male,Under £20k,Very likely
+2196,65+,East Midlands,Male,£60k-£80k,Very unlikely
+2197,45-54,Wales,Female,Under £20k,Very unlikely
+2198,45-54,London,Male,£40k-£60k,Neutral
+2199,55-64,Wales,Male,£40k-£60k,Somewhat unlikely
+2200,55-64,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+2201,35-44,Wales,Male,Under £20k,Somewhat unlikely
+2202,25-34,Northern Ireland,Female,Under £20k,Very likely
+2203,18-24,North East,Male,£80k+,Neutral
+2204,18-24,North West,Male,£60k-£80k,Somewhat unlikely
+2205,35-44,East Midlands,Male,£80k+,Very unlikely
+2206,45-54,South East,Male,Under £20k,Very unlikely
+2207,45-54,West Midlands,Male,£40k-£60k,Very likely
+2208,35-44,Scotland,Female,£60k-£80k,Very likely
+2209,45-54,London,Female,£60k-£80k,Somewhat likely
+2210,25-34,Yorkshire,Female,£80k+,Somewhat unlikely
+2211,18-24,Yorkshire,Female,£60k-£80k,Somewhat likely
+2212,25-34,London,Female,£60k-£80k,Somewhat likely
+2213,65+,South West,Male,Under £20k,Neutral
+2214,18-24,North East,Female,£60k-£80k,Very unlikely
+2215,55-64,North West,Female,£40k-£60k,Somewhat likely
+2216,18-24,South East,Female,£60k-£80k,Neutral
+2217,35-44,South West,Male,£60k-£80k,Neutral
+2218,55-64,Northern Ireland,Female,£60k-£80k,Neutral
+2219,65+,Scotland,Male,Under £20k,Very unlikely
+2220,55-64,North West,Male,£80k+,Somewhat unlikely
+2221,35-44,Wales,Other,£40k-£60k,Very likely
+2222,45-54,South West,Female,£40k-£60k,Very likely
+2223,65+,West Midlands,Male,Under £20k,Very unlikely
+2224,25-34,Wales,Male,£80k+,Very likely
+2225,25-34,Northern Ireland,Other,£60k-£80k,Somewhat unlikely
+2226,25-34,Scotland,Male,£40k-£60k,Somewhat likely
+2227,25-34,Wales,Female,Under £20k,Somewhat likely
+2228,35-44,London,Male,£40k-£60k,Somewhat likely
+2229,18-24,Northern Ireland,Female,£60k-£80k,Neutral
+2230,35-44,Yorkshire,Female,£60k-£80k,Neutral
+2231,35-44,South East,Female,£60k-£80k,Somewhat likely
+2232,25-34,East of England,Female,£80k+,Somewhat likely
+2233,35-44,Wales,Female,£60k-£80k,Somewhat unlikely
+2234,65+,Scotland,Female,Under £20k,Very unlikely
+2235,18-24,South East,Female,£80k+,Very unlikely
+2236,18-24,East Midlands,Female,£80k+,Very unlikely
+2237,18-24,Wales,Male,£80k+,Very unlikely
+2238,65+,North East,Female,£20k-£40k,Neutral
+2239,45-54,East of England,Male,£20k-£40k,Very unlikely
+2240,18-24,Yorkshire,Other,£60k-£80k,Neutral
+2241,65+,Northern Ireland,Female,£60k-£80k,Very likely
+2242,35-44,North West,Female,£40k-£60k,Very unlikely
+2243,35-44,North East,Female,£60k-£80k,Somewhat unlikely
+2244,18-24,West Midlands,Male,Under £20k,Somewhat likely
+2245,35-44,East of England,Female,£80k+,Somewhat likely
+2246,25-34,Scotland,Other,£20k-£40k,Neutral
+2247,45-54,North West,Female,£60k-£80k,Very unlikely
+2248,55-64,West Midlands,Male,£60k-£80k,Very unlikely
+2249,25-34,West Midlands,Female,£80k+,Very likely
+2250,25-34,South East,Female,£20k-£40k,Somewhat likely
+2251,65+,Scotland,Female,£40k-£60k,Very unlikely
+2252,25-34,Yorkshire,Male,Under £20k,Very likely
+2253,18-24,Wales,Female,£20k-£40k,Very likely
+2254,65+,East of England,Female,Under £20k,Very unlikely
+2255,18-24,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+2256,35-44,South West,Male,£20k-£40k,Somewhat likely
+2257,55-64,North West,Female,£60k-£80k,Very unlikely
+2258,65+,London,Male,£20k-£40k,Very unlikely
+2259,65+,Scotland,Female,Under £20k,Somewhat unlikely
+2260,55-64,South East,Male,£40k-£60k,Neutral
+2261,25-34,South East,Male,£40k-£60k,Very unlikely
+2262,25-34,West Midlands,Male,Under £20k,Somewhat likely
+2263,45-54,Wales,Male,£60k-£80k,Neutral
+2264,35-44,Wales,Female,£20k-£40k,Somewhat likely
+2265,18-24,South West,Female,£80k+,Very unlikely
+2266,18-24,Yorkshire,Other,£60k-£80k,Very unlikely
+2267,55-64,East of England,Male,£80k+,Very unlikely
+2268,18-24,North West,Female,£80k+,Very likely
+2269,55-64,South West,Male,£40k-£60k,Somewhat likely
+2270,25-34,London,Male,£20k-£40k,Very likely
+2271,65+,South West,Male,£60k-£80k,Neutral
+2272,18-24,Yorkshire,Female,£40k-£60k,Neutral
+2273,45-54,West Midlands,Female,£60k-£80k,Very unlikely
+2274,35-44,South West,Male,£40k-£60k,Very unlikely
+2275,18-24,Scotland,Female,£80k+,Somewhat likely
+2276,25-34,Northern Ireland,Female,£60k-£80k,Somewhat likely
+2277,65+,North East,Female,£80k+,Somewhat likely
+2278,45-54,West Midlands,Male,£40k-£60k,Neutral
+2279,65+,South East,Male,Under £20k,Very unlikely
+2280,35-44,Scotland,Male,£80k+,Somewhat unlikely
+2281,65+,East of England,Male,Under £20k,Somewhat likely
+2282,35-44,West Midlands,Female,£40k-£60k,Somewhat likely
+2283,25-34,Wales,Male,£20k-£40k,Somewhat unlikely
+2284,18-24,London,Male,Under £20k,Somewhat unlikely
+2285,25-34,East Midlands,Female,£40k-£60k,Very unlikely
+2286,55-64,South East,Male,£80k+,Somewhat likely
+2287,25-34,South East,Female,£80k+,Very unlikely
+2288,65+,South East,Female,£60k-£80k,Very unlikely
+2289,45-54,Yorkshire,Female,£20k-£40k,Somewhat likely
+2290,45-54,East Midlands,Male,£40k-£60k,Neutral
+2291,18-24,East Midlands,Male,£40k-£60k,Somewhat unlikely
+2292,25-34,Scotland,Male,Under £20k,Neutral
+2293,55-64,London,Female,£40k-£60k,Somewhat likely
+2294,45-54,London,Female,£80k+,Very likely
+2295,65+,London,Male,Under £20k,Very unlikely
+2296,45-54,Northern Ireland,Male,£40k-£60k,Very unlikely
+2297,45-54,South East,Female,£40k-£60k,Neutral
+2298,18-24,West Midlands,Male,£60k-£80k,Neutral
+2299,65+,South East,Female,£80k+,Somewhat likely
+2300,25-34,London,Female,£20k-£40k,Very likely
+2301,35-44,Northern Ireland,Female,£20k-£40k,Somewhat likely
+2302,25-34,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+2303,55-64,London,Female,Under £20k,Somewhat likely
+2304,18-24,South East,Male,£40k-£60k,Very likely
+2305,35-44,Northern Ireland,Female,£60k-£80k,Somewhat likely
+2306,25-34,South West,Female,Under £20k,Very likely
+2307,25-34,Scotland,Female,£60k-£80k,Neutral
+2308,65+,South East,Female,£20k-£40k,Very unlikely
+2309,65+,East Midlands,Other,£40k-£60k,Very unlikely
+2310,45-54,North West,Male,£40k-£60k,Somewhat unlikely
+2311,35-44,East of England,Female,£20k-£40k,Somewhat unlikely
+2312,65+,North West,Female,Under £20k,Very unlikely
+2313,18-24,North West,Male,£20k-£40k,Neutral
+2314,45-54,North West,Female,£40k-£60k,Somewhat likely
+2315,55-64,East of England,Female,£40k-£60k,Very unlikely
+2316,35-44,Northern Ireland,Male,£20k-£40k,Very unlikely
+2317,18-24,South West,Male,£40k-£60k,Neutral
+2318,45-54,Scotland,Female,£60k-£80k,Somewhat likely
+2319,35-44,West Midlands,Male,£40k-£60k,Very unlikely
+2320,55-64,Wales,Male,£60k-£80k,Very unlikely
+2321,65+,South East,Male,£60k-£80k,Neutral
+2322,18-24,East Midlands,Female,£60k-£80k,Neutral
+2323,18-24,East of England,Male,£60k-£80k,Somewhat likely
+2324,45-54,East of England,Male,£40k-£60k,Very likely
+2325,35-44,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+2326,45-54,North West,Male,£60k-£80k,Somewhat likely
+2327,35-44,East of England,Female,£80k+,Somewhat likely
+2328,65+,London,Female,Under £20k,Neutral
+2329,18-24,London,Female,£20k-£40k,Very likely
+2330,18-24,North East,Male,£80k+,Somewhat unlikely
+2331,45-54,West Midlands,Male,£20k-£40k,Somewhat unlikely
+2332,65+,North East,Female,£20k-£40k,Very unlikely
+2333,35-44,Wales,Male,£80k+,Somewhat likely
+2334,18-24,South East,Male,£80k+,Neutral
+2335,35-44,Northern Ireland,Male,£40k-£60k,Somewhat unlikely
+2336,25-34,South West,Male,£60k-£80k,Very likely
+2337,18-24,Wales,Male,£40k-£60k,Very likely
+2338,35-44,South East,Male,Under £20k,Neutral
+2339,45-54,Scotland,Male,£20k-£40k,Neutral
+2340,18-24,London,Female,£40k-£60k,Very unlikely
+2341,55-64,East of England,Male,£20k-£40k,Very unlikely
+2342,18-24,North East,Female,£40k-£60k,Neutral
+2343,65+,Yorkshire,Other,£40k-£60k,Very unlikely
+2344,35-44,Yorkshire,Male,£40k-£60k,Somewhat likely
+2345,35-44,East of England,Female,£80k+,Neutral
+2346,35-44,Wales,Female,Under £20k,Very likely
+2347,45-54,North West,Female,£20k-£40k,Neutral
+2348,18-24,North West,Female,£60k-£80k,Neutral
+2349,65+,South East,Male,£60k-£80k,Very unlikely
+2350,35-44,Wales,Female,£60k-£80k,Very unlikely
+2351,55-64,South West,Male,£40k-£60k,Very unlikely
+2352,45-54,Scotland,Male,£40k-£60k,Somewhat likely
+2353,18-24,Scotland,Female,£40k-£60k,Very unlikely
+2354,18-24,West Midlands,Female,£80k+,Very unlikely
+2355,35-44,North East,Male,Under £20k,Neutral
+2356,65+,South West,Male,£20k-£40k,Somewhat unlikely
+2357,35-44,Scotland,Female,£20k-£40k,Somewhat likely
+2358,35-44,South East,Female,Under £20k,Somewhat likely
+2359,25-34,North East,Female,Under £20k,Very likely
+2360,35-44,London,Male,Under £20k,Very likely
+2361,25-34,Yorkshire,Female,£80k+,Neutral
+2362,55-64,South West,Female,£40k-£60k,Somewhat likely
+2363,65+,North West,Male,Under £20k,Somewhat unlikely
+2364,18-24,East Midlands,Female,£20k-£40k,Very unlikely
+2365,65+,West Midlands,Male,Under £20k,Very unlikely
+2366,35-44,Scotland,Male,£80k+,Somewhat likely
+2367,35-44,Scotland,Male,£20k-£40k,Somewhat likely
+2368,45-54,East of England,Male,£40k-£60k,Very likely
+2369,55-64,Wales,Male,£20k-£40k,Neutral
+2370,45-54,South East,Male,£60k-£80k,Somewhat unlikely
+2371,55-64,Wales,Female,£60k-£80k,Neutral
+2372,45-54,West Midlands,Other,£60k-£80k,Very likely
+2373,55-64,London,Female,£60k-£80k,Very likely
+2374,25-34,Scotland,Female,£20k-£40k,Neutral
+2375,35-44,South West,Female,£80k+,Very unlikely
+2376,18-24,West Midlands,Male,Under £20k,Neutral
+2377,55-64,East Midlands,Female,Under £20k,Very likely
+2378,65+,South East,Male,Under £20k,Very unlikely
+2379,55-64,East Midlands,Female,Under £20k,Somewhat likely
+2380,55-64,Wales,Female,Under £20k,Very unlikely
+2381,55-64,South West,Female,£60k-£80k,Somewhat likely
+2382,65+,Wales,Female,£40k-£60k,Very unlikely
+2383,65+,London,Female,£80k+,Very unlikely
+2384,18-24,South East,Male,£80k+,Very unlikely
+2385,55-64,South East,Male,Under £20k,Somewhat unlikely
+2386,55-64,East Midlands,Male,Under £20k,Neutral
+2387,45-54,South West,Female,£80k+,Somewhat likely
+2388,55-64,Wales,Male,£80k+,Somewhat likely
+2389,25-34,Wales,Male,£20k-£40k,Somewhat unlikely
+2390,65+,North West,Male,£80k+,Neutral
+2391,45-54,North East,Male,Under £20k,Very unlikely
+2392,45-54,Yorkshire,Female,£60k-£80k,Neutral
+2393,18-24,East Midlands,Male,£60k-£80k,Somewhat likely
+2394,35-44,East Midlands,Male,£60k-£80k,Very likely
+2395,35-44,London,Female,£80k+,Somewhat likely
+2396,35-44,South West,Male,£60k-£80k,Somewhat likely
+2397,25-34,Yorkshire,Female,£80k+,Somewhat likely
+2398,65+,East of England,Male,Under £20k,Neutral
+2399,25-34,Yorkshire,Female,£80k+,Somewhat likely
+2400,65+,South West,Male,£40k-£60k,Very unlikely
+2401,18-24,Wales,Female,£60k-£80k,Somewhat unlikely
+2402,25-34,Scotland,Female,£80k+,Somewhat unlikely
+2403,55-64,North East,Male,£40k-£60k,Somewhat unlikely
+2404,55-64,Yorkshire,Female,£60k-£80k,Very likely
+2405,18-24,Northern Ireland,Male,Under £20k,Somewhat unlikely
+2406,45-54,Wales,Male,£20k-£40k,Very unlikely
+2407,65+,North West,Male,£20k-£40k,Very unlikely
+2408,45-54,West Midlands,Female,Under £20k,Somewhat unlikely
+2409,18-24,London,Female,Under £20k,Neutral
+2410,35-44,Scotland,Female,Under £20k,Very unlikely
+2411,35-44,South East,Female,£60k-£80k,Very likely
+2412,65+,Scotland,Female,£20k-£40k,Neutral
+2413,45-54,Wales,Male,£20k-£40k,Very unlikely
+2414,45-54,East of England,Female,£20k-£40k,Very likely
+2415,18-24,Wales,Female,Under £20k,Somewhat likely
+2416,25-34,London,Male,£60k-£80k,Neutral
+2417,18-24,Yorkshire,Male,£80k+,Neutral
+2418,25-34,Scotland,Female,£80k+,Somewhat likely
+2419,55-64,East of England,Female,Under £20k,Somewhat unlikely
+2420,65+,West Midlands,Female,£80k+,Somewhat likely
+2421,55-64,North East,Male,£60k-£80k,Neutral
+2422,55-64,East of England,Male,£20k-£40k,Very unlikely
+2423,35-44,North East,Male,£40k-£60k,Very likely
+2424,25-34,North East,Male,£80k+,Somewhat likely
+2425,55-64,Scotland,Female,£60k-£80k,Somewhat unlikely
+2426,55-64,Northern Ireland,Female,£80k+,Somewhat unlikely
+2427,35-44,Wales,Male,£40k-£60k,Neutral
+2428,25-34,Yorkshire,Female,Under £20k,Very likely
+2429,55-64,Northern Ireland,Male,Under £20k,Neutral
+2430,18-24,Scotland,Female,Under £20k,Neutral
+2431,18-24,West Midlands,Female,£80k+,Very unlikely
+2432,55-64,East Midlands,Female,£40k-£60k,Very unlikely
+2433,18-24,London,Female,£20k-£40k,Somewhat unlikely
+2434,45-54,East Midlands,Male,£20k-£40k,Very likely
+2435,18-24,London,Female,£20k-£40k,Neutral
+2436,45-54,Wales,Female,Under £20k,Somewhat unlikely
+2437,18-24,West Midlands,Female,£20k-£40k,Neutral
+2438,45-54,East of England,Male,£60k-£80k,Very likely
+2439,55-64,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+2440,18-24,North West,Male,£80k+,Very likely
+2441,45-54,Northern Ireland,Female,£80k+,Somewhat unlikely
+2442,18-24,Northern Ireland,Male,Under £20k,Very likely
+2443,25-34,East Midlands,Male,Under £20k,Somewhat likely
+2444,55-64,Wales,Female,£40k-£60k,Somewhat likely
+2445,45-54,East Midlands,Female,Under £20k,Very likely
+2446,55-64,North West,Female,£40k-£60k,Very unlikely
+2447,25-34,East Midlands,Female,£40k-£60k,Somewhat unlikely
+2448,35-44,Wales,Male,£40k-£60k,Somewhat likely
+2449,55-64,East of England,Male,£40k-£60k,Very unlikely
+2450,65+,Scotland,Female,Under £20k,Neutral
+2451,25-34,East of England,Male,£80k+,Somewhat likely
+2452,35-44,Northern Ireland,Female,£20k-£40k,Very likely
+2453,25-34,Northern Ireland,Male,£60k-£80k,Very unlikely
+2454,18-24,East Midlands,Female,£40k-£60k,Somewhat likely
+2455,45-54,North East,Female,Under £20k,Very likely
+2456,55-64,West Midlands,Female,£60k-£80k,Neutral
+2457,18-24,North West,Male,£20k-£40k,Somewhat unlikely
+2458,55-64,London,Female,Under £20k,Somewhat unlikely
+2459,35-44,London,Female,£40k-£60k,Very unlikely
+2460,35-44,Scotland,Male,Under £20k,Somewhat likely
+2461,55-64,West Midlands,Female,Under £20k,Very unlikely
+2462,55-64,West Midlands,Female,£40k-£60k,Very unlikely
+2463,55-64,East Midlands,Male,£80k+,Very unlikely
+2464,35-44,South West,Other,£60k-£80k,Somewhat unlikely
+2465,25-34,South West,Female,£40k-£60k,Somewhat unlikely
+2466,35-44,South East,Other,£80k+,Somewhat likely
+2467,55-64,West Midlands,Male,£40k-£60k,Neutral
+2468,65+,North East,Female,£80k+,Very likely
+2469,35-44,Scotland,Female,£40k-£60k,Very unlikely
+2470,45-54,East Midlands,Male,Under £20k,Neutral
+2471,35-44,East Midlands,Female,£80k+,Somewhat likely
+2472,18-24,Scotland,Female,£40k-£60k,Very unlikely
+2473,55-64,Yorkshire,Female,£60k-£80k,Somewhat likely
+2474,35-44,North East,Female,£20k-£40k,Somewhat likely
+2475,25-34,South West,Female,Under £20k,Somewhat likely
+2476,65+,London,Male,£80k+,Very unlikely
+2477,55-64,Yorkshire,Male,£20k-£40k,Very likely
+2478,65+,North East,Other,Under £20k,Very unlikely
+2479,35-44,East of England,Female,£80k+,Somewhat likely
+2480,18-24,South East,Female,Under £20k,Neutral
+2481,25-34,North West,Male,£40k-£60k,Somewhat unlikely
+2482,65+,West Midlands,Male,£60k-£80k,Very unlikely
+2483,25-34,London,Male,£40k-£60k,Somewhat likely
+2484,45-54,Wales,Male,£40k-£60k,Somewhat unlikely
+2485,25-34,Yorkshire,Male,£20k-£40k,Very unlikely
+2486,18-24,South East,Female,£40k-£60k,Neutral
+2487,65+,East of England,Female,£40k-£60k,Very unlikely
+2488,45-54,Scotland,Male,£20k-£40k,Neutral
+2489,65+,South East,Female,£20k-£40k,Very unlikely
+2490,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+2491,18-24,East of England,Female,£80k+,Neutral
+2492,55-64,East of England,Male,£40k-£60k,Somewhat likely
+2493,55-64,North East,Female,£40k-£60k,Neutral
+2494,35-44,North West,Male,Under £20k,Somewhat unlikely
+2495,45-54,Northern Ireland,Female,£60k-£80k,Neutral
+2496,35-44,East of England,Female,£40k-£60k,Somewhat unlikely
+2497,55-64,North West,Male,£60k-£80k,Neutral
+2498,25-34,East of England,Male,£60k-£80k,Neutral
+2499,65+,South West,Female,£40k-£60k,Somewhat unlikely
+2500,18-24,South East,Male,£80k+,Very unlikely
+2501,55-64,East Midlands,Female,£20k-£40k,Very unlikely
+2502,45-54,London,Male,£60k-£80k,Somewhat likely
+2503,55-64,Northern Ireland,Female,Under £20k,Somewhat likely
+2504,18-24,West Midlands,Male,£20k-£40k,Very unlikely
+2505,25-34,East of England,Female,£60k-£80k,Very unlikely
+2506,35-44,South West,Male,£80k+,Somewhat likely
+2507,35-44,South East,Male,£40k-£60k,Neutral
+2508,55-64,South East,Other,Under £20k,Very likely
+2509,35-44,East Midlands,Female,£60k-£80k,Somewhat unlikely
+2510,45-54,North East,Female,£20k-£40k,Very unlikely
+2511,65+,Scotland,Female,£80k+,Somewhat likely
+2512,18-24,Scotland,Female,£60k-£80k,Neutral
+2513,45-54,South West,Female,£80k+,Somewhat likely
+2514,18-24,North West,Male,£40k-£60k,Very likely
+2515,55-64,East of England,Female,£60k-£80k,Neutral
+2516,45-54,Yorkshire,Female,£20k-£40k,Very likely
+2517,65+,Northern Ireland,Male,£80k+,Neutral
+2518,55-64,Yorkshire,Male,£40k-£60k,Somewhat likely
+2519,35-44,North East,Female,£20k-£40k,Very unlikely
+2520,35-44,North East,Other,Under £20k,Very unlikely
+2521,65+,North East,Male,£20k-£40k,Very unlikely
+2522,55-64,South West,Male,Under £20k,Very unlikely
+2523,55-64,East of England,Female,Under £20k,Somewhat unlikely
+2524,18-24,Yorkshire,Male,£80k+,Neutral
+2525,45-54,East of England,Male,£60k-£80k,Somewhat likely
+2526,18-24,Northern Ireland,Female,Under £20k,Neutral
+2527,45-54,East Midlands,Male,£20k-£40k,Very unlikely
+2528,65+,Wales,Male,£40k-£60k,Very unlikely
+2529,65+,North West,Female,£40k-£60k,Neutral
+2530,35-44,North East,Male,£80k+,Somewhat unlikely
+2531,18-24,Northern Ireland,Female,Under £20k,Neutral
+2532,65+,East of England,Male,£80k+,Very unlikely
+2533,65+,London,Female,Under £20k,Neutral
+2534,55-64,West Midlands,Female,£20k-£40k,Very unlikely
+2535,35-44,East Midlands,Male,£20k-£40k,Somewhat unlikely
+2536,35-44,South West,Male,Under £20k,Very unlikely
+2537,65+,Northern Ireland,Male,£60k-£80k,Somewhat likely
+2538,55-64,Scotland,Male,£20k-£40k,Very likely
+2539,65+,North East,Female,£80k+,Neutral
+2540,35-44,East Midlands,Female,£20k-£40k,Very unlikely
+2541,25-34,North East,Female,£60k-£80k,Somewhat unlikely
+2542,45-54,Scotland,Male,£60k-£80k,Somewhat likely
+2543,25-34,South East,Other,£40k-£60k,Somewhat likely
+2544,45-54,Yorkshire,Male,£60k-£80k,Somewhat likely
+2545,45-54,Yorkshire,Female,£40k-£60k,Somewhat unlikely
+2546,65+,South West,Female,£60k-£80k,Very unlikely
+2547,45-54,Scotland,Male,£20k-£40k,Very likely
+2548,35-44,East of England,Male,£60k-£80k,Very likely
+2549,35-44,North East,Female,£60k-£80k,Somewhat likely
+2550,45-54,West Midlands,Male,Under £20k,Somewhat likely
+2551,65+,North West,Male,Under £20k,Somewhat unlikely
+2552,45-54,North West,Female,£20k-£40k,Somewhat unlikely
+2553,65+,South East,Female,£80k+,Very unlikely
+2554,25-34,Scotland,Female,Under £20k,Somewhat unlikely
+2555,18-24,Northern Ireland,Male,£40k-£60k,Somewhat unlikely
+2556,55-64,South East,Female,£80k+,Somewhat likely
+2557,55-64,North West,Other,£80k+,Somewhat unlikely
+2558,65+,North West,Male,£20k-£40k,Very unlikely
+2559,35-44,West Midlands,Male,£20k-£40k,Very unlikely
+2560,18-24,London,Female,£80k+,Very likely
+2561,45-54,East Midlands,Male,£40k-£60k,Neutral
+2562,25-34,Wales,Female,£20k-£40k,Very likely
+2563,65+,South East,Female,£60k-£80k,Very unlikely
+2564,25-34,Northern Ireland,Female,Under £20k,Very likely
+2565,55-64,Northern Ireland,Female,£60k-£80k,Very likely
+2566,65+,East of England,Female,£20k-£40k,Somewhat likely
+2567,55-64,West Midlands,Male,£80k+,Very unlikely
+2568,35-44,West Midlands,Female,Under £20k,Somewhat likely
+2569,45-54,North West,Male,£80k+,Neutral
+2570,35-44,West Midlands,Male,£60k-£80k,Neutral
+2571,45-54,North East,Female,£80k+,Somewhat unlikely
+2572,45-54,London,Other,£60k-£80k,Very unlikely
+2573,55-64,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
+2574,18-24,West Midlands,Female,£60k-£80k,Neutral
+2575,55-64,South East,Female,£40k-£60k,Somewhat likely
+2576,65+,South East,Male,£20k-£40k,Neutral
+2577,45-54,Scotland,Male,£20k-£40k,Neutral
+2578,45-54,East of England,Female,£80k+,Very unlikely
+2579,18-24,East Midlands,Male,£40k-£60k,Somewhat unlikely
+2580,25-34,London,Male,£80k+,Neutral
+2581,18-24,North East,Female,£80k+,Very unlikely
+2582,55-64,East Midlands,Male,£20k-£40k,Neutral
+2583,65+,East Midlands,Female,Under £20k,Very unlikely
+2584,45-54,Northern Ireland,Male,£20k-£40k,Very unlikely
+2585,25-34,East of England,Female,£20k-£40k,Very likely
+2586,18-24,London,Female,£60k-£80k,Somewhat likely
+2587,55-64,East Midlands,Male,£80k+,Somewhat unlikely
+2588,18-24,North East,Male,£40k-£60k,Somewhat unlikely
+2589,65+,North East,Female,£80k+,Very unlikely
+2590,55-64,Wales,Male,£40k-£60k,Somewhat unlikely
+2591,25-34,Scotland,Female,£40k-£60k,Somewhat likely
+2592,35-44,East Midlands,Male,£40k-£60k,Very unlikely
+2593,65+,South West,Male,£60k-£80k,Very likely
+2594,45-54,South West,Male,Under £20k,Very unlikely
+2595,18-24,North East,Female,£20k-£40k,Somewhat unlikely
+2596,55-64,East Midlands,Male,Under £20k,Somewhat unlikely
+2597,55-64,South West,Male,£80k+,Very unlikely
+2598,35-44,Wales,Male,£20k-£40k,Somewhat likely
+2599,45-54,Scotland,Female,£40k-£60k,Somewhat unlikely
+2600,45-54,North East,Female,£20k-£40k,Very likely
+2601,25-34,South East,Female,£40k-£60k,Very likely
+2602,55-64,South East,Male,£80k+,Somewhat unlikely
+2603,45-54,Yorkshire,Female,£80k+,Somewhat unlikely
+2604,65+,Scotland,Female,£60k-£80k,Neutral
+2605,18-24,North West,Other,Under £20k,Very unlikely
+2606,55-64,South West,Male,£60k-£80k,Very unlikely
+2607,35-44,South East,Female,Under £20k,Very likely
+2608,45-54,West Midlands,Female,£40k-£60k,Somewhat likely
+2609,18-24,North West,Female,£60k-£80k,Somewhat unlikely
+2610,65+,East Midlands,Male,£80k+,Somewhat unlikely
+2611,18-24,Scotland,Female,£20k-£40k,Very unlikely
+2612,35-44,Northern Ireland,Male,£60k-£80k,Neutral
+2613,45-54,Northern Ireland,Female,Under £20k,Somewhat unlikely
+2614,45-54,Wales,Male,Under £20k,Very unlikely
+2615,45-54,Wales,Male,£60k-£80k,Somewhat likely
+2616,55-64,North West,Male,£20k-£40k,Very unlikely
+2617,18-24,North West,Male,£80k+,Somewhat likely
+2618,55-64,North East,Male,£40k-£60k,Very unlikely
+2619,55-64,London,Female,Under £20k,Somewhat unlikely
+2620,65+,East Midlands,Male,£40k-£60k,Neutral
+2621,18-24,Scotland,Female,£60k-£80k,Very unlikely
+2622,65+,East Midlands,Female,£60k-£80k,Very unlikely
+2623,65+,East of England,Female,Under £20k,Somewhat unlikely
+2624,55-64,Northern Ireland,Male,£20k-£40k,Very unlikely
+2625,25-34,South East,Male,Under £20k,Very likely
+2626,65+,Northern Ireland,Male,Under £20k,Very unlikely
+2627,35-44,North West,Female,Under £20k,Somewhat likely
+2628,65+,Yorkshire,Female,£20k-£40k,Very unlikely
+2629,55-64,Northern Ireland,Female,£80k+,Very likely
+2630,65+,West Midlands,Male,Under £20k,Somewhat likely
+2631,55-64,South West,Female,Under £20k,Somewhat likely
+2632,18-24,North East,Female,£80k+,Neutral
+2633,65+,Northern Ireland,Female,Under £20k,Somewhat unlikely
+2634,55-64,Yorkshire,Male,£60k-£80k,Somewhat unlikely
+2635,65+,South East,Female,£60k-£80k,Somewhat likely
+2636,18-24,South West,Female,£20k-£40k,Neutral
+2637,65+,London,Female,Under £20k,Neutral
+2638,35-44,East Midlands,Male,£20k-£40k,Somewhat likely
+2639,65+,Wales,Female,£20k-£40k,Very unlikely
+2640,65+,South West,Male,£60k-£80k,Very unlikely
+2641,25-34,North East,Male,£40k-£60k,Somewhat likely
+2642,25-34,North East,Female,£20k-£40k,Very unlikely
+2643,35-44,Northern Ireland,Male,Under £20k,Neutral
+2644,55-64,Yorkshire,Male,£80k+,Somewhat unlikely
+2645,65+,Wales,Female,Under £20k,Very unlikely
+2646,55-64,West Midlands,Male,£80k+,Somewhat likely
+2647,65+,West Midlands,Male,£40k-£60k,Neutral
+2648,65+,East of England,Female,£40k-£60k,Somewhat likely
+2649,25-34,North East,Male,£40k-£60k,Very likely
+2650,18-24,East of England,Female,£20k-£40k,Neutral
+2651,45-54,Scotland,Male,£80k+,Neutral
+2652,55-64,London,Male,Under £20k,Somewhat unlikely
+2653,18-24,South West,Male,£40k-£60k,Neutral
+2654,18-24,South West,Female,£40k-£60k,Somewhat likely
+2655,55-64,South West,Female,£60k-£80k,Very unlikely
+2656,45-54,Scotland,Female,£60k-£80k,Somewhat unlikely
+2657,45-54,North West,Male,£40k-£60k,Somewhat unlikely
+2658,45-54,Wales,Male,Under £20k,Very unlikely
+2659,25-34,East of England,Male,£60k-£80k,Somewhat unlikely
+2660,55-64,West Midlands,Female,£20k-£40k,Somewhat unlikely
+2661,35-44,Scotland,Other,£80k+,Somewhat likely
+2662,55-64,South West,Male,£40k-£60k,Very unlikely
+2663,18-24,South East,Male,£20k-£40k,Somewhat unlikely
+2664,45-54,West Midlands,Male,Under £20k,Somewhat unlikely
+2665,25-34,South West,Male,Under £20k,Very likely
+2666,25-34,West Midlands,Male,£20k-£40k,Very likely
+2667,55-64,Yorkshire,Male,£20k-£40k,Neutral
+2668,45-54,East of England,Female,£20k-£40k,Very unlikely
+2669,65+,West Midlands,Female,£20k-£40k,Very unlikely
+2670,18-24,West Midlands,Male,£20k-£40k,Neutral
+2671,35-44,North East,Female,£60k-£80k,Neutral
+2672,55-64,South East,Male,£80k+,Very likely
+2673,55-64,South West,Female,£40k-£60k,Neutral
+2674,55-64,London,Female,£60k-£80k,Very unlikely
+2675,65+,North West,Male,£20k-£40k,Very likely
+2676,35-44,West Midlands,Male,£60k-£80k,Somewhat unlikely
+2677,45-54,South West,Male,£60k-£80k,Somewhat unlikely
+2678,45-54,London,Male,£60k-£80k,Somewhat likely
+2679,45-54,Wales,Female,Under £20k,Neutral
+2680,18-24,Yorkshire,Female,Under £20k,Somewhat unlikely
+2681,45-54,London,Male,£20k-£40k,Somewhat unlikely
+2682,45-54,Wales,Male,£60k-£80k,Somewhat unlikely
+2683,65+,West Midlands,Male,Under £20k,Somewhat unlikely
+2684,35-44,Northern Ireland,Female,£80k+,Somewhat unlikely
+2685,45-54,East of England,Male,£60k-£80k,Somewhat unlikely
+2686,55-64,Yorkshire,Male,£20k-£40k,Very unlikely
+2687,55-64,West Midlands,Female,Under £20k,Somewhat likely
+2688,35-44,Northern Ireland,Female,£20k-£40k,Neutral
+2689,55-64,Northern Ireland,Female,£60k-£80k,Very likely
+2690,35-44,London,Male,£60k-£80k,Somewhat likely
+2691,18-24,Scotland,Female,£40k-£60k,Neutral
+2692,65+,North East,Female,Under £20k,Very unlikely
+2693,25-34,North East,Male,Under £20k,Neutral
+2694,35-44,Wales,Male,Under £20k,Somewhat likely
+2695,18-24,East of England,Female,£20k-£40k,Somewhat likely
+2696,55-64,South East,Male,£20k-£40k,Somewhat unlikely
+2697,45-54,North East,Male,£60k-£80k,Somewhat unlikely
+2698,25-34,Northern Ireland,Female,£80k+,Neutral
+2699,18-24,Yorkshire,Male,£20k-£40k,Somewhat unlikely
+2700,65+,Wales,Female,Under £20k,Somewhat unlikely
+2701,65+,South East,Male,£40k-£60k,Somewhat unlikely
+2702,18-24,South West,Female,£40k-£60k,Somewhat unlikely
+2703,65+,South East,Female,£60k-£80k,Very unlikely
+2704,25-34,Scotland,Male,£40k-£60k,Neutral
+2705,55-64,North West,Female,Under £20k,Neutral
+2706,45-54,North West,Female,£60k-£80k,Somewhat likely
+2707,65+,South West,Male,Under £20k,Very unlikely
+2708,25-34,Wales,Male,Under £20k,Somewhat likely
+2709,18-24,West Midlands,Female,£40k-£60k,Somewhat likely
+2710,55-64,Wales,Male,£20k-£40k,Neutral
+2711,65+,Yorkshire,Male,£80k+,Neutral
+2712,65+,Scotland,Female,£80k+,Somewhat unlikely
+2713,55-64,Yorkshire,Female,£60k-£80k,Very unlikely
+2714,18-24,Yorkshire,Male,£40k-£60k,Very unlikely
+2715,25-34,East Midlands,Female,£60k-£80k,Somewhat likely
+2716,65+,South West,Female,£40k-£60k,Somewhat unlikely
+2717,65+,Scotland,Other,£60k-£80k,Very unlikely
+2718,35-44,South East,Male,£80k+,Somewhat likely
+2719,35-44,Yorkshire,Male,£60k-£80k,Very likely
+2720,55-64,Scotland,Male,£40k-£60k,Somewhat unlikely
+2721,45-54,London,Female,£40k-£60k,Neutral
+2722,45-54,North West,Male,£80k+,Somewhat likely
+2723,55-64,South East,Male,£20k-£40k,Somewhat likely
+2724,18-24,Scotland,Male,£20k-£40k,Somewhat unlikely
+2725,65+,West Midlands,Female,£40k-£60k,Very unlikely
+2726,45-54,Scotland,Male,£40k-£60k,Somewhat unlikely
+2727,65+,Wales,Other,£40k-£60k,Somewhat unlikely
+2728,55-64,West Midlands,Male,£60k-£80k,Somewhat unlikely
+2729,45-54,North East,Female,£60k-£80k,Somewhat likely
+2730,25-34,West Midlands,Male,£80k+,Somewhat unlikely
+2731,45-54,Wales,Male,Under £20k,Neutral
+2732,65+,West Midlands,Other,£60k-£80k,Neutral
+2733,18-24,Scotland,Male,£80k+,Somewhat unlikely
+2734,18-24,Scotland,Female,£60k-£80k,Very unlikely
+2735,35-44,Scotland,Male,£80k+,Neutral
+2736,65+,South East,Female,Under £20k,Very unlikely
+2737,65+,West Midlands,Female,£20k-£40k,Very unlikely
+2738,25-34,East Midlands,Male,£20k-£40k,Very likely
+2739,65+,North West,Male,£40k-£60k,Somewhat likely
+2740,18-24,North West,Female,£60k-£80k,Somewhat likely
+2741,55-64,East Midlands,Other,£20k-£40k,Very unlikely
+2742,55-64,Wales,Male,£80k+,Very unlikely
+2743,25-34,North West,Male,Under £20k,Very likely
+2744,18-24,Wales,Female,£80k+,Very unlikely
+2745,45-54,South East,Female,£40k-£60k,Very unlikely
+2746,55-64,South East,Female,£80k+,Somewhat unlikely
+2747,55-64,Northern Ireland,Male,£60k-£80k,Very unlikely
+2748,18-24,North East,Female,Under £20k,Neutral
+2749,65+,East of England,Female,£60k-£80k,Somewhat unlikely
+2750,18-24,South East,Male,£40k-£60k,Somewhat unlikely
+2751,55-64,South East,Female,£40k-£60k,Neutral
+2752,35-44,South West,Female,£60k-£80k,Somewhat likely
+2753,18-24,Yorkshire,Female,Under £20k,Neutral
+2754,65+,East Midlands,Female,£40k-£60k,Somewhat unlikely
+2755,65+,East Midlands,Male,£60k-£80k,Very unlikely
+2756,55-64,North East,Female,£20k-£40k,Somewhat likely
+2757,35-44,London,Male,£40k-£60k,Neutral
+2758,65+,North East,Male,£20k-£40k,Very unlikely
+2759,35-44,East Midlands,Female,£40k-£60k,Very likely
+2760,65+,South West,Male,£40k-£60k,Very unlikely
+2761,35-44,Wales,Male,£20k-£40k,Neutral
+2762,25-34,Scotland,Male,£40k-£60k,Somewhat unlikely
+2763,65+,East of England,Male,£80k+,Very unlikely
+2764,35-44,Wales,Male,£80k+,Somewhat likely
+2765,35-44,West Midlands,Female,£60k-£80k,Somewhat unlikely
+2766,55-64,East Midlands,Male,£60k-£80k,Very likely
+2767,18-24,Yorkshire,Male,£20k-£40k,Somewhat likely
+2768,35-44,Scotland,Female,Under £20k,Neutral
+2769,35-44,East Midlands,Male,Under £20k,Very unlikely
+2770,55-64,North West,Female,£40k-£60k,Very unlikely
+2771,45-54,Wales,Male,£40k-£60k,Somewhat unlikely
+2772,35-44,East of England,Other,£80k+,Very unlikely
+2773,18-24,East Midlands,Female,£20k-£40k,Somewhat likely
+2774,65+,South West,Female,£20k-£40k,Neutral
+2775,65+,East Midlands,Male,£80k+,Neutral
+2776,35-44,South East,Female,Under £20k,Very unlikely
+2777,25-34,East of England,Male,£20k-£40k,Somewhat likely
+2778,55-64,Scotland,Male,Under £20k,Somewhat unlikely
+2779,18-24,Yorkshire,Female,Under £20k,Somewhat likely
+2780,18-24,East Midlands,Male,£20k-£40k,Somewhat likely
+2781,55-64,North West,Female,£40k-£60k,Somewhat unlikely
+2782,55-64,West Midlands,Female,Under £20k,Very unlikely
+2783,45-54,Wales,Male,£80k+,Very unlikely
+2784,18-24,North East,Female,£80k+,Neutral
+2785,65+,South West,Male,£60k-£80k,Somewhat unlikely
+2786,65+,North East,Male,£80k+,Neutral
+2787,35-44,Wales,Female,£40k-£60k,Somewhat unlikely
+2788,18-24,South West,Female,£40k-£60k,Very unlikely
+2789,55-64,East Midlands,Female,£20k-£40k,Very likely
+2790,45-54,Wales,Male,£60k-£80k,Neutral
+2791,65+,East of England,Female,£20k-£40k,Very unlikely
+2792,25-34,North West,Male,£40k-£60k,Somewhat likely
+2793,55-64,East Midlands,Male,£40k-£60k,Very unlikely
+2794,25-34,Scotland,Female,£40k-£60k,Very likely
+2795,45-54,South West,Female,£80k+,Somewhat unlikely
+2796,35-44,East of England,Other,£80k+,Somewhat unlikely
+2797,65+,North East,Male,£40k-£60k,Somewhat unlikely
+2798,35-44,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+2799,65+,Yorkshire,Male,£60k-£80k,Very unlikely
+2800,45-54,London,Female,£60k-£80k,Very likely
+2801,45-54,Yorkshire,Female,£20k-£40k,Very unlikely
+2802,35-44,London,Female,£20k-£40k,Somewhat likely
+2803,65+,North East,Male,£40k-£60k,Very likely
+2804,45-54,West Midlands,Male,£80k+,Somewhat unlikely
+2805,25-34,Scotland,Female,£40k-£60k,Very likely
+2806,25-34,South West,Male,£60k-£80k,Very unlikely
+2807,55-64,East Midlands,Female,Under £20k,Very unlikely
+2808,45-54,Northern Ireland,Female,£60k-£80k,Somewhat likely
+2809,55-64,Scotland,Male,Under £20k,Very likely
+2810,35-44,North East,Female,£60k-£80k,Very unlikely
+2811,18-24,East Midlands,Male,Under £20k,Neutral
+2812,65+,West Midlands,Female,£20k-£40k,Very unlikely
+2813,55-64,North West,Female,£60k-£80k,Neutral
+2814,55-64,East of England,Female,£40k-£60k,Somewhat unlikely
+2815,35-44,Northern Ireland,Male,Under £20k,Very unlikely
+2816,65+,Northern Ireland,Female,£40k-£60k,Very unlikely
+2817,45-54,Northern Ireland,Female,£20k-£40k,Neutral
+2818,25-34,East Midlands,Male,£20k-£40k,Neutral
+2819,65+,North East,Male,Under £20k,Neutral
+2820,65+,West Midlands,Male,£60k-£80k,Very unlikely
+2821,55-64,London,Female,£80k+,Neutral
+2822,55-64,West Midlands,Other,£80k+,Very unlikely
+2823,35-44,East of England,Female,£80k+,Somewhat likely
+2824,18-24,Northern Ireland,Male,Under £20k,Very unlikely
+2825,18-24,East of England,Male,£80k+,Very unlikely
+2826,18-24,Scotland,Female,£80k+,Somewhat unlikely
+2827,25-34,South East,Female,£60k-£80k,Somewhat unlikely
+2828,45-54,East Midlands,Female,£20k-£40k,Somewhat unlikely
+2829,18-24,South West,Female,£40k-£60k,Neutral
+2830,65+,Northern Ireland,Female,£60k-£80k,Very unlikely
+2831,45-54,Scotland,Male,£80k+,Very unlikely
+2832,18-24,London,Male,£60k-£80k,Somewhat likely
+2833,25-34,Scotland,Female,£40k-£60k,Neutral
+2834,65+,Wales,Male,£80k+,Very unlikely
+2835,65+,Scotland,Male,£20k-£40k,Neutral
+2836,25-34,South East,Male,£80k+,Very unlikely
+2837,18-24,South West,Female,Under £20k,Neutral
+2838,35-44,North West,Female,£20k-£40k,Somewhat likely
+2839,45-54,North East,Male,£20k-£40k,Very unlikely
+2840,18-24,South West,Female,£60k-£80k,Somewhat likely
+2841,45-54,London,Male,£20k-£40k,Neutral
+2842,45-54,East Midlands,Male,£20k-£40k,Very unlikely
+2843,55-64,South East,Male,£20k-£40k,Somewhat unlikely
+2844,55-64,Northern Ireland,Female,£20k-£40k,Very unlikely
+2845,18-24,East Midlands,Female,£40k-£60k,Somewhat unlikely
+2846,35-44,West Midlands,Male,Under £20k,Somewhat unlikely
+2847,35-44,East Midlands,Male,Under £20k,Very unlikely
+2848,18-24,London,Male,£60k-£80k,Neutral
+2849,18-24,Yorkshire,Male,£40k-£60k,Very unlikely
+2850,45-54,Wales,Male,Under £20k,Somewhat unlikely
+2851,45-54,East Midlands,Male,£40k-£60k,Somewhat unlikely
+2852,35-44,London,Male,£20k-£40k,Very likely
+2853,18-24,South West,Female,£20k-£40k,Somewhat unlikely
+2854,18-24,London,Female,£20k-£40k,Very unlikely
+2855,65+,North East,Male,£60k-£80k,Very unlikely
+2856,45-54,South West,Male,£80k+,Very unlikely
+2857,65+,Wales,Male,Under £20k,Very unlikely
+2858,18-24,East Midlands,Male,£60k-£80k,Somewhat unlikely
+2859,35-44,Scotland,Male,Under £20k,Somewhat likely
+2860,45-54,London,Female,£20k-£40k,Very unlikely
+2861,18-24,East of England,Male,£80k+,Somewhat unlikely
+2862,25-34,South West,Male,£40k-£60k,Very unlikely
+2863,18-24,West Midlands,Other,Under £20k,Very unlikely
+2864,45-54,West Midlands,Female,£80k+,Neutral
+2865,55-64,Wales,Male,£60k-£80k,Somewhat unlikely
+2866,35-44,South West,Male,£80k+,Somewhat likely
+2867,55-64,Wales,Female,£60k-£80k,Somewhat unlikely
+2868,55-64,North West,Male,£80k+,Somewhat likely
+2869,25-34,North West,Female,Under £20k,Somewhat unlikely
+2870,35-44,Scotland,Male,£20k-£40k,Somewhat likely
+2871,65+,Wales,Male,£60k-£80k,Very unlikely
+2872,55-64,East of England,Female,£40k-£60k,Very unlikely
+2873,25-34,Yorkshire,Male,£20k-£40k,Neutral
+2874,18-24,Northern Ireland,Female,£60k-£80k,Somewhat unlikely
+2875,25-34,South West,Male,Under £20k,Somewhat unlikely
+2876,25-34,South West,Male,Under £20k,Neutral
+2877,45-54,Yorkshire,Male,£80k+,Neutral
+2878,25-34,East Midlands,Female,£80k+,Somewhat likely
+2879,65+,North East,Female,£80k+,Very unlikely
+2880,35-44,South West,Male,£60k-£80k,Somewhat unlikely
+2881,45-54,Wales,Male,£40k-£60k,Very unlikely
+2882,35-44,South East,Female,£60k-£80k,Neutral
+2883,55-64,South West,Male,£60k-£80k,Very unlikely
+2884,18-24,East of England,Female,£20k-£40k,Very unlikely
+2885,35-44,East Midlands,Male,Under £20k,Very unlikely
+2886,55-64,South West,Male,£80k+,Somewhat likely
+2887,65+,North West,Female,£20k-£40k,Very unlikely
+2888,35-44,East of England,Female,£20k-£40k,Neutral
+2889,55-64,East of England,Male,£80k+,Neutral
+2890,25-34,Northern Ireland,Female,£80k+,Very likely
+2891,25-34,South East,Female,£80k+,Somewhat likely
+2892,65+,South West,Female,£80k+,Somewhat unlikely
+2893,25-34,North East,Male,£60k-£80k,Somewhat likely
+2894,55-64,West Midlands,Female,£60k-£80k,Neutral
+2895,65+,North East,Male,£40k-£60k,Very unlikely
+2896,65+,North East,Male,£80k+,Very unlikely
+2897,18-24,London,Female,£20k-£40k,Somewhat likely
+2898,25-34,North West,Male,£20k-£40k,Neutral
+2899,45-54,Scotland,Male,£40k-£60k,Very likely
+2900,35-44,South West,Female,Under £20k,Somewhat unlikely
+2901,55-64,Wales,Male,£60k-£80k,Somewhat likely
+2902,35-44,Yorkshire,Male,Under £20k,Neutral
+2903,55-64,South East,Female,£80k+,Somewhat unlikely
+2904,65+,East Midlands,Male,Under £20k,Somewhat unlikely
+2905,55-64,East Midlands,Male,£40k-£60k,Very unlikely
+2906,18-24,West Midlands,Female,£40k-£60k,Somewhat likely
+2907,45-54,West Midlands,Female,£60k-£80k,Very unlikely
+2908,25-34,East of England,Male,£80k+,Very unlikely
+2909,35-44,North West,Female,£60k-£80k,Very unlikely
+2910,45-54,West Midlands,Male,Under £20k,Very unlikely
+2911,35-44,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+2912,35-44,West Midlands,Female,£40k-£60k,Very unlikely
+2913,18-24,London,Male,£60k-£80k,Somewhat likely
+2914,45-54,North West,Female,£40k-£60k,Very likely
+2915,65+,East Midlands,Female,£80k+,Somewhat unlikely
+2916,55-64,Wales,Male,£80k+,Somewhat likely
+2917,65+,South East,Female,Under £20k,Very unlikely
+2918,25-34,Yorkshire,Female,£80k+,Somewhat likely
+2919,45-54,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+2920,45-54,East Midlands,Female,£80k+,Very likely
+2921,45-54,Wales,Female,£60k-£80k,Somewhat unlikely
+2922,18-24,North West,Female,Under £20k,Somewhat unlikely
+2923,35-44,South East,Male,£60k-£80k,Somewhat unlikely
+2924,65+,East Midlands,Female,£40k-£60k,Somewhat unlikely
+2925,65+,Yorkshire,Male,£20k-£40k,Neutral
+2926,18-24,Yorkshire,Male,£40k-£60k,Somewhat unlikely
+2927,25-34,North West,Female,£80k+,Neutral
+2928,65+,West Midlands,Female,£20k-£40k,Very unlikely
+2929,18-24,Yorkshire,Male,£80k+,Somewhat unlikely
+2930,25-34,Yorkshire,Female,Under £20k,Very unlikely
+2931,18-24,Wales,Male,£80k+,Neutral
+2932,25-34,West Midlands,Male,£60k-£80k,Somewhat likely
+2933,45-54,Yorkshire,Female,£20k-£40k,Neutral
+2934,18-24,North West,Female,£80k+,Somewhat unlikely
+2935,55-64,North East,Female,£80k+,Somewhat likely
+2936,55-64,Northern Ireland,Male,Under £20k,Somewhat likely
+2937,55-64,Wales,Male,£40k-£60k,Somewhat likely
+2938,35-44,East of England,Male,£20k-£40k,Very unlikely
+2939,18-24,Northern Ireland,Female,£40k-£60k,Somewhat unlikely
+2940,18-24,Yorkshire,Other,£60k-£80k,Very unlikely
+2941,25-34,East of England,Male,£40k-£60k,Very likely
+2942,25-34,Northern Ireland,Other,£20k-£40k,Very unlikely
+2943,45-54,Wales,Female,£20k-£40k,Very likely
+2944,25-34,London,Female,£60k-£80k,Somewhat unlikely
+2945,45-54,East of England,Female,£80k+,Somewhat likely
+2946,25-34,East of England,Female,£80k+,Very unlikely
+2947,45-54,Northern Ireland,Male,£40k-£60k,Very unlikely
+2948,35-44,West Midlands,Male,£20k-£40k,Somewhat likely
+2949,35-44,South East,Female,£20k-£40k,Somewhat likely
+2950,65+,North West,Female,£80k+,Somewhat likely
+2951,55-64,Northern Ireland,Male,£40k-£60k,Somewhat likely
+2952,55-64,North West,Female,£80k+,Very unlikely
+2953,25-34,East Midlands,Male,Under £20k,Somewhat likely
+2954,45-54,East Midlands,Female,Under £20k,Very unlikely
+2955,25-34,London,Female,£80k+,Neutral
+2956,35-44,East Midlands,Female,£20k-£40k,Very likely
+2957,35-44,South East,Female,£40k-£60k,Neutral
+2958,65+,London,Female,£60k-£80k,Somewhat unlikely
+2959,25-34,West Midlands,Male,£60k-£80k,Somewhat likely
+2960,65+,Wales,Male,£20k-£40k,Very unlikely
+2961,55-64,West Midlands,Male,£80k+,Very unlikely
+2962,55-64,Yorkshire,Female,£80k+,Very likely
+2963,35-44,Scotland,Male,Under £20k,Neutral
+2964,55-64,West Midlands,Female,£20k-£40k,Neutral
+2965,55-64,South West,Female,Under £20k,Somewhat unlikely
+2966,45-54,Northern Ireland,Male,Under £20k,Very likely
+2967,45-54,Scotland,Female,£60k-£80k,Very unlikely
+2968,45-54,Northern Ireland,Male,£40k-£60k,Somewhat likely
+2969,35-44,Yorkshire,Male,£60k-£80k,Very unlikely
+2970,45-54,South East,Male,£60k-£80k,Somewhat likely
+2971,35-44,Wales,Female,£40k-£60k,Neutral
+2972,18-24,East of England,Male,£80k+,Very likely
+2973,55-64,London,Female,Under £20k,Somewhat likely
+2974,55-64,London,Male,£60k-£80k,Neutral
+2975,55-64,Scotland,Male,Under £20k,Very unlikely
+2976,25-34,Wales,Female,£20k-£40k,Neutral
+2977,35-44,South East,Female,£20k-£40k,Neutral
+2978,55-64,South West,Female,£20k-£40k,Somewhat unlikely
+2979,45-54,London,Female,£80k+,Very unlikely
+2980,18-24,North East,Female,Under £20k,Neutral
+2981,25-34,Scotland,Female,Under £20k,Somewhat likely
+2982,55-64,South West,Other,£40k-£60k,Very unlikely
+2983,65+,East of England,Female,£60k-£80k,Very unlikely
+2984,65+,East of England,Male,£20k-£40k,Somewhat unlikely
+2985,25-34,East Midlands,Male,£60k-£80k,Very likely
+2986,18-24,East Midlands,Female,£80k+,Somewhat likely
+2987,55-64,South East,Female,£40k-£60k,Very unlikely
+2988,55-64,Scotland,Female,£80k+,Neutral
+2989,55-64,Wales,Male,£40k-£60k,Somewhat likely
+2990,25-34,North East,Female,£60k-£80k,Somewhat likely
+2991,45-54,South East,Female,£60k-£80k,Very likely
+2992,55-64,East Midlands,Female,£40k-£60k,Somewhat unlikely
+2993,35-44,Wales,Female,£80k+,Very unlikely
+2994,25-34,South East,Male,£80k+,Somewhat unlikely
+2995,55-64,East of England,Male,£40k-£60k,Very unlikely
+2996,55-64,London,Male,£40k-£60k,Neutral
+2997,35-44,East of England,Male,£60k-£80k,Somewhat unlikely
+2998,55-64,South West,Female,Under £20k,Very unlikely
+2999,18-24,East Midlands,Female,£20k-£40k,Somewhat unlikely
+3000,18-24,Northern Ireland,Male,£20k-£40k,Somewhat unlikely
