@@ -53,28 +53,16 @@ def triage_agent(state: GraphState) -> GraphState:
     response = structured_llm.invoke([system_prompt, human_prompt])
     print()
     print("TRIAGE AGENT RESPONSE:",response, "\n")
-    # print(response["raw"].response_metadata)
     print()
 
     if response.mitigation_required == False:
         with open(f"agent_outputs/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
-        return GraphState(
-            session_id=state['session_id'],
-            alerts=state['alerts'],
-            triage_output={
-                "mitigation_required": response.mitigation_required,
-                "reasoning": response.reasoning,
-                "severity": response.severity
-            }
-        )
-    else:
-        return GraphState(
-            session_id=state['session_id'],
-            alerts=state['alerts'],
-            triage_output={
-                "mitigation_required": response.mitigation_required,
-                "reasoning": response.reasoning,
-                "severity": response.severity
-            }
-        )
+
+    return GraphState(
+        triage_output={
+            "mitigation_required": response.mitigation_required,
+            "reasoning": response.reasoning,
+            "severity": response.severity
+        }
+    )
