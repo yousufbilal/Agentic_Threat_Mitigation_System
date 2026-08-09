@@ -39,14 +39,17 @@ async def investigator_agent(state: GraphState) -> GraphState:
     # mitre_technique_id = await get_mitre_technique_id(alert_log_sequence)
     # print("MITRE TECHNIQUE RESULT:", mitre_technique_id)
 
+#   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
     mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence)
+    print()
+    print("MITRE TECHNIQUE RESULT:", mitre_mcp_tool_result, "\n")
+    print()
 
     if verdict == "rejected":
         system_prompt = SystemMessage(content="""
             You are a SOC investigator reviewing a sequence of security alerts that have been flagged for mitigation.
 
             Your only task:
-            identify the likely attack technique or pattern in this alert sequence, and which account or host it affects.
             Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
 
             If a previous_critique is included below, it means an adversarial reviewer rejected your prior conclusion. Read the
@@ -55,34 +58,51 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Explain your reasoning for the identified attack technique and affected entity, referencing the specific alert patterns that support your conclusion.
             Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
 
-            Output format: {"affected_entity": "account/host from the data",
-            "reasoning": "explanation of why this technique and entity were identified, based on the alert data",
-            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion]}
+            Output format: {
+            "affected_entity": "account/host from the data",
+            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion
+            "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
+            ]}
 """)
-        
-        payload = {"alerts": alerts, "triage_output": triage_output, "adversarial_output": adversarial_output}
+        payload = {
+            "alerts": alerts,
+            "triage_output": triage_output,
+            "adversarial_output": adversarial_output,
+            "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
+            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None
+        }
+
     else:
         system_prompt = SystemMessage(content="""
             You are a SOC investigator reviewing a sequence of security alerts that have been flagged for mitigation.
 
             Your only task:
-            identify the likely attack technique or pattern in this alert sequence, and which account or host it affects.
             Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
-            Explain your reasoning for the identified attack technique and affected entity, referencing the specific alert patterns that support your conclusion.
-            Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
+            Only include rule_id values that  appear in the alert data below. Do not invent or guess IDs.
 
-            Output format: {"affected_entity": "account/host from the data",
-            "reasoning": "explanation of why this technique and entity were identified, based on the alert data",
-            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion]}""")
+
+            Output format:{
+            "affected_entity": "account/host from the data",
+            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion,
+            "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
+            ]}""")
         
-        payload = {"alerts": alerts, "triage_output": triage_output}
+        payload = {
+            "alerts": alerts,
+            "triage_output": triage_output,
+            "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
+            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None
+        }
 
+        
     human_prompt = HumanMessage(content=str(payload))
 
     response = await structured_llm.ainvoke([system_prompt, human_prompt])
     print()
     print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
     print()
+
+#   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
 
     if mitre_mcp_tool_result is not None:
         attack_technique = mitre_mcp_tool_result.technique_name
@@ -93,9 +113,9 @@ async def investigator_agent(state: GraphState) -> GraphState:
 
     return GraphState(
         investigator_output={
-            "attack_technique": attack_technique,
-            "technique_id": technique_id,
             "affected_entity": response.affected_entity,
             "cited_rule_ids": response.cited_rule_ids,
             "reasoning": response.reasoning,
+            "attack_technique": attack_technique,
+            "technique_id": technique_id,
         })

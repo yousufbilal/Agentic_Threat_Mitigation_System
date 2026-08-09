@@ -26,22 +26,26 @@ def triage_agent(state: GraphState) -> GraphState:
     session_id = state["session_id"]
     alerts = state['alerts']
 
-    system_prompt = SystemMessage(content="""You are a SOC triage analyst reviewing a sequence of security alerts from a Wazuh monitoring system.
+    system_prompt = SystemMessage(content="""
+    You are a SOC triage analyst reviewing a sequence of security alerts.
     Your only task:
     decide whether this alert sequence requires mitigation action.
     Consider the sequence and pattern of events, not just individual alerts in isolation.
     Base your decision only on the alert data provided below. Do not assume information that isn't present.
 
     If mitigation IS required:
-    - severity must reflect the actual risk (Low, Medium, or High)
-    - reasoning must name the specific event_id or rule_id values that justify escalation
+    - severity must reflect the actual risk [Low, Medium, High]
+    - reasoning must name the specific event_id and rule_id values that justify escalation
 
     If mitigation is NOT required:
     - set severity to "Low"
-    - reasoning must be minimum 10 words
+    - reasoning must name the specific event_id and rule_id values that justify escalation
 
-    Output format: {"mitigation_required": True or False, "severity": Low or Medium or High, "reasoning": "one sentence explanation"}
-    """)
+    Output format: {
+    "mitigation_required": True or False, 
+    "severity": [Low, Medium, High], 
+    "reasoning explaining the decision, referencing event_id and rule_id values"
+    }""")
     
     human_prompt = HumanMessage(content=str(alerts)) 
 
@@ -54,6 +58,9 @@ def triage_agent(state: GraphState) -> GraphState:
     print()
     print("TRIAGE AGENT RESPONSE:",response, "\n")
     print()
+
+    raw_response = llm.invoke([system_prompt, human_prompt])
+    print(raw_response.usage_metadata)
 
     if response.mitigation_required == False:
         with open(f"agent_outputs/{session_id}_result.json", "w") as file:

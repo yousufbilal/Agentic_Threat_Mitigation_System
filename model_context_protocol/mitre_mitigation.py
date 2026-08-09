@@ -49,7 +49,7 @@ async def get_mitre_technique_id(demo_technique_id):
    tool_to_use = tools_by_name[call["name"]]
   
    result = await tool_to_use.ainvoke(call["args"])
-   print(result[0])
+#    print(result[0])
 
    return result
 

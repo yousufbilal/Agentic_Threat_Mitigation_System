@@ -8,15 +8,12 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 class AdversalOutput(BaseModel):
-    verdict: Literal["confirmed", "revised", "rejected"]
+    verdict: Literal["confirmed", "rejected"]
     technique_judgment: str
     entity_judgment: str
     cited_rule_ids: list[int]
-    revised_technique: Literal[
-    "network_scans", "service_scans", "dirb", "wpscan", "webshell",
-    "cracking", "reverse_shell", "privilege_escalation",
-    "service_stop", "dnsteal", "other", "none"]
-    revised_entity: Optional[str] = None
+    # revised_technique: Optional[str] = None
+    # revised_entity: Optional[str] = None
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0, reasoning=True)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
@@ -29,28 +26,30 @@ def adversarial_agent(state: GraphState) -> GraphState:
 
     alerts = state["alerts"]
     investigator_output = state["investigator_output"]
-    triage_output = state["triage_output"]
+    # triage_output = state["triage_output"]
+
     revision_count = state["revision_count"]
 
-    system_prompt = SystemMessage(content="""You are a SOC adversarial reviewer challenging an investigator's conclusion about a security alert sequence.
-        Your task: independently judge whether attack_technique and affected_entity are EACH supported by the alert data, or whether either
-        overreaches, ignores an alternative explanation (e.g. false positive, benign admin activity), or is not backed by the cited events.
-        Base your review only on the alert data, triage reasoning, and investigator output provided below. Do not assume information that isn't present.
+    system_prompt = SystemMessage(content="""
+        You are a SOC adversarial reviewer. Independently judge whether the Investigator's attack_technique
+        and affected_entity are each supported by the alert data.
 
-        If affected_entity contains generic placeholder text instead of a specific value (e.g. the literal word "host" or "account" with no
-        actual hostname/username resolved), treat that as NOT supported and set entity_verdict to "revised" with a corrected value, or "rejected"
-        if no specific entity can be determined from the alert data.
-        
-        Output format: {"technique_verdict": "confirmed", "revised", "rejected",
-                                  
-        "entity_verdict": "confirmed" or "revised" or "rejected",
-        "revised_technique": "short label, required if technique_verdict is revised, otherwise null",
-        "revised_entity": "corrected account/host, required if entity_verdict is revised, otherwise null",
-        "technique_judgment": "one sentence stating what the cited rule_id values' actual content shows and why it does or doesn't support the technique",
-        "entity_judgment": "one sentence stating what the cited rule_id values' actual content shows and why it does or doesn't support the entity",
-        "cited_rule_ids": [rule_id values from the alert data above that directly support your judgments]}
-        Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs. ]}""")
+        Reject if either:
+        - is not backed by the cited alerts
+        - ignores a more likely explanation (e.g. false positive, benign admin activity)
+        - affected_entity is a generic placeholder (e.g. "host", "account") instead of a real value
 
+        Otherwise confirm.
+
+        Output format: {
+        "verdict": "confirmed" or "rejected",
+        "technique_judgment": "one sentence on whether the cited rule_ids support the technique",
+        "entity_judgment": "one sentence on whether the cited rule_ids support the entity",
+        "cited_rule_ids": [rule_id values from the alert data that directly support your judgments]
+        }
+        Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
+        """)
+    
     human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
 
     # COT LOGIC 
@@ -71,8 +70,8 @@ def adversarial_agent(state: GraphState) -> GraphState:
     return GraphState(
         adversarial_output={
             "verdict": response.verdict,
-            "revised_technique": response.revised_technique,
-            "revised_entity": response.revised_entity,
+            # "revised_technique": response.revised_technique,
+            # "revised_entity": response.revised_entity,
             "technique_judgment": response.technique_judgment,
             "entity_judgment": response.entity_judgment,
             "cited_rule_ids": response.cited_rule_ids
