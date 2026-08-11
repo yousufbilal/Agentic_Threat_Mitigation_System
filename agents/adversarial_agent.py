@@ -7,6 +7,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv() 
 
+
 class AdversalOutput(BaseModel):
     verdict: Literal["confirmed", "rejected"]
     technique_judgment: str
@@ -66,15 +67,15 @@ def adversarial_agent(state: GraphState) -> GraphState:
     
     if adversal_verdict == "rejected":
         revision_count += 1
-
+# bug the adversarial agent is not returning the MITRE ATT&CK technique and affected entity to the responder agent 
     return GraphState(
         adversarial_output={
             "verdict": response.verdict,
-            # "revised_technique": response.revised_technique,
-            # "revised_entity": response.revised_entity,
             "technique_judgment": response.technique_judgment,
             "entity_judgment": response.entity_judgment,
             "cited_rule_ids": response.cited_rule_ids
+            # "revised_technique": response.revised_technique,
+            # "revised_entity": response.revised_entity,
         },
                 revision_count = revision_count
     )

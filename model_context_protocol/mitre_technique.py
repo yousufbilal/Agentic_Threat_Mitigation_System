@@ -29,9 +29,9 @@ llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(MitreTechniqueResult)
 
 async def get_mitre_technique_id(alert_log_sequence):
-   print()
-   print("ALERT SEQUENCE:", alert_log_sequence)
-   print()
+#    print()
+#    print("ALERT SEQUENCE:", alert_log_sequence)
+#    print()
 
    tools = await mcp_client.get_tools()
 
@@ -47,10 +47,10 @@ async def get_mitre_technique_id(alert_log_sequence):
            tools_by_name[tool.name] = tool
 
    filtered_tools = list(tools_by_name.values())
-   for tool in filtered_tools:
-       print("TOOL NAME:", tool.name)
-       print("TOOL DESCRIPTION:", tool.description)
-       print("TOOL ARGS SCHEMA:", tool.args)
+#    for tool in filtered_tools:
+#        print("TOOL NAME:", tool.name)
+#        print("TOOL DESCRIPTION:", tool.description)
+#        print("TOOL ARGS SCHEMA:", tool.args)
 
    llm_with_tools = llm.bind_tools(filtered_tools)
 
@@ -83,9 +83,9 @@ async def get_mitre_technique_id(alert_log_sequence):
    tool_to_use = filtered_tools[0]
   
    result = await tool_to_use.ainvoke(call["args"])
-   print()
-   print("TOOL RETURNED:", result)   
-   print()
+#    print()
+#    print("TOOL RETURNED:", result)   
+#    print()
 
    parsed = json.loads(result[0]["text"])
    technique = parsed.get("technique", {})

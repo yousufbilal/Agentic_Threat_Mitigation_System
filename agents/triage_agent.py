@@ -10,8 +10,8 @@ load_dotenv()
 
 class TriageOutput(BaseModel):
     mitigation_required: bool
-    reasoning: str
     severity: Literal["Low", "Medium", "High"]
+    reasoning: str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
@@ -69,7 +69,7 @@ def triage_agent(state: GraphState) -> GraphState:
     return GraphState(
         triage_output={
             "mitigation_required": response.mitigation_required,
+            "severity": response.severity,
             "reasoning": response.reasoning,
-            "severity": response.severity
         }
     )

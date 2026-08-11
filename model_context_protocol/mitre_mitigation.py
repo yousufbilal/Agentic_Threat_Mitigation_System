@@ -9,6 +9,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv() 
 
+# in this tool we are getting all the mitre mitigation technqiues as the LLM i have is small and its context windoow small so it cant handle the entire data and get the correct mitigation technique for a given attack technique so we are using the agentic_rag tool to get the correct mitigation technique for a given attack technique and then we are using that mitigation technique to get the correct action and remediation plan from the LLM
+# this model only provide full list of mitre techniques
+
 class MitreTechniqueResult(BaseModel):
     mitigation_technique: Optional[str] = None
 

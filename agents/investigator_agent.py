@@ -13,8 +13,8 @@ class InvestigatorOutput(BaseModel):
     # removed technique as the llm tool call provides is this 
     # attack_technique: str
     affected_entity:str
-    reasoning:str
     cited_rule_ids: list[int]
+    reasoning:str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
@@ -40,7 +40,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
     # print("MITRE TECHNIQUE RESULT:", mitre_technique_id)
 
 #   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
-    mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence)
+    mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence) 
+# confusing name change them so its much clear what tool i am using and what the result is
+    # this model only provide full list of mitre techniques
+    # this is the mitiagtion tool that im supplying the log sequence to 
     print()
     print("MITRE TECHNIQUE RESULT:", mitre_mcp_tool_result, "\n")
     print()
@@ -49,21 +52,21 @@ async def investigator_agent(state: GraphState) -> GraphState:
         system_prompt = SystemMessage(content="""
             You are a SOC investigator reviewing a sequence of security alerts that have been flagged for mitigation.
 
-            Your only task:
-            Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
+            Task: identify the specific account or host affected by this alert sequence.
+            An attack_technique is included in the data below — use it as context when reasoning about which entity it affects.
 
-            If a previous_critique is included below, it means an adversarial reviewer rejected your prior conclusion. Read the
-            reviewer's technique_judgment and entity_judgment carefully, and produce a revised attack_technique and/or
-            affected_entity that directly addresses the reviewer's stated concerns. Do not repeat your previous answer unchanged.
-            Explain your reasoning for the identified attack technique and affected entity, referencing the specific alert patterns that support your conclusion.
-            Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
+            A previous_critique is included below — an adversarial reviewer rejected your prior conclusion. Read
+            entity_judgment carefully and produce a revised affected_entity that directly addresses the reviewer's
+            stated concerns. Do not repeat your previous answer unchanged.
+
+            Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
+            Only include rule_id values that appear in the alert data below. Do not invent or guess IDs.
 
             Output format: {
             "affected_entity": "account/host from the data",
-            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion
+            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
-            ]}
-""")
+            }""")
         payload = {
             "alerts": alerts,
             "triage_output": triage_output,
@@ -76,16 +79,17 @@ async def investigator_agent(state: GraphState) -> GraphState:
         system_prompt = SystemMessage(content="""
             You are a SOC investigator reviewing a sequence of security alerts that have been flagged for mitigation.
 
-            Your only task:
+            Task: identify the specific account or host affected by this alert sequence.
+            An attack_technique is included in the data below — use it as context when reasoning about which entity it affects.
+
             Base your analysis only on the alert data and triage reasoning provided below. Do not assume information that isn't present.
-            Only include rule_id values that  appear in the alert data below. Do not invent or guess IDs.
+            Only include rule_id values that appear in the alert data below. Do not invent or guess IDs.
 
-
-            Output format:{
+            Output format: {
             "affected_entity": "account/host from the data",
-            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion,
+            "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
-            ]}""")
+            }""")
         
         payload = {
             "alerts": alerts,
