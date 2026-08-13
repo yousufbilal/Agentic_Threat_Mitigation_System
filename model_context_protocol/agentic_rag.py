@@ -24,18 +24,28 @@ llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 llm_with_tools = llm.bind_tools(([agentic_rag]))
 
-async def run_agent(user_input):
+async def run_agent(user_input,domain): 
     message = HumanMessage(content=user_input)
-    ai_msg = await llm_with_tools.ainvoke([message])
+    response = await llm_with_tools.ainvoke([message])
+    print()
+    print("THE RESPONSE AGENTIC RAG",response)
+    print()
 
-    if not ai_msg.tool_calls:
+    if not response.tool_calls:
         return "No tool was called"
 
-    # call the first tool 
-    call = ai_msg.tool_calls[0]
-    result = await agentic_rag.ainvoke(call["args"])
+    # print("THE TOOL CALLS ARE ",response.tool_calls)
 
-    return result
+    
+
+
+    # for call in response.tool_calls:
+    #     tool_to_use = call["name"]
+    #     tool_args = {tool_to_use, "domain": domain}
+
+    # result = await agentic_rag.ainvoke(tool_args)
+
+    # return result
 
 if __name__ == "__main__":
     result = asyncio.run(run_agent("T1078 Valid Accounts - adversary uses stolen legitimate credentials to gain unauthorized access"))

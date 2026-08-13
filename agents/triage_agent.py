@@ -60,7 +60,7 @@ def triage_agent(state: GraphState) -> GraphState:
     print()
 
     raw_response = llm.invoke([system_prompt, human_prompt])
-    print(raw_response.usage_metadata)
+    # print(raw_response.usage_metadata)
 
     if response.mitigation_required == False:
         with open(f"agent_outputs/{session_id}_result.json", "w") as file:

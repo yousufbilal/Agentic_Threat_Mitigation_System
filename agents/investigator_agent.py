@@ -6,6 +6,7 @@ from typing import Literal
 from model_context_protocol.mitre_technique import get_mitre_technique_id
 import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
+# from model_context_protocol.agentic_rag import run_agent
 from dotenv import load_dotenv
 load_dotenv() 
 
@@ -14,6 +15,7 @@ class InvestigatorOutput(BaseModel):
     # attack_technique: str
     affected_entity:str
     cited_rule_ids: list[int]
+    domain: Literal["enterprise-attack", "mobile-attack", "ics-attack"]
     reasoning:str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
@@ -44,9 +46,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
 # confusing name change them so its much clear what tool i am using and what the result is
     # this model only provide full list of mitre techniques
     # this is the mitiagtion tool that im supplying the log sequence to 
-    print()
-    print("MITRE TECHNIQUE RESULT:", mitre_mcp_tool_result, "\n")
-    print()
+
+    # print()
+    # print("MITRE TECHNIQUE RESULT:", mitre_mcp_tool_result, "\n")
+    # print()
 
     if verdict == "rejected":
         system_prompt = SystemMessage(content="""
@@ -65,6 +68,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Output format: {
             "affected_entity": "account/host from the data",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
+            "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
             }""")
         payload = {
@@ -88,6 +92,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Output format: {
             "affected_entity": "account/host from the data",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
+            "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
             }""")
         
@@ -103,10 +108,14 @@ async def investigator_agent(state: GraphState) -> GraphState:
 
     response = await structured_llm.ainvoke([system_prompt, human_prompt])
     print()
-    print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
+    # print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
+    print("INVESTIGATOR AGENT RESPONSE:", response)
     print()
 
 #   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
+
+    # mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}", response.domain )
+
 
     if mitre_mcp_tool_result is not None:
         attack_technique = mitre_mcp_tool_result.technique_name
@@ -122,4 +131,5 @@ async def investigator_agent(state: GraphState) -> GraphState:
             "reasoning": response.reasoning,
             "attack_technique": attack_technique,
             "technique_id": technique_id,
+            "domain": response.domain
         })

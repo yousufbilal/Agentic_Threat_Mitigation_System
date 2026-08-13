@@ -8,8 +8,6 @@ import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
-
-
 from dotenv import load_dotenv
 load_dotenv() 
 
@@ -71,21 +69,23 @@ async def get_mitre_technique_id(alert_log_sequence):
 #  sometimes model get confused in the prompts 
    tool_prompt = HumanMessage(content=f"Identify the relevant MITRE ATT&CK technique ID for these alert sequence: {alert_log_sequence}")
 
-   ai_msg = await llm_with_tools.ainvoke([system_prompt, tool_prompt])
+   response = await llm_with_tools.ainvoke([system_prompt, tool_prompt])
+   # print()
+   # print("THIS IS THE LLM RESPONSE FOR MITRE TECHNIQUE:", response.content)
+   # print()
 
-#    print(" LLM responded:", ai_msg.tool_calls)
 
-   if not ai_msg.tool_calls:
+#    print(" LLM responded:", response.tool_calls)
+
+   if not response.tool_calls:
        return None
 
-   call = ai_msg.tool_calls[0]
-   
-   tool_to_use = filtered_tools[0]
-  
-   result = await tool_to_use.ainvoke(call["args"])
-#    print()
-#    print("TOOL RETURNED:", result)   
-#    print()
+   # call = response.tool_calls[0]
+
+   for tool_call in response.tool_calls:
+    tool_to_use = tools_by_name[tool_call["name"]]
+    result = await tool_to_use.ainvoke(tool_call["args"])
+
 
    parsed = json.loads(result[0]["text"])
    technique = parsed.get("technique", {})
