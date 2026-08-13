@@ -10,7 +10,9 @@ async def main():
         target,
         data="my_golden_dataset",
         evaluators=[action_correct, target_correct, severity_correct, remediation_correct],
+        # experiment_prefix="groq-llama-3.3-70b-versatile",
         experiment_prefix="baseline",
+
     )
 
 if __name__ == "__main__":

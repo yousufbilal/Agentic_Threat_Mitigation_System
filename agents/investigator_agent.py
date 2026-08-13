@@ -6,12 +6,13 @@ from typing import Literal
 from model_context_protocol.mitre_technique import get_mitre_technique_id
 import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 # from model_context_protocol.agentic_rag import run_agent
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 class InvestigatorOutput(BaseModel):
-    # removed technique as the llm tool call provides is this 
+    # removed technique as the llm tool call provides is this
     # attack_technique: str
     affected_entity:str
     cited_rule_ids: list[int]
@@ -20,8 +21,11 @@ class InvestigatorOutput(BaseModel):
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+# MODEL_NAME = "groq-llama-3.3-70b-versatile"
+# llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+MODEL_NAME = "qwen2.5-3b"
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(InvestigatorOutput)
 
 async def investigator_agent(state: GraphState) -> GraphState:

@@ -4,8 +4,9 @@ from graph.state import GraphState
 from pydantic import BaseModel
 from typing import Literal, Optional
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 
 class AdversalOutput(BaseModel):
@@ -18,8 +19,11 @@ class AdversalOutput(BaseModel):
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0, reasoning=True)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+# MODEL_NAME = "groq-llama-3.3-70b-versatile"
+# llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+MODEL_NAME = "qwen2.5-3b"
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 
 structured_llm = llm.with_structured_output(AdversalOutput)
 

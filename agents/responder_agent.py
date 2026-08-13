@@ -10,6 +10,7 @@ import asyncio
 import json
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from model_context_protocol.mitre_mitigation import get_mitre_mitigation
 from dotenv import load_dotenv
 load_dotenv() 
@@ -28,8 +29,11 @@ class ResponderOutput(BaseModel):
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0, reasoning=True)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+# MODEL_NAME = "groq-llama-3.3-70b-versatile"
+# llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+MODEL_NAME = "qwen2.5-3b"
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 structured_llm = llm.with_structured_output(ResponderOutput)
 os.makedirs("agent_outputs", exist_ok=True)   
 
@@ -41,9 +45,6 @@ async def responder_agent(state: GraphState) -> GraphState:
     adversarial_output = state["adversarial_output"]
     session_id = state["session_id"]
     domain = state["investigator_output"]["domain"]
-
-
-    print("RESPONDER DOMAIN IS ",domain)
     
     # bug the adversarial agent output does not contain the mitre attack technique ID or Name 
     # check to make sure i am only sending 1 query to the agetic rag tool and not multiple queries
@@ -52,7 +53,7 @@ async def responder_agent(state: GraphState) -> GraphState:
     # print("THIS IS THE MITIGATION TOOL",mitigation_data)
     mitigation_domain = await get_mitre_mitigation(domain)
 
-    mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}", domain )
+    mitigation_data = await run_agent(adversarial_output, domain)
     
 
     system_prompt = SystemMessage(content="""
@@ -78,7 +79,8 @@ async def responder_agent(state: GraphState) -> GraphState:
     human_prompt = HumanMessage(content=str({
         "adversarial_output": adversarial_output,
         "alerts": alerts,
-        # "retrieved_mitigation_data": mitigation_data,
+        "domain": domain,
+        "retrieved_mitigation_data": mitigation_data,
     }))
 
     response = structured_llm.invoke([system_prompt, human_prompt])
@@ -89,7 +91,8 @@ async def responder_agent(state: GraphState) -> GraphState:
     decision = interrupt({"responder_output": response})
 
     if decision == "y":
-        with open(f"deepseek_output/{session_id}_result.json", "w") as file:
+        os.makedirs(f"responder_output/{MODEL_NAME}", exist_ok=True)
+        with open(f"responder_output/{MODEL_NAME}/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
         print(f"Human decision: {decision}")
         return GraphState(
