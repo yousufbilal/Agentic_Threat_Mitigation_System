@@ -24,7 +24,7 @@ async def run():
     graph = build_graph()
     save_graph_diagram(graph)
 
-    data = get_session("fox")
+    data = get_session("shaw")
     # print("THE DATA GET SESSION POISOND DATA",data)
           
     initial_state = {

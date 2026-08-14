@@ -18,9 +18,9 @@ load_dotenv()
 # all other pydantic classes do not have field description look into it further 
 class ResponderOutput(BaseModel):
     # alert_ids: list[str] = Field(description="List of alert IDs involved in this incident")
-    # affected_asset: str = Field(description="Format: 'username @ hostname (ip_address, agent_id)'. Example: 'phopkins @ intranet-server (10.35.35.206, agent 27)'. NOT severity, NOT a plan, NOT a sentence.")
+    affected_asset: str = Field(description="Format: 'username @ hostname (ip_address, agent_id)'. Example: 'phopkins @ intranet-server (10.35.35.206, agent 27)'. NOT severity, NOT a plan, NOT a sentence.")
     # action: Literal["escalate", "contain", "monitor", "dismiss"]
-    # severity: Literal["low", "medium", "high", "critical"]
+    severity: Literal["low", "medium", "high", "critical"]
     action: Literal["escalate", "contain", "monitor"]
     # domain: Literal["enterprise-attack", "mobile-attack", "ics-attack"]
     confidence: float
@@ -68,7 +68,9 @@ async def responder_agent(state: GraphState) -> GraphState:
         Keep each step short and actionable.
         
         Output format:
-        {  
+        {
+            "affected_asset": "username @ hostname (ip_address, agent_id), taken from the alerts/adversarial_output data. NOT a severity, NOT a plan, NOT a sentence.",
+            "severity": "low" | "medium" | "high" | "critical",
             "action": "escalate" | "contain" | "monitor",
             "confidence": float between 0 and 1,
             "reasoning": "explanation referencing the verdict and technique",
@@ -98,9 +100,9 @@ async def responder_agent(state: GraphState) -> GraphState:
         return GraphState(
             responder_output={
                 # "alert_ids": response.alert_ids,
-                # "affected_asset": response.affected_asset,
+                "affected_asset": response.affected_asset,
                 "action": response.action,
-                # "severity": response.severity,
+                "severity": response.severity,
                 "confidence": response.confidence,
                 "reasoning": response.reasoning,
                 "remediation_plan": response.remediation_plan

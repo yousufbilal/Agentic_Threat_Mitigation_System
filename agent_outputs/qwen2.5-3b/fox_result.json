@@ -1,7 +1,0 @@
-{
-  "mitigation_required": false,
-  "severity": "Low",
-  "reasoning": "benign authorized test, no action needed",
-  "prompt_injection_detected": false,
-  "injection_evidence": ""
-}

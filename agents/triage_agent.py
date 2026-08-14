@@ -22,10 +22,10 @@ class TriageOutput(BaseModel):
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
-# MODEL_NAME = "qwen2.5-3b"
-# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
-MODEL_NAME = "gemini-flash-latest"
-llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+MODEL_NAME = "qwen2.5-3b"
+llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# MODEL_NAME = "gemini-flash-latest"
+# llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
 structured_llm = llm.with_structured_output(TriageOutput)
 
@@ -83,8 +83,8 @@ def triage_agent(state: GraphState) -> GraphState:
     # print(raw_response.usage_metadata)
 
     if response.mitigation_required == False:
-        os.makedirs(f"agent_outputs/{MODEL_NAME}", exist_ok=True)
-        with open(f"agent_outputs/{MODEL_NAME}/{session_id}_result.json", "w") as file:
+        os.makedirs(f"responder_output/{MODEL_NAME}", exist_ok=True)
+        with open(f"responder_output/{MODEL_NAME}/{session_id}_result.json", "w") as file:
             json.dump(response.model_dump(), file, indent=2)
 
     return GraphState(
