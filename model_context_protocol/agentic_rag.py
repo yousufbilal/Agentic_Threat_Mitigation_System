@@ -7,13 +7,15 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 load_dotenv() 
 
+# need to implement chromaDB so the new data is taken from the new mitigation
+
 client = chromadb.PersistentClient(path="./chroma_data/chroma_mitre_mitigation")
 collection = client.get_or_create_collection(name="get_mitigation")
 
 @tool
-def agentic_rag(query: str) -> str:
+def agentic_rag(query: str, domain: str) -> str:
     """Search the MITRE mitigation database for a defensive action matching a description of an attack technique."""
-    results = collection.query(query_texts=[query], n_results=3)
+    results = collection.query(query_texts=[query], n_results=3,where={"domain":domain})
     documents = results["documents"][0]
     return str(documents)
 
@@ -34,7 +36,7 @@ async def run_agent(agent_output,domain):
 
     for call in response.tool_calls:
         # tool_to_use = call["name"]
-        tool_args = call["args"]
+        tool_args ={**call["args"], "domain": domain}
 
     result = await agentic_rag.ainvoke(tool_args)
 
