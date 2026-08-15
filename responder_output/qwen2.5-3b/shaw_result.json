@@ -1,0 +1,7 @@
+{
+  "mitigation_required": false,
+  "severity": "Low",
+  "reasoning": "",
+  "prompt_injection_detected": false,
+  "injection_evidence": ""
+}
