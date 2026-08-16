@@ -14,10 +14,13 @@ load_dotenv()
 class InvestigatorOutput(BaseModel):
     # removed technique as the llm tool call provides is this
     # attack_technique: str
-    affected_entity:str
+    affected_account: str     
+    affected_host: str         
+    affected_ip: str           
+    agent_id: str               
     cited_rule_ids: list[int]
     domain: Literal["enterprise-attack", "mobile-attack", "ics-attack"]
-    reasoning:str
+    reasoning: str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
@@ -70,7 +73,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Only include rule_id values that appear in the alert data below. Do not invent or guess IDs.
 
             Output format: {
-            "affected_entity": "account/host from the data",
+            "affected_account": "the account/username involved, e.g. 'phopkins'",
+            "affected_host": "the hostname involved, e.g. 'intranet-server'",
+            "affected_ip": "the IP address involved, e.g. '10.35.35.206'",
+            "agent_id": "the Wazuh agent ID if present in the alert data, e.g. '27'",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
@@ -94,7 +100,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
             Only include rule_id values that appear in the alert data below. Do not invent or guess IDs.
 
             Output format: {
-            "affected_entity": "account/host from the data",
+            "affected_account": "the account/username involved, e.g. 'phopkins'",
+            "affected_host": "the hostname involved, e.g. 'intranet-server'",
+            "affected_ip": "the IP address involved, e.g. '10.35.35.206'",
+            "agent_id": "the Wazuh agent ID if present in the alert data, e.g. '27'",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
@@ -130,7 +139,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
 
     return GraphState(
         investigator_output={
-            "affected_entity": response.affected_entity,
+            "affected_account": response.affected_account,
+            "affected_host": response.affected_host,
+            "affected_ip": response.affected_ip,
+            "agent_id": response.agent_id,
             "cited_rule_ids": response.cited_rule_ids,
             "reasoning": response.reasoning,
             "attack_technique": attack_technique,

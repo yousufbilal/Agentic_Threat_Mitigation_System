@@ -18,6 +18,7 @@ class TriageOutput(BaseModel):
     injection_evidence: str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
+# MODEL_NAME = "qwen3:4b"
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
 # llm = ChatOllama(model="qwen3:4b", temperature=0, reasoning=True)
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"

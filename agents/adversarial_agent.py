@@ -31,26 +31,35 @@ def adversarial_agent(state: GraphState) -> GraphState:
 
     alerts = state["alerts"]
     investigator_output = state["investigator_output"]
+    revision_count = state["revision_count"]
+    affected_account = state["investigator_output"]["affected_account"]
+    affected_host = state["investigator_output"]["affected_host"]
+    affected_ip = state["investigator_output"]["affected_ip"]
+    agent_id = state["investigator_output"]["agent_id"]
     # triage_output = state["triage_output"]
 
-    revision_count = state["revision_count"]
 
     system_prompt = SystemMessage(content="""
         You are a SOC adversarial reviewer. Independently judge whether the Investigator's attack_technique
-        and affected_entity are each supported by the alert data.
+        and affected entity details (account, host, IP, agent_id) are each supported by the alert data.
 
         Reject if either:
         - is not backed by the cited alerts
         - ignores a more likely explanation (e.g. false positive, benign admin activity)
-        - affected_entity is a generic placeholder (e.g. "host", "account") instead of a real value
+        - any of affected_account, affected_host, affected_ip, or agent_id is a generic placeholder
+          (e.g. "host", "account", "unknown") instead of a real value taken from the alert data
 
         Otherwise confirm.
 
         Output format: {
-        "verdict": "confirmed" or "rejected",
+        "verdict": ["confirmed", "rejected"]
         "technique_judgment": "one sentence on whether the cited rule_ids support the technique",
-        "entity_judgment": "one sentence on whether the cited rule_ids support the entity",
-        "cited_rule_ids": [rule_id values from the alert data that directly support your judgments]
+        "entity_judgment": "one sentence on whether the cited rule_ids support the affected account, host, IP, and agent_id",
+        "cited_rule_ids": [rule_id values from the alert data that directly support your judgments],
+        "affected_account": "the account/username being confirmed or rejected, taken from the Investigator's output",
+        "affected_host": "the hostname being confirmed or rejected, taken from the Investigator's output",
+        "affected_ip": "the IP address being confirmed or rejected, taken from the Investigator's output",
+        "agent_id": "the agent ID being confirmed or rejected, taken from the Investigator's output"
         }
         Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
         """)
@@ -77,9 +86,11 @@ def adversarial_agent(state: GraphState) -> GraphState:
             "verdict": response.verdict,
             "technique_judgment": response.technique_judgment,
             "entity_judgment": response.entity_judgment,
-            "cited_rule_ids": response.cited_rule_ids
-            # "revised_technique": response.revised_technique,
-            # "revised_entity": response.revised_entity,
+            "cited_rule_ids": response.cited_rule_ids,
+            "affected_account": affected_account,
+            "affected_host": affected_host,
+            "affected_ip": affected_ip,
+            "agent_id": agent_id,
         },
                 revision_count = revision_count
     )
