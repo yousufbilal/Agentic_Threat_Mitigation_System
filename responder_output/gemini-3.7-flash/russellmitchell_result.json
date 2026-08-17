@@ -1,0 +1,8 @@
+{
+  "affected_asset": "jhall @ intranet-server (10.143.2.4, agent 10)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The adversarial reviewer confirmed execution of /bin/cat /etc/shadow via sudo by user jhall (T1003.008), originating from a web server upload directory.",
+  "remediation_plan": "1. Isolate host intranet-server (10.143.2.4) from the network to prevent further compromise or lateral movement.\n2. Terminate any active sessions and lock compromised accounts including jhall and www-data.\n3. Force a password reset and credential rotation for all local accounts present in /etc/shadow.\n4. Investigate and remove any web shells or malicious files located in /var/www/intranet.smith.russellmitchell.com/wp-content/uploads/2022/01.\n5. Audit the sudoers configuration to restrict unnecessary root execution permissions for standard users."
+}

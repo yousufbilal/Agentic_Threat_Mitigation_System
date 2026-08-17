@@ -1,0 +1,8 @@
+{
+  "affected_asset": "kford @ intranet-server (192.168.2.114, agent 32)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The adversarial verdict confirms credential dumping where user kford gained elevated root access via sudo from a web upload path and accessed /etc/shadow and /etc/passwd.",
+  "remediation_plan": "1. Isolate the host intranet-server (192.168.2.114) from the network to prevent lateral movement.\n2. Terminate all active sessions for the user kford and revoke their sudo permissions.\n3. Force a password reset for all user accounts present in /etc/shadow.\n4. Investigate and remove any web shells or malicious artifacts within /var/www/intranet.flores.wheeler.biz/wp-content/uploads/.\n5. Audit sudoers policies to restrict unauthorized command execution on critical system files."
+}

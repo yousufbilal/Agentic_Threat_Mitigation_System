@@ -1,0 +1,8 @@
+{
+  "affected_asset": "gmarsh @ intranet-server (192.168.188.179, agent 21)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The verdict confirmed credential dumping (T1003.008) via sudo execution of /bin/cat /etc/shadow originating from a web server upload directory.",
+  "remediation_plan": "1. Isolate intranet-server (192.168.188.179) from the network to prevent lateral movement.\n2. Terminate all active sessions and processes associated with user gmarsh and www-data.\n3. Force a password reset and revoke active session tokens for all local accounts present in /etc/shadow.\n4. Investigate and remove unauthorized files or webshells in /var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/.\n5. Audit the sudoers configuration to restrict unauthorized privilege escalation."
+}

@@ -4,6 +4,7 @@ from langchain_core.tools import tool
 import chromadb
 import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 load_dotenv() 
 
@@ -21,9 +22,19 @@ def agentic_rag(query: str, domain: str) -> str:
 
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
-# llm = ChatOllama(model="qwen3:4b", temperature=0)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+
+# MODEL_NAME = "groq-llama-3.3-70b-versatile"
+# llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+
+# MODEL_NAME = "qwen3:4b"
+# llm = ChatOllama(model="qwen3:4b", temperature=0)
+
+MODEL_NAME = "gemini-3.7-flash"
+llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
+
 llm_with_tools = llm.bind_tools(([agentic_rag]))
 
 async def run_agent(agent_output,domain): 

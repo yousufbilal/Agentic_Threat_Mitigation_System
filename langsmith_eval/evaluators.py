@@ -8,7 +8,8 @@ from langchain_ollama import ChatOllama
 
 # judge_llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 # judge_llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
-judge_llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+# judge_llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+judge_llm = ChatOllama(model="qwen3:4b", temperature=0)
 
 
 

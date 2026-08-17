@@ -1,0 +1,8 @@
+{
+  "affected_asset": "blord @ intranet-server (172.21.241.88, agent 12)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The alert sequence confirms credential dumping (T1003.008) via sudo execution of /bin/cat /etc/shadow originating from a web upload path.",
+  "remediation_plan": "1. Isolate the host intranet-server (172.21.241.88) to prevent lateral movement. 2. Terminate all active sessions for user blord and root. 3. Immediately rotate passwords for all local accounts stored in /etc/shadow. 4. Investigate and remove any web shells or unauthorized files in /var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01. 5. Audit the sudoers configuration to restrict unauthorized privilege escalation commands."
+}

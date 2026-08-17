@@ -1,0 +1,8 @@
+{
+  "affected_asset": "phopkins @ intranet-server (10.35.35.206, agent 27)",
+  "severity": "critical",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The alert sequence confirms privilege escalation via sudo, where user phopkins executed root-level commands including reading /etc/shadow originating from a web application directory.",
+  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) from the network to prevent further lateral movement.\n2. Terminate all active sessions for the account phopkins and service user www-data.\n3. Rotate administrative credentials and all user passwords contained in /etc/shadow.\n4. Audit and restrict sudo privileges in /etc/sudoers for user phopkins.\n5. Inspect the web upload directory (/var/www/intranet.price.fox.org/wp-content/uploads/2022/01) to identify and remove any uploaded webshells or malicious files."
+}

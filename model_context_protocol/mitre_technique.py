@@ -16,12 +16,21 @@ class MitreTechniqueResult(BaseModel):
     technique_name: Optional[str] = None
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
-# llm = ChatOllama(model="qwen3:4b", temperature=0)
-llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
+
+# llm = ChatOllama(model="qwen2.5:3b", temperature=0)
+
+# MODEL_NAME = "groq-llama-3.3-70b-versatile"
+# llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+
+# MODEL_NAME = "qwen3:4b"
+# llm = ChatOllama(model="qwen3:4b", temperature=0)
+
+MODEL_NAME = "gemini-3.7-flash"
+llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 
 
 structured_llm = llm.with_structured_output(MitreTechniqueResult)

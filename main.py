@@ -24,7 +24,9 @@ async def run():
     graph = build_graph()
     save_graph_diagram(graph)
 
-    data = get_session("wardbeck")
+    # data = get_session("fox")
+    data = get_session("wilson")
+
     # print("THE DATA GET SESSION POISOND DATA",data)
           
     initial_state = {
@@ -46,6 +48,7 @@ async def run():
     if "__interrupt__" in result:
         approval = input("Approve this action? (y/n): ")
         result = await graph.ainvoke(Command(resume=approval), config=config)
+        print("Responder Output:", result.get("responder_output"))
 
 if __name__ == "__main__":
     asyncio.run(run())

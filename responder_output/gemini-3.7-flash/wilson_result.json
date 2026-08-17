@@ -1,0 +1,8 @@
+{
+  "affected_asset": "jwilkinson @ intranet-server (172.26.243.167, 28)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The alert sequence confirms privilege escalation via sudo (T1548.003) executed from a web uploads directory, with root-level discovery commands being run.",
+  "remediation_plan": "1. Isolate intranet-server (172.26.243.167) from the network to contain potential lateral movement.\n2. Terminate all active sessions for the jwilkinson and www-data accounts on the host.\n3. Suspend the jwilkinson account and revoke any unauthorized sudo privileges.\n4. Investigate and remove suspicious files or webshells in /var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02.\n5. Audit /etc/sudoers and system logs to identify any persistence mechanisms or additional unauthorized commands."
+}

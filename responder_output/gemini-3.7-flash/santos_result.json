@@ -1,0 +1,8 @@
+{
+  "affected_asset": "gmorgan @ intranet-server (192.168.104.155, 26)",
+  "severity": "critical",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The adversarial reviewer confirmed credential dumping (T1003.008) where the compromised user executed sudo to read /etc/shadow and inspect /root. Immediate containment is required to prevent credential reuse and lateral movement.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.104.155) from the network.\n2. Terminate active sessions and revoke privileges for user gmorgan and web service accounts.\n3. Force password resets across all accounts stored in /etc/shadow.\n4. Investigate the web application upload path (/var/www/intranet.smith.santos.com/wp-content/uploads/) for web shells or malicious files.\n5. Audit sudoers configuration to remove unauthorized administrative privileges."
+}

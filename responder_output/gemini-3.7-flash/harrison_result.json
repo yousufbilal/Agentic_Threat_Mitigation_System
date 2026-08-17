@@ -1,0 +1,8 @@
+{
+  "affected_asset": "jward @ intranet-server (192.168.131.215, 21)",
+  "severity": "high",
+  "action": "contain",
+  "confidence": 0.95,
+  "reasoning": "The adversarial verdict confirmed that user jward escalated privileges and accessed /etc/shadow on intranet-server, indicating active credential access following a potential web compromise.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.131.215) from the network to prevent further lateral movement.\n2. Terminate all active sessions associated with user jward and the web server service account www-data.\n3. Reset credentials and password hashes for all accounts listed in /etc/shadow.\n4. Inspect the web directory /var/www/intranet.mannsmith.harrison.com/wp-content/uploads/ for web shells or malicious scripts.\n5. Audit and restrict sudoers permissions to ensure standard users cannot execute commands as root."
+}
