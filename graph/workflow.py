@@ -6,6 +6,7 @@ from agents.adversarial_agent import adversarial_agent
 from agents.responder_agent import responder_agent
 from typing import Literal
 from langgraph.checkpoint.memory import InMemorySaver
+from agents.human_approval import human_approval
 
 def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
     if state["triage_output"]["mitigation_required"] == True:
@@ -29,13 +30,17 @@ def build_graph():
     builder.add_node("investigator", investigator_agent)
     builder.add_node("adversarial", adversarial_agent)
     builder.add_node("responder", responder_agent)
+    builder.add_node("human_approval", human_approval)
+
 
     # Edges
     builder.add_edge(START, "triage")
     builder.add_conditional_edges("triage", route_after_tirage)
     builder.add_edge("investigator", "adversarial")
     builder.add_conditional_edges("adversarial", route_after_adversal)
-    builder.add_edge("responder", END)
+    builder.add_edge("responder", "human_approval")
+    builder.add_edge("human_approval", END)
+
 
     # Compile
     graph = builder.compile(checkpointer=InMemorySaver())

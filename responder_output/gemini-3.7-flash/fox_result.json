@@ -7,23 +7,21 @@
   "technique_name": "Sudo and Sudo Caching",
   "cited_rule_ids": [
     5304,
-    5501,
     5402,
+    5501,
     5502
   ],
   "mitigation_names": [
     "Sudo Caching Mitigation",
-    "Sudo Mitigation",
-    "Component Firmware Mitigation"
+    "Sudo Mitigation"
   ],
   "mitigation_descriptions": [
     "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
-    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
+    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary activity for T1548.003 (Sudo and Sudo Caching) is confirmed on host intranet-server involving user phopkins elevating privileges to root. Immediate containment and sudoers hardening are necessary to prevent further unauthorized root command execution.",
-  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) and revoke active sessions for user phopkins. 2. Edit the sudoers configuration to enforce timestamp_timeout=0 and enable tty_tickets. 3. Audit and restrict the sudoers file on intranet-server so passwords are required and risky root process spawning is prohibited. 4. Prevent unauthorized access to privileged accounts and inspect the host for persistent components that need removal or replacement."
+  "reasoning": "The adversary activity was confirmed for technique T1548.003 involving unauthorized sudo executions to root by user phopkins on intranet-server.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (10.35.35.206) and revoke active sessions for user phopkins. 2. Edit the sudoers configuration to strictly require passwords for all executions and prevent spawning higher-privilege processes. 3. Set timestamp_timeout to 0 in sudoers to mandate password re-entry on every sudo execution. 4. Enable the tty_tickets setting to prevent sudo credential leakage across terminal sessions."
 }

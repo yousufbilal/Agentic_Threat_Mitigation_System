@@ -26,8 +26,11 @@ async def run():
     graph = build_graph()
     save_graph_diagram(graph)
 
-    # data = get_session("fox")
-    data = get_session("fox")
+    # scenarios = ["fox", "harrison", "russellmitchell", "santos", "shaw", "wardbeck", "wheeler", "wilson"]
+    # for n in scenarios:
+    #     data = get_session(n)
+
+    data = get_session("wilson")
 
     # print("THE DATA GET SESSION POISOND DATA",data)
           

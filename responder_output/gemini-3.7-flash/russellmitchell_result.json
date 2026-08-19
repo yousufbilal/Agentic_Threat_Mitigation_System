@@ -1,11 +1,27 @@
 {
-  "action": "contain",
   "username": "jhall",
   "hostname": "intranet-server",
   "ip": "10.143.2.4",
   "agent_id": "10",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5501,
+    5402,
+    5502
+  ],
+  "mitigation_names": [
+    "Password Policies",
+    "User Account Management"
+  ],
+  "mitigation_descriptions": [
+    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse.",
+    "User Account Management involves implementing and enforcing policies for the lifecycle of user accounts, including creation, modification, and deactivation. Proper account management reduces the attack surface by limiting unauthorized access, managing account privileges, and ensuring accounts are used according to organizational policies."
+  ],
+  "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary escalated privileges from www-data to user jhall and executed sudo to read /etc/shadow, confirming credential access.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) from the network to prevent lateral movement. 2. Terminate all active sessions and processes for user jhall and the web service account. 3. Rotate credentials for root, jhall, and all accounts listed in /etc/shadow. 4. Inspect the web directory /var/www/.../wp-content/uploads/ for malicious webshells and remove unauthorized files. 5. Review and restrict sudo permissions in /etc/sudoers for non-administrative accounts."
+  "reasoning": "The adversarial reviewer confirmed credential dumping targeting /etc/shadow via sudo cat by account jhall on intranet-server. Immediate containment and credential remediation are required to prevent lateral movement and unauthorized access from cracked password hashes.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) to halt potential lateral movement.\n2. Revoke active sessions and force password resets for account jhall and all local accounts residing in /etc/shadow.\n3. Enforce strong password complexity and lockout policies on Linux systems using PAM modules (pam_pwquality, pam_faillock).\n4. Enforce the principle of least privilege by auditing and updating sudoers configurations to restrict access to sensitive system files like /etc/shadow.\n5. Implement Multi-Factor Authentication (MFA) on high-risk and administrative accounts to mitigate compromised credentials.\n6. Audit system configurations and local accounts using tools like Lynis and deactivate any dormant accounts."
 }

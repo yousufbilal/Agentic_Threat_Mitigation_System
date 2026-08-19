@@ -1,8 +1,26 @@
 {
-  "affected_asset": "gmarsh @ intranet-server (192.168.188.179, agent 21)",
-  "severity": "high",
+  "username": "gmarsh",
+  "hostname": "intranet-server",
+  "ip": "192.168.188.179",
+  "agent_id": "21",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5402,
+    5403,
+    5501,
+    5502
+  ],
+  "mitigation_names": [
+    "Valid Accounts Mitigation"
+  ],
+  "mitigation_descriptions": [
+    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The verdict confirmed credential dumping (T1003.008) via sudo execution of /bin/cat /etc/shadow originating from a web server upload directory.",
-  "remediation_plan": "1. Isolate intranet-server (192.168.188.179) from the network to prevent lateral movement.\n2. Terminate all active sessions and processes associated with user gmarsh and www-data.\n3. Force a password reset and revoke active session tokens for all local accounts present in /etc/shadow.\n4. Investigate and remove unauthorized files or webshells in /var/www/intranet.thomasmurray.shaw.info/wp-content/uploads/.\n5. Audit the sudoers configuration to restrict unauthorized privilege escalation."
+  "reasoning": "The adversarial review confirmed credential dumping via sudo execution of /bin/cat /etc/shadow on host intranet-server by account gmarsh (T1003.008).",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.188.179) from the network to prevent lateral movement. 2. Terminate active sessions and force immediate password resets for account gmarsh and all local accounts defined in /etc/shadow. 3. Audit sudoers configuration on intranet-server to restrict access to sensitive credential files and enforce least privilege. 4. Ensure local administrator accounts maintain complex, unique credentials across systems to limit credential overlap. 5. Audit all local and domain accounts on intranet-server for unauthorized persistence or elevated permissions."
 }

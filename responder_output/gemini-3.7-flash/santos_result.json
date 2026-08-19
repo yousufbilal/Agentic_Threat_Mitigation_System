@@ -1,8 +1,26 @@
 {
-  "affected_asset": "gmorgan @ intranet-server (192.168.104.155, 26)",
-  "severity": "critical",
+  "username": "gmorgan",
+  "hostname": "intranet-server",
+  "ip": "192.168.104.155",
+  "agent_id": "26",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5501,
+    5403,
+    5402,
+    5502
+  ],
+  "mitigation_names": [
+    "Password Policies"
+  ],
+  "mitigation_descriptions": [
+    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. On Linux systems, configure Pluggable Authentication Modules (PAM) such as pam_pwquality for complexity, pam_tally2/pam_faillock for lockouts, and use audit tools like Lynis."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversarial reviewer confirmed credential dumping (T1003.008) where the compromised user executed sudo to read /etc/shadow and inspect /root. Immediate containment is required to prevent credential reuse and lateral movement.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.104.155) from the network.\n2. Terminate active sessions and revoke privileges for user gmorgan and web service accounts.\n3. Force password resets across all accounts stored in /etc/shadow.\n4. Investigate the web application upload path (/var/www/intranet.smith.santos.com/wp-content/uploads/) for web shells or malicious files.\n5. Audit sudoers configuration to remove unauthorized administrative privileges."
+  "reasoning": "The adversary confirmed execution of 'cat /etc/shadow' via sudo on host intranet-server (192.168.104.155) under account gmorgan, indicating potential credential dumping of local password hashes.",
+  "remediation_plan": "1. Isolate host intranet-server (192.168.104.155) to prevent lateral movement.\n2. Invalidate and reset passwords for all accounts present in /etc/shadow, starting with gmorgan.\n3. Configure Linux Pluggable Authentication Modules (PAM) using pam_pwquality to enforce password complexity and length.\n4. Implement pam_faillock or pam_tally2 to establish account lockout duration and thresholds.\n5. Audit system configurations and password compliance using security auditing tools such as Lynis."
 }

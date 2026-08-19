@@ -1,8 +1,28 @@
 {
-  "affected_asset": "jwilkinson @ intranet-server (172.26.243.167, 28)",
-  "severity": "high",
+  "username": "jwilkinson",
+  "hostname": "intranet-server",
+  "ip": "172.26.243.167",
+  "agent_id": "28",
+  "technique_id": "T1548.003",
+  "technique_name": "Sudo and Sudo Caching",
+  "cited_rule_ids": [
+    5304,
+    5501,
+    5403,
+    5402,
+    5502
+  ],
+  "mitigation_names": [
+    "Sudo Caching Mitigation",
+    "Sudo Mitigation"
+  ],
+  "mitigation_descriptions": [
+    "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
+    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The alert sequence confirms privilege escalation via sudo (T1548.003) executed from a web uploads directory, with root-level discovery commands being run.",
-  "remediation_plan": "1. Isolate intranet-server (172.26.243.167) from the network to contain potential lateral movement.\n2. Terminate all active sessions for the jwilkinson and www-data accounts on the host.\n3. Suspend the jwilkinson account and revoke any unauthorized sudo privileges.\n4. Investigate and remove suspicious files or webshells in /var/www/intranet.hallbrown.wilson.com/wp-content/uploads/2022/02.\n5. Audit /etc/sudoers and system logs to identify any persistence mechanisms or additional unauthorized commands."
+  "reasoning": "The adversary activity was confirmed on host intranet-server involving user jwilkinson leveraging sudo commands for privilege escalation (T1548.003). Immediate containment and restriction of sudo privileges and caching settings are required.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (172.26.243.167) to prevent lateral movement. 2. Invalidate active sudo caching sessions and kill unauthorized root processes executed by jwilkinson. 3. Update the sudoers configuration to set timestamp_timeout to 0 and enable tty_tickets to enforce password entry per execution and prevent session leakage. 4. Strictly audit and edit the sudoers file on intranet-server to enforce password requirements and restrict users from spawning unauthorized privileged processes."
 }

@@ -1,8 +1,28 @@
 {
-  "affected_asset": "blord @ intranet-server (172.21.241.88, agent 12)",
-  "severity": "high",
+  "username": "blord",
+  "hostname": "intranet-server",
+  "ip": "172.21.241.88",
+  "agent_id": "12",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5402,
+    5403,
+    5501,
+    5502
+  ],
+  "mitigation_names": [
+    "Password Policies",
+    "User Account Management"
+  ],
+  "mitigation_descriptions": [
+    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access, including complexity, lockout thresholds, and disabling password reuse via PAM modules.",
+    "User Account Management involves implementing and enforcing policies for the lifecycle of user accounts, including enforcing the principle of least privilege, managing dormant accounts, and restricting privileged access."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The alert sequence confirms credential dumping (T1003.008) via sudo execution of /bin/cat /etc/shadow originating from a web upload path.",
-  "remediation_plan": "1. Isolate the host intranet-server (172.21.241.88) to prevent lateral movement. 2. Terminate all active sessions for user blord and root. 3. Immediately rotate passwords for all local accounts stored in /etc/shadow. 4. Investigate and remove any web shells or unauthorized files in /var/www/intranet.hurstwong.wardbeck.info/wp-content/uploads/2022/01. 5. Audit the sudoers configuration to restrict unauthorized privilege escalation commands."
+  "reasoning": "The adversary activity was confirmed as credential dumping (T1003.008) via unauthorized sudo execution of /bin/cat /etc/shadow on host intranet-server by user blord.",
+  "remediation_plan": "1. Immediately isolate intranet-server (172.21.241.88) from the network to prevent lateral movement. 2. Suspend or revoke sudo permissions for account 'blord' and audit sudoers configuration to enforce the principle of least privilege. 3. Force an immediate password reset for all local user accounts present in /etc/shadow on intranet-server. 4. Configure Linux PAM modules (pam_pwquality and pam_faillock) to enforce strict password complexity and account lockout policies. 5. Require Multi-Factor Authentication (MFA) and restrict interactive logins for privileged and administrative accounts."
 }

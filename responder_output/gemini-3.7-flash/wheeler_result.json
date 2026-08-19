@@ -1,8 +1,26 @@
 {
-  "affected_asset": "kford @ intranet-server (192.168.2.114, agent 32)",
-  "severity": "high",
+  "username": "kford",
+  "hostname": "intranet-server",
+  "ip": "192.168.2.114",
+  "agent_id": "32",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5402,
+    5403,
+    5501,
+    5502
+  ],
+  "mitigation_names": [
+    "Password Policies"
+  ],
+  "mitigation_descriptions": [
+    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. On Linux systems, configure Pluggable Authentication Modules (PAM) using pam_pwquality, pam_tally2, or pam_faillock, and periodically audit password policies."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversarial verdict confirms credential dumping where user kford gained elevated root access via sudo from a web upload path and accessed /etc/shadow and /etc/passwd.",
-  "remediation_plan": "1. Isolate the host intranet-server (192.168.2.114) from the network to prevent lateral movement.\n2. Terminate all active sessions for the user kford and revoke their sudo permissions.\n3. Force a password reset for all user accounts present in /etc/shadow.\n4. Investigate and remove any web shells or malicious artifacts within /var/www/intranet.flores.wheeler.biz/wp-content/uploads/.\n5. Audit sudoers policies to restrict unauthorized command execution on critical system files."
+  "reasoning": "The adversary activity for T1003.008 was confirmed with execution of sudo commands accessing /etc/shadow and /etc/passwd on intranet-server by user kford. Immediate containment and credential protection are required.",
+  "remediation_plan": "1. Isolate host intranet-server (192.168.2.114) to prevent lateral movement and further unauthorized access.\n2. Invalidate sessions and rotate credentials for user kford and all local accounts present in /etc/shadow.\n3. Configure Linux PAM modules including pam_pwquality to enforce password complexity and length requirements.\n4. Implement pam_faillock or pam_tally2 to enforce account lockout thresholds.\n5. Audit the system using Lynis or vulnerability scanners to review sudo privileges and ensure compliance with secure password guidelines."
 }

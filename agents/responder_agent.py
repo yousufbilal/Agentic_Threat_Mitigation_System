@@ -71,9 +71,6 @@ async def responder_agent(state: GraphState) -> GraphState:
         mitigation_domain = await get_mitre_mitigation(domain)
 
     mitigation_data = await run_agent(adversarial_output, domain)
-    print()
-    print("THIS IS MITIGATION DATA FROM RUN AGENT ",mitigation_data)
-    print()
 
     system_prompt = SystemMessage(content="""
         You are a SOC responder deciding the mitigation action for a security alert sequence.
@@ -112,32 +109,31 @@ async def responder_agent(state: GraphState) -> GraphState:
     print("REPONDER AGENT RESPONSE:",response, "\n")
     print()
 
-    decision = interrupt({"responder_output": response})
+    # decision = interrupt({"responder_output": response})
 
-    if decision == "y":
-        responder_output = {
-            "username": state["adversarial_output"]["affected_account"],
-            "hostname": state["adversarial_output"]["affected_host"],
-            "ip": state["adversarial_output"]["affected_ip"],
-            "agent_id": state["adversarial_output"]["agent_id"],
-            "technique_id": technique_id,
-            "technique_name": technique_name,
-            "cited_rule_ids": cited_rule_ids,
-            "mitigation_names": response.mitigation_names,
-            "mitigation_descriptions": response.mitigation_descriptions,
-            "action": response.action,
-            "severity": response.severity,
-            "confidence": response.confidence,
-            "reasoning": response.reasoning,
-            "remediation_plan": response.remediation_plan
-        }
+    # if decision == "y":
+    responder_output = {
+        "username": state["adversarial_output"]["affected_account"],
+        "hostname": state["adversarial_output"]["affected_host"],
+        "ip": state["adversarial_output"]["affected_ip"],
+        "agent_id": state["adversarial_output"]["agent_id"],
+        "technique_id": technique_id,
+        "technique_name": technique_name,
+        "cited_rule_ids": cited_rule_ids,
+        "mitigation_names": response.mitigation_names,
+        "mitigation_descriptions": response.mitigation_descriptions,
+        "action": response.action,
+        "severity": response.severity,
+        "confidence": response.confidence,
+        "reasoning": response.reasoning,
+        "remediation_plan": response.remediation_plan
+    }
 
-        os.makedirs(f"responder_output/{MODEL_NAME}", exist_ok=True)
-        with open(f"responder_output/{MODEL_NAME}/{session_id}_result.json", "w") as file:
-            json.dump(responder_output, file, indent=2)
+        # os.makedirs(f"responder_output/{MODEL_NAME}", exist_ok=True)
+        # with open(f"responder_output/{MODEL_NAME}/{session_id}_result.json", "w") as file:
+        #     json.dump(responder_output, file, indent=2)
 
-        print(f"Human decision: {decision}")
-
-        return GraphState(responder_output=responder_output)
-    else:
-        return GraphState(responder_output=None)
+        # print(f"Human decision: {decision}")
+    return GraphState(responder_output=responder_output)
+    # else:
+    #     return GraphState(responder_output=None)

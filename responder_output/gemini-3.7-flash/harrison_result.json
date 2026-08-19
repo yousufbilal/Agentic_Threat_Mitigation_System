@@ -1,8 +1,26 @@
 {
-  "affected_asset": "jward @ intranet-server (192.168.131.215, 21)",
-  "severity": "high",
+  "username": "jward",
+  "hostname": "intranet-server",
+  "ip": "192.168.131.215",
+  "agent_id": "21",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5402,
+    5403,
+    5501,
+    5502
+  ],
+  "mitigation_names": [
+    "Password Policies"
+  ],
+  "mitigation_descriptions": [
+    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse."
+  ],
   "action": "contain",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversarial verdict confirmed that user jward escalated privileges and accessed /etc/shadow on intranet-server, indicating active credential access following a potential web compromise.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.131.215) from the network to prevent further lateral movement.\n2. Terminate all active sessions associated with user jward and the web server service account www-data.\n3. Reset credentials and password hashes for all accounts listed in /etc/shadow.\n4. Inspect the web directory /var/www/intranet.mannsmith.harrison.com/wp-content/uploads/ for web shells or malicious scripts.\n5. Audit and restrict sudoers permissions to ensure standard users cannot execute commands as root."
+  "reasoning": "The adversary reviewer confirmed technique T1003.008 involving unauthorized sudo reading of /etc/shadow on host intranet-server by user jward. Immediate containment and credential remediation are required to prevent lateral movement and unauthorized access.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (IP: 192.168.131.215, Agent ID: 21) from the network to contain credential abuse. 2. Terminate any unauthorized sessions and force a password reset for account jward and other accounts exposed in /etc/shadow. 3. Configure Linux Pluggable Authentication Modules (PAM) using pam_pwquality to enforce complexity and pam_faillock or pam_tally2 for lockout thresholds. 4. Implement pwunconv to manage password reuse controls and audit system security configurations with Lynis."
 }
