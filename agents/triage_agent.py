@@ -7,6 +7,7 @@ import json
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -41,6 +42,8 @@ llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 structured_llm = llm.with_structured_output(TriageOutput)
 
 def triage_agent(state: GraphState) -> GraphState:
+
+    start_time = time.time()
 
     session_id = state["session_id"]
     alerts = state['alerts']
@@ -85,6 +88,9 @@ def triage_agent(state: GraphState) -> GraphState:
     # print("TRIAGE AGENT REASONING (CoT):", cot)
 
     response = structured_llm.invoke([system_prompt, human_prompt])
+    end_time = time.time()
+    agent_execution_time = end_time - start_time
+    print(f"Triage Agent Response Time: {agent_execution_time:.2f} seconds")
     print()
     print("TRIAGE AGENT RESPONSE:",response, "\n")
     print()
@@ -99,6 +105,7 @@ def triage_agent(state: GraphState) -> GraphState:
 
     return GraphState(
         triage_output={
+            "session_id":session_id,
             "mitigation_required": response.mitigation_required,
             "severity": response.severity,
             "reasoning": response.reasoning,

@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from typing import Literal, Optional
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,6 +15,12 @@ class AdversalOutput(BaseModel):
     technique_judgment: str
     entity_judgment: str
     cited_rule_ids: list[int]
+    affected_account: str
+    affected_host: str
+    affected_ip: str
+    agent_id: str
+    technique_id: str
+    technique_name: str
     # revised_technique: Optional[str] = None
     # revised_entity: Optional[str] = None
 
@@ -37,19 +44,27 @@ structured_llm = llm.with_structured_output(AdversalOutput)
 
 def adversarial_agent(state: GraphState) -> GraphState:
 
+    start_time = time.time()
+
     alerts = state["alerts"]
     investigator_output = state["investigator_output"]
     revision_count = state["revision_count"]
-    affected_account = state["investigator_output"]["affected_account"]
-    affected_host = state["investigator_output"]["affected_host"]
-    affected_ip = state["investigator_output"]["affected_ip"]
-    agent_id = state["investigator_output"]["agent_id"]
+    session_id = state["triage_output"]["session_id"]
+
+    # affected_account = state["investigator_output"]["affected_account"]
+    # affected_host = state["investigator_output"]["affected_host"]
+    # affected_ip = state["investigator_output"]["affected_ip"]
+    # agent_id = state["investigator_output"]["agent_id"]
+    # technique_id = state['investigator_output']["technique_id"]
+    # technique_name = state['investigator_output']["technique_name"]
+
     # triage_output = state["triage_output"]
 
 
     system_prompt = SystemMessage(content="""
         You are a SOC adversarial reviewer. Independently judge whether the Investigator's attack_technique
         and affected entity details (account, host, IP, agent_id) are each supported by the alert data.
+        Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
 
         Reject if either:
         - is not backed by the cited alerts
@@ -67,10 +82,10 @@ def adversarial_agent(state: GraphState) -> GraphState:
         "affected_account": "the account/username being confirmed or rejected, taken from the Investigator's output",
         "affected_host": "the hostname being confirmed or rejected, taken from the Investigator's output",
         "affected_ip": "the IP address being confirmed or rejected, taken from the Investigator's output",
-        "agent_id": "the agent ID being confirmed or rejected, taken from the Investigator's output"
-        }
-        Only include rule_id values that literally appear in the alert data below. Do not invent or guess IDs.
-        """)
+        "agent_id": "the agent ID being confirmed or rejected, taken from the Investigator's output",
+        "technique_id": The MITRE ATT&CK technique ID this response is grounded in, taken from the investigator data. Example: 'T1003.008'.",
+        "technique_name": "the MITRE ATT&CK technique name this response is grounded in, taken from the Investigator's output."
+        }""")
     
     human_prompt = HumanMessage(content=str({"alerts": alerts, "investigator_output": investigator_output, }))
 
@@ -80,6 +95,9 @@ def adversarial_agent(state: GraphState) -> GraphState:
     # print("ADVERSAL AGENT REASONING (CoT):", cot)
 
     response = structured_llm.invoke([system_prompt, human_prompt])
+    end_time = time.time()
+    agent_execution_time = end_time - start_time
+    print(f"Adversarial Agent Response Time: {agent_execution_time:.2f} seconds")
     print()
     print("ADVERSAL AGENT RESPONSE:",response, "\n")
     print()
@@ -91,14 +109,17 @@ def adversarial_agent(state: GraphState) -> GraphState:
 # bug the adversarial agent is not returning the MITRE ATT&CK technique and affected entity to the responder agent 
     return GraphState(
         adversarial_output={
+            "session_id":session_id,
             "verdict": response.verdict,
             "technique_judgment": response.technique_judgment,
             "entity_judgment": response.entity_judgment,
             "cited_rule_ids": response.cited_rule_ids,
-            "affected_account": affected_account,
-            "affected_host": affected_host,
-            "affected_ip": affected_ip,
-            "agent_id": agent_id,
+            "affected_account": response.affected_account,
+            "affected_host": response.affected_host,
+            "affected_ip": response.affected_ip,
+            "agent_id": response.agent_id,
+            "technique_id": response.technique_id,
+            "technique_name": response.technique_name,
         },
                 revision_count = revision_count
     )

@@ -9,8 +9,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import chromadb
 import json
 from langchain_groq import ChatGroq
+import time
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 # need to implement chromaDB so the new data is taken from the new mitigation
 
@@ -38,7 +39,9 @@ llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 structured_llm = llm.with_structured_output(MitreTechniqueResult)
 
 async def get_mitre_mitigation(mitigation_domain):
-   
+
+   start_time = time.time()
+
    tools = await mcp_client.get_tools()
 
    allowed_tool_names = (
@@ -66,6 +69,9 @@ async def get_mitre_mitigation(mitigation_domain):
    tool_decision = await llm_with_tools.ainvoke([tool_prompt])
 
    if not tool_decision.tool_calls:
+       end_time = time.time()
+       agent_execution_time = end_time - start_time
+       print(f"Get Mitre Mitigation Sub-Agent Response Time: {agent_execution_time:.2f} seconds")
        return None
 
    for call in tool_decision.tool_calls:
@@ -74,6 +80,10 @@ async def get_mitre_mitigation(mitigation_domain):
        parsed = json.loads(result[0]["text"])
        with open(f"mitre_mitigations/mitre_mitigations_{mitigation_domain}.json", "w", encoding="utf-8") as f:
            json.dump(parsed, f, indent=4)
+
+   end_time = time.time()
+   agent_execution_time = end_time - start_time
+   print(f"Get Mitre Mitigation Sub-Agent Response Time: {agent_execution_time:.2f} seconds")
 
 # this runs when i run this file so can leave it here for now dont need to change parameters
 # if __name__ == "__main__":

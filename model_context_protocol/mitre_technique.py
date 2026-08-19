@@ -8,8 +8,9 @@ import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
+import time
 from dotenv import load_dotenv
-load_dotenv() 
+load_dotenv()
 
 class MitreTechniqueResult(BaseModel):
     technique_id: Optional[str] = None
@@ -39,6 +40,8 @@ async def get_mitre_technique_id(alert_log_sequence):
 #    print()
 #    print("ALERT SEQUENCE:", alert_log_sequence)
 #    print()
+
+   start_time = time.time()
 
    tools = await mcp_client.get_tools()
 
@@ -87,6 +90,9 @@ async def get_mitre_technique_id(alert_log_sequence):
 #    print(" LLM responded:", response.tool_calls)
 
    if not response.tool_calls:
+       end_time = time.time()
+       agent_execution_time = end_time - start_time
+       print(f"Get Mitre Technique ID Sub-Agent Response Time: {agent_execution_time:.2f} seconds")
        return None
 
    # call = response.tool_calls[0]
@@ -99,6 +105,9 @@ async def get_mitre_technique_id(alert_log_sequence):
    parsed = json.loads(result[0]["text"])
    technique = parsed.get("technique", {})
 
+   end_time = time.time()
+   agent_execution_time = end_time - start_time
+   print(f"Get Mitre Technique ID Sub-Agent Response Time: {agent_execution_time:.2f} seconds")
 
    return MitreTechniqueResult(
         technique_id = technique.get("mitre_id"),

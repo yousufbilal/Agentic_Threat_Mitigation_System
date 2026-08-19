@@ -8,6 +8,7 @@ import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 # from model_context_protocol.agentic_rag import run_agent
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -36,14 +37,17 @@ class InvestigatorOutput(BaseModel):
 MODEL_NAME = "gemini-3.7-flash"
 llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 
-
 structured_llm = llm.with_structured_output(InvestigatorOutput)
 
 async def investigator_agent(state: GraphState) -> GraphState:
+
+    start_time = time.time()
+
     alerts = state["alerts"]
     triage_output = state["triage_output"]
     adversarial_output = state["adversarial_output"]
     alert_log_sequence = state["alert_log_sequence"]
+    session_id = state["triage_output"]["session_id"]
 
     if adversarial_output is None:
         verdict = None
@@ -58,6 +62,9 @@ async def investigator_agent(state: GraphState) -> GraphState:
 
 #   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
     mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence) 
+    technique_id = mitre_mcp_tool_result.technique_id
+    technique_name = mitre_mcp_tool_result.technique_name
+
 # confusing name change them so its much clear what tool i am using and what the result is
     # this model only provide full list of mitre techniques
     # this is the mitiagtion tool that im supplying the log sequence to 
@@ -85,6 +92,8 @@ async def investigator_agent(state: GraphState) -> GraphState:
             "affected_host": "the hostname involved, e.g. 'intranet-server'",
             "affected_ip": "the IP address involved, e.g. '10.35.35.206'",
             "agent_id": "the Wazuh agent ID if present in the alert data, e.g. '27'",
+            "technique_id": "the MITRE ATT&CK technique ID identified for this alert sequence, e.g. 'T1003.008'",
+            "technique_name": "the MITRE ATT&CK technique name identified for this alert sequence, e.g. 'OS Credential Dumping: /etc/passwd and /etc/shadow'",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
@@ -93,8 +102,9 @@ async def investigator_agent(state: GraphState) -> GraphState:
             "alerts": alerts,
             "triage_output": triage_output,
             "adversarial_output": adversarial_output,
-            "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
-            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None
+            # "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
+            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
+            "technique_name": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None
         }
 
     else:
@@ -112,6 +122,8 @@ async def investigator_agent(state: GraphState) -> GraphState:
             "affected_host": "the hostname involved, e.g. 'intranet-server'",
             "affected_ip": "the IP address involved, e.g. '10.35.35.206'",
             "agent_id": "the Wazuh agent ID if present in the alert data, e.g. '27'",
+            "technique_id": "the MITRE ATT&CK technique ID identified for this alert sequence, e.g. 'T1003.008'",
+            "technique_name": "the MITRE ATT&CK technique name identified for this alert sequence, e.g. 'OS Credential Dumping: /etc/passwd and /etc/shadow'",
             "cited_rule_ids": [list of rule_id values from the alert data above that directly support your conclusion],
             "domain": "enterprise-attack" | "mobile-attack" | "ics-attack",
             "reasoning": "explanation of why this entity was identified as the affected account/host, based on the alert data and the given technique"
@@ -120,14 +132,19 @@ async def investigator_agent(state: GraphState) -> GraphState:
         payload = {
             "alerts": alerts,
             "triage_output": triage_output,
-            "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
-            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None
+            # "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
+            "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
+            # "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
+            "technique_name": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None
         }
 
         
     human_prompt = HumanMessage(content=str(payload))
 
     response = await structured_llm.ainvoke([system_prompt, human_prompt])
+    end_time = time.time()
+    agent_execution_time = end_time - start_time
+    print(f"Investigator Agent Response Time: {agent_execution_time:.2f} seconds")
     print()
     # print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
     print("INVESTIGATOR AGENT RESPONSE:", response)
@@ -138,22 +155,23 @@ async def investigator_agent(state: GraphState) -> GraphState:
     # mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}", response.domain )
 
 
-    if mitre_mcp_tool_result is not None:
-        attack_technique = mitre_mcp_tool_result.technique_name
-        technique_id = mitre_mcp_tool_result.technique_id
-    else:
-        attack_technique = None
-        technique_id = None
+    # if mitre_mcp_tool_result is not None:
+    #     attack_technique = mitre_mcp_tool_result.technique_name
+    #     technique_id = mitre_mcp_tool_result.technique_id
+    # else:
+    #     attack_technique = None
+    #     technique_id = None
 
     return GraphState(
         investigator_output={
+            "session_id": session_id,
             "affected_account": response.affected_account,
             "affected_host": response.affected_host,
             "affected_ip": response.affected_ip,
             "agent_id": response.agent_id,
             "cited_rule_ids": response.cited_rule_ids,
             "reasoning": response.reasoning,
-            "attack_technique": attack_technique,
             "technique_id": technique_id,
+            "technique_name": technique_name,
             "domain": response.domain
         })

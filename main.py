@@ -9,6 +9,7 @@ from langgraph.types import Command
 import json
 import os
 import asyncio
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -20,12 +21,13 @@ def save_graph_diagram(graph):
         f.write(png_bytes)
 
 async def run():
+
     print()
     graph = build_graph()
     save_graph_diagram(graph)
 
     # data = get_session("fox")
-    data = get_session("wilson")
+    data = get_session("fox")
 
     # print("THE DATA GET SESSION POISOND DATA",data)
           
@@ -43,11 +45,25 @@ async def run():
 
 }
     config = {"configurable": {"thread_id": data["session_id"]}}
+
+    start_time = time.time()
     result = await graph.ainvoke(initial_state, config=config)
+    end_time = time.time()
+    ttr_seconds = end_time - start_time
+    print(f"Time-to-Recommendation: {ttr_seconds:.2f} seconds")
 
     if "__interrupt__" in result:
         approval = input("Approve this action? (y/n): ")
+
+        exec_start = time.time()
         result = await graph.ainvoke(Command(resume=approval), config=config)
+        exec_end = time.time()
+        exec_seconds = exec_end - exec_start
+
+        total_processing_seconds = ttr_seconds + exec_seconds
+        print(f"Execution time: {exec_seconds:.2f} seconds")
+        print(f"Total Processing Time: {total_processing_seconds:.2f} seconds")
+
         print("Responder Output:", result.get("responder_output"))
 
 if __name__ == "__main__":
