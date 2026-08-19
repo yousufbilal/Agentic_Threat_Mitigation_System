@@ -67,8 +67,8 @@ async def responder_agent(state: GraphState) -> GraphState:
     # print("THIS IS THE MITIGATION TOOL",mitigation_data)
     file_path = Path(f"mitre_mitigations/mitre_mitigations_{domain}.json")
 
-    if not file_path:
-        mitigation_domain = await get_mitre_mitigation(domain)
+    # if not file_path:
+    #     mitigation_domain = await get_mitre_mitigation(domain)
 
     mitigation_data = await run_agent(adversarial_output, domain)
 
