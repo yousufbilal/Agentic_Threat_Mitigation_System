@@ -1,5 +1,4 @@
-from botocore import response
-from langchain_ollama import ChatOllama  
+from langchain_ollama import ChatOllama
 from langchain_core.messages import SystemMessage, HumanMessage
 from graph.state import GraphState  
 from pydantic import BaseModel, Field
