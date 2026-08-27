@@ -33,11 +33,12 @@ class TriageOutput(BaseModel):
 # MODEL_NAME = "gemini-flash-latest"
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
+# MODEL_NAME = "llama-3.1-8b-instant"
+# llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+
 MODEL_NAME = "gemini-3.7-flash"
 llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 
-# MODEL_NAME = "llama-3.1-8b-instant"
-# llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
 structured_llm = llm.with_structured_output(TriageOutput)
 

@@ -8,18 +8,24 @@ from typing import Literal
 from langgraph.checkpoint.memory import InMemorySaver
 from agents.human_approval import human_approval
 
-def route_after_tirage(state:GraphState)-> Literal["investigator", END]:
-    if state["triage_output"]["mitigation_required"] == True:
-                return "investigator"
+def route_after_triage(state: GraphState) -> Literal["investigator", "human_approval", END]:
+    if state["triage_output"]["prompt_injection_detected"] == True:
+        return "human_approval"
+    elif state["triage_output"]["mitigation_required"] == True:
+        return "investigator"
     else:
         return END
     
     # the revision count here is for how many times i wanna run the loop 
-def route_after_adversal(state: GraphState) -> Literal["investigator", "responder"]:
-    if state["adversarial_output"]["verdict"] == "rejected" and state["revision_count"] <= 2:
+def route_after_adversal(state: GraphState) -> Literal["investigator", "responder","human_approval"]:
+    if state["adversarial_output"]["prompt_injection_detected"] == True:
+        return "human_approval"
+    elif state["adversarial_output"]["verdict"] == "rejected" and state["revision_count"] <= 2:
         return "investigator"
     else:
         return "responder"
+
+
 
 def build_graph():
 
@@ -35,7 +41,7 @@ def build_graph():
 
     # Edges
     builder.add_edge(START, "triage")
-    builder.add_conditional_edges("triage", route_after_tirage)
+    builder.add_conditional_edges("triage", route_after_triage)
     builder.add_edge("investigator", "adversarial")
     builder.add_conditional_edges("adversarial", route_after_adversal)
     builder.add_edge("responder", "human_approval")
