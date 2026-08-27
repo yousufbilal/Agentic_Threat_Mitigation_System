@@ -9,7 +9,6 @@ import time
 from dotenv import load_dotenv
 load_dotenv()
 
-
 class AdversalOutput(BaseModel):
     verdict: Literal["confirmed", "rejected"]
     technique_judgment: str
@@ -31,11 +30,8 @@ class AdversalOutput(BaseModel):
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
-
-
 # MODEL_NAME = "qwen2.5-3b"
 # llm = ChatOllama(model="qwen2.5:3b", temperature=0)
-
 # MODEL_NAME = "qwen3:4b"
 # llm = ChatOllama(model="qwen3:4b", temperature=0)
 
@@ -59,9 +55,7 @@ def adversarial_agent(state: GraphState) -> GraphState:
     # agent_id = state["investigator_output"]["agent_id"]
     # technique_id = state['investigator_output']["technique_id"]
     # technique_name = state['investigator_output']["technique_name"]
-
     # triage_output = state["triage_output"]
-
 
     system_prompt = SystemMessage(content="""
         You are a SOC adversarial reviewer. Independently judge whether the Investigator's attack_technique
@@ -118,7 +112,6 @@ def adversarial_agent(state: GraphState) -> GraphState:
     
     if adversal_verdict == "rejected":
         revision_count += 1
-# bug the adversarial agent is not returning the MITRE ATT&CK technique and affected entity to the responder agent 
     return GraphState(
         adversarial_output={
             "session_id":session_id,
