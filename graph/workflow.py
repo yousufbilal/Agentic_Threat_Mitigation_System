@@ -7,19 +7,20 @@ from agents.responder_agent import responder_agent
 from typing import Literal
 from langgraph.checkpoint.memory import InMemorySaver
 from agents.human_approval import human_approval
+from agents.prompt_injection_alert import prompt_injection_alert
 
-def route_after_triage(state: GraphState) -> Literal["investigator", "human_approval", END]:
+def route_after_triage(state: GraphState) -> Literal["investigator","prompt_injection_alert", END]:
     if state["triage_output"]["prompt_injection_detected"] == True:
-        return "human_approval"
+        return "prompt_injection_alert"
     elif state["triage_output"]["mitigation_required"] == True:
         return "investigator"
     else:
         return END
     
     # the revision count here is for how many times i wanna run the loop 
-def route_after_adversal(state: GraphState) -> Literal["investigator", "responder","human_approval"]:
+def route_after_adversal(state: GraphState) -> Literal["investigator", "responder","prompt_injection_alert"]:
     if state["adversarial_output"]["prompt_injection_detected"] == True:
-        return "human_approval"
+        return "prompt_injection_alert"
     elif state["adversarial_output"]["verdict"] == "rejected" and state["revision_count"] <= 2:
         return "investigator"
     else:
@@ -36,6 +37,7 @@ def build_graph():
     builder.add_node("investigator", investigator_agent)
     builder.add_node("adversarial", adversarial_agent)
     builder.add_node("responder", responder_agent)
+    builder.add_node("prompt_injection_alert", prompt_injection_alert)
     builder.add_node("human_approval", human_approval)
 
 
