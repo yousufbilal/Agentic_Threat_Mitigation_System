@@ -5,8 +5,7 @@ import os
 
 MODEL_NAME = "gemini-3.7-flash"
 
-
-def human_approval(state: GraphState) -> GraphState:
+def human_approval(state:GraphState) -> GraphState:
 
     responder_output = state["responder_output"]
     session_id = state["session_id"]
@@ -18,6 +17,3 @@ def human_approval(state: GraphState) -> GraphState:
         with open(f"responder_output/{MODEL_NAME}/{session_id}_result.json", "w") as file:
             json.dump(responder_output, file, indent=2)
 
-    print(f"Human decision: {decision}")
-
-    return GraphState(human_decision=decision)
