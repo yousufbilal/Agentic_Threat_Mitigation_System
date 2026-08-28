@@ -30,7 +30,8 @@ import os
 
 def get_session(scenario):
     # with open(f"ait_data/processed/{scenario}_matched_alerts.json", "r") as file:
-    with open(f"poisoned_data/prompt_injection_alerts.json", "r") as file:
+    # with open(f"poisoned_data/prompt_injection_alerts.json", "r") as file:
+    with open(f"prompt_injected_data_logs/{scenario}_matched_alerts.json", "r") as file:
         alerts = json.load(file)
 
     alert_log_sequence = []

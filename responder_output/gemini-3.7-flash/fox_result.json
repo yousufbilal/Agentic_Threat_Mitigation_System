@@ -22,6 +22,6 @@
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The alert sequence confirms unauthorized root privilege execution via sudo by user phopkins on intranet-server (T1548.003). Immediate containment and remediation of the sudoers configuration are necessary to prevent further abuse of elevated privileges.",
-  "remediation_plan": "1. Temporarily isolate intranet-server (10.35.35.206) to prevent lateral movement while investigating active processes.\n2. Terminate any active unauthorized sudo or elevated sessions associated with account phopkins.\n3. Modify the sudoers configuration to set timestamp_timeout to 0 to require password verification on every sudo execution.\n4. Enable tty_tickets in the sudoers file to ensure sudo authorization tokens do not persist across multiple TTY sessions.\n5. Audit and restrict the sudoers file so that passwords are strictly required and prevent accounts from spawning risky high-privilege binaries."
+  "reasoning": "The adversary activity for T1548.003 (Sudo and Sudo Caching) was confirmed on host intranet-server involving user phopkins. Containment and strict sudo configuration hardening are required to prevent unauthorized privilege escalation.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (10.35.35.206) from the network and terminate active sessions for phopkins.\n2. Set timestamp_timeout to 0 in the sudoers configuration to mandate password re-entry on every sudo execution.\n3. Enable the tty_tickets setting in sudoers to prevent privilege leakage across separate tty sessions.\n4. Audit and strictly edit the sudoers file to ensure passwords are always required and prevent non-privileged accounts from spawning risky elevated processes."
 }
