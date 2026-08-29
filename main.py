@@ -31,7 +31,7 @@ async def run():
     #     data = get_session(n)
 
     # --- previous single-session run, kept for reference ---
-    data = get_session("russellmitchell")
+    data = get_session("harrison")
     
     initial_state = {
     "session_id": data["session_id"],
