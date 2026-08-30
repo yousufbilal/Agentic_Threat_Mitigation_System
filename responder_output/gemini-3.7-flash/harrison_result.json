@@ -13,14 +13,18 @@
     5502
   ],
   "mitigation_names": [
-    "Password Policies"
+    "Valid Accounts Mitigation",
+    "Component Firmware Mitigation",
+    "Bootkit Mitigation"
   ],
   "mitigation_descriptions": [
-    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse."
+    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.",
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
+    "Ensure proper permissions are in place to help prevent adversary access to privileged accounts necessary to perform this action."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary reviewer confirmed technique T1003.008 involving unauthorized sudo reading of /etc/shadow on host intranet-server by user jward. Immediate containment and credential remediation are required to prevent lateral movement and unauthorized access.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (IP: 192.168.131.215, Agent ID: 21) from the network to contain credential abuse. 2. Terminate any unauthorized sessions and force a password reset for account jward and other accounts exposed in /etc/shadow. 3. Configure Linux Pluggable Authentication Modules (PAM) using pam_pwquality to enforce complexity and pam_faillock or pam_tally2 for lockout thresholds. 4. Implement pwunconv to manage password reuse controls and audit system security configurations with Lynis."
+  "reasoning": "The alert confirmed that user jward executed /bin/cat /etc/shadow via sudo on intranet-server, indicating an active OS credential dumping attempt under MITRE technique T1003.008. Immediate containment and credential resets are required to prevent lateral movement.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.131.215, agent ID 21) from the network to contain the compromise.\n2. Revoke active sessions and force a password reset for user jward and all local accounts with hashes stored in /etc/shadow.\n3. Audit sudoers configuration and user permissions on intranet-server to restrict unauthorized access to privileged commands and sensitive system files.\n4. Limit credential overlap across systems by ensuring all local administrator and user accounts maintain unique passwords across the network.\n5. Audit local and domain accounts on the host to verify if any unauthorized accounts or privilege escalations have occurred."
 }
