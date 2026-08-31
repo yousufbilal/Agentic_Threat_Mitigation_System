@@ -17,7 +17,7 @@ collection = client.get_or_create_collection(name="get_mitigation")
 @tool
 def agentic_rag(query: str, domain: str) -> str:
     """Search the MITRE mitigation database for a defensive action matching a description of an attack technique."""
-    results = collection.query(query_texts=[query], n_results=3, where={"domain": domain})
+    results = collection.query(query_texts=[query], n_results=5, where={"domain": domain})
     documents = results["documents"][0]
     metadatas = results["metadatas"][0]
     return str({"documents": documents, "metadatas": metadatas})

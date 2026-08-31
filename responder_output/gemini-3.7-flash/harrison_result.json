@@ -13,18 +13,16 @@
     5502
   ],
   "mitigation_names": [
-    "Valid Accounts Mitigation",
-    "Component Firmware Mitigation",
-    "Bootkit Mitigation"
+    "Credential Dumping Mitigation",
+    "Valid Accounts Mitigation"
   ],
   "mitigation_descriptions": [
-    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.",
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
-    "Ensure proper permissions are in place to help prevent adversary access to privileged accounts necessary to perform this action."
+    "Follow best practices in restricting access to escalated privileges to avoid hostile programs from accessing sensitive regions of memory or credentials.",
+    "Take measures to detect or prevent techniques such as OS Credential Dumping. Limit credential overlap across systems to prevent access if account credentials are obtained. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The alert confirmed that user jward executed /bin/cat /etc/shadow via sudo on intranet-server, indicating an active OS credential dumping attempt under MITRE technique T1003.008. Immediate containment and credential resets are required to prevent lateral movement.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.131.215, agent ID 21) from the network to contain the compromise.\n2. Revoke active sessions and force a password reset for user jward and all local accounts with hashes stored in /etc/shadow.\n3. Audit sudoers configuration and user permissions on intranet-server to restrict unauthorized access to privileged commands and sensitive system files.\n4. Limit credential overlap across systems by ensuring all local administrator and user accounts maintain unique passwords across the network.\n5. Audit local and domain accounts on the host to verify if any unauthorized accounts or privilege escalations have occurred."
+  "reasoning": "The adversary activity was confirmed with high fidelity, demonstrating unauthorized access to /etc/shadow via sudo /bin/cat by account jward on intranet-server (T1003.008).",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.131.215) from the network to prevent lateral movement. 2. Terminate active sessions and revoke elevated sudo privileges for user account jward. 3. Rotate credentials, passwords, and SSH keys for all accounts present in /etc/shadow on the affected server. 4. Audit sudoers policies and local permission levels on intranet-server to enforce least privilege access. 5. Review authentication logs across the environment to identify any lateral movement using compromised credentials."
 }
