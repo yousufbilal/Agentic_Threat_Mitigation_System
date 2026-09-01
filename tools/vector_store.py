@@ -15,7 +15,6 @@ def store_mitre_mitigation(mitigation, domain):
     collection.add(
         documents=[mitigation_text],
         metadatas=[{"name": mitigation["name"], "domain": domain}],
-        # namespaced because the same mitigation id can appear in more than one domain file
         ids=[f"{domain}::{mitigation['id']}"]
     )
 

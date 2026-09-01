@@ -43,7 +43,12 @@ async def run_agent(agent_output,domain):
 
     start_time = time.time()
 
-    message = HumanMessage(content= f"this is the data you need to find from {agent_output} and the domain is {domain}")
+    message = HumanMessage(content=(
+    f"The following is a confirmed security finding from an incident investigation:\n{agent_output}\n\n"
+    f"Using the agentic_rag tool, search the MITRE ATT&CK mitigation database for defensive actions "
+    f"relevant to the attack technique described above, in the '{domain}' domain. "
+    f"Construct a concise search query based on the technique and behaviour described in the finding above."
+))    
     response = await llm_with_tools.ainvoke([message])
 
     if not response.tool_calls:

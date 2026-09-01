@@ -32,7 +32,6 @@ class ResponderOutput(BaseModel):
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
-
 # MODEL_NAME = "qwen2.5-3b"
 # llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 
@@ -42,11 +41,8 @@ class ResponderOutput(BaseModel):
 MODEL_NAME = "gemini-3.7-flash"
 llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 
-
 structured_llm = llm.with_structured_output(ResponderOutput)
 os.makedirs("agent_outputs", exist_ok=True)   
-
-
 
 async def responder_agent(state: GraphState) -> GraphState:
 

@@ -85,10 +85,6 @@ async def get_mitre_mitigation(mitigation_domain):
    agent_execution_time = end_time - start_time
    print(f"Get Mitre Mitigation Sub-Agent Response Time: {agent_execution_time:.2f} seconds")
 
-# this runs when i run this file so can leave it here for now dont need to change parameters
-# if __name__ == "__main__":
-#     mitigation_domain = "T1110"
-#     result = asyncio.run(get_mitre_mitigation(mitigation_domain))
-#     parsed = json.loads(result[0]["text"])
-#     with open(f"mitre_mitigations/mitre_mitigations{mitigation_domain}.json", "w", encoding="utf-8") as f:
-#         json.dump(parsed, f, indent=4)
+if __name__ == "__main__":
+    mitigation_domain = "T1110"  
+    asyncio.run(get_mitre_mitigation(mitigation_domain))
