@@ -12,16 +12,18 @@
     5502
   ],
   "mitigation_names": [
-    "Password Policies",
-    "User Account Management"
+    "Sudo Mitigation",
+    "Sudo Caching Mitigation",
+    "Component Firmware Mitigation"
   ],
   "mitigation_descriptions": [
-    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse.",
-    "User Account Management involves implementing and enforcing policies for the lifecycle of user accounts, including creation, modification, and deactivation. Proper account management reduces the attack surface by limiting unauthorized access, managing account privileges, and ensuring accounts are used according to organizational policies."
+    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
+    "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
   ],
   "action": "contain",
-  "severity": "high",
+  "severity": "critical",
   "confidence": 0.95,
-  "reasoning": "The adversarial reviewer confirmed credential dumping targeting /etc/shadow via sudo cat by account jhall on intranet-server. Immediate containment and credential remediation are required to prevent lateral movement and unauthorized access from cracked password hashes.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) to halt potential lateral movement.\n2. Revoke active sessions and force password resets for account jhall and all local accounts residing in /etc/shadow.\n3. Enforce strong password complexity and lockout policies on Linux systems using PAM modules (pam_pwquality, pam_faillock).\n4. Enforce the principle of least privilege by auditing and updating sudoers configurations to restrict access to sensitive system files like /etc/shadow.\n5. Implement Multi-Factor Authentication (MFA) on high-risk and administrative accounts to mitigate compromised credentials.\n6. Audit system configurations and local accounts using tools like Lynis and deactivate any dormant accounts."
+  "reasoning": "The investigator confirmed that an unauthorized account transition from www-data to jhall occurred on intranet-server, followed by credential dumping from /etc/shadow via sudo privileges. Immediate containment is required to stop credential exposure and unauthorized administrative access.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) from the network to prevent lateral movement. 2. Terminate active sessions and revoke active credentials for user account jhall and the www-data service. 3. Rotate all system credentials and passwords potentially exposed through the /etc/shadow read. 4. Strictly audit and edit the sudoers configuration to ensure passwords are required and restrict users from executing risky binaries with elevated privileges. 5. Configure timestamp_timeout to 0 and enable tty_tickets to prevent sudo privilege caching and leakage across sessions."
 }

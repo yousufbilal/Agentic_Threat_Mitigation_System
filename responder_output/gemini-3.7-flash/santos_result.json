@@ -13,14 +13,18 @@
     5502
   ],
   "mitigation_names": [
-    "Password Policies"
+    "Component Firmware Mitigation",
+    "Valid Accounts Mitigation",
+    "Brute Force Mitigation"
   ],
   "mitigation_descriptions": [
-    "Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. On Linux systems, configure Pluggable Authentication Modules (PAM) such as pam_pwquality for complexity, pam_tally2/pam_faillock for lockouts, and use audit tools like Lynis."
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
+    "Take measures to detect or prevent techniques such as OS Credential Dumping. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.",
+    "Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts."
   ],
   "action": "contain",
-  "severity": "high",
+  "severity": "critical",
   "confidence": 0.95,
-  "reasoning": "The adversary confirmed execution of 'cat /etc/shadow' via sudo on host intranet-server (192.168.104.155) under account gmorgan, indicating potential credential dumping of local password hashes.",
-  "remediation_plan": "1. Isolate host intranet-server (192.168.104.155) to prevent lateral movement.\n2. Invalidate and reset passwords for all accounts present in /etc/shadow, starting with gmorgan.\n3. Configure Linux Pluggable Authentication Modules (PAM) using pam_pwquality to enforce password complexity and length.\n4. Implement pam_faillock or pam_tally2 to establish account lockout duration and thresholds.\n5. Audit system configurations and password compliance using security auditing tools such as Lynis."
+  "reasoning": "The intranet-server suffered privilege escalation from www-data to gmorgan and root, culminating in credential dumping of /etc/shadow from a web directory. Immediate containment is necessary to stop further lateral movement and credential exploitation.",
+  "remediation_plan": "1. Isolate the intranet-server (192.168.104.155) from the network to prevent lateral movement and exfiltration. 2. Terminate unauthorized sessions and processes associated with user gmorgan and web service user www-data. 3. Prevent adversary access to privileged accounts by rotating credentials and password hashes for all accounts present in /etc/shadow. 4. Audit local and domain account permissions, sudoers configuration, and SSH keys to enforce least privilege. 5. Inspect and remove any webshells or malicious files deployed within the WordPress uploads directory. 6. Enforce multifactor authentication and limit credential overlap across systems to prevent credential reuse."
 }

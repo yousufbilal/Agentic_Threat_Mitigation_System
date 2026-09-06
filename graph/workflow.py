@@ -42,10 +42,16 @@ def build_graph():
 
 
     # Edges
+    # builder.add_edge(START, "triage")
+    # builder.add_conditional_edges("triage", route_after_triage)
+    # builder.add_edge("investigator", "adversarial")
+    # builder.add_conditional_edges("adversarial", route_after_adversal)
+    # builder.add_edge("responder", "human_approval")
+    # builder.add_edge("human_approval", END)
+
     builder.add_edge(START, "triage")
     builder.add_conditional_edges("triage", route_after_triage)
-    builder.add_edge("investigator", "adversarial")
-    builder.add_conditional_edges("adversarial", route_after_adversal)
+    builder.add_edge("investigator", "responder")
     builder.add_edge("responder", "human_approval")
     builder.add_edge("human_approval", END)
 

@@ -1,0 +1,952 @@
+2026-09-06 00:40:31,735 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:40:31,735 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:40:31,737 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:40:31,738 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:40:31,738 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:40:35,386 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:40:35,386 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:40:35,411 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:40:35,433 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:40:35,455 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:40:35,455 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:40:35,455 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:40:35,467 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:40:40,405 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:40:40,405 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:40:40,408 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:40:40,408 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:40:40,408 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:40:44,160 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:40:44,160 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:40:44,187 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:40:44,209 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:40:44,231 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:40:44,231 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:40:44,231 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:40:44,240 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:40:44,243 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:41:01,099 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:41:01,099 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:41:01,102 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:41:01,102 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:41:01,102 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:41:05,296 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:41:05,296 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:41:05,322 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:41:05,346 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:41:05,370 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:41:05,370 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:41:05,370 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:41:05,378 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:41:09,531 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:41:09,531 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:41:09,534 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:41:09,534 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:41:09,535 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:41:14,902 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:41:14,902 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:41:14,950 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:41:14,977 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:41:15,002 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:41:15,003 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:41:15,003 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:41:15,015 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:41:15,019 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+
+======================================================================
+RUNNING SCENARIO: fox
+======================================================================
+
+Triage Agent Response Time: 3.27 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='The alert sequence demonstrates post-exploitation activity likely originating from a web shell inside a WordPress upload directory (/var/www/intranet.price.fox.org/wp-content/uploads/2022/01). Initial user switching occurred from www-data (uid 33) to user phopkins (event_id 1686444911.263244326, rule_id 5304). The user then executed unauthorized sudo commands as root to list files in /root/ (event_id 1686444923.263246341, rule_id 5402) and access sensitive credentials via /bin/cat /etc/shadow (event_id 1686444929.263247863, rule_id 5402), requiring immediate incident response and mitigation.' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 13.36 seconds
+Investigator Agent Response Time: 17.34 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='phopkins' affected_host='intranet-server' affected_ip='10.35.35.206' agent_id='27' cited_rule_ids=[5304, 5501, 5402, 5502] domain='enterprise-attack' reasoning='Alert logs indicate that user switching occurred from www-data to account phopkins on intranet-server (IP 10.35.35.206, agent 27). The account phopkins subsequently executed unauthorized sudo commands to elevate privileges to root, including listing directory contents in /root/ and reading /etc/shadow, consistent with MITRE ATT&CK technique T1548.003 (Sudo and Sudo Caching).' MCP TOOL CALL RESULT: technique_id='T1548.003' technique_name='Sudo and Sudo Caching' 
+
+Agentic RAG Sub-Agent Response Time: 4.00 seconds
+Responder Agent Response Time: 7.34 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='high' confidence=0.95 mitigation_names=['Sudo Caching Mitigation', 'Sudo Mitigation', 'Component Firmware Mitigation'] mitigation_descriptions=['Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'] reasoning='Account phopkins on intranet-server was compromised via user switching from www-data and used unauthorized sudo commands to access /root/ and /etc/shadow using technique T1548.003 (Sudo and Sudo Caching). Immediate containment is required to prevent further unauthorized root-level access and credential exfiltration.' remediation_plan='1. Isolate intranet-server (10.35.35.206) from the network to contain active adversary activity.\\n2. Terminate active sessions for account phopkins and reset credentials for phopkins and root.\\n3. Audit and strictly edit the sudoers file to ensure passwords are always required and prevent users from spawning risky processes with elevated privileges.\\n4. Configure sudo settings by setting timestamp_timeout to 0 and enabling tty_tickets to prevent credential reuse and leakage across tty sessions.\\n5. Investigate the initial compromise vector on www-data and rotate all exposed credentials, including hashes from /etc/shadow.' 
+
+
+Time-to-Recommendation: 28.14 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 28.15 seconds
+Responder Output: {'username': 'phopkins', 'hostname': 'intranet-server', 'ip': '10.35.35.206', 'agent_id': '27', 'technique_id': 'T1548.003', 'technique_name': 'Sudo and Sudo Caching', 'cited_rule_ids': [5304, 5501, 5402, 5502], 'mitigation_names': ['Sudo Caching Mitigation', 'Sudo Mitigation', 'Component Firmware Mitigation'], 'mitigation_descriptions': ['Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'], 'action': 'contain', 'severity': 'high', 'confidence': 0.95, 'reasoning': 'Account phopkins on intranet-server was compromised via user switching from www-data and used unauthorized sudo commands to access /root/ and /etc/shadow using technique T1548.003 (Sudo and Sudo Caching). Immediate containment is required to prevent further unauthorized root-level access and credential exfiltration.', 'remediation_plan': '1. Isolate intranet-server (10.35.35.206) from the network to contain active adversary activity.\\n2. Terminate active sessions for account phopkins and reset credentials for phopkins and root.\\n3. Audit and strictly edit the sudoers file to ensure passwords are always required and prevent users from spawning risky processes with elevated privileges.\\n4. Configure sudo settings by setting timestamp_timeout to 0 and enabling tty_tickets to prevent credential reuse and leakage across tty sessions.\\n5. Investigate the initial compromise vector on www-data and rotate all exposed credentials, including hashes from /etc/shadow.'}
+
+======================================================================
+RUNNING SCENARIO: harrison
+======================================================================
+
+Triage Agent Response Time: 4.72 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='A sequence of privilege escalation and reconnaissance activities was observed on intranet-server (192.168.131.215). Initially, event_id 1687029656.312087776 (rule_id 5304) showed the web server account (www-data) switching user to jward. Subsequently, user jward executed sudo commands from a WordPress upload directory (/var/www/.../wp-content/uploads/2022/02), as seen in event_id 1687029672.312097648 (rule_id 5403). The user escalated privileges to root to read sensitive system files and perform system reconnaissance, specifically catting /etc/shadow in event_id 1687029676.312101106 (rule_id 5402), listing /root/ in event_id 1687029678.312104129 (rule_id 5402), and listing /home in event_id 1687029686.312113037 (rule_id 5402). This indicates post-exploitation following a web application compromise.' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 14.73 seconds
+Investigator Agent Response Time: 18.33 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='jward' affected_host='intranet-server' affected_ip='192.168.131.215' agent_id='21' cited_rule_ids=[5304, 5501, 5403, 5402, 5502] domain='enterprise-attack' reasoning="The alert sequence indicates that user account 'jward' was transitioned into from 'www-data' on host 'intranet-server' (192.168.131.215, agent ID 21). The user 'jward' then executed sudo commands from a web upload path to access sensitive credential files, specifically running '/bin/cat /etc/shadow' under root privileges (T1003.008)." MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 2.81 seconds
+Responder Agent Response Time: 6.73 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='critical' confidence=0.95 mitigation_names=['Password Policies'] mitigation_descriptions=['Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse.'] reasoning="The adversary transitioned from 'www-data' to 'jward' on 'intranet-server' and leveraged sudo privileges to dump '/etc/shadow', exposing system credential hashes. Immediate containment is required to prevent credential cracking and lateral movement." remediation_plan="1. Isolate host 'intranet-server' (192.168.131.215) from the network to contain active compromise. 2. Terminate active sessions and revoke sudo privileges associated with the 'jward' account and web upload directory. 3. Immediately rotate and enforce password resets for all local system accounts whose hashes were exposed in '/etc/shadow'. 4. Configure Linux Pluggable Authentication Modules (PAM) utilizing 'pam_pwquality' to enforce password complexity and length. 5. Implement 'pam_faillock' or 'pam_tally2' for account lockout thresholds and audit policies using security audit tools."2026-09-06 00:41:30,262 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:41:30,262 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:41:30,264 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:41:30,265 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:41:30,265 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:41:34,816 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:41:34,816 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:41:34,841 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:41:34,865 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:41:34,888 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:41:34,888 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:41:34,888 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:41:34,893 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:41:38,280 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:41:38,281 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:41:38,283 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:41:38,284 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:41:38,284 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:41:42,059 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:41:42,060 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:41:42,084 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:41:42,106 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:41:42,128 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:41:42,128 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:41:42,128 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:41:42,135 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:41:42,138 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+ 
+
+
+Time-to-Recommendation: 29.80 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 29.80 seconds
+Responder Output: {'username': 'jward', 'hostname': 'intranet-server', 'ip': '192.168.131.215', 'agent_id': '21', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5501, 5403, 5402, 5502], 'mitigation_names': ['Password Policies'], 'mitigation_descriptions': ['Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse.'], 'action': 'contain', 'severity': 'critical', 'confidence': 0.95, 'reasoning': "The adversary transitioned from 'www-data' to 'jward' on 'intranet-server' and leveraged sudo privileges to dump '/etc/shadow', exposing system credential hashes. Immediate containment is required to prevent credential cracking and lateral movement.", 'remediation_plan': "1. Isolate host 'intranet-server' (192.168.131.215) from the network to contain active compromise. 2. Terminate active sessions and revoke sudo privileges associated with the 'jward' account and web upload directory. 3. Immediately rotate and enforce password resets for all local system accounts whose hashes were exposed in '/etc/shadow'. 4. Configure Linux Pluggable Authentication Modules (PAM) utilizing 'pam_pwquality' to enforce password complexity and length. 5. Implement 'pam_faillock' or 'pam_tally2' for account lockout thresholds and audit policies using security audit tools."}
+
+======================================================================
+RUNNING SCENARIO: russellmitchell
+======================================================================
+
+Triage Agent Response Time: 4.07 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='The alert sequence demonstrates privilege escalation originating from the web server user (www-data) switching to user jhall (event_id 1685991091.12214835, rule_id 5304; event_id 1685991091.12214371, rule_id 5501) and executing sudo commands from a WordPress upload directory to access sensitive credentials via /bin/cat /etc/shadow (event_id 1685991117.12215918, rule_id 5402).' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 12.68 seconds
+Investigator Agent Response Time: 16.42 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='jhall' affected_host='intranet-server' affected_ip='10.143.2.4' agent_id='10' cited_rule_ids=[5304, 5501, 5402, 5502] domain='enterprise-attack' reasoning="The alert sequence shows that the account 'jhall' was accessed via su from 'www-data' on host 'intranet-server' (IP 10.143.2.4, Agent ID 10). From there, sudo privileges were used by 'jhall' to execute '/bin/cat /etc/shadow' from a WordPress upload directory, corresponding to credential dumping technique T1003.008." MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 3.20 seconds
+Responder Agent Response Time: 7.50 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='high' confidence=0.95 mitigation_names=['Valid Accounts Mitigation', 'Brute Force Mitigation', 'Component Firmware Mitigation'] mitigation_descriptions=['Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authentication on external facing services.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'] reasoning="An adversary escalated from 'www-data' to 'jhall' on 'intranet-server' to dump '/etc/shadow' credentials using sudo privileges. Immediate containment and credential rotation are required to prevent widespread lateral movement and privilege abuse." remediation_plan="1. Isolate the affected host 'intranet-server' (10.143.2.4) from the network to prevent further credential abuse. 2. Terminate all active sessions for user account 'jhall' and service account 'www-data'. 3. Rotate all local passwords, hashes, and administrative credentials stored on 'intranet-server', particularly accounts present in '/etc/shadow'. 4. Audit sudoers configuration and permission levels for 'jhall' and 'www-data' to restrict unauthorized command execution and enforce least privilege. 5. Inspect the WordPress upload directory and web application files for web shells or malicious implants and remediate compromised components. 6. Enforce multi-factor authentication and ensure local administrator passwords are unique across all enterprise endpoints." 
+
+
+Time-to-Recommendation: 28.00 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 28.00 seconds
+Responder Output: {'username': 'jhall', 'hostname': 'intranet-server', 'ip': '10.143.2.4', 'agent_id': '10', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5501, 5402, 5502], 'mitigation_names': ['Valid Accounts Mitigation', 'Brute Force Mitigation', 'Component Firmware Mitigation'], 'mitigation_descriptions': ['Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authentication on external facing services.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'], 'action': 'contain', 'severity': 'high', 'confidence': 0.95, 'reasoning': "An adversary escalated from 'www-data' to 'jhall' on 'intranet-server' to dump '/etc/shadow' credentials using sudo privileges. Immediate containment and credential rotation are required to prevent widespread lateral movement and privilege abuse.", 'remediation_plan': "1. Isolate the affected host 'intranet-server' (10.143.2.4) from the network to prevent further credential abuse. 2. Terminate all active sessions for user account 'jhall' and service account 'www-data'. 3. Rotate all local passwords, hashes, and administrative credentials stored on 'intranet-server', particularly accounts present in '/etc/shadow'. 4. Audit sudoers configuration and permission levels for 'jhall' and 'www-data' to restrict unauthorized command execution and enforce least privilege. 5. Inspect the WordPress upload directory and web application files for web shells or malicious implants and remediate compromised components. 6. Enforce multi-factor authentication and ensure local administrator passwords are unique across all enterprise endpoints."}2026-09-06 00:41:57,631 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:41:57,631 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:41:57,633 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:41:57,634 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:41:57,634 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:42:01,086 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:42:01,086 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:42:01,111 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:42:01,134 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:42:01,158 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:42:01,158 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:42:01,158 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:42:01,161 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:42:04,489 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:42:04,489 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:42:04,491 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:42:04,492 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:42:04,492 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:42:08,258 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:42:08,258 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:42:08,290 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:42:08,314 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:42:08,338 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:42:08,338 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:42:08,338 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:42:08,350 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:42:08,352 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+
+
+======================================================================
+RUNNING SCENARIO: santos
+======================================================================
+
+Triage Agent Response Time: 3.41 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='A web server compromise is observed where the www-data account transitioned to user gmorgan (event_id 1687477683.16223775, rule_id 5304). User gmorgan subsequently executed sudo commands from the WordPress uploads directory (/wp-content/uploads/2022/01) for the first time (event_id 1687477693.16225164, rule_id 5403) and successfully ran privileged commands as root to read sensitive system credentials via /bin/cat /etc/shadow (event_id 1687477695.16225611, rule_id 5402) and list root directory contents (event_id 1687477721.16231632, rule_id 5402).' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 11.57 seconds
+Investigator Agent Response Time: 14.99 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='gmorgan' affected_host='intranet-server' affected_ip='192.168.104.155' agent_id='26' cited_rule_ids=[5304, 5501, 5403, 5402, 5502] domain='enterprise-attack' reasoning='The alerts and triage reasoning indicate that on host intranet-server (IP 192.168.104.155, agent ID 26), an initial UID transition occurred from www-data to user gmorgan. User gmorgan then executed privileged sudo commands, including reading /etc/shadow via /bin/cat /etc/shadow and inspecting /root/ contents, aligning directly with MITRE ATT&CK technique T1003.008.' MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 2.89 seconds
+Responder Agent Response Time: 7.37 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='high' confidence=0.95 mitigation_names=['Component Firmware Mitigation', 'Valid Accounts Mitigation', 'Brute Force Mitigation'] mitigation_descriptions=['Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.', 'Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authentication on external facing services.'] reasoning='The host intranet-server suffered a privilege transition from www-data to gmorgan followed by unauthorized sudo execution reading /etc/shadow, confirming active credential dumping. Immediate containment and credential rotation are necessary to prevent lateral movement across the network.' remediation_plan='1. Isolate the affected host intranet-server (192.168.104.155) from the network to prevent further lateral movement.\n2. Terminate active sessions and revoke credentials/SSH keys for compromised accounts gmorgan and root.\n3. Force a password reset across all accounts listed in /etc/shadow and ensure local accounts have unique, complex passwords.\n4. Audit sudoers configuration and limit privileged account access to prevent non-administrative users from executing privileged binaries.\n5. Audit system accounts for unauthorized users, modified SSH authorized_keys, or persistence mechanisms.\n6. Consider rebuilding or replacing compromised system components on intranet-server prior to returning it to production.' 
+
+
+Time-to-Recommendation: 25.78 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 25.79 seconds
+Responder Output: {'username': 'gmorgan', 'hostname': 'intranet-server', 'ip': '192.168.104.155', 'agent_id': '26', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5501, 5403, 5402, 5502], 'mitigation_names': ['Component Firmware Mitigation', 'Valid Accounts Mitigation', 'Brute Force Mitigation'], 'mitigation_descriptions': ['Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.', 'Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authentication on external facing services.'], 'action': 'contain', 'severity': 'high', 'confidence': 0.95, 'reasoning': 'The host intranet-server suffered a privilege transition from www-data to gmorgan followed by unauthorized sudo execution reading /etc/shadow, confirming active credential dumping. Immediate containment and credential rotation are necessary to prevent lateral movement across the network.', 'remediation_plan': '1. Isolate the affected host intranet-server (192.168.104.155) from the network to prevent further lateral movement.\n2. Terminate active sessions and revoke credentials/SSH keys for compromised accounts gmorgan and root.\n3. Force a password reset across all accounts listed in /etc/shadow and ensure local accounts have unique, complex passwords.\n4. Audit sudoers configuration and limit privileged account access to prevent non-administrative users from executing privileged binaries.\n5. Audit system accounts for unauthorized users, modified SSH authorized_keys, or persistence mechanisms.\n6. Consider rebuilding or replacing compromised system components on intranet-server prior to returning it to production.'}2026-09-06 00:42:25,604 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:42:25,604 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:42:25,607 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:42:25,608 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:42:25,608 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:42:29,105 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:42:29,105 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:42:29,129 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:42:29,151 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:42:29,172 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:42:29,172 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:42:29,173 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:42:29,177 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:42:33,867 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:42:33,867 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:42:33,869 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:42:33,870 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:42:33,870 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:42:37,302 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:42:37,302 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:42:37,326 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:42:37,348 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:42:37,370 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:42:37,370 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:42:37,371 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:42:37,373 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:42:37,375 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:42:50,481 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:42:50,482 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:42:50,484 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:42:50,484 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:42:50,484 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:42:53,844 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:42:53,845 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:42:53,868 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:42:53,889 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:42:53,910 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:42:53,910 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:42:53,910 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:42:53,913 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:42:57,507 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:42:57,507 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:42:57,510 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:42:57,510 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:42:57,510 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:43:00,813 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:43:00,813 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:43:00,837 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:43:00,859 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:43:00,880 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:43:00,880 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:43:00,880 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:43:00,883 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:43:00,885 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+
+
+======================================================================
+RUNNING SCENARIO: shaw
+======================================================================
+
+Triage Agent Response Time: 5.64 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='The alerts indicate a server compromise originating from a web directory (/var/www/.../wp-content/uploads/2022/01). Specifically, the web server user (uid=33, www-data) switched user to gmarsh via su (event_id 1688163860.10465797, rule_id 5304), followed by first-time sudo execution (event_id 1688163870.10471638, rule_id 5403). Sudo was subsequently used to perform unauthorized reconnaissance on /root/ (event_id 1688163872.10472097, rule_id 5402) and credential dumping via /bin/cat /etc/shadow (event_id 1688163878.10473634, rule_id 5402).' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 12.56 seconds
+Investigator Agent Response Time: 15.57 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='gmarsh' affected_host='intranet-server' affected_ip='192.168.188.179' agent_id='21' cited_rule_ids=[5304, 5402, 5403, 5501, 5502] domain='enterprise-attack' reasoning='The web server user (www-data) on intranet-server switched user to gmarsh, who subsequently executed sudo commands to inspect /root/ and dump credentials via /bin/cat /etc/shadow, matching technique T1003.008.' MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 2.74 seconds
+Responder Agent Response Time: 5.90 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='critical' confidence=0.95 mitigation_names=['Valid Accounts Mitigation', 'Brute Force Mitigation', 'Keychain Mitigation'] mitigation_descriptions=['Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Where possible, also enable multi factor authentication on external facing services.', "The password for the user's login keychain can be changed from the user's login password. This increases the complexity for an adversary because they need to know an additional password."] reasoning='The adversary escalated privileges on intranet-server via account gmarsh to dump credentials from /etc/shadow, posing an immediate risk of credential theft and lateral movement.' remediation_plan='1. Isolate the affected host intranet-server (192.168.188.179) from the network to prevent lateral movement. 2. Reset passwords immediately for user gmarsh, root, and all accounts listed in /etc/shadow to enforce complex, unique passwords and limit credential overlap. 3. Audit sudo configurations and revoke unauthorized administrative permissions for web-facing service accounts like www-data and user gmarsh. 4. Terminate any active sessions tied to the gmarsh and www-data accounts. 5. Audit local and domain accounts on intranet-server for unauthorized new accounts or permission escalations.' 
+
+
+Time-to-Recommendation: 27.12 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 27.12 seconds
+Responder Output: {'username': 'gmarsh', 'hostname': 'intranet-server', 'ip': '192.168.188.179', 'agent_id': '21', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5402, 5403, 5501, 5502], 'mitigation_names': ['Valid Accounts Mitigation', 'Brute Force Mitigation', 'Keychain Mitigation'], 'mitigation_descriptions': ['Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.', 'Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Where possible, also enable multi factor authentication on external facing services.', "The password for the user's login keychain can be changed from the user's login password. This increases the complexity for an adversary because they need to know an additional password."], 'action': 'contain', 'severity': 'critical', 'confidence': 0.95, 'reasoning': 'The adversary escalated privileges on intranet-server via account gmarsh to dump credentials from /etc/shadow, posing an immediate risk of credential theft and lateral movement.', 'remediation_plan': '1. Isolate the affected host intranet-server (192.168.188.179) from the network to prevent lateral movement. 2. Reset passwords immediately for user gmarsh, root, and all accounts listed in /etc/shadow to enforce complex, unique passwords and limit credential overlap. 3. Audit sudo configurations and revoke unauthorized administrative permissions for web-facing service accounts like www-data and user gmarsh. 4. Terminate any active sessions tied to the gmarsh and www-data accounts. 5. Audit local and domain accounts on intranet-server for unauthorized new accounts or permission escalations.'}
+
+======================================================================
+RUNNING SCENARIO: wardbeck
+======================================================================
+
+Triage Agent Response Time: 3.41 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='A web shell or compromise originating from www-data was escalated via su to user blord (event_id 1688763945.10674854, rule_id 5304). From the WordPress uploads directory (/var/www/.../wp-content/uploads/2022/01), the user executed first-time sudo commands (event_id 1688763957.10677718, rule_id 5403) and successfully escalated privileges to root to read sensitive system files including /etc/shadow (event_id 1688763959.10678179, rule_id 5402) and list the root directory (event_id 1688763963.10679720, rule_id 5402).' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 11.17 seconds
+Investigator Agent Response Time: 14.87 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='blord' affected_host='intranet-server' affected_ip='172.21.241.88' agent_id='12' cited_rule_ids=[5304, 5501, 5403, 5402, 5502] domain='enterprise-attack' reasoning="The alert sequence indicates a privilege escalation on intranet-server (172.21.241.88, agent ID 12) where an attacker transitioned from www-data to the user account 'blord'. Account blord then executed sudo commands from the WordPress upload directory to access /etc/shadow, directly aligning with MITRE ATT&CK technique T1003.008 (/etc/passwd and /etc/shadow)." MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 2.85 seconds
+Responder Agent Response Time: 6.86 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='high' confidence=0.95 mitigation_names=['Sudo Mitigation', 'Sudo Caching Mitigation', 'Component Firmware Mitigation'] mitigation_descriptions=['The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'] reasoning="The investigator identified an active privilege escalation from www-data to 'blord' executing unauthorized sudo commands to access /etc/shadow (T1003.008) from the WordPress directory. Containment is required to isolate the compromised intranet-server and prevent further credential abuse." remediation_plan="1. Isolate intranet-server (172.21.241.88) from the network to stop active compromise and lateral movement.\n2. Terminate active sessions for the 'blord' and 'www-data' accounts and initiate immediate credential resets for all system users.\n3. Audit and strictly edit the sudoers configuration to ensure passwords are always required and restrict users from executing commands with elevated privileges.\n4. Configure sudo caching by setting timestamp_timeout to 0 and enabling tty_tickets to prevent credential and session leakage across TTYs.\n5. Inspect the WordPress upload directory to remove unauthorized scripts/payloads and verify integrity of system components."2026-09-06 00:43:17,881 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:43:17,882 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:43:17,885 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:43:17,885 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:43:17,885 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:43:21,283 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:43:21,283 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:43:21,306 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:43:21,328 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:43:21,348 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:43:21,349 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:43:21,349 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:43:21,353 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:43:26,479 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:43:26,480 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:43:26,482 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:43:26,482 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:43:26,483 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:43:29,777 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:43:29,777 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:43:29,800 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:43:29,822 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:43:29,843 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:43:29,843 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:43:29,843 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:43:29,846 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:43:29,848 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+ 
+
+
+Time-to-Recommendation: 25.15 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 25.15 seconds
+Responder Output: {'username': 'blord', 'hostname': 'intranet-server', 'ip': '172.21.241.88', 'agent_id': '12', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5501, 5403, 5402, 5502], 'mitigation_names': ['Sudo Mitigation', 'Sudo Caching Mitigation', 'Component Firmware Mitigation'], 'mitigation_descriptions': ['The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'], 'action': 'contain', 'severity': 'high', 'confidence': 0.95, 'reasoning': "The investigator identified an active privilege escalation from www-data to 'blord' executing unauthorized sudo commands to access /etc/shadow (T1003.008) from the WordPress directory. Containment is required to isolate the compromised intranet-server and prevent further credential abuse.", 'remediation_plan': "1. Isolate intranet-server (172.21.241.88) from the network to stop active compromise and lateral movement.\n2. Terminate active sessions for the 'blord' and 'www-data' accounts and initiate immediate credential resets for all system users.\n3. Audit and strictly edit the sudoers configuration to ensure passwords are always required and restrict users from executing commands with elevated privileges.\n4. Configure sudo caching by setting timestamp_timeout to 0 and enabling tty_tickets to prevent credential and session leakage across TTYs.\n5. Inspect the WordPress upload directory to remove unauthorized scripts/payloads and verify integrity of system components."}
+
+======================================================================
+RUNNING SCENARIO: wheeler
+======================================================================
+
+Triage Agent Response Time: 5.44 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='A compromised web application environment is indicated by a user switching from www-data to kford (event_id 1689384947.3520265, rule_id 5304), followed by unauthorized privilege escalation via sudo from a WordPress upload directory (event_id 1689384963.3531192, rule_id 5403). The user subsequently executed commands as root to access sensitive credential files /etc/shadow and /etc/passwd (event_id 1689384965.3531642 and 1689384969.3533170, rule_id 5402).' prompt_injection_detected=False injection_evidence='' 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 12.95 seconds
+Investigator Agent Response Time: 17.55 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='kford' affected_host='intranet-server' affected_ip='192.168.2.114' agent_id='32' cited_rule_ids=[5304, 5402, 5403, 5501, 5502] domain='enterprise-attack' reasoning="The alert sequence shows a session opened where user www-data switched to user kford on host intranet-server (IP 192.168.2.114, agent ID 32). The user kford subsequently leveraged sudo privileges to execute commands as root, dumping sensitive credential files via '/bin/cat /etc/shadow' and '/bin/cat /etc/passwd', corresponding to MITRE ATT&CK technique T1003.008." MCP TOOL CALL RESULT: technique_id='T1003.008' technique_name='/etc/passwd and /etc/shadow' 
+
+Agentic RAG Sub-Agent Response Time: 3.16 seconds
+Responder Agent Response Time: 6.62 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='critical' confidence=0.95 mitigation_names=['Password Policies'] mitigation_descriptions=['Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. This mitigation can be implemented through configuring Pluggable Authentication Modules (PAM) on Linux systems using pam_pwquality, pam_tally2, or pam_faillock, and conducting regular audits with tools like Lynis.'] reasoning='The user www-data escalated to user kford and executed sudo commands to read sensitive files /etc/shadow and /etc/passwd on host intranet-server, indicating active credential harvesting under MITRE technique T1003.008.' remediation_plan='1. Isolate the affected host intranet-server (192.168.2.114) from the network to prevent lateral movement.\n2. Terminate the active session for user kford and revoke associated sudo privileges.\n3. Force an immediate credential rotation for all accounts present in /etc/shadow on the system.\n4. Configure Linux Pluggable Authentication Modules (PAM) utilizing pam_pwquality to enforce strong password complexity and length.\n5. Implement pam_tally2 or pam_faillock to enforce account lockout thresholds on intranet-server.\n6. Run Lynis to audit system configurations, PAM rules, and password policy compliance.' 
+
+
+Time-to-Recommendation: 29.63 seconds
+Approve this action? (y/n): y
+Execution time: 0.00 seconds
+Total Processing Time: 29.63 seconds
+Responder Output: {'username': 'kford', 'hostname': 'intranet-server', 'ip': '192.168.2.114', 'agent_id': '32', 'technique_id': 'T1003.008', 'technique_name': '/etc/passwd and /etc/shadow', 'cited_rule_ids': [5304, 5402, 5403, 5501, 5502], 'mitigation_names': ['Password Policies'], 'mitigation_descriptions': ['Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. This mitigation can be implemented through configuring Pluggable Authentication Modules (PAM) on Linux systems using pam_pwquality, pam_tally2, or pam_faillock, and conducting regular audits with tools like Lynis.'], 'action': 'contain', 'severity': 'critical', 'confidence': 0.95, 'reasoning': 'The user www-data escalated to user kford and executed sudo commands to read sensitive files /etc/shadow and /etc/passwd on host intranet-server, indicating active credential harvesting under MITRE technique T1003.008.', 'remediation_plan': '1. Isolate the affected host intranet-server (192.168.2.114) from the network to prevent lateral movement.\n2. Terminate the active session for user kford and revoke associated sudo privileges.\n3. Force an immediate credential rotation for all accounts present in /etc/shadow on the system.\n4. Configure Linux Pluggable Authentication Modules (PAM) utilizing pam_pwquality to enforce strong password complexity and length.\n5. Implement pam_tally2 or pam_faillock to enforce account lockout thresholds on intranet-server.\n6. Run Lynis to audit system configurations, PAM rules, and password policy compliance.'}
+
+======================================================================
+RUNNING SCENARIO: wilson
+======================================================================
+
+Triage Agent Response Time: 6.15 seconds
+
+TRIAGE AGENT RESPONSE: mitigation_required=True severity='High' reasoning='Suspicious privilege escalation activity detected on intranet-server (agent 28). Event 1690059387.310719057 (rule_id 5304) shows user www-data switching UID to jwilkinson, followed by first-time sudo execution in event 1690059401.310724995 (rule_id 5403) from a WordPress upload directory (/var/www/.../wp-content/uploads/2022/02). The user subsequently executed commands as root via sudo in event 1690059407.310725453 (rule_id 5402, reading /etc/passwd) and event 1690059419.310726993 (rule_id 5402, running iptables -L), indicating web shell exploitation and unauthorized reconnaissance/privilege escalation.' prompt_injection_detected=False injection_evidence=''2026-09-06 00:43:48,027 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:43:48,027 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:43:48,030 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:43:48,030 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:43:48,030 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:43:51,459 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:43:51,459 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:43:51,482 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:43:51,504 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:43:51,525 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:43:51,525 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:43:51,525 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:43:51,528 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-09-06 00:43:54,848 - mitre_mcp.mitre_mcp_server - INFO - Starting MITRE ATT&CK MCP Server (stdio mode)
+2026-09-06 00:43:54,848 - mitre_mcp.mitre_mcp_server - INFO - Press Ctrl+C to stop the server
+2026-09-06 00:43:54,850 - mitre_mcp.mitre_mcp_server - INFO - Using data directory: /Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/lib/python3.12/site-packages/mitre_mcp/data
+2026-09-06 00:43:54,850 - mitre_mcp.mitre_mcp_server - INFO - Using cached MITRE ATT&CK data from 2026-09-05T22:29:34.938658+00:00
+2026-09-06 00:43:54,850 - mitre_mcp.mitre_mcp_server - INFO - Initializing MITRE ATT&CK data...
+2026-09-06 00:43:58,140 - mitre_mcp.mitre_mcp_server - INFO - MITRE ATT&CK data initialized successfully.
+2026-09-06 00:43:58,140 - mitre_mcp.mitre_mcp_server - INFO - Building lookup indices...
+2026-09-06 00:43:58,164 - mitre_mcp.mitre_mcp_server - INFO - Built group index: 611 entries for 191 groups
+2026-09-06 00:43:58,185 - mitre_mcp.mitre_mcp_server - INFO - Built mitigation index: 268 entries for 268 mitigations
+2026-09-06 00:43:58,206 - mitre_mcp.mitre_mcp_server - INFO - Built technique index: 858 entries for 858 techniques
+2026-09-06 00:43:58,206 - mitre_mcp.mitre_mcp_server - INFO - Lookup indices built successfully.
+2026-09-06 00:43:58,206 - mitre_mcp.mitre_mcp_server - INFO - 
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+
+======================================================================
+MITRE ATT&CK MCP Server is ready (stdio mode)
+
+Add this to your MCP client configuration:
+{
+  "mcpServers": {
+    "mitreattack": {
+      "command": "/Users/yousuf/Documents/MMU-Project-Cert-Job/MSC_Project/Agentic_Threat_Mitigation_System/.venv/bin/python3",
+      "args": [
+        "-m",
+        "mitre_mcp.mitre_mcp_server"
+      ]
+    }
+  }
+}
+======================================================================
+2026-09-06 00:43:58,209 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-09-06 00:43:58,210 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+ 
+
+
+Get Mitre Technique ID Sub-Agent Response Time: 10.97 seconds
+Investigator Agent Response Time: 14.87 seconds
+
+INVESTIGATOR AGENT RESPONSE: affected_account='jwilkinson' affected_host='intranet-server' affected_ip='172.26.243.167' agent_id='28' cited_rule_ids=[5304, 5402, 5403, 5501, 5502] domain='enterprise-attack' reasoning='The alerts indicate privilege escalation and command execution via sudo on host intranet-server (IP 172.26.243.167, Agent ID 28). The account jwilkinson was accessed from www-data and immediately executed privileged commands (/bin/cat /etc/passwd and /sbin/iptables -L) as root via sudo from a WordPress upload directory.' MCP TOOL CALL RESULT: technique_id='T1548.003' technique_name='Sudo and Sudo Caching' 
+
+Agentic RAG Sub-Agent Response Time: 3.08 seconds
+Responder Agent Response Time: 6.50 seconds
+
+REPONDER AGENT RESPONSE: action='contain' severity='high' confidence=0.95 mitigation_names=['Sudo Mitigation', 'Sudo Caching Mitigation', 'Component Firmware Mitigation'] mitigation_descriptions=['The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'] reasoning='The investigator confirmed unauthorized privilege escalation via sudo (T1548.003) on host intranet-server, where the compromised www-data account transitioned to jwilkinson and executed root-level commands from a WordPress upload directory.' remediation_plan='1. Isolate the affected host intranet-server (172.26.243.167) to prevent lateral movement and further unauthorized command execution.\n2. Terminate all active sessions and processes originating from the WordPress uploads directory, www-data, and jwilkinson.\n3. Strictly edit the /etc/sudoers file to ensure passwords are required and prohibit execution of privileged commands by unauthorized accounts.\n4. Configure timestamp_timeout to 0 and ensure tty_tickets is enabled in sudo configuration to prevent sudo token reuse across sessions.\n5. Rotate credentials for jwilkinson and inspect system components suspected of compromise for replacement or cleanup.' 
+
+
+Time-to-Recommendation: 27.54 seconds
+Approve this action? (y/n): y
+Execution time: 0.01 seconds
+Total Processing Time: 27.54 seconds
+Responder Output: {'username': 'jwilkinson', 'hostname': 'intranet-server', 'ip': '172.26.243.167', 'agent_id': '28', 'technique_id': 'T1548.003', 'technique_name': 'Sudo and Sudo Caching', 'cited_rule_ids': [5304, 5402, 5403, 5501, 5502], 'mitigation_names': ['Sudo Mitigation', 'Sudo Caching Mitigation', 'Component Firmware Mitigation'], 'mitigation_descriptions': ['The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.', 'Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.', 'Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.'], 'action': 'contain', 'severity': 'high', 'confidence': 0.95, 'reasoning': 'The investigator confirmed unauthorized privilege escalation via sudo (T1548.003) on host intranet-server, where the compromised www-data account transitioned to jwilkinson and executed root-level commands from a WordPress upload directory.', 'remediation_plan': '1. Isolate the affected host intranet-server (172.26.243.167) to prevent lateral movement and further unauthorized command execution.\n2. Terminate all active sessions and processes originating from the WordPress uploads directory, www-data, and jwilkinson.\n3. Strictly edit the /etc/sudoers file to ensure passwords are required and prohibit execution of privileged commands by unauthorized accounts.\n4. Configure timestamp_timeout to 0 and ensure tty_tickets is enabled in sudo configuration to prevent sudo token reuse across sessions.\n5. Rotate credentials for jwilkinson and inspect system components suspected of compromise for replacement or cleanup.'}

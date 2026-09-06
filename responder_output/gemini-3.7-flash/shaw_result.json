@@ -13,14 +13,18 @@
     5502
   ],
   "mitigation_names": [
-    "Valid Accounts Mitigation"
+    "Valid Accounts Mitigation",
+    "Component Firmware Mitigation",
+    "Bootkit Mitigation"
   ],
   "mitigation_descriptions": [
-    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account."
+    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.",
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
+    "Ensure proper permissions are in place to help prevent adversary access to privileged accounts necessary to perform this action. Use Trusted Platform Module technology and a secure or trusted boot process to prevent system integrity from being compromised."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversarial review confirmed credential dumping via sudo execution of /bin/cat /etc/shadow on host intranet-server by account gmarsh (T1003.008).",
-  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.188.179) from the network to prevent lateral movement. 2. Terminate active sessions and force immediate password resets for account gmarsh and all local accounts defined in /etc/shadow. 3. Audit sudoers configuration on intranet-server to restrict access to sensitive credential files and enforce least privilege. 4. Ensure local administrator accounts maintain complex, unique credentials across systems to limit credential overlap. 5. Audit all local and domain accounts on intranet-server for unauthorized persistence or elevated permissions."
+  "reasoning": "The investigator confirmed unauthorized privilege escalation where the web account www-data switched to gmarsh and executed cat /etc/shadow using sudo, indicating active OS credential dumping (T1003.008). Containment is required to isolate the affected host, revoke exposed credentials, and investigate potential web shell or application compromise.",
+  "remediation_plan": "1. Isolate the intranet-server (192.168.188.179) from the network to prevent lateral movement and further credential exfiltration. 2. Terminate the active session for gmarsh and the parent session originating from www-data. 3. Immediately rotate passwords and credentials for gmarsh, root, and all local accounts stored in /etc/shadow. 4. Audit sudoers permissions and ensure proper permissions are enforced to restrict gmarsh and www-data from executing sensitive administrative commands. 5. Inspect the web application running under www-data for unauthorized access points or uploaded web shells."
 }

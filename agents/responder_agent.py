@@ -48,14 +48,18 @@ async def responder_agent(state: GraphState) -> GraphState:
 
     start_time = time.time()
 
-    adversarial_output = state["adversarial_output"]
+    # adversarial_output = state["adversarial_output"]
+    investigator_output = state["investigator_output"]
     session_id = state["session_id"]
     domain = state["investigator_output"]["domain"]
-    cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
+    # cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
+    cited_rule_ids = state["investigator_output"]["cited_rule_ids"]
     session_id = state["triage_output"]["session_id"]
-    technique_id = state["adversarial_output"]["technique_id"]
-    technique_name = state["adversarial_output"]["technique_name"]
-    cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
+    # technique_id = state["adversarial_output"]["technique_id"]
+    # technique_name = state["adversarial_output"]["technique_name"]
+    technique_id = state["investigator_output"]["technique_id"]
+    technique_name = state["investigator_output"]["technique_name"]
+    # cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
     
     # bug the adversarial agent output does not contain the mitre attack technique ID or Name 
     # check to make sure i am only sending 1 query to the agetic rag tool and not multiple queries
@@ -66,13 +70,14 @@ async def responder_agent(state: GraphState) -> GraphState:
     # if not file_path:
     #     mitigation_domain = await get_mitre_mitigation(domain)
 
-    mitigation_data = await run_agent(adversarial_output, domain)
+    # mitigation_data = await run_agent(adversarial_output, domain)
+    mitigation_data = await run_agent(investigator_output, domain)
 
     system_prompt = SystemMessage(content="""
         You are a SOC responder deciding the mitigation action for a security alert sequence.
 
         Your only task:
-        Based on the adversarial reviewer's verdict and the retrieved_mitigation_data, decide the action and remediation plan and confidence and provide your reasoning.
+        Based on the investigator's findings and the retrieved_mitigation_data, decide the action and remediation plan and confidence and provide your reasoning.
         Base your decision only on the data provided below. Do not assume information that isn't present.
 
         IMPORTANT: Your remediation_plan must be grounded in the retrieved_mitigation_data provided and use to to fill the mitigation details in output
@@ -84,15 +89,16 @@ async def responder_agent(state: GraphState) -> GraphState:
             "action": "escalate" | "contain" | "monitor",
             "severity": "low" | "medium" | "high" | "critical",
             "confidence": float between 0 and 1,
-            "reasoning": "explanation referencing the verdict and technique",
+            "reasoning": "explanation referencing the investigator's findings and technique",
             "mitigation_names": "list of mitigation names corresponding to the mitigation_ids used",
             "mitigation_descriptions": "list of mitigation descriptions corresponding to the mitigation_ids used",
-            "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in retrieved_mitigation_data and adversarial_output"
+            "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in retrieved_mitigation_data and investigator_output"
         }
         """)
 
     human_prompt = HumanMessage(content=str({
-        "adversarial_output": adversarial_output,
+        # "adversarial_output": adversarial_output,
+        "investigator_output": investigator_output,
         "domain": domain,
         "retrieved_mitigation_data": mitigation_data,
     }))
@@ -109,10 +115,14 @@ async def responder_agent(state: GraphState) -> GraphState:
 
     # if decision == "y":
     responder_output = {
-        "username": state["adversarial_output"]["affected_account"],
-        "hostname": state["adversarial_output"]["affected_host"],
-        "ip": state["adversarial_output"]["affected_ip"],
-        "agent_id": state["adversarial_output"]["agent_id"],
+        # "username": state["adversarial_output"]["affected_account"],
+        # "hostname": state["adversarial_output"]["affected_host"],
+        # "ip": state["adversarial_output"]["affected_ip"],
+        # "agent_id": state["adversarial_output"]["agent_id"],
+        "username": state["investigator_output"]["affected_account"],
+        "hostname": state["investigator_output"]["affected_host"],
+        "ip": state["investigator_output"]["affected_ip"],
+        "agent_id": state["investigator_output"]["agent_id"],
         "technique_id": technique_id,
         "technique_name": technique_name,
         "cited_rule_ids": cited_rule_ids,

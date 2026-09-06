@@ -146,9 +146,9 @@ async def investigator_agent(state: GraphState) -> GraphState:
     agent_execution_time = end_time - start_time
     print(f"Investigator Agent Response Time: {agent_execution_time:.2f} seconds")
     print()
-    # print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
-    print("INVESTIGATOR AGENT RESPONSE:", response)
-    print()
+    print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
+    # print("INVESTIGATOR AGENT RESPONSE:", response)
+    # print()
 
 #   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
 

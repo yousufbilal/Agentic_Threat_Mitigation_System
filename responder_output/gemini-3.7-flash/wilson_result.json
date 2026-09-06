@@ -13,16 +13,18 @@
     5502
   ],
   "mitigation_names": [
+    "Sudo Mitigation",
     "Sudo Caching Mitigation",
-    "Sudo Mitigation"
+    "Component Firmware Mitigation"
   ],
   "mitigation_descriptions": [
+    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
     "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
-    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file."
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary activity was confirmed on host intranet-server involving user jwilkinson leveraging sudo commands for privilege escalation (T1548.003). Immediate containment and restriction of sudo privileges and caching settings are required.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (172.26.243.167) to prevent lateral movement. 2. Invalidate active sudo caching sessions and kill unauthorized root processes executed by jwilkinson. 3. Update the sudoers configuration to set timestamp_timeout to 0 and enable tty_tickets to enforce password entry per execution and prevent session leakage. 4. Strictly audit and edit the sudoers file on intranet-server to enforce password requirements and restrict users from spawning unauthorized privileged processes."
+  "reasoning": "An unauthorized privilege escalation occurred on intranet-server where a user pivoted from www-data to jwilkinson and executed sudo commands as root to inspect sensitive files and firewall configurations.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (172.26.243.167) from the network to stop ongoing adversary actions. 2. Terminate all active sessions associated with the www-data and jwilkinson accounts. 3. Audit and strictly configure the /etc/sudoers file to ensure password requirements are enforced and users cannot spawn unauthorized privileged processes. 4. Configure timestamp_timeout to 0 and enable tty_tickets to prevent sudo credential caching and leakage across sessions. 5. Invalidate compromised credentials and inspect the system for persistence or further unauthorized modifications."
 }

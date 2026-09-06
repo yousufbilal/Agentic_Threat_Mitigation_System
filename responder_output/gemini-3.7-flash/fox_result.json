@@ -7,21 +7,23 @@
   "technique_name": "Sudo and Sudo Caching",
   "cited_rule_ids": [
     5304,
-    5501,
     5402,
+    5501,
     5502
   ],
   "mitigation_names": [
+    "Sudo Mitigation",
     "Sudo Caching Mitigation",
-    "Sudo Mitigation"
+    "Component Firmware Mitigation"
   ],
   "mitigation_descriptions": [
+    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
     "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
-    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file."
+    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary activity for T1548.003 (Sudo and Sudo Caching) was confirmed on host intranet-server involving user phopkins. Containment and strict sudo configuration hardening are required to prevent unauthorized privilege escalation.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (10.35.35.206) from the network and terminate active sessions for phopkins.\n2. Set timestamp_timeout to 0 in the sudoers configuration to mandate password re-entry on every sudo execution.\n3. Enable the tty_tickets setting in sudoers to prevent privilege leakage across separate tty sessions.\n4. Audit and strictly edit the sudoers file to ensure passwords are always required and prevent non-privileged accounts from spawning risky elevated processes."
+  "reasoning": "The adversary transitioned from the www-data account to phopkins and successfully abused sudo privileges to execute root commands and read /etc/shadow. Immediate containment is required to prevent further unauthorized root access and credential harvesting.",
+  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) from the network to restrict unauthorized access.\n2. Terminate active sessions for phopkins and www-data, and rotate compromised credentials.\n3. Audit and edit the /etc/sudoers file to strictly enforce password requirements and restrict privilege escalation.\n4. Set sudo configuration parameter timestamp_timeout to 0 and enable tty_tickets to eliminate sudo caching risks.\n5. Inspect the system for persistence and replace any compromised components or credentials exposed by the /etc/shadow read."
 }
