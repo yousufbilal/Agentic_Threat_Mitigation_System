@@ -10,6 +10,7 @@ with open("ait_data/labels/labels.csv", "r") as file:
     for row in reader:
         if row["attack"] == "privilege_escalation":
             scenario_name = row["scenario"]
+            # this is filling up the pe_windows dictionary with the scenario names
             pe_windows[scenario_name] = {
                 "start": float(row["start"]),
                 "end": float(row["end"])
@@ -21,6 +22,7 @@ def extract_slimmed_alert(alert):
     return {
         "timestamp": alert.get("@timestamp"),
         "event_id": alert.get("id"),
+        # {} precented crashes
         "agent_ip": alert.get("agent", {}).get("ip"),
         "agent_name": alert.get("agent", {}).get("name"),
         "agent_id": alert.get("agent", {}).get("id"),
@@ -36,7 +38,6 @@ def iso_to_epoch(timestamp_string):
     dt = datetime.strptime(timestamp_string, "%Y-%m-%dT%H:%M:%S.%fZ")
     dt = dt.replace(tzinfo=timezone.utc)
     return dt.timestamp()
-
 
 os.makedirs("ait_data/processed", exist_ok=True)
 
@@ -58,7 +59,7 @@ for scenario, window in pe_windows.items():
                 if window["start"] <= alert_epoch <= window["end"]:
                     matched_alerts.append(slimmed_alert)
 
-    print(f"{scenario}: {len(matched_alerts)} matched alerts")
+    # print(f"{scenario}: {len(matched_alerts)} matched alerts")
 
     with open(f"ait_data/processed/{scenario}_matched_alerts.json", "w") as out_file:
         json.dump(matched_alerts, out_file, indent=2)

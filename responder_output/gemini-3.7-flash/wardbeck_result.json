@@ -1,0 +1,30 @@
+{
+  "username": "blord",
+  "hostname": "intranet-server",
+  "ip": "172.21.241.88",
+  "agent_id": "12",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
+  "cited_rule_ids": [
+    5304,
+    5501,
+    5403,
+    5402,
+    5502
+  ],
+  "mitigation_names": [
+    "Keychain Mitigation",
+    "Brute Force Mitigation",
+    "Valid Accounts Mitigation"
+  ],
+  "mitigation_descriptions": [
+    "The password for the user's login keychain can be changed from the user's login password. This increases the complexity for an adversary because they need to know an additional password.",
+    "Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Follow best practices for mitigating access to Valid Accounts, enable multi-factor authentication, and refer to NIST guidelines when creating passwords.",
+    "Take measures to detect or prevent techniques such as OS Credential Dumping. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure local administrator accounts have complex, unique passwords, audit domain and local account permissions routinely, and ensure default passwords/SSH keys are secured."
+  ],
+  "action": "contain",
+  "severity": "high",
+  "confidence": 0.95,
+  "reasoning": "The adversary escalated privileges from 'www-data' to 'blord' on 'intranet-server' and executed root-level sudo commands to dump '/etc/shadow' (T1003.008). Containment is required to isolate the compromised host and invalidate exposed credentials.",
+  "remediation_plan": "1. Isolate the affected host 'intranet-server' (172.21.241.88) from the network to prevent lateral movement. 2. Terminate unauthorized sessions associated with accounts 'www-data' and 'blord'. 3. Rotate passwords and SSH keys for all local accounts on 'intranet-server', specifically 'blord' and root. 4. Limit credential overlap across systems by ensuring unique administrator passwords and segmented administrative tiers. 5. Audit sudo permissions and local account configurations on 'intranet-server' to enforce the principle of least privilege. 6. Implement multi-factor authentication and account lockout policies to prevent credential-based attacks."
+}
