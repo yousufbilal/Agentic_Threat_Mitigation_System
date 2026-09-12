@@ -7,24 +7,24 @@
   "technique_name": "/etc/passwd and /etc/shadow",
   "cited_rule_ids": [
     5304,
-    5501,
-    5403,
     5402,
+    5403,
+    5501,
     5502
   ],
   "mitigation_names": [
-    "Component Firmware Mitigation",
-    "Valid Accounts Mitigation",
-    "Brute Force Mitigation"
+    "Operating System Configuration",
+    "Password Policies",
+    "User Account Management"
   ],
   "mitigation_descriptions": [
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
-    "Take measures to detect or prevent techniques such as OS Credential Dumping or installation of keyloggers to acquire credentials through Input Capture. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are tightly controlled and use of accounts is segmented, as this is often equivalent to having a local administrator account with the same password on all systems. Follow best practices for design and administration of an enterprise network to limit privileged account use across administrative tiers. Audit domain and local accounts as well as their permission levels routinely to look for situations that could allow an adversary to gain wide access by obtaining credentials of a privileged account. These audits should also include if default accounts have been enabled, or if new local accounts are created that have not be authorized. Applications and appliances that utilize default username and password should be changed immediately after the installation, and before deployment to a production environment. When possible, applications that use SSH keys should be updated periodically and properly secured.",
-    "Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts. Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authentication on external facing services."
+    "Ensure permissions on /etc/shadow restrict read access to root only and audit sudoers configuration to prevent unauthorized read access.",
+    "Implement strong password hashing algorithms and enforce complex passwords or key-based authentication to minimize exposure if hashes are dumped.",
+    "Limit administrative privileges and restrict sudo rights for non-privileged accounts like jward."
   ],
   "action": "contain",
-  "severity": "critical",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The investigator identified an active privilege escalation and OS credential dumping incident (T1003.008) where the www-data account transitioned to jward and executed '/bin/cat /etc/shadow' via sudo. Immediate containment and credential rotation are required to prevent lateral movement.",
-  "remediation_plan": "1. Isolate the affected host 'intranet-server' (192.168.131.215) to prevent lateral movement and further data exfiltration. 2. Terminate active sessions and revoke compromised access for accounts 'jward' and 'www-data'. 3. Force an immediate credential reset for all accounts listed in /etc/shadow, ensuring complex, unique passwords across systems to limit credential overlap. 4. Audit sudoers configuration and permission levels to prevent web accounts and standard users from running privileged commands. 5. Inspect and remove compromised web application components and malicious scripts from the WordPress uploads directory. 6. Enforce multi-factor authentication and review SSH keys and account authorizations across the environment."
+  "reasoning": "The adversarial reviewer confirmed unauthorized access to /etc/shadow via sudo by user jward on intranet-server, confirming OS credential dumping technique T1003.008.",
+  "remediation_plan": "1. Isolate the affected host 'intranet-server' (192.168.131.215) from the network to prevent lateral movement. 2. Terminate active sessions and revoke compromised credentials for account 'jward'. 3. Force password resets across all local accounts whose password hashes in /etc/shadow were exposed. 4. Review and harden the sudoers configuration on 'intranet-server' to restrict commands that allow reading sensitive system files. 5. Inspect host audit logs for any subsequent lateral movement or persistence activities originating from agent ID 21."
 }

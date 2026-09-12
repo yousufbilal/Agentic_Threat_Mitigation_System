@@ -3,27 +3,27 @@
   "hostname": "intranet-server",
   "ip": "10.35.35.206",
   "agent_id": "27",
-  "technique_id": "T1548.003",
-  "technique_name": "Sudo and Sudo Caching",
+  "technique_id": "T1003.008",
+  "technique_name": "/etc/passwd and /etc/shadow",
   "cited_rule_ids": [
     5304,
-    5402,
     5501,
+    5402,
     5502
   ],
   "mitigation_names": [
-    "Sudo Mitigation",
-    "Sudo Caching Mitigation",
-    "Component Firmware Mitigation"
+    "Restrict File and Directory Permissions",
+    "Privileged Account Management",
+    "Password Policies"
   ],
   "mitigation_descriptions": [
-    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
-    "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
+    "Ensure permissions on /etc/shadow and sensitive credential stores are properly restricted to root only.",
+    "Restrict sudo permissions and manage privileged access to prevent unauthorized users from reading credential files.",
+    "Enforce strong password hashing algorithms and require credential resets if hashes are potentially compromised."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The adversary transitioned from the www-data account to phopkins and successfully abused sudo privileges to execute root commands and read /etc/shadow. Immediate containment is required to prevent further unauthorized root access and credential harvesting.",
-  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) from the network to restrict unauthorized access.\n2. Terminate active sessions for phopkins and www-data, and rotate compromised credentials.\n3. Audit and edit the /etc/sudoers file to strictly enforce password requirements and restrict privilege escalation.\n4. Set sudo configuration parameter timestamp_timeout to 0 and enable tty_tickets to eliminate sudo caching risks.\n5. Inspect the system for persistence and replace any compromised components or credentials exposed by the /etc/shadow read."
+  "reasoning": "The alert sequence confirms credential dumping via T1003.008 where account phopkins used sudo to read /etc/shadow on intranet-server. Immediate containment and credential rotation are required due to potential exposure of system password hashes.",
+  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) from the network to prevent potential lateral movement. 2. Suspend or revoke active sessions for user phopkins and force a password reset. 3. Initiate a mandatory password reset for all user accounts listed in /etc/shadow. 4. Audit /etc/sudoers on intranet-server to restrict non-administrative users from executing commands that access sensitive files. 5. Inspect authentication and network logs on intranet-server for signs of credential exfiltration or subsequent unauthorized access."
 }

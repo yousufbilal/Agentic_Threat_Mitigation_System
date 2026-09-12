@@ -3,8 +3,8 @@
   "hostname": "intranet-server",
   "ip": "10.143.2.4",
   "agent_id": "10",
-  "technique_id": "T1003.008",
-  "technique_name": "/etc/passwd and /etc/shadow",
+  "technique_id": "T1548.003",
+  "technique_name": "Sudo and Sudo Caching",
   "cited_rule_ids": [
     5304,
     5501,
@@ -12,18 +12,18 @@
     5502
   ],
   "mitigation_names": [
-    "Sudo Mitigation",
-    "Sudo Caching Mitigation",
-    "Component Firmware Mitigation"
+    "Privileged Account Management",
+    "User Account Management",
+    "Audit"
   ],
   "mitigation_descriptions": [
-    "The sudoers file should be strictly edited such that passwords are always required and that users can\u2019t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.",
-    "Setting the timestamp_timeout to 0 will require the user to input their password every time sudo is executed. Similarly, ensuring that the tty_tickets setting is enabled will prevent this leakage across tty sessions.",
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised."
+    "Restrict sudo access and configure the sudoers file to require passwords and minimize command elevation privileges.",
+    "Review and manage user account privileges to ensure the principle of least privilege is applied to user jhall.",
+    "Audit sudo configuration files (/etc/sudoers and /etc/sudoers.d/) and monitor auditd/auth logs for unauthorized privilege escalation."
   ],
   "action": "contain",
-  "severity": "critical",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The investigator confirmed that an unauthorized account transition from www-data to jhall occurred on intranet-server, followed by credential dumping from /etc/shadow via sudo privileges. Immediate containment is required to stop credential exposure and unauthorized administrative access.",
-  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) from the network to prevent lateral movement. 2. Terminate active sessions and revoke active credentials for user account jhall and the www-data service. 3. Rotate all system credentials and passwords potentially exposed through the /etc/shadow read. 4. Strictly audit and edit the sudoers configuration to ensure passwords are required and restrict users from executing risky binaries with elevated privileges. 5. Configure timestamp_timeout to 0 and enable tty_tickets to prevent sudo privilege caching and leakage across sessions."
+  "reasoning": "The adversarial reviewer confirmed privilege escalation activity (T1548.003 - Sudo and Sudo Caching) by user jhall on host intranet-server (10.143.2.4) across multiple security rules. Immediate containment is required to isolate the host and revoke compromised or unauthorized sudo privileges.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (10.143.2.4) from the network to prevent lateral movement. 2. Suspend or revoke sudo permissions and active sessions for user account jhall. 3. Inspect /etc/sudoers and /etc/sudoers.d/ configuration files for unauthorized modifications or overly permissive rules. 4. Review audit and authentication logs on agent ID 10 to identify all commands executed with elevated privileges. 5. Reset credentials for user jhall and verify the integrity of system binaries and services on intranet-server."
 }

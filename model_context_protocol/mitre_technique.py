@@ -22,6 +22,7 @@ class MitreTechniqueResult(BaseModel):
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
 
+# MODEL_NAME = "qwen2.5-3b"
 # llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
