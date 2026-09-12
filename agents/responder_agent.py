@@ -48,59 +48,90 @@ async def responder_agent(state: GraphState) -> GraphState:
 
     start_time = time.time()
 
-    # adversarial_output = state["adversarial_output"]
-    investigator_output = state["investigator_output"]
-    session_id = state["session_id"]
-    domain = state["investigator_output"]["domain"]
-    # cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
-    cited_rule_ids = state["investigator_output"]["cited_rule_ids"]
+    # session_id = state["session_id"]
     session_id = state["triage_output"]["session_id"]
-    # technique_id = state["adversarial_output"]["technique_id"]
-    # technique_name = state["adversarial_output"]["technique_name"]
-    technique_id = state["investigator_output"]["technique_id"]
-    technique_name = state["investigator_output"]["technique_name"]
-    # cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
+
+    # adversarial 
+    adversarial_output = state["adversarial_output"]
+    cited_rule_ids = state["adversarial_output"]["cited_rule_ids"]
+    technique_name = state["adversarial_output"]["technique_name"]
+    technique_id = state["adversarial_output"]["technique_id"]
+
+
+    # Investigator 
+    investigator_output = state["investigator_output"]
+    domain = state["investigator_output"]["domain"]
+    # cited_rule_ids = state["investigator_output"]["cited_rule_ids"]
+    # Technique ID and Name from investigator output
+    # technique_id = state["investigator_output"]["technique_id"]
+    # technique_name = state["investigator_output"]["technique_name"]
     
     # bug the adversarial agent output does not contain the mitre attack technique ID or Name 
     # check to make sure i am only sending 1 query to the agetic rag tool and not multiple queries
 
     # print("THIS IS THE MITIGATION TOOL",mitigation_data)
-    file_path = Path(f"mitre_mitigations/mitre_mitigations_{domain}.json")
+    # file_path = Path(f"mitre_mitigations/mitre_mitigations_{domain}.json")
 
     # if not file_path:
     #     mitigation_domain = await get_mitre_mitigation(domain)
 
     # mitigation_data = await run_agent(adversarial_output, domain)
-    mitigation_data = await run_agent(investigator_output, domain)
+    # mitigation_data = await run_agent(investigator_output, domain)
+
+    # system_prompt = SystemMessage(content="""
+    #     You are a SOC responder deciding the mitigation action for a security alert sequence.
+
+    #     Your only task:
+    #     Based on the adversarial's findings and look up appropriate mitigations, decide the action and remediation plan and confidence and provide your reasoning.
+    #     Base your decision only on the data provided below. Do not assume information that isn't present.
+
+    #     IMPORTANT: Your remediation_plan must be fill the mitigation details in output
+    #     Write the remediation_plan as a clear, numbered list of concrete steps a SOC analyst can act on immediately. 
+    #     Keep each step short and actionable. use
+        
+    #     Output format:
+    #     {
+    #         "action": "escalate" | "contain" | "monitor",
+    #         "severity": "low" | "medium" | "high" | "critical",
+    #         "confidence": float between 0 and 1,
+    #         "reasoning": "explanation referencing the adversarial's findings and technique",
+    #         "mitigation_names": "list of mitigation names corresponding to the mitigation_ids used",
+    #         "mitigation_descriptions": "list of mitigation descriptions corresponding to the mitigation_ids used",
+    #         "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in adversarial_output, for guidance look at retrieved_mitigation_data"
+    #     }
+    #     """)
+
 
     system_prompt = SystemMessage(content="""
         You are a SOC responder deciding the mitigation action for a security alert sequence.
 
         Your only task:
-        Based on the investigator's findings and the retrieved_mitigation_data, decide the action and remediation plan and confidence and provide your reasoning.
+        Based on the adversarial reviewer's findings, use your own knowledge of MITRE ATT&CK mitigations to decide the action and remediation plan, confidence, and provide your reasoning.
         Base your decision only on the data provided below. Do not assume information that isn't present.
 
-        IMPORTANT: Your remediation_plan must be grounded in the retrieved_mitigation_data provided and use to to fill the mitigation details in output
-        Write the remediation_plan as a clear, numbered list of concrete steps a SOC analyst can act on immediately. 
-        Keep each step short and actionable. use
-        
+        IMPORTANT: Your remediation_plan must fill in the mitigation details in the output.
+        Write the remediation_plan as a clear, numbered list of concrete steps a SOC analyst can act on immediately.
+        Keep each step short and actionable.
+
         Output format:
         {
             "action": "escalate" | "contain" | "monitor",
             "severity": "low" | "medium" | "high" | "critical",
             "confidence": float between 0 and 1,
-            "reasoning": "explanation referencing the investigator's findings and technique",
-            "mitigation_names": "list of mitigation names corresponding to the mitigation_ids used",
-            "mitigation_descriptions": "list of mitigation descriptions corresponding to the mitigation_ids used",
-            "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in retrieved_mitigation_data and investigator_output"
+            "reasoning": "explanation referencing the adversarial reviewer's findings and technique",
+            "mitigation_names": "list of MITRE ATT&CK mitigation names",
+            "mitigation_descriptions": "list of mitigation descriptions corresponding to the mitigation names",
+            "remediation_plan": "numbered list of concrete steps, filtered to only what's relevant, grounded in adversarial_output and your own knowledge of the identified technique"
         }
         """)
 
+
+
     human_prompt = HumanMessage(content=str({
-        # "adversarial_output": adversarial_output,
-        "investigator_output": investigator_output,
+        "adversarial_output": adversarial_output,
+        # "investigator_output": investigator_output,
         "domain": domain,
-        "retrieved_mitigation_data": mitigation_data,
+        # "retrieved_mitigation_data": mitigation_data,
     }))
 
     response = structured_llm.invoke([system_prompt, human_prompt])
@@ -115,14 +146,14 @@ async def responder_agent(state: GraphState) -> GraphState:
 
     # if decision == "y":
     responder_output = {
-        # "username": state["adversarial_output"]["affected_account"],
-        # "hostname": state["adversarial_output"]["affected_host"],
-        # "ip": state["adversarial_output"]["affected_ip"],
-        # "agent_id": state["adversarial_output"]["agent_id"],
-        "username": state["investigator_output"]["affected_account"],
-        "hostname": state["investigator_output"]["affected_host"],
-        "ip": state["investigator_output"]["affected_ip"],
-        "agent_id": state["investigator_output"]["agent_id"],
+        "username": state["adversarial_output"]["affected_account"],
+        "hostname": state["adversarial_output"]["affected_host"],
+        "ip": state["adversarial_output"]["affected_ip"],
+        "agent_id": state["adversarial_output"]["agent_id"],
+        # "username": state["investigator_output"]["affected_account"],
+        # "hostname": state["investigator_output"]["affected_host"],
+        # "ip": state["investigator_output"]["affected_ip"],
+        # "agent_id": state["investigator_output"]["agent_id"],
         "technique_id": technique_id,
         "technique_name": technique_name,
         "cited_rule_ids": cited_rule_ids,

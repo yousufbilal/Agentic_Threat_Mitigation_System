@@ -13,18 +13,20 @@
     5502
   ],
   "mitigation_names": [
-    "Component Firmware Mitigation",
-    "Valid Accounts Mitigation",
-    "Brute Force Mitigation"
+    "Restrict File and Directory Permissions",
+    "Operating System Configuration",
+    "Privileged Account Management",
+    "Password Policies"
   ],
   "mitigation_descriptions": [
-    "Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.",
-    "Take measures to detect or prevent techniques such as OS Credential Dumping. Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Audit domain and local accounts as well as their permission levels routinely.",
-    "Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Use multifactor authentication. Follow best practices for mitigating access to Valid Accounts."
+    "Ensure permissions on /etc/shadow and sensitive credential stores are properly restricted to prevent unauthorized read access.",
+    "Audit and configure sudoers files to prevent non-administrative users from executing binaries like /bin/cat against sensitive system files.",
+    "Manage and audit privileged accounts and sudo privileges to ensure adherence to the principle of least privilege.",
+    "Enforce password rotation and complexity requirements for accounts whose hashes may have been exposed."
   ],
   "action": "contain",
-  "severity": "critical",
+  "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The intranet-server suffered privilege escalation from www-data to gmorgan and root, culminating in credential dumping of /etc/shadow from a web directory. Immediate containment is necessary to stop further lateral movement and credential exploitation.",
-  "remediation_plan": "1. Isolate the intranet-server (192.168.104.155) from the network to prevent lateral movement and exfiltration. 2. Terminate unauthorized sessions and processes associated with user gmorgan and web service user www-data. 3. Prevent adversary access to privileged accounts by rotating credentials and password hashes for all accounts present in /etc/shadow. 4. Audit local and domain account permissions, sudoers configuration, and SSH keys to enforce least privilege. 5. Inspect and remove any webshells or malicious files deployed within the WordPress uploads directory. 6. Enforce multifactor authentication and limit credential overlap across systems to prevent credential reuse."
+  "reasoning": "The adversary successfully executed a privileged command to dump password hashes from /etc/shadow using account gmorgan on intranet-server, confirming technique T1003.008. Immediate containment and credential rotation are necessary to prevent offline cracking and lateral movement.",
+  "remediation_plan": "1. Isolate the affected host intranet-server (192.168.104.155) from the network to prevent further lateral movement. 2. Suspend or revoke active sessions and credentials for the compromised user account gmorgan. 3. Initiate an immediate password reset for all local user and service accounts present on intranet-server whose hashes were exposed via /etc/shadow. 4. Review and restrict the /etc/sudoers configuration on intranet-server to revoke unauthorized sudo privileges for /bin/cat and other file viewing binaries. 5. Verify and restore appropriate file permissions and ownership on /etc/shadow (e.g., chmod 000 /etc/shadow or 640 root:shadow). 6. Inspect authentication and command-line execution logs for any additional anomalous activities originating from agent ID 26."
 }

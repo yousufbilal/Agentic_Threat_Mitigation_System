@@ -1,7 +1,7 @@
 .env
 .venv
 __pycache__
-ait_data/
+ait_data/raw/
 .DS_Store
 chroma_data/
 enterprise-attack.json

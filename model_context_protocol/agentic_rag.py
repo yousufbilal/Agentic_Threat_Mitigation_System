@@ -26,6 +26,7 @@ def agentic_rag(query: str, domain: str) -> str:
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
+# MODEL_NAME = "qwen2.5-3b"
 # llm = ChatOllama(model="qwen2.5:3b", temperature=0)
 
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
