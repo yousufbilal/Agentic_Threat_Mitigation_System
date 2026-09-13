@@ -67,7 +67,6 @@ run_all_scenarios.py     Batch run across all scenarios (auto-approves human gat
 <img width="390" height="435" alt="image" src="https://github.com/user-attachments/assets/e07d35ba-8fa0-49f2-a040-76d240d5eb59" />
 </div>
 
-<img width="414" height="630" alt="image" src="https://github.com/user-attachments/assets/75a2e9a2-e4e5-4113-be29-19c40ea3edf2" />
 
 ## Dependencies & Tech Stack
 
