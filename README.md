@@ -45,15 +45,35 @@ python main.py                # single scenario, interactive human-approval prom
 python run_all_scenarios.py   # all 8 scenarios, auto-approves human gate
 ```
 
+## Repository File Structure
+
+```
+agents/                  Each agent node (triage, investigator, adversarial, responder, human_approval, prompt_injection_alert)
+graph/                   LangGraph state schema and graph builder
+model_context_protocol/  MCP client + MITRE technique lookup tool (agentic RAG mitigation-retrieval tool evaluated and removed from the active pipeline — see /legacy)
+tools/                   Session loading, alert preprocessing (data_bridge), ingestion, LangSmith upload
+ait_data/
+  ├── raw/               Raw Wazuh JSON logs (gitignored — not committed)
+  ├── labels/            Attack-window labels (start/end timestamps per scenario)
+  └── processed/         Alerts sliced to the relevant attack window per scenario
+responder_output/        Saved final decisions, one folder per model used
+main.py                  Single-scenario interactive run
+run_all_scenarios.py     Batch run across all scenarios (auto-approves human gate)
+```
+
 ## System Architecture & Workflow
 
 <div align="center">
 <img width="390" height="435" alt="image" src="https://github.com/user-attachments/assets/e07d35ba-8fa0-49f2-a040-76d240d5eb59" />
 </div>
 
-mermaid
 <img width="414" height="630" alt="image" src="https://github.com/user-attachments/assets/75a2e9a2-e4e5-4113-be29-19c40ea3edf2" />
 
+## Dependencies & Tech Stack
+
+**Model Choice.** Gemini 3.7 Flash (gemini-3.7-flash) was chosen as the primary LLM for MATMF because it offers efficient execution and strong support for agent workflows. As the MATMF architecture relies on iterative review loops between agents, connecting to MITRE servers for technique identification via MCP low latency and conditional edges it is vital for the system to be responsive and avoid crashes.
+
+**Runtime.** The MATMF project is implemented in Python version 3.12.13, executed inside a local virtual environment (.venv) rather than the system interpreter; all the dependencies are pinned to the exact version using pip freeze into the requirements.txt file, available in the root for reproducibility. The Agent Orchestration system is built on the LangGraph version (0.6.11) together with LangGraph checkpoint (2.1.2) and prebuilt (0.6.5), layered on top of langchain-core version 1.5.3, with different integration packages installed such as langchain-ollama (0.3.10) for local inference, langchain-groq (1.1.3) for Groq provided models and langchain-google-genai (4.3.2) for Gemini based models, so any agent can be repointed between them. Pydantic version 2.13.4 is used to enforce structured schema validated output. External tools used by the sub-agents are accessed via Model Context Protocol through Langchain-mcp-adapters (0.3.0) together with the Mitre-MCP server (0.3.1). API keys and environment variables are stored in the .env file, loaded via python-dotenv (1.2.1), Langsmith client (0.4.37) allows runs to be recorded, and tracing is available on the LangSmith website.
 
 ### Ingestion Bridge and State Initialisation
 
@@ -99,24 +119,4 @@ To isolate untrusted data, incoming logs and intermediate outputs are wrapped in
 
 **Human-In-The-Loop.** The human-in-the-loop mechanism is present at the human_approval node right after the Responder Agent. Rather than executing the remediation plan, the Responder Agent pauses and presents the remediation plan to the human SOC analyst for review and to get an explicit command to either proceed with the remediation plan by entering "y" and saving it as a JSON file or to enter "n" to discard it.
 
-## Repository File Structure
 
-```
-agents/                  Each agent node (triage, investigator, adversarial, responder, human_approval, prompt_injection_alert)
-graph/                   LangGraph state schema and graph builder
-model_context_protocol/  MCP client + MITRE technique lookup tool (agentic RAG mitigation-retrieval tool evaluated and removed from the active pipeline — see /legacy)
-tools/                   Session loading, alert preprocessing (data_bridge), ingestion, LangSmith upload
-ait_data/
-  ├── raw/               Raw Wazuh JSON logs (gitignored — not committed)
-  ├── labels/            Attack-window labels (start/end timestamps per scenario)
-  └── processed/         Alerts sliced to the relevant attack window per scenario
-responder_output/        Saved final decisions, one folder per model used
-main.py                  Single-scenario interactive run
-run_all_scenarios.py     Batch run across all scenarios (auto-approves human gate)
-```
-
-## Dependencies & Tech Stack
-
-**Model Choice.** Gemini 3.7 Flash (gemini-3.7-flash) was chosen as the primary LLM for MATMF because it offers efficient execution and strong support for agent workflows. As the MATMF architecture relies on iterative review loops between agents, connecting to MITRE servers for technique identification via MCP low latency and conditional edges it is vital for the system to be responsive and avoid crashes.
-
-**Runtime.** The MATMF project is implemented in Python version 3.12.13, executed inside a local virtual environment (.venv) rather than the system interpreter; all the dependencies are pinned to the exact version using pip freeze into the requirements.txt file, available in the root for reproducibility. The Agent Orchestration system is built on the LangGraph version (0.6.11) together with LangGraph checkpoint (2.1.2) and prebuilt (0.6.5), layered on top of langchain-core version 1.5.3, with different integration packages installed such as langchain-ollama (0.3.10) for local inference, langchain-groq (1.1.3) for Groq provided models and langchain-google-genai (4.3.2) for Gemini based models, so any agent can be repointed between them. Pydantic version 2.13.4 is used to enforce structured schema validated output. External tools used by the sub-agents are accessed via Model Context Protocol through Langchain-mcp-adapters (0.3.0) together with the Mitre-MCP server (0.3.1). API keys and environment variables are stored in the .env file, loaded via python-dotenv (1.2.1), Langsmith client (0.4.37) allows runs to be recorded, and tracing is available on the LangSmith website.
