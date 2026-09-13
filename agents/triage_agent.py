@@ -83,10 +83,6 @@ def triage_agent(state: GraphState) -> GraphState:
     # human_prompt = HumanMessage(content=str(alerts))
     human_prompt = HumanMessage(content=f"<untrusted_alert_data>{alerts}</untrusted_alert_data>")
 
-    # COT LOGIC 
-    # reasoning = llm.invoke([system_prompt, human_prompt])
-    # cot = reasoning.additional_kwargs.get("reasoning_content")
-    # print("TRIAGE AGENT REASONING (CoT):", cot)
 
     response = structured_llm.invoke([system_prompt, human_prompt])
     end_time = time.time()
@@ -96,8 +92,6 @@ def triage_agent(state: GraphState) -> GraphState:
     print("TRIAGE AGENT RESPONSE:",response, "\n")
     print()
 
-    # raw_response = llm.invoke([system_prompt, human_prompt])
-    # print(raw_response.usage_metadata)
 
     if response.mitigation_required == False:
         os.makedirs(f"responder_output/{MODEL_NAME}", exist_ok=True)

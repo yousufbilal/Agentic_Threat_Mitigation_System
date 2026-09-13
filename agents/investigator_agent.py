@@ -7,14 +7,11 @@ from model_context_protocol.mitre_technique import get_mitre_technique_id
 import asyncio
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
-# from model_context_protocol.agentic_rag import run_agent
 import time
 from dotenv import load_dotenv
 load_dotenv()
 
 class InvestigatorOutput(BaseModel):
-    # removed technique as the llm tool call provides is this
-    # attack_technique: str
     affected_account: str     
     affected_host: str         
     affected_ip: str           
@@ -24,7 +21,9 @@ class InvestigatorOutput(BaseModel):
     reasoning: str
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
+
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+
 # MODEL_NAME = "groq-llama-3.3-70b-versatile"
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
@@ -60,18 +59,10 @@ async def investigator_agent(state: GraphState) -> GraphState:
     # mitre_technique_id = await get_mitre_technique_id(alert_log_sequence)
     # print("MITRE TECHNIQUE RESULT:", mitre_technique_id)
 
-#   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
     mitre_mcp_tool_result = await get_mitre_technique_id(alert_log_sequence) 
     technique_id = mitre_mcp_tool_result.technique_id
     technique_name = mitre_mcp_tool_result.technique_name
 
-# confusing name change them so its much clear what tool i am using and what the result is
-    # this model only provide full list of mitre techniques
-    # this is the mitiagtion tool that im supplying the log sequence to 
-
-    # print()
-    # print("MITRE TECHNIQUE RESULT:", mitre_mcp_tool_result, "\n")
-    # print()
 
     if verdict == "rejected":
         system_prompt = SystemMessage(content="""
@@ -102,7 +93,6 @@ async def investigator_agent(state: GraphState) -> GraphState:
             "alerts": alerts,
             "triage_output": triage_output,
             "adversarial_output": adversarial_output,
-            # "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
             "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
             "technique_name": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None
         }
@@ -132,9 +122,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
         payload = {
             "alerts": alerts,
             "triage_output": triage_output,
-            # "attack_technique": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None,
             "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
-            # "technique_id": mitre_mcp_tool_result.technique_id if mitre_mcp_tool_result else None,
             "technique_name": mitre_mcp_tool_result.technique_name if mitre_mcp_tool_result else None
         }
 
@@ -147,20 +135,7 @@ async def investigator_agent(state: GraphState) -> GraphState:
     print(f"Investigator Agent Response Time: {agent_execution_time:.2f} seconds")
     print()
     print("INVESTIGATOR AGENT RESPONSE:", response, "MCP TOOL CALL RESULT:", mitre_mcp_tool_result, "\n")
-    # print("INVESTIGATOR AGENT RESPONSE:", response)
-    # print()
 
-#   need to check as this utility agent does not know if adversaial agent rejeted the outpout and if it needs to revise 
-
-    # mitigation_data = await run_agent(f"Find a mitigation for this attack: {adversarial_output}", response.domain )
-
-
-    # if mitre_mcp_tool_result is not None:
-    #     attack_technique = mitre_mcp_tool_result.technique_name
-    #     technique_id = mitre_mcp_tool_result.technique_id
-    # else:
-    #     attack_technique = None
-    #     technique_id = None
 
     return GraphState(
         investigator_output={
