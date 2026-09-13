@@ -7,7 +7,6 @@ import asyncio
 import json
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
-from langchain_google_genai import ChatGoogleGenerativeAI
 import time
 from dotenv import load_dotenv
 load_dotenv()
@@ -17,8 +16,11 @@ class MitreTechniqueResult(BaseModel):
     technique_name: Optional[str] = None
 
 # llm = ChatOllama(model="deepseek-r1:1.5b", temperature=0)
+
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
+
 # llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+
 # llm = ChatGoogleGenerativeAI(model="gemini-flash-latest", temperature=0)
 
 
@@ -38,9 +40,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash", temperature=0)
 structured_llm = llm.with_structured_output(MitreTechniqueResult)
 
 async def get_mitre_technique_id(alert_log_sequence):
-#    print()
 #    print("ALERT SEQUENCE:", alert_log_sequence)
-#    print()
 
    start_time = time.time()
 
@@ -79,14 +79,13 @@ async def get_mitre_technique_id(alert_log_sequence):
         }""")
 
 
-#  sometimes model get confused in the prompts 
+#  sometimes model get confused in the prompts ensure no contradictory instrctions
    tool_prompt = HumanMessage(content=f"Identify the relevant MITRE ATT&CK technique ID for these alert sequence: {alert_log_sequence}")
 
    response = await llm_with_tools.ainvoke([system_prompt, tool_prompt])
    # print()
    # print("THIS IS THE LLM RESPONSE FOR MITRE TECHNIQUE:", response.content)
    # print()
-
 
 #    print(" LLM responded:", response.tool_calls)
 
@@ -115,7 +114,7 @@ async def get_mitre_technique_id(alert_log_sequence):
         technique_name = technique.get("name"),
    )
 
-# this runs when i run this file so can leave it here for now dont need to change parameters
+# leave  for now dont need to change parameters
 # if __name__ == "__main__":
 #     demo_alert_log_sequence = [
 #         {"rule_id": 1001, "timestamp": "2026-07-23T10:12:03Z", "host": "web-server-01", "message": "Multiple failed SSH login attempts for user 'admin' (12 attempts in 30s)"},

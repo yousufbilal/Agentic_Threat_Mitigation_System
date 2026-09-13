@@ -12,18 +12,20 @@
     5502
   ],
   "mitigation_names": [
-    "Restrict File and Directory Permissions",
+    "Password Policies",
     "Privileged Account Management",
-    "Password Policies"
+    "Restrict File and Directory Permissions",
+    "User Account Management"
   ],
   "mitigation_descriptions": [
-    "Ensure permissions on /etc/shadow and sensitive credential stores are properly restricted to root only.",
-    "Restrict sudo permissions and manage privileged access to prevent unauthorized users from reading credential files.",
-    "Enforce strong password hashing algorithms and require credential resets if hashes are potentially compromised."
+    "Ensure strong password complexity, rotation, and hashing algorithms are enforced to mitigate the impact of dumped hashes.",
+    "Restrict sudo permissions and ensure users cannot run arbitrary commands capable of reading sensitive credential files.",
+    "Ensure permissions on /etc/shadow strictly restrict read access to root and appropriate system processes.",
+    "Manage user privileges and audit sudoers configuration to enforce principle of least privilege."
   ],
   "action": "contain",
   "severity": "high",
   "confidence": 0.95,
-  "reasoning": "The alert sequence confirms credential dumping via T1003.008 where account phopkins used sudo to read /etc/shadow on intranet-server. Immediate containment and credential rotation are required due to potential exposure of system password hashes.",
-  "remediation_plan": "1. Isolate host intranet-server (10.35.35.206) from the network to prevent potential lateral movement. 2. Suspend or revoke active sessions for user phopkins and force a password reset. 3. Initiate a mandatory password reset for all user accounts listed in /etc/shadow. 4. Audit /etc/sudoers on intranet-server to restrict non-administrative users from executing commands that access sensitive files. 5. Inspect authentication and network logs on intranet-server for signs of credential exfiltration or subsequent unauthorized access."
+  "reasoning": "The adversary successfully executed elevated commands to dump /etc/shadow via sudo on intranet-server, confirming credential access (T1003.008). Containment and credential rotation are immediately necessary to prevent lateral movement.",
+  "remediation_plan": "1. Isolate the affected host 'intranet-server' (10.35.35.206) from the network to prevent lateral movement. 2. Suspend or revoke active sessions and credentials for the compromised user account 'phopkins'. 3. Force an organization-wide password reset for all local accounts present in /etc/shadow. 4. Audit /etc/sudoers on 'intranet-server' to restrict phopkins and other non-admin accounts from executing commands that read sensitive system files. 5. Inspect host logs for any signs of subsequent lateral movement or persistence established using obtained hashes."
 }
